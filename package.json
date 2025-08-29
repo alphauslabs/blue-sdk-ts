@@ -1,6 +1,6 @@
 {
   "name": "@ninyolittle/blue-sdk-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -14,7 +14,7 @@
     "@connectrpc/connect": "^2.1.0",
     "@connectrpc/connect-web": "^2.1.0"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/ninyolittle/blue-sdk-ts.git"
   }
