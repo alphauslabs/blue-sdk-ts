@@ -1,0 +1,58 @@
+"use strict";
+// Copyright 2019 Google LLC.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Distribution_ExemplarSchema = exports.Distribution_BucketOptions_ExplicitSchema = exports.Distribution_BucketOptions_ExponentialSchema = exports.Distribution_BucketOptions_LinearSchema = exports.Distribution_BucketOptionsSchema = exports.Distribution_RangeSchema = exports.DistributionSchema = exports.file_google_api_distribution = void 0;
+const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
+const wkt_1 = require("@bufbuild/protobuf/wkt");
+/**
+ * Describes the file google/api/distribution.proto.
+ */
+exports.file_google_api_distribution = (0, codegenv2_1.fileDesc)("Ch1nb29nbGUvYXBpL2Rpc3RyaWJ1dGlvbi5wcm90bxIKZ29vZ2xlLmFwaSLZBgoMRGlzdHJpYnV0aW9uEg0KBWNvdW50GAEgASgDEgwKBG1lYW4YAiABKAESIAoYc3VtX29mX3NxdWFyZWRfZGV2aWF0aW9uGAMgASgBEi0KBXJhbmdlGAQgASgLMh4uZ29vZ2xlLmFwaS5EaXN0cmlidXRpb24uUmFuZ2USPgoOYnVja2V0X29wdGlvbnMYBiABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5CdWNrZXRPcHRpb25zEhUKDWJ1Y2tldF9jb3VudHMYByADKAMSNAoJZXhlbXBsYXJzGAogAygLMiEuZ29vZ2xlLmFwaS5EaXN0cmlidXRpb24uRXhlbXBsYXIaIQoFUmFuZ2USCwoDbWluGAEgASgBEgsKA21heBgCIAEoARq1AwoNQnVja2V0T3B0aW9ucxJHCg5saW5lYXJfYnVja2V0cxgBIAEoCzItLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uLkJ1Y2tldE9wdGlvbnMuTGluZWFySAASUQoTZXhwb25lbnRpYWxfYnVja2V0cxgCIAEoCzIyLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uLkJ1Y2tldE9wdGlvbnMuRXhwb25lbnRpYWxIABJLChBleHBsaWNpdF9idWNrZXRzGAMgASgLMi8uZ29vZ2xlLmFwaS5EaXN0cmlidXRpb24uQnVja2V0T3B0aW9ucy5FeHBsaWNpdEgAGkMKBkxpbmVhchIaChJudW1fZmluaXRlX2J1Y2tldHMYASABKAUSDQoFd2lkdGgYAiABKAESDgoGb2Zmc2V0GAMgASgBGk8KC0V4cG9uZW50aWFsEhoKEm51bV9maW5pdGVfYnVja2V0cxgBIAEoBRIVCg1ncm93dGhfZmFjdG9yGAIgASgBEg0KBXNjYWxlGAMgASgBGhoKCEV4cGxpY2l0Eg4KBmJvdW5kcxgBIAMoAUIJCgdvcHRpb25zGnMKCEV4ZW1wbGFyEg0KBXZhbHVlGAEgASgBEi0KCXRpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoLYXR0YWNobWVudHMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQW55QnEKDmNvbS5nb29nbGUuYXBpQhFEaXN0cmlidXRpb25Qcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwaS9kaXN0cmlidXRpb247ZGlzdHJpYnV0aW9uogIER0FQSWIGcHJvdG8z", [wkt_1.file_google_protobuf_any, wkt_1.file_google_protobuf_timestamp]);
+/**
+ * Describes the message google.api.Distribution.
+ * Use `create(DistributionSchema)` to create a new message.
+ */
+exports.DistributionSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0);
+/**
+ * Describes the message google.api.Distribution.Range.
+ * Use `create(Distribution_RangeSchema)` to create a new message.
+ */
+exports.Distribution_RangeSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 0);
+/**
+ * Describes the message google.api.Distribution.BucketOptions.
+ * Use `create(Distribution_BucketOptionsSchema)` to create a new message.
+ */
+exports.Distribution_BucketOptionsSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 1);
+/**
+ * Describes the message google.api.Distribution.BucketOptions.Linear.
+ * Use `create(Distribution_BucketOptions_LinearSchema)` to create a new message.
+ */
+exports.Distribution_BucketOptions_LinearSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 1, 0);
+/**
+ * Describes the message google.api.Distribution.BucketOptions.Exponential.
+ * Use `create(Distribution_BucketOptions_ExponentialSchema)` to create a new message.
+ */
+exports.Distribution_BucketOptions_ExponentialSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 1, 1);
+/**
+ * Describes the message google.api.Distribution.BucketOptions.Explicit.
+ * Use `create(Distribution_BucketOptions_ExplicitSchema)` to create a new message.
+ */
+exports.Distribution_BucketOptions_ExplicitSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 1, 2);
+/**
+ * Describes the message google.api.Distribution.Exemplar.
+ * Use `create(Distribution_ExemplarSchema)` to create a new message.
+ */
+exports.Distribution_ExemplarSchema = (0, codegenv2_1.messageDesc)(exports.file_google_api_distribution, 0, 2);
