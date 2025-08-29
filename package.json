@@ -8,5 +8,16 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@connectrpc/connect": "^2.1.0",
+    "@connectrpc/connect-web": "^2.1.0"
+  },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/ninyolittle/blue-sdk-ts.git"
   }
 }
