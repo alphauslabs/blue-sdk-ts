@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/budget.proto.
  */
 export const file_api_budget: GenFile = /*@__PURE__*/
-  fileDesc("ChBhcGkvYnVkZ2V0LnByb3RvEgtibHVlYXBpLmFwaSJbCgZCdWRnZXQSCgoCaWQYASABKAkSEgoKZmlzY2FsWWVhchgCIAEoCRIxCg1tb250aGx5QnVkZ2V0GAMgAygLMhouYmx1ZWFwaS5hcGkuTW9udGhseUJ1ZGdldCIyCg1Nb250aGx5QnVkZ2V0EhEKCXllYXJNb250aBgBIAEoCRIOCgZhbW91bnQYAiABKAEiMgoQRGFpbHlCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIIj4KHERhaWx5UmF0ZUluY3JlYXNlQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCI0ChJNb250aGx5QnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCJdChdDdXN0b21QZXJpb2RCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIEhEKCXN0YXJ0RGF0ZRgDIAEoCRIPCgdlbmREYXRlGAQgASgJIjwKF0J1ZGdldEFsZXJ0Tm90aWZpY2F0aW9uEhAKCGNoYW5uZWxzGAIgAygJEg8KB2VuYWJsZWQYAyABKAgiZAodQnVkZ2V0QWxlcnROb3RpZmljYXRpb25EZXRhaWwSMgoIY2hhbm5lbHMYAiADKAsyIC5ibHVlYXBpLmFwaS5Ob3RpZmljYXRpb25DaGFubmVsEg8KB2VuYWJsZWQYAyABKAhCUwoZY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaUIOQXBpQnVkZ2V0UHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpYgZwcm90bzM", [file_api_notification]);
+  fileDesc("ChBhcGkvYnVkZ2V0LnByb3RvEgtibHVlYXBpLmFwaSJbCgZCdWRnZXQSCgoCaWQYASABKAkSEgoKZmlzY2FsWWVhchgCIAEoCRIxCg1tb250aGx5QnVkZ2V0GAMgAygLMhouYmx1ZWFwaS5hcGkuTW9udGhseUJ1ZGdldCIyCg1Nb250aGx5QnVkZ2V0EhEKCXllYXJNb250aBgBIAEoCRIOCgZhbW91bnQYAiABKAEiMgoQRGFpbHlCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIIj4KHERhaWx5UmF0ZUluY3JlYXNlQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCI0ChJNb250aGx5QnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCJdChdDdXN0b21QZXJpb2RCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIEhEKCXN0YXJ0RGF0ZRgDIAEoCRIPCgdlbmREYXRlGAQgASgJIkoKFkN1c3RvbU1vbnRoQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCBIQCghzdGFydERheRgDIAEoCSI8ChdCdWRnZXRBbGVydE5vdGlmaWNhdGlvbhIQCghjaGFubmVscxgCIAMoCRIPCgdlbmFibGVkGAMgASgIImQKHUJ1ZGdldEFsZXJ0Tm90aWZpY2F0aW9uRGV0YWlsEjIKCGNoYW5uZWxzGAIgAygLMiAuYmx1ZWFwaS5hcGkuTm90aWZpY2F0aW9uQ2hhbm5lbBIPCgdlbmFibGVkGAMgASgIQlMKGWNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGlCDkFwaUJ1ZGdldFByb3RvWiZnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaWIGcHJvdG8z", [file_api_notification]);
 
 /**
  * @generated from message blueapi.api.Budget
@@ -198,6 +198,42 @@ export const CustomPeriodBudgetAlertSchema: GenMessage<CustomPeriodBudgetAlert> 
   messageDesc(file_api_budget, 5);
 
 /**
+ * CustomMonthBudgetAlert resource definition.
+ *
+ * @generated from message blueapi.api.CustomMonthBudgetAlert
+ */
+export type CustomMonthBudgetAlert = Message<"blueapi.api.CustomMonthBudgetAlert"> & {
+  /**
+   * Required. threshold in budget alerts
+   *
+   * @generated from field: double value = 1;
+   */
+  value: number;
+
+  /**
+   * Required. notification enable/disable 
+   * If disabled, no alert is sent.
+   *
+   * @generated from field: bool enabled = 2;
+   */
+  enabled: boolean;
+
+  /**
+   * Required. start day in budget alerts
+   *
+   * @generated from field: string startDay = 3;
+   */
+  startDay: string;
+};
+
+/**
+ * Describes the message blueapi.api.CustomMonthBudgetAlert.
+ * Use `create(CustomMonthBudgetAlertSchema)` to create a new message.
+ */
+export const CustomMonthBudgetAlertSchema: GenMessage<CustomMonthBudgetAlert> = /*@__PURE__*/
+  messageDesc(file_api_budget, 6);
+
+/**
  * BudgetAlertNotification resource definition.
  *
  * @generated from message blueapi.api.BudgetAlertNotification
@@ -224,7 +260,7 @@ export type BudgetAlertNotification = Message<"blueapi.api.BudgetAlertNotificati
  * Use `create(BudgetAlertNotificationSchema)` to create a new message.
  */
 export const BudgetAlertNotificationSchema: GenMessage<BudgetAlertNotification> = /*@__PURE__*/
-  messageDesc(file_api_budget, 6);
+  messageDesc(file_api_budget, 7);
 
 /**
  * BudgetAlertNotificationDetail resource definition.
@@ -253,5 +289,5 @@ export type BudgetAlertNotificationDetail = Message<"blueapi.api.BudgetAlertNoti
  * Use `create(BudgetAlertNotificationDetailSchema)` to create a new message.
  */
 export const BudgetAlertNotificationDetailSchema: GenMessage<BudgetAlertNotificationDetail> = /*@__PURE__*/
-  messageDesc(file_api_budget, 7);
+  messageDesc(file_api_budget, 8);
 

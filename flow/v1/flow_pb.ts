@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flow/v1/flow.proto.
  */
 export const file_flow_v1_flow: GenFile = /*@__PURE__*/
-  fileDesc("ChJmbG93L3YxL2Zsb3cucHJvdG8SD2JsdWVhcGkuZmxvdy52MSIQCg5HZXRJbmZvUmVxdWVzdCLiAQoVQ3JlYXRlU2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEg8KB3BheWVySWQYCiABKAkioQMKFVVwZGF0ZVNldHRpbmdzUmVxdWVzdBIKCgJpZBgBIAEoCRIZCgxhY2NvdW50U2NvcGUYAiABKAlIAIgBARIaCg1jdXN0b21pemF0aW9uGAMgASgJSAGIAQESFQoIcGxhblRlcm0YBCABKAlIAogBARIaCg1wYXltZW50T3B0aW9uGAUgASgJSAOIAQESGwoObG9va0JhY2tQZXJpb2QYBiABKAlIBIgBARIbCg5pbnN0YW5jZUZhbWlseRgHIAEoCUgFiAEBEhkKDGFubnVhbEJ1ZGdldBgIIAEoAUgGiAEBEhUKCGFwcHJvdmFsGAkgASgISAeIAQESFAoHcGF5ZXJJZBgKIAEoCUgIiAEBQg8KDV9hY2NvdW50U2NvcGVCEAoOX2N1c3RvbWl6YXRpb25CCwoJX3BsYW5UZXJtQhAKDl9wYXltZW50T3B0aW9uQhEKD19sb29rQmFja1BlcmlvZEIRCg9faW5zdGFuY2VGYW1pbHlCDwoNX2FubnVhbEJ1ZGdldEILCglfYXBwcm92YWxCCgoIX3BheWVySWQiIAoSR2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJIi0KH0dldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QSCgoCaWQYASABKAkiKQonR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0IicKGUdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QSCgoCaWQYASABKAkiMQofQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVxdWVzdBIOCgZ0YXJnZXQYASABKAkiVgofR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBIPCgdwYXllcklkGAEgASgJEhEKCXN0YXJ0RGF0ZRgCIAEoCRIPCgdlbmREYXRlGAMgASgJIicKJUdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QiLwodQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QSDgoGdGFyZ2V0GAEgASgJIiMKD0dldEluZm9SZXNwb25zZRIQCghyZXNwb25zZRgBIAEoCSIqChZDcmVhdGVTZXR0aW5nc1Jlc3BvbnNlEhAKCHJlc3BvbnNlGAEgASgJIioKFlVwZGF0ZVNldHRpbmdzUmVzcG9uc2USEAoIcmVzcG9uc2UYASABKAki9QEKE0dldFNldHRpbmdzUmVzcG9uc2USCgoCaWQYASABKAkSFAoMYWNjb3VudFNjb3BlGAIgASgJEhUKDWN1c3RvbWl6YXRpb24YAyABKAkSEAoIcGxhblRlcm0YBCABKAkSFQoNcGF5bWVudE9wdGlvbhgFIAEoCRIWCg5sb29rQmFja1BlcmlvZBgGIAEoCRIWCg5pbnN0YW5jZUZhbWlseRgHIAEoCRIUCgxhbm51YWxCdWRnZXQYCCABKAESEAoIYXBwcm92YWwYCSABKAgSEwoLbGFzdFVwZGF0ZWQYCiABKAkSDwoHcGF5ZXJJZBgLIAEoCSKTBAogR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzUmVzcG9uc2USCgoCaWQYASABKAkSIwobY3VycmVudE1vbnRobHlPbkRlbWFuZFNwZW5kGAIgASgBEh0KFWVzdGltYXRlZE1vbnRobHlTcGVuZBgDIAEoARImCh5lc3RpbWF0ZWRNb250aGx5U2F2aW5nc0Rlcml2ZWQYBCABKAESFgoOdG90YWxEYWlseUNvc3QYBSABKAESGwoTY3VycmVudFNQQ29tbWl0bWVudBgGIAEoARIdChVlc3RpbWF0ZWRPbkRlbWFuZENvc3QYByABKAESGAoQaG91cmx5Q29tbWl0bWVudBgIIAEoARIfChdlc3RpbWF0ZWRNb250aGx5U2F2aW5ncxgJIAEoARIYChBlc3RpbWF0ZWRTYXZpbmdzGAogASgBEhsKE3JlY29tbWVuZGF0aW9uTGV2ZWwYCyABKAkSEAoIcGxhblR5cGUYDCABKAkSEAoIcGxhblRlcm0YDSABKAkSFQoNcGF5bWVudE9wdGlvbhgOIAEoCRIWCg5sb29rQmFja1BlcmlvZBgPIAEoCRIUCgxlc3RpbWF0ZWRST0kYECABKAESFwoPZXN0aW1hdGVkU1BDb3N0GBEgASgBEhoKEmVzdGltYXRlZFRvdGFsQ29zdBgSIAEoARITCgtsYXN0VXBkYXRlZBgTIAEoCSKMAQooR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXNwb25zZRIRCglsYXVuY2hVcmwYASABKAkSEwoLdGVtcGxhdGVVcmwYAiABKAkSEQoJc3RhY2tOYW1lGAMgASgJEhEKCXByaW5jaXBhbBgEIAEoCRISCgpleHRlcm5hbElkGAUgASgJIuABCg9TZXR0aW5nc0hpc3RvcnkSCgoCaWQYASABKAkSFAoMYWNjb3VudFNjb3BlGAIgASgJEhUKDWN1c3RvbWl6YXRpb24YAyABKAkSEAoIcGxhblRlcm0YBCABKAkSFQoNcGF5bWVudE9wdGlvbhgFIAEoCRIWCg5sb29rQmFja1BlcmlvZBgGIAEoCRIWCg5pbnN0YW5jZUZhbWlseRgHIAEoCRIUCgxhbm51YWxCdWRnZXQYCCABKAESEAoIYXBwcm92YWwYCSABKAgSEwoLbGFzdFVwZGF0ZWQYCiABKAkiVwoaR2V0U2V0dGluZ3NIaXN0b3J5UmVzcG9uc2USOQoPc2V0dGluZ3NIaXN0b3J5GAEgAygLMiAuYmx1ZWFwaS5mbG93LnYxLlNldHRpbmdzSGlzdG9yeSLHAQogQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVzcG9uc2USDgoGdGFyZ2V0GAEgASgJEg8KB3JvbGVBcm4YAiABKAkSEgoKZXh0ZXJuYWxJZBgDIAEoCRIPCgdzdGFja0lkGAQgASgJEhMKC3N0YWNrUmVnaW9uGAUgASgJEhMKC3RlbXBsYXRlVXJsGAYgASgJEg4KBnN0YXR1cxgHIAEoCRITCgtsYXN0VXBkYXRlZBgIIAEoCRIOCgZhY2Nlc3MYCSABKAkiZgoMTW9udGhseUNvc3RzEhsKE21vbnRobHlPbkRlbWFuZENvc3QYASABKAESHAoUbW9udGhseUVmZmVjdGl2ZUNvc3QYAiABKAESGwoTbW9udGhseVRvdGFsU2F2aW5ncxgDIAEoASLRAgoJU3BEZXRhaWxzEhcKD3NhdmluZ3NQbGFuVHlwZRgBIAEoCRINCgVzdGF0ZRgCIAEoCRIRCglzdGFydFRpbWUYAyABKAkSDwoHZW5kVGltZRgEIAEoCRIXCg9yZXR1cm5hYmxlVW50aWwYBSABKAkSEgoKY29tbWl0bWVudBgGIAEoARIQCghjdXJyZW5jeRgHIAEoCRIQCghwbGFuVGVybRgIIAEoCRIVCg1wYXltZW50T3B0aW9uGAkgASgJEhQKDHByb2R1Y3RUeXBlcxgKIAMoCRIcChR1cGZyb250UGF5bWVudEFtb3VudBgLIAEoARIeChZyZWN1cnJpbmdQYXltZW50QW1vdW50GAwgASgBEhkKEWVjMkluc3RhbmNlRmFtaWx5GA0gAygJEgwKBHRhZ3MYDiABKAkSEwoLcHVyY2hhc2VkQnkYDyABKAki1AEKEFVzYWdlQ29zdERldGFpbHMSEwoLY3VycmVudERhdGUYASABKAkSEwoLcHJvZHVjdENvZGUYAiABKAkSFAoMb25kZW1hbmRDb3N0GAMgASgBEhQKDHJlc2VydmVkQ29zdBgEIAEoARIdChVzYXZpbmdzUGxhbkNvc3RCeUZsb3cYBSABKAESHQoVc2F2aW5nc1BsYW5Db3N0QnlVc2VyGAYgASgBEhAKCHNwb3RDb3N0GAcgASgBEhoKEmNvdmVyYWdlUGVyY2VudGFnZRgIIAEoASJVChJVdGlsaXphdGlvbkRldGFpbHMSEwoLY3VycmVudERhdGUYASABKAkSCwoDYXJuGAIgASgJEh0KFXV0aWxpemF0aW9uUGVyY2VudGFnZRgDIAEoASKVAgogR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVzcG9uc2USDwoHcGF5ZXJJZBgBIAEoCRIzCgxtb250aGx5Q29zdHMYAiABKAsyHS5ibHVlYXBpLmZsb3cudjEuTW9udGhseUNvc3RzEi0KCXNwRGV0YWlscxgDIAMoCzIaLmJsdWVhcGkuZmxvdy52MS5TcERldGFpbHMSOwoQdXNhZ2VDb3N0RGV0YWlscxgEIAMoCzIhLmJsdWVhcGkuZmxvdy52MS5Vc2FnZUNvc3REZXRhaWxzEj8KEnV0aWxpemF0aW9uRGV0YWlscxgFIAMoCzIjLmJsdWVhcGkuZmxvdy52MS5VdGlsaXphdGlvbkRldGFpbHMiMgoVR2V0QXdzQWNjb3VudHNSZXF1ZXN0EhkKEWJpbGxpbmdJbnRlcm5hbElkGAEgASgJIvcBChZHZXRBd3NBY2NvdW50c1Jlc3BvbnNlEg8KB2dyb3VwSWQYASABKAkSEQoJZ3JvdXBOYW1lGAIgASgJEhUKDXBheWVyQWNjb3VudHMYAyADKAkSYwoWbGlua2VkQWNjb3VudFRvUGF5ZXJJZBgEIAMoCzJDLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1Jlc3BvbnNlLkxpbmtlZEFjY291bnRUb1BheWVySWRFbnRyeRo9ChtMaW5rZWRBY2NvdW50VG9QYXllcklkRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKKAQomR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2USEQoJbGF1bmNoVXJsGAEgASgJEhMKC3RlbXBsYXRlVXJsGAIgASgJEhEKCXN0YWNrTmFtZRgDIAEoCRIRCglwcmluY2lwYWwYBCABKAkSEgoKZXh0ZXJuYWxJZBgFIAEoCSLFAQoeQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1Jlc3BvbnNlEg4KBnRhcmdldBgBIAEoCRIPCgdyb2xlQXJuGAIgASgJEhIKCmV4dGVybmFsSWQYAyABKAkSDwoHc3RhY2tJZBgEIAEoCRITCgtzdGFja1JlZ2lvbhgFIAEoCRITCgt0ZW1wbGF0ZVVybBgGIAEoCRIOCgZzdGF0dXMYByABKAkSEwoLbGFzdFVwZGF0ZWQYCCABKAkSDgoGYWNjZXNzGAkgASgJMv8OCgRGbG93El4KB0dldEluZm8SHy5ibHVlYXBpLmZsb3cudjEuR2V0SW5mb1JlcXVlc3QaIC5ibHVlYXBpLmZsb3cudjEuR2V0SW5mb1Jlc3BvbnNlIhCC0+STAgoSCC92MS9pbmZvEnoKDkNyZWF0ZVNldHRpbmdzEiYuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZVNldHRpbmdzUmVxdWVzdBonLmJsdWVhcGkuZmxvdy52MS5DcmVhdGVTZXR0aW5nc1Jlc3BvbnNlIheC0+STAhE6ASoiDC92MS9zZXR0aW5ncxJ/Cg5VcGRhdGVTZXR0aW5ncxImLmJsdWVhcGkuZmxvdy52MS5VcGRhdGVTZXR0aW5nc1JlcXVlc3QaJy5ibHVlYXBpLmZsb3cudjEuVXBkYXRlU2V0dGluZ3NSZXNwb25zZSIcgtPkkwIWOgEqGhEvdjEvc2V0dGluZ3Mve2lkfRJzCgtHZXRTZXR0aW5ncxIjLmJsdWVhcGkuZmxvdy52MS5HZXRTZXR0aW5nc1JlcXVlc3QaJC5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NSZXNwb25zZSIZgtPkkwITEhEvdjEvc2V0dGluZ3Mve2lkfRKqAQoYR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzEjAuYmx1ZWFwaS5mbG93LnYxLkdldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QaMS5ibHVlYXBpLmZsb3cudjEuR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzUmVzcG9uc2UiKYLT5JMCIxIhL3YxL3NldHRpbmdzL3JlY29tbWVuZGF0aW9ucy97aWR9ErIBCiBHZXRDb3N0RXhwbG9yZXJBY2Nlc3NUZW1wbGF0ZVVybBI4LmJsdWVhcGkuZmxvdy52MS5HZXRDb3N0RXhwbG9yZXJBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QaOS5ibHVlYXBpLmZsb3cudjEuR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXNwb25zZSIZgtPkkwITEhEvdjEvYXdzL3hhY2N0L2NlYRKQAQoSR2V0U2V0dGluZ3NIaXN0b3J5EiouYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QaKy5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NIaXN0b3J5UmVzcG9uc2UiIYLT5JMCGxIZL3YxL3NldHRpbmdzL2hpc3Rvcnkve2lkfRKdAQoYQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzEjAuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZUNvc3RFeHBsb3JlckFjY2Vzc1JlcXVlc3QaMS5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVzcG9uc2UiHILT5JMCFjoBKiIRL3YxL2F3cy94YWNjdC9jZWESmQEKGEdldERhaWx5VXNhZ2VDb3N0RGV0YWlscxIwLmJsdWVhcGkuZmxvdy52MS5HZXREYWlseVVzYWdlQ29zdERldGFpbHNSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkdldERhaWx5VXNhZ2VDb3N0RGV0YWlsc1Jlc3BvbnNlIhiC0+STAhI6ASoiDS92MS91c2FnZWNvc3QSkgEKDkdldEF3c0FjY291bnRzEiYuYmx1ZWFwaS5mbG93LnYxLkdldEF3c0FjY291bnRzUmVxdWVzdBonLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1Jlc3BvbnNlIi+C0+STAik6ASoiJC92MS9hd3Mve2JpbGxpbmdJbnRlcm5hbElkfS9hY2NvdW50cxKsAQoeR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsEjYuYmx1ZWFwaS5mbG93LnYxLkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QaNy5ibHVlYXBpLmZsb3cudjEuR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2UiGYLT5JMCExIRL3YxL2F3cy94YWNjdC9zcGESlwEKFkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3MSLi5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QaLy5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9hd3MveGFjY3Qvc3BhGpUBkkGRARJBKEFMUEhBKSBGbG93IEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2Zsb3caTAoSU2VydmljZSBkZWZpbml0aW9uEjZodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxvdy9CSAoWY2xvdWQuYWxwaGF1cy5hcGkuZmxvd0IJRmxvd1Byb3RvWiNnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvZmxvd2IGcHJvdG8z", [file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChJmbG93L3YxL2Zsb3cucHJvdG8SD2JsdWVhcGkuZmxvdy52MSIQCg5HZXRJbmZvUmVxdWVzdCLfAQoSU2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEg8KB3BheWVySWQYCiABKAkiIAoSR2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJIi0KH0dldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QSCgoCaWQYASABKAkiKQonR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0IicKGUdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QSCgoCaWQYASABKAkiMQofQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVxdWVzdBIOCgZ0YXJnZXQYASABKAkiVgofR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBIPCgdwYXllcklkGAEgASgJEhEKCXN0YXJ0RGF0ZRgCIAEoCRIPCgdlbmREYXRlGAMgASgJIicKJUdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QiLwodQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QSDgoGdGFyZ2V0GAEgASgJIjYKI0dldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXF1ZXN0Eg8KB3BheWVySWQYASABKAkiIwoPR2V0SW5mb1Jlc3BvbnNlEhAKCHJlc3BvbnNlGAEgASgJIicKE1NldFNldHRpbmdzUmVzcG9uc2USEAoIcmVzcG9uc2UYASABKAki9QEKE0dldFNldHRpbmdzUmVzcG9uc2USCgoCaWQYASABKAkSFAoMYWNjb3VudFNjb3BlGAIgASgJEhUKDWN1c3RvbWl6YXRpb24YAyABKAkSEAoIcGxhblRlcm0YBCABKAkSFQoNcGF5bWVudE9wdGlvbhgFIAEoCRIWCg5sb29rQmFja1BlcmlvZBgGIAEoCRIWCg5pbnN0YW5jZUZhbWlseRgHIAEoCRIUCgxhbm51YWxCdWRnZXQYCCABKAESEAoIYXBwcm92YWwYCSABKAgSEwoLbGFzdFVwZGF0ZWQYCiABKAkSDwoHcGF5ZXJJZBgLIAEoCSKTBAogR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzUmVzcG9uc2USCgoCaWQYASABKAkSIwobY3VycmVudE1vbnRobHlPbkRlbWFuZFNwZW5kGAIgASgBEh0KFWVzdGltYXRlZE1vbnRobHlTcGVuZBgDIAEoARImCh5lc3RpbWF0ZWRNb250aGx5U2F2aW5nc0Rlcml2ZWQYBCABKAESFgoOdG90YWxEYWlseUNvc3QYBSABKAESGwoTY3VycmVudFNQQ29tbWl0bWVudBgGIAEoARIdChVlc3RpbWF0ZWRPbkRlbWFuZENvc3QYByABKAESGAoQaG91cmx5Q29tbWl0bWVudBgIIAEoARIfChdlc3RpbWF0ZWRNb250aGx5U2F2aW5ncxgJIAEoARIYChBlc3RpbWF0ZWRTYXZpbmdzGAogASgBEhsKE3JlY29tbWVuZGF0aW9uTGV2ZWwYCyABKAkSEAoIcGxhblR5cGUYDCABKAkSEAoIcGxhblRlcm0YDSABKAkSFQoNcGF5bWVudE9wdGlvbhgOIAEoCRIWCg5sb29rQmFja1BlcmlvZBgPIAEoCRIUCgxlc3RpbWF0ZWRST0kYECABKAESFwoPZXN0aW1hdGVkU1BDb3N0GBEgASgBEhoKEmVzdGltYXRlZFRvdGFsQ29zdBgSIAEoARITCgtsYXN0VXBkYXRlZBgTIAEoCSKMAQooR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXNwb25zZRIRCglsYXVuY2hVcmwYASABKAkSEwoLdGVtcGxhdGVVcmwYAiABKAkSEQoJc3RhY2tOYW1lGAMgASgJEhEKCXByaW5jaXBhbBgEIAEoCRISCgpleHRlcm5hbElkGAUgASgJIuABCg9TZXR0aW5nc0hpc3RvcnkSCgoCaWQYASABKAkSFAoMYWNjb3VudFNjb3BlGAIgASgJEhUKDWN1c3RvbWl6YXRpb24YAyABKAkSEAoIcGxhblRlcm0YBCABKAkSFQoNcGF5bWVudE9wdGlvbhgFIAEoCRIWCg5sb29rQmFja1BlcmlvZBgGIAEoCRIWCg5pbnN0YW5jZUZhbWlseRgHIAEoCRIUCgxhbm51YWxCdWRnZXQYCCABKAESEAoIYXBwcm92YWwYCSABKAgSEwoLbGFzdFVwZGF0ZWQYCiABKAkiVwoaR2V0U2V0dGluZ3NIaXN0b3J5UmVzcG9uc2USOQoPc2V0dGluZ3NIaXN0b3J5GAEgAygLMiAuYmx1ZWFwaS5mbG93LnYxLlNldHRpbmdzSGlzdG9yeSLHAQogQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVzcG9uc2USDgoGdGFyZ2V0GAEgASgJEg8KB3JvbGVBcm4YAiABKAkSEgoKZXh0ZXJuYWxJZBgDIAEoCRIPCgdzdGFja0lkGAQgASgJEhMKC3N0YWNrUmVnaW9uGAUgASgJEhMKC3RlbXBsYXRlVXJsGAYgASgJEg4KBnN0YXR1cxgHIAEoCRITCgtsYXN0VXBkYXRlZBgIIAEoCRIOCgZhY2Nlc3MYCSABKAkiZgoMTW9udGhseUNvc3RzEhsKE21vbnRobHlPbkRlbWFuZENvc3QYASABKAESHAoUbW9udGhseUVmZmVjdGl2ZUNvc3QYAiABKAESGwoTbW9udGhseVRvdGFsU2F2aW5ncxgDIAEoASLRAgoJU3BEZXRhaWxzEhcKD3NhdmluZ3NQbGFuVHlwZRgBIAEoCRINCgVzdGF0ZRgCIAEoCRIRCglzdGFydFRpbWUYAyABKAkSDwoHZW5kVGltZRgEIAEoCRIXCg9yZXR1cm5hYmxlVW50aWwYBSABKAkSEgoKY29tbWl0bWVudBgGIAEoARIQCghjdXJyZW5jeRgHIAEoCRIQCghwbGFuVGVybRgIIAEoCRIVCg1wYXltZW50T3B0aW9uGAkgASgJEhQKDHByb2R1Y3RUeXBlcxgKIAMoCRIcChR1cGZyb250UGF5bWVudEFtb3VudBgLIAEoARIeChZyZWN1cnJpbmdQYXltZW50QW1vdW50GAwgASgBEhkKEWVjMkluc3RhbmNlRmFtaWx5GA0gAygJEgwKBHRhZ3MYDiABKAkSEwoLcHVyY2hhc2VkQnkYDyABKAki1AEKEFVzYWdlQ29zdERldGFpbHMSEwoLY3VycmVudERhdGUYASABKAkSEwoLcHJvZHVjdENvZGUYAiABKAkSFAoMb25kZW1hbmRDb3N0GAMgASgBEhQKDHJlc2VydmVkQ29zdBgEIAEoARIdChVzYXZpbmdzUGxhbkNvc3RCeUZsb3cYBSABKAESHQoVc2F2aW5nc1BsYW5Db3N0QnlVc2VyGAYgASgBEhAKCHNwb3RDb3N0GAcgASgBEhoKEmNvdmVyYWdlUGVyY2VudGFnZRgIIAEoASJGChBEYWlseVV0aWxpemF0aW9uEhMKC2N1cnJlbnREYXRlGAEgASgJEh0KFXV0aWxpemF0aW9uUGVyY2VudGFnZRgCIAEoASKDAQoSVXRpbGl6YXRpb25EZXRhaWxzEhcKD3NhdmluZ3NQbGFuTmFtZRgBIAEoCRIWCg5zYXZpbmdzUGxhbkFybhgCIAEoCRI8ChFwZXJEYXlVdGlsaXphdGlvbhgDIAMoCzIhLmJsdWVhcGkuZmxvdy52MS5EYWlseVV0aWxpemF0aW9uIpUCCiBHZXREYWlseVVzYWdlQ29zdERldGFpbHNSZXNwb25zZRIPCgdwYXllcklkGAEgASgJEjMKDG1vbnRobHlDb3N0cxgCIAEoCzIdLmJsdWVhcGkuZmxvdy52MS5Nb250aGx5Q29zdHMSLQoJc3BEZXRhaWxzGAMgAygLMhouYmx1ZWFwaS5mbG93LnYxLlNwRGV0YWlscxI7ChB1c2FnZUNvc3REZXRhaWxzGAQgAygLMiEuYmx1ZWFwaS5mbG93LnYxLlVzYWdlQ29zdERldGFpbHMSPwoSdXRpbGl6YXRpb25EZXRhaWxzGAUgAygLMiMuYmx1ZWFwaS5mbG93LnYxLlV0aWxpemF0aW9uRGV0YWlscyIyChVHZXRBd3NBY2NvdW50c1JlcXVlc3QSGQoRYmlsbGluZ0ludGVybmFsSWQYASABKAki9wEKFkdldEF3c0FjY291bnRzUmVzcG9uc2USDwoHZ3JvdXBJZBgBIAEoCRIRCglncm91cE5hbWUYAiABKAkSFQoNcGF5ZXJBY2NvdW50cxgDIAMoCRJjChZsaW5rZWRBY2NvdW50VG9QYXllcklkGAQgAygLMkMuYmx1ZWFwaS5mbG93LnYxLkdldEF3c0FjY291bnRzUmVzcG9uc2UuTGlua2VkQWNjb3VudFRvUGF5ZXJJZEVudHJ5Gj0KG0xpbmtlZEFjY291bnRUb1BheWVySWRFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIooBCiZHZXRTUFB1cmNoYXNlQWNjZXNzVGVtcGxhdGVVcmxSZXNwb25zZRIRCglsYXVuY2hVcmwYASABKAkSEwoLdGVtcGxhdGVVcmwYAiABKAkSEQoJc3RhY2tOYW1lGAMgASgJEhEKCXByaW5jaXBhbBgEIAEoCRISCgpleHRlcm5hbElkGAUgASgJIsUBCh5DcmVhdGVTUFB1cmNoYXNlQWNjZXNzUmVzcG9uc2USDgoGdGFyZ2V0GAEgASgJEg8KB3JvbGVBcm4YAiABKAkSEgoKZXh0ZXJuYWxJZBgDIAEoCRIPCgdzdGFja0lkGAQgASgJEhMKC3N0YWNrUmVnaW9uGAUgASgJEhMKC3RlbXBsYXRlVXJsGAYgASgJEg4KBnN0YXR1cxgHIAEoCRITCgtsYXN0VXBkYXRlZBgIIAEoCRIOCgZhY2Nlc3MYCSABKAkicgokR2V0Q3Jvc3NBY2NvdW50QWNjZXNzRGV0YWlsc1Jlc3BvbnNlEg4KBnRhcmdldBgBIAEoCRI6CgdkZXRhaWxzGAIgAygLMikuYmx1ZWFwaS5mbG93LnYxLkNyb3NzQWNjb3VudEFjY2Vzc0RldGFpbCKaAQoYQ3Jvc3NBY2NvdW50QWNjZXNzRGV0YWlsEg8KB3JvbGVBcm4YASABKAkSEgoKZXh0ZXJuYWxJZBgCIAEoCRIPCgdzdGFja0lkGAMgASgJEhMKC3N0YWNrUmVnaW9uGAQgASgJEhMKC3RlbXBsYXRlVXJsGAUgASgJEg4KBnN0YXR1cxgGIAEoCRIOCgZhY2Nlc3MYByABKAkysA8KBEZsb3cSXgoHR2V0SW5mbxIfLmJsdWVhcGkuZmxvdy52MS5HZXRJbmZvUmVxdWVzdBogLmJsdWVhcGkuZmxvdy52MS5HZXRJbmZvUmVzcG9uc2UiEILT5JMCChIIL3YxL2luZm8SdgoLU2V0U2V0dGluZ3MSIy5ibHVlYXBpLmZsb3cudjEuU2V0U2V0dGluZ3NSZXF1ZXN0GiQuYmx1ZWFwaS5mbG93LnYxLlNldFNldHRpbmdzUmVzcG9uc2UiHILT5JMCFjoBKhoRL3YxL3NldHRpbmdzL3tpZH0ScwoLR2V0U2V0dGluZ3MSIy5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NSZXF1ZXN0GiQuYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzUmVzcG9uc2UiGYLT5JMCExIRL3YxL3NldHRpbmdzL3tpZH0SqgEKGEdldFJlY29tbWVuZGF0aW9uRGV0YWlscxIwLmJsdWVhcGkuZmxvdy52MS5HZXRSZWNvbW1lbmRhdGlvbkRldGFpbHNSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkdldFJlY29tbWVuZGF0aW9uRGV0YWlsc1Jlc3BvbnNlIimC0+STAiMSIS92MS9zZXR0aW5ncy9yZWNvbW1lbmRhdGlvbnMve2lkfRKyAQogR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmwSOC5ibHVlYXBpLmZsb3cudjEuR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0GjkuYmx1ZWFwaS5mbG93LnYxLkdldENvc3RFeHBsb3JlckFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2UiGYLT5JMCExIRL3YxL2F3cy94YWNjdC9jZWESkAEKEkdldFNldHRpbmdzSGlzdG9yeRIqLmJsdWVhcGkuZmxvdy52MS5HZXRTZXR0aW5nc0hpc3RvcnlSZXF1ZXN0GisuYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzSGlzdG9yeVJlc3BvbnNlIiGC0+STAhsSGS92MS9zZXR0aW5ncy9oaXN0b3J5L3tpZH0SnQEKGENyZWF0ZUNvc3RFeHBsb3JlckFjY2VzcxIwLmJsdWVhcGkuZmxvdy52MS5DcmVhdGVDb3N0RXhwbG9yZXJBY2Nlc3NSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZUNvc3RFeHBsb3JlckFjY2Vzc1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9hd3MveGFjY3QvY2VhEpkBChhHZXREYWlseVVzYWdlQ29zdERldGFpbHMSMC5ibHVlYXBpLmZsb3cudjEuR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBoxLmJsdWVhcGkuZmxvdy52MS5HZXREYWlseVVzYWdlQ29zdERldGFpbHNSZXNwb25zZSIYgtPkkwISOgEqIg0vdjEvdXNhZ2Vjb3N0EpIBCg5HZXRBd3NBY2NvdW50cxImLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1JlcXVlc3QaJy5ibHVlYXBpLmZsb3cudjEuR2V0QXdzQWNjb3VudHNSZXNwb25zZSIvgtPkkwIpOgEqIiQvdjEvYXdzL3tiaWxsaW5nSW50ZXJuYWxJZH0vYWNjb3VudHMSrAEKHkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybBI2LmJsdWVhcGkuZmxvdy52MS5HZXRTUFB1cmNoYXNlQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0GjcuYmx1ZWFwaS5mbG93LnYxLkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlc3BvbnNlIhmC0+STAhMSES92MS9hd3MveGFjY3Qvc3BhEpcBChZDcmVhdGVTUFB1cmNoYXNlQWNjZXNzEi4uYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3NSZXF1ZXN0Gi8uYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3NSZXNwb25zZSIcgtPkkwIWOgEqIhEvdjEvYXdzL3hhY2N0L3NwYRKzAQocR2V0Q3Jvc3NBY2NvdW50QWNjZXNzRGV0YWlscxI0LmJsdWVhcGkuZmxvdy52MS5HZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzUmVxdWVzdBo1LmJsdWVhcGkuZmxvdy52MS5HZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzUmVzcG9uc2UiJoLT5JMCIBIeL3YxL2F3cy94YWNjdC97cGF5ZXJJZH0vYWNjZXNzGpUBkkGRARJBKEFMUEhBKSBGbG93IEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2Zsb3caTAoSU2VydmljZSBkZWZpbml0aW9uEjZodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxvdy9CSAoWY2xvdWQuYWxwaGF1cy5hcGkuZmxvd0IJRmxvd1Byb3RvWiNnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvZmxvd2IGcHJvdG8z", [file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * Request message for the Flow.GetInfo rpc.
@@ -32,9 +32,9 @@ export const GetInfoRequestSchema: GenMessage<GetInfoRequest> = /*@__PURE__*/
 /**
  * Request message for the Flow.CreateSettings rpc.
  *
- * @generated from message blueapi.flow.v1.CreateSettingsRequest
+ * @generated from message blueapi.flow.v1.SetSettingsRequest
  */
-export type CreateSettingsRequest = Message<"blueapi.flow.v1.CreateSettingsRequest"> & {
+export type SetSettingsRequest = Message<"blueapi.flow.v1.SetSettingsRequest"> & {
   /**
    * Required. The id of the payer.
    *
@@ -107,95 +107,11 @@ export type CreateSettingsRequest = Message<"blueapi.flow.v1.CreateSettingsReque
 };
 
 /**
- * Describes the message blueapi.flow.v1.CreateSettingsRequest.
- * Use `create(CreateSettingsRequestSchema)` to create a new message.
+ * Describes the message blueapi.flow.v1.SetSettingsRequest.
+ * Use `create(SetSettingsRequestSchema)` to create a new message.
  */
-export const CreateSettingsRequestSchema: GenMessage<CreateSettingsRequest> = /*@__PURE__*/
+export const SetSettingsRequestSchema: GenMessage<SetSettingsRequest> = /*@__PURE__*/
   messageDesc(file_flow_v1_flow, 1);
-
-/**
- * Request message for the Flow.UpdateSettings rpc.
- *
- * @generated from message blueapi.flow.v1.UpdateSettingsRequest
- */
-export type UpdateSettingsRequest = Message<"blueapi.flow.v1.UpdateSettingsRequest"> & {
-  /**
-   * Required. The id of the payer to update.
-   *
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * Optional. Update account scope (payer or linked).
-   *
-   * @generated from field: optional string accountScope = 2;
-   */
-  accountScope?: string;
-
-  /**
-   * Optional. Update customization setting.
-   *
-   * @generated from field: optional string customization = 3;
-   */
-  customization?: string;
-
-  /**
-   * Optional. Update term of the SP.
-   *
-   * @generated from field: optional string planTerm = 4;
-   */
-  planTerm?: string;
-
-  /**
-   * Optional. Update payment option.
-   *
-   * @generated from field: optional string paymentOption = 5;
-   */
-  paymentOption?: string;
-
-  /**
-   * Optional. Update lookback period.
-   *
-   * @generated from field: optional string lookBackPeriod = 6;
-   */
-  lookBackPeriod?: string;
-
-  /**
-   * Optional. Update list of instance families.
-   *
-   * @generated from field: optional string instanceFamily = 7;
-   */
-  instanceFamily?: string;
-
-  /**
-   * Optional. Update annual budget.
-   *
-   * @generated from field: optional double annualBudget = 8;
-   */
-  annualBudget?: number;
-
-  /**
-   * Optional. Update purchase approval.
-   *
-   * @generated from field: optional bool approval = 9;
-   */
-  approval?: boolean;
-
-  /**
-   * Optional. Update used payerId.
-   *
-   * @generated from field: optional string payerId = 10;
-   */
-  payerId?: string;
-};
-
-/**
- * Describes the message blueapi.flow.v1.UpdateSettingsRequest.
- * Use `create(UpdateSettingsRequestSchema)` to create a new message.
- */
-export const UpdateSettingsRequestSchema: GenMessage<UpdateSettingsRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 2);
 
 /**
  * Request message for fetching previous settings configuration of a user.
@@ -216,7 +132,7 @@ export type GetSettingsRequest = Message<"blueapi.flow.v1.GetSettingsRequest"> &
  * Use `create(GetSettingsRequestSchema)` to create a new message.
  */
 export const GetSettingsRequestSchema: GenMessage<GetSettingsRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 3);
+  messageDesc(file_flow_v1_flow, 2);
 
 /**
  * @generated from message blueapi.flow.v1.GetRecommendationDetailsRequest
@@ -235,7 +151,7 @@ export type GetRecommendationDetailsRequest = Message<"blueapi.flow.v1.GetRecomm
  * Use `create(GetRecommendationDetailsRequestSchema)` to create a new message.
  */
 export const GetRecommendationDetailsRequestSchema: GenMessage<GetRecommendationDetailsRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 4);
+  messageDesc(file_flow_v1_flow, 3);
 
 /**
  * Request message for the Flow.GetCostExplorerAccessTemplateUrl rpc.
@@ -251,7 +167,7 @@ export type GetCostExplorerAccessTemplateUrlRequest = Message<"blueapi.flow.v1.G
  * Use `create(GetCostExplorerAccessTemplateUrlRequestSchema)` to create a new message.
  */
 export const GetCostExplorerAccessTemplateUrlRequestSchema: GenMessage<GetCostExplorerAccessTemplateUrlRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 5);
+  messageDesc(file_flow_v1_flow, 4);
 
 /**
  * Request message for the Flow.GetSettingsHistory rpc.
@@ -272,7 +188,7 @@ export type GetSettingsHistoryRequest = Message<"blueapi.flow.v1.GetSettingsHist
  * Use `create(GetSettingsHistoryRequestSchema)` to create a new message.
  */
 export const GetSettingsHistoryRequestSchema: GenMessage<GetSettingsHistoryRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 6);
+  messageDesc(file_flow_v1_flow, 5);
 
 /**
  * Request message for the Flow.CreateCostExplorerAccess rpc.
@@ -294,7 +210,7 @@ export type CreateCostExplorerAccessRequest = Message<"blueapi.flow.v1.CreateCos
  * Use `create(CreateCostExplorerAccessRequestSchema)` to create a new message.
  */
 export const CreateCostExplorerAccessRequestSchema: GenMessage<CreateCostExplorerAccessRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 7);
+  messageDesc(file_flow_v1_flow, 6);
 
 /**
  * Request message for the Flow.GetDailyUsageCostDetailsRequest rpc.
@@ -329,7 +245,7 @@ export type GetDailyUsageCostDetailsRequest = Message<"blueapi.flow.v1.GetDailyU
  * Use `create(GetDailyUsageCostDetailsRequestSchema)` to create a new message.
  */
 export const GetDailyUsageCostDetailsRequestSchema: GenMessage<GetDailyUsageCostDetailsRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 8);
+  messageDesc(file_flow_v1_flow, 7);
 
 /**
  * Request message for the Flow.GetSPPurchaseAccessTemplateUrl rpc.
@@ -344,7 +260,7 @@ export type GetSPPurchaseAccessTemplateUrlRequest = Message<"blueapi.flow.v1.Get
  * Use `create(GetSPPurchaseAccessTemplateUrlRequestSchema)` to create a new message.
  */
 export const GetSPPurchaseAccessTemplateUrlRequestSchema: GenMessage<GetSPPurchaseAccessTemplateUrlRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 9);
+  messageDesc(file_flow_v1_flow, 8);
 
 /**
  * Request message for the Flow.CreateSPPurchaseAccess rpc.
@@ -365,6 +281,27 @@ export type CreateSPPurchaseAccessRequest = Message<"blueapi.flow.v1.CreateSPPur
  * Use `create(CreateSPPurchaseAccessRequestSchema)` to create a new message.
  */
 export const CreateSPPurchaseAccessRequestSchema: GenMessage<CreateSPPurchaseAccessRequest> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 9);
+
+/**
+ * Request message for the Flow.GetCrossAccountAccessDetails rpc.
+ *
+ * @generated from message blueapi.flow.v1.GetCrossAccountAccessDetailsRequest
+ */
+export type GetCrossAccountAccessDetailsRequest = Message<"blueapi.flow.v1.GetCrossAccountAccessDetailsRequest"> & {
+  /**
+   * Required. The target payerId of the AWS account to be checked.
+   *
+   * @generated from field: string payerId = 1;
+   */
+  payerId: string;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.GetCrossAccountAccessDetailsRequest.
+ * Use `create(GetCrossAccountAccessDetailsRequestSchema)` to create a new message.
+ */
+export const GetCrossAccountAccessDetailsRequestSchema: GenMessage<GetCrossAccountAccessDetailsRequest> = /*@__PURE__*/
   messageDesc(file_flow_v1_flow, 10);
 
 /**
@@ -389,9 +326,9 @@ export const GetInfoResponseSchema: GenMessage<GetInfoResponse> = /*@__PURE__*/
 /**
  * Response message for the Flow.CreateSettings rpc.
  *
- * @generated from message blueapi.flow.v1.CreateSettingsResponse
+ * @generated from message blueapi.flow.v1.SetSettingsResponse
  */
-export type CreateSettingsResponse = Message<"blueapi.flow.v1.CreateSettingsResponse"> & {
+export type SetSettingsResponse = Message<"blueapi.flow.v1.SetSettingsResponse"> & {
   /**
    * @generated from field: string response = 1;
    */
@@ -399,28 +336,11 @@ export type CreateSettingsResponse = Message<"blueapi.flow.v1.CreateSettingsResp
 };
 
 /**
- * Describes the message blueapi.flow.v1.CreateSettingsResponse.
- * Use `create(CreateSettingsResponseSchema)` to create a new message.
+ * Describes the message blueapi.flow.v1.SetSettingsResponse.
+ * Use `create(SetSettingsResponseSchema)` to create a new message.
  */
-export const CreateSettingsResponseSchema: GenMessage<CreateSettingsResponse> = /*@__PURE__*/
+export const SetSettingsResponseSchema: GenMessage<SetSettingsResponse> = /*@__PURE__*/
   messageDesc(file_flow_v1_flow, 12);
-
-/**
- * @generated from message blueapi.flow.v1.UpdateSettingsResponse
- */
-export type UpdateSettingsResponse = Message<"blueapi.flow.v1.UpdateSettingsResponse"> & {
-  /**
-   * @generated from field: string response = 1;
-   */
-  response: string;
-};
-
-/**
- * Describes the message blueapi.flow.v1.UpdateSettingsResponse.
- * Use `create(UpdateSettingsResponseSchema)` to create a new message.
- */
-export const UpdateSettingsResponseSchema: GenMessage<UpdateSettingsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 13);
 
 /**
  * Response message for fetching previous settings configuration of a user.
@@ -489,7 +409,7 @@ export type GetSettingsResponse = Message<"blueapi.flow.v1.GetSettingsResponse">
  * Use `create(GetSettingsResponseSchema)` to create a new message.
  */
 export const GetSettingsResponseSchema: GenMessage<GetSettingsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 14);
+  messageDesc(file_flow_v1_flow, 13);
 
 /**
  * @generated from message blueapi.flow.v1.GetRecommendationDetailsResponse
@@ -634,7 +554,7 @@ export type GetRecommendationDetailsResponse = Message<"blueapi.flow.v1.GetRecom
  * Use `create(GetRecommendationDetailsResponseSchema)` to create a new message.
  */
 export const GetRecommendationDetailsResponseSchema: GenMessage<GetRecommendationDetailsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 15);
+  messageDesc(file_flow_v1_flow, 14);
 
 /**
  * Response message for the Flow.GetCostExplorerAccessTemplateUrl rpc.
@@ -683,7 +603,7 @@ export type GetCostExplorerAccessTemplateUrlResponse = Message<"blueapi.flow.v1.
  * Use `create(GetCostExplorerAccessTemplateUrlResponseSchema)` to create a new message.
  */
 export const GetCostExplorerAccessTemplateUrlResponseSchema: GenMessage<GetCostExplorerAccessTemplateUrlResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 16);
+  messageDesc(file_flow_v1_flow, 15);
 
 /**
  * Settings history message.
@@ -767,7 +687,7 @@ export type SettingsHistory = Message<"blueapi.flow.v1.SettingsHistory"> & {
  * Use `create(SettingsHistorySchema)` to create a new message.
  */
 export const SettingsHistorySchema: GenMessage<SettingsHistory> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 17);
+  messageDesc(file_flow_v1_flow, 16);
 
 /**
  * Response message for the Flow.GetSettingsHistory rpc.
@@ -786,7 +706,7 @@ export type GetSettingsHistoryResponse = Message<"blueapi.flow.v1.GetSettingsHis
  * Use `create(GetSettingsHistoryResponseSchema)` to create a new message.
  */
 export const GetSettingsHistoryResponseSchema: GenMessage<GetSettingsHistoryResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 18);
+  messageDesc(file_flow_v1_flow, 17);
 
 /**
  * Response message for the Flow.CreateCostExplorerAccess rpc.
@@ -863,7 +783,7 @@ export type CreateCostExplorerAccessResponse = Message<"blueapi.flow.v1.CreateCo
  * Use `create(CreateCostExplorerAccessResponseSchema)` to create a new message.
  */
 export const CreateCostExplorerAccessResponseSchema: GenMessage<CreateCostExplorerAccessResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 19);
+  messageDesc(file_flow_v1_flow, 18);
 
 /**
  * Summary of monthly cost values associated with a single Savings Plan.
@@ -898,7 +818,7 @@ export type MonthlyCosts = Message<"blueapi.flow.v1.MonthlyCosts"> & {
  * Use `create(MonthlyCostsSchema)` to create a new message.
  */
 export const MonthlyCostsSchema: GenMessage<MonthlyCosts> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 20);
+  messageDesc(file_flow_v1_flow, 19);
 
 /**
  * Savings Plan Details to be used in the GetDailyUsageCostDetailsResponse.
@@ -1017,7 +937,7 @@ export type SpDetails = Message<"blueapi.flow.v1.SpDetails"> & {
  * Use `create(SpDetailsSchema)` to create a new message.
  */
 export const SpDetailsSchema: GenMessage<SpDetails> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 21);
+  messageDesc(file_flow_v1_flow, 20);
 
 /**
  * Usage and Cost Details to be used in the GetDailyUsageCostDetailsResponse.
@@ -1087,6 +1007,34 @@ export type UsageCostDetails = Message<"blueapi.flow.v1.UsageCostDetails"> & {
  * Use `create(UsageCostDetailsSchema)` to create a new message.
  */
 export const UsageCostDetailsSchema: GenMessage<UsageCostDetails> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 21);
+
+/**
+ * Daily utilization data for a specific date range.
+ *
+ * @generated from message blueapi.flow.v1.DailyUtilization
+ */
+export type DailyUtilization = Message<"blueapi.flow.v1.DailyUtilization"> & {
+  /**
+   * The current date for which the utilization is reported.
+   *
+   * @generated from field: string currentDate = 1;
+   */
+  currentDate: string;
+
+  /**
+   * The percentage of utilization for this specific date
+   *
+   * @generated from field: double utilizationPercentage = 2;
+   */
+  utilizationPercentage: number;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.DailyUtilization.
+ * Use `create(DailyUtilizationSchema)` to create a new message.
+ */
+export const DailyUtilizationSchema: GenMessage<DailyUtilization> = /*@__PURE__*/
   messageDesc(file_flow_v1_flow, 22);
 
 /**
@@ -1096,25 +1044,25 @@ export const UsageCostDetailsSchema: GenMessage<UsageCostDetails> = /*@__PURE__*
  */
 export type UtilizationDetails = Message<"blueapi.flow.v1.UtilizationDetails"> & {
   /**
-   * The current date for which the utilization details are reported.
+   * Descriptive name of the Savings Plan
    *
-   * @generated from field: string currentDate = 1;
+   * @generated from field: string savingsPlanName = 1;
    */
-  currentDate: string;
+  savingsPlanName: string;
 
   /**
-   * The ARN of each of the Savings Plan for which utilization is reported.
+   * The ARN of the Savings Plan
    *
-   * @generated from field: string arn = 2;
+   * @generated from field: string savingsPlanArn = 2;
    */
-  arn: string;
+  savingsPlanArn: string;
 
   /**
-   * The percentage of utilization for each of the Savings Plan
+   * Array of daily utilization data for this Savings Plan
    *
-   * @generated from field: double utilizationPercentage = 3;
+   * @generated from field: repeated blueapi.flow.v1.DailyUtilization perDayUtilization = 3;
    */
-  utilizationPercentage: number;
+  perDayUtilization: DailyUtilization[];
 };
 
 /**
@@ -1357,6 +1305,97 @@ export const CreateSPPurchaseAccessResponseSchema: GenMessage<CreateSPPurchaseAc
   messageDesc(file_flow_v1_flow, 28);
 
 /**
+ * Response message for the Flow.GetCrossAccountAccessDetails rpc.
+ *
+ * @generated from message blueapi.flow.v1.GetCrossAccountAccessDetailsResponse
+ */
+export type GetCrossAccountAccessDetailsResponse = Message<"blueapi.flow.v1.GetCrossAccountAccessDetailsResponse"> & {
+  /**
+   * The queried target account.
+   *
+   * @generated from field: string target = 1;
+   */
+  target: string;
+
+  /**
+   * List of cross-access details for the target account.
+   *
+   * @generated from field: repeated blueapi.flow.v1.CrossAccountAccessDetail details = 2;
+   */
+  details: CrossAccountAccessDetail[];
+};
+
+/**
+ * Describes the message blueapi.flow.v1.GetCrossAccountAccessDetailsResponse.
+ * Use `create(GetCrossAccountAccessDetailsResponseSchema)` to create a new message.
+ */
+export const GetCrossAccountAccessDetailsResponseSchema: GenMessage<GetCrossAccountAccessDetailsResponse> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 29);
+
+/**
+ * Individual cross-access detail record.
+ *
+ * @generated from message blueapi.flow.v1.CrossAccountAccessDetail
+ */
+export type CrossAccountAccessDetail = Message<"blueapi.flow.v1.CrossAccountAccessDetail"> & {
+  /**
+   * The role ARN that provides the cross-account access permissions.
+   *
+   * @generated from field: string roleArn = 1;
+   */
+  roleArn: string;
+
+  /**
+   * The external id for this role.
+   *
+   * @generated from field: string externalId = 2;
+   */
+  externalId: string;
+
+  /**
+   * The id of the CloudFormation stack deployed in the target account.
+   *
+   * @generated from field: string stackId = 3;
+   */
+  stackId: string;
+
+  /**
+   * The region where the stack is deployed.
+   *
+   * @generated from field: string stackRegion = 4;
+   */
+  stackRegion: string;
+
+  /**
+   * The latest template used to deploy the stack.
+   *
+   * @generated from field: string templateUrl = 5;
+   */
+  templateUrl: string;
+
+  /**
+   * This can be `latest`, `outdated`, or some error information.
+   *
+   * @generated from field: string status = 6;
+   */
+  status: string;
+
+  /**
+   * The access type:  "savings_plan_access" or "cost_explorer_access"
+   *
+   * @generated from field: string access = 7;
+   */
+  access: string;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.CrossAccountAccessDetail.
+ * Use `create(CrossAccountAccessDetailSchema)` to create a new message.
+ */
+export const CrossAccountAccessDetailSchema: GenMessage<CrossAccountAccessDetail> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 30);
+
+/**
  * Flow service definition.
  *
  * @generated from service blueapi.flow.v1.Flow
@@ -1373,24 +1412,14 @@ export const Flow: GenService<{
     output: typeof GetInfoResponseSchema;
   },
   /**
-   * Creates a new settings configuration for the user.
+   * Creates or Updates the settings configuration for recommendation.
    *
-   * @generated from rpc blueapi.flow.v1.Flow.CreateSettings
+   * @generated from rpc blueapi.flow.v1.Flow.SetSettings
    */
-  createSettings: {
+  setSettings: {
     methodKind: "unary";
-    input: typeof CreateSettingsRequestSchema;
-    output: typeof CreateSettingsResponseSchema;
-  },
-  /**
-   * Update the settings configuration for a user.
-   *
-   * @generated from rpc blueapi.flow.v1.Flow.UpdateSettings
-   */
-  updateSettings: {
-    methodKind: "unary";
-    input: typeof UpdateSettingsRequestSchema;
-    output: typeof UpdateSettingsResponseSchema;
+    input: typeof SetSettingsRequestSchema;
+    output: typeof SetSettingsResponseSchema;
   },
   /**
    * Fetch previous settings for a user
@@ -1481,6 +1510,16 @@ export const Flow: GenService<{
     methodKind: "unary";
     input: typeof CreateSPPurchaseAccessRequestSchema;
     output: typeof CreateSPPurchaseAccessResponseSchema;
+  },
+  /**
+   * Returns the activated cross-account access roles of the target payerId.
+   *
+   * @generated from rpc blueapi.flow.v1.Flow.GetCrossAccountAccessDetails
+   */
+  getCrossAccountAccessDetails: {
+    methodKind: "unary";
+    input: typeof GetCrossAccountAccessDetailsRequestSchema;
+    output: typeof GetCrossAccountAccessDetailsResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_flow_v1_flow, 0);

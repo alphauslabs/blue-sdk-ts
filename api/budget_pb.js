@@ -3,13 +3,13 @@
 // @generated from file api/budget.proto (package blueapi.api, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BudgetAlertNotificationDetailSchema = exports.BudgetAlertNotificationSchema = exports.CustomPeriodBudgetAlertSchema = exports.MonthlyBudgetAlertSchema = exports.DailyRateIncreaseBudgetAlertSchema = exports.DailyBudgetAlertSchema = exports.MonthlyBudgetSchema = exports.BudgetSchema = exports.file_api_budget = void 0;
+exports.BudgetAlertNotificationDetailSchema = exports.BudgetAlertNotificationSchema = exports.CustomMonthBudgetAlertSchema = exports.CustomPeriodBudgetAlertSchema = exports.MonthlyBudgetAlertSchema = exports.DailyRateIncreaseBudgetAlertSchema = exports.DailyBudgetAlertSchema = exports.MonthlyBudgetSchema = exports.BudgetSchema = exports.file_api_budget = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const notification_pb_1 = require("./notification_pb");
 /**
  * Describes the file api/budget.proto.
  */
-exports.file_api_budget = (0, codegenv2_1.fileDesc)("ChBhcGkvYnVkZ2V0LnByb3RvEgtibHVlYXBpLmFwaSJbCgZCdWRnZXQSCgoCaWQYASABKAkSEgoKZmlzY2FsWWVhchgCIAEoCRIxCg1tb250aGx5QnVkZ2V0GAMgAygLMhouYmx1ZWFwaS5hcGkuTW9udGhseUJ1ZGdldCIyCg1Nb250aGx5QnVkZ2V0EhEKCXllYXJNb250aBgBIAEoCRIOCgZhbW91bnQYAiABKAEiMgoQRGFpbHlCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIIj4KHERhaWx5UmF0ZUluY3JlYXNlQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCI0ChJNb250aGx5QnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCJdChdDdXN0b21QZXJpb2RCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIEhEKCXN0YXJ0RGF0ZRgDIAEoCRIPCgdlbmREYXRlGAQgASgJIjwKF0J1ZGdldEFsZXJ0Tm90aWZpY2F0aW9uEhAKCGNoYW5uZWxzGAIgAygJEg8KB2VuYWJsZWQYAyABKAgiZAodQnVkZ2V0QWxlcnROb3RpZmljYXRpb25EZXRhaWwSMgoIY2hhbm5lbHMYAiADKAsyIC5ibHVlYXBpLmFwaS5Ob3RpZmljYXRpb25DaGFubmVsEg8KB2VuYWJsZWQYAyABKAhCUwoZY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaUIOQXBpQnVkZ2V0UHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpYgZwcm90bzM", [notification_pb_1.file_api_notification]);
+exports.file_api_budget = (0, codegenv2_1.fileDesc)("ChBhcGkvYnVkZ2V0LnByb3RvEgtibHVlYXBpLmFwaSJbCgZCdWRnZXQSCgoCaWQYASABKAkSEgoKZmlzY2FsWWVhchgCIAEoCRIxCg1tb250aGx5QnVkZ2V0GAMgAygLMhouYmx1ZWFwaS5hcGkuTW9udGhseUJ1ZGdldCIyCg1Nb250aGx5QnVkZ2V0EhEKCXllYXJNb250aBgBIAEoCRIOCgZhbW91bnQYAiABKAEiMgoQRGFpbHlCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIIj4KHERhaWx5UmF0ZUluY3JlYXNlQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCI0ChJNb250aGx5QnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCCJdChdDdXN0b21QZXJpb2RCdWRnZXRBbGVydBINCgV2YWx1ZRgBIAEoARIPCgdlbmFibGVkGAIgASgIEhEKCXN0YXJ0RGF0ZRgDIAEoCRIPCgdlbmREYXRlGAQgASgJIkoKFkN1c3RvbU1vbnRoQnVkZ2V0QWxlcnQSDQoFdmFsdWUYASABKAESDwoHZW5hYmxlZBgCIAEoCBIQCghzdGFydERheRgDIAEoCSI8ChdCdWRnZXRBbGVydE5vdGlmaWNhdGlvbhIQCghjaGFubmVscxgCIAMoCRIPCgdlbmFibGVkGAMgASgIImQKHUJ1ZGdldEFsZXJ0Tm90aWZpY2F0aW9uRGV0YWlsEjIKCGNoYW5uZWxzGAIgAygLMiAuYmx1ZWFwaS5hcGkuTm90aWZpY2F0aW9uQ2hhbm5lbBIPCgdlbmFibGVkGAMgASgIQlMKGWNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGlCDkFwaUJ1ZGdldFByb3RvWiZnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaWIGcHJvdG8z", [notification_pb_1.file_api_notification]);
 /**
  * Describes the message blueapi.api.Budget.
  * Use `create(BudgetSchema)` to create a new message.
@@ -41,12 +41,17 @@ exports.MonthlyBudgetAlertSchema = (0, codegenv2_1.messageDesc)(exports.file_api
  */
 exports.CustomPeriodBudgetAlertSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 5);
 /**
+ * Describes the message blueapi.api.CustomMonthBudgetAlert.
+ * Use `create(CustomMonthBudgetAlertSchema)` to create a new message.
+ */
+exports.CustomMonthBudgetAlertSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 6);
+/**
  * Describes the message blueapi.api.BudgetAlertNotification.
  * Use `create(BudgetAlertNotificationSchema)` to create a new message.
  */
-exports.BudgetAlertNotificationSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 6);
+exports.BudgetAlertNotificationSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 7);
 /**
  * Describes the message blueapi.api.BudgetAlertNotificationDetail.
  * Use `create(BudgetAlertNotificationDetailSchema)` to create a new message.
  */
-exports.BudgetAlertNotificationDetailSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 7);
+exports.BudgetAlertNotificationDetailSchema = (0, codegenv2_1.messageDesc)(exports.file_api_budget, 8);

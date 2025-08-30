@@ -92,7 +92,7 @@ export const NotificationSchema: GenMessage<Notification> = /*@__PURE__*/
 export type Budget = Message<"blueapi.api.wave.Budget"> & {
   /**
    * budget id
-   * `previousDay` / `daily` / `monthly` / `customPeriod`
+   * `previousDay` / `daily` / `monthly` / `customPeriod` / `customMonth`
    *
    * @generated from field: string id = 1;
    */

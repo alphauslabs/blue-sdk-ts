@@ -3,7 +3,7 @@
 // @generated from file vortex/v1/vortex.proto (package blueapi.vortex.v1, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Vortex = exports.TestResponseSchema = exports.file_vortex_v1_vortex = void 0;
+exports.Vortex = exports.GetUserResponseSchema = exports.GetUserRequestSchema = exports.CreateOrgResponseSchema = exports.CreateOrgRequestSchema = exports.TestResponseSchema = exports.file_vortex_v1_vortex = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const wkt_1 = require("@bufbuild/protobuf/wkt");
 const annotations_pb_1 = require("../../google/api/annotations_pb");
@@ -11,12 +11,32 @@ const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations
 /**
  * Describes the file vortex/v1/vortex.proto.
  */
-exports.file_vortex_v1_vortex = (0, codegenv2_1.fileDesc)("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIfCgxUZXN0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCTL5AQoGVm9ydGV4ElEKBFRlc3QSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaHy5ibHVlYXBpLnZvcnRleC52MS5UZXN0UmVzcG9uc2UiEILT5JMCChIIL3YxL3Rlc3QamwGSQZcBEkUoQWxwaGEpIFZvcnRleCBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS92b3J0ZXgaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vdm9ydGV4L0JOChhjbG91ZC5hbHBoYXVzLmFwaS52b3J0ZXhCC1ZvcnRleFByb3RvWiVnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdm9ydGV4YgZwcm90bzM", [wkt_1.file_google_protobuf_empty, annotations_pb_1.file_google_api_annotations, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+exports.file_vortex_v1_vortex = (0, codegenv2_1.fileDesc)("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIfCgxUZXN0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCSIvChBDcmVhdGVPcmdSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZW1haWwYAiABKAkiPwoRQ3JlYXRlT3JnUmVzcG9uc2USDQoFb3JnSWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCSIfCg5HZXRVc2VyUmVxdWVzdBINCgVlbWFpbBgBIAEoCSJJCg9HZXRVc2VyUmVzcG9uc2USCgoCaWQYASABKAkSDQoFZW1haWwYAiABKAkSDAoEbmFtZRgDIAEoCRINCgVvcmdJZBgEIAEoCTLeAwoGVm9ydGV4ElQKBFRlc3QSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaHy5ibHVlYXBpLnZvcnRleC52MS5UZXN0UmVzcG9uc2UiE4LT5JMCDRILL3YxL3Rlc3RpbmcSdAoJQ3JlYXRlT3JnEiMuYmx1ZWFwaS52b3J0ZXgudjEuQ3JlYXRlT3JnUmVxdWVzdBokLmJsdWVhcGkudm9ydGV4LnYxLkNyZWF0ZU9yZ1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9vcmdhbml6YXRpb25zEmoKB0dldFVzZXISIS5ibHVlYXBpLnZvcnRleC52MS5HZXRVc2VyUmVxdWVzdBoiLmJsdWVhcGkudm9ydGV4LnYxLkdldFVzZXJSZXNwb25zZSIYgtPkkwISEhAvdjEvdXNlci97ZW1haWx9GpsBkkGXARJFKEFscGhhKSBWb3J0ZXggQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvdm9ydGV4Gk4KElNlcnZpY2UgZGVmaW5pdGlvbhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL3ZvcnRleC9CTgoYY2xvdWQuYWxwaGF1cy5hcGkudm9ydGV4QgtWb3J0ZXhQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3ZvcnRleGIGcHJvdG8z", [wkt_1.file_google_protobuf_empty, annotations_pb_1.file_google_api_annotations, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
 /**
  * Describes the message blueapi.vortex.v1.TestResponse.
  * Use `create(TestResponseSchema)` to create a new message.
  */
 exports.TestResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 0);
+/**
+ * Describes the message blueapi.vortex.v1.CreateOrgRequest.
+ * Use `create(CreateOrgRequestSchema)` to create a new message.
+ */
+exports.CreateOrgRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 1);
+/**
+ * Describes the message blueapi.vortex.v1.CreateOrgResponse.
+ * Use `create(CreateOrgResponseSchema)` to create a new message.
+ */
+exports.CreateOrgResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 2);
+/**
+ * Describes the message blueapi.vortex.v1.GetUserRequest.
+ * Use `create(GetUserRequestSchema)` to create a new message.
+ */
+exports.GetUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 3);
+/**
+ * Describes the message blueapi.vortex.v1.GetUserResponse.
+ * Use `create(GetUserResponseSchema)` to create a new message.
+ */
+exports.GetUserResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 4);
 /**
  * Vortex service definition.
  *

@@ -14,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file vortex/v1/vortex.proto.
  */
 export const file_vortex_v1_vortex: GenFile = /*@__PURE__*/
-  fileDesc("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIfCgxUZXN0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCTL5AQoGVm9ydGV4ElEKBFRlc3QSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaHy5ibHVlYXBpLnZvcnRleC52MS5UZXN0UmVzcG9uc2UiEILT5JMCChIIL3YxL3Rlc3QamwGSQZcBEkUoQWxwaGEpIFZvcnRleCBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS92b3J0ZXgaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vdm9ydGV4L0JOChhjbG91ZC5hbHBoYXVzLmFwaS52b3J0ZXhCC1ZvcnRleFByb3RvWiVnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdm9ydGV4YgZwcm90bzM", [file_google_protobuf_empty, file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIfCgxUZXN0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCSIvChBDcmVhdGVPcmdSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZW1haWwYAiABKAkiPwoRQ3JlYXRlT3JnUmVzcG9uc2USDQoFb3JnSWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCSIfCg5HZXRVc2VyUmVxdWVzdBINCgVlbWFpbBgBIAEoCSJJCg9HZXRVc2VyUmVzcG9uc2USCgoCaWQYASABKAkSDQoFZW1haWwYAiABKAkSDAoEbmFtZRgDIAEoCRINCgVvcmdJZBgEIAEoCTLeAwoGVm9ydGV4ElQKBFRlc3QSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaHy5ibHVlYXBpLnZvcnRleC52MS5UZXN0UmVzcG9uc2UiE4LT5JMCDRILL3YxL3Rlc3RpbmcSdAoJQ3JlYXRlT3JnEiMuYmx1ZWFwaS52b3J0ZXgudjEuQ3JlYXRlT3JnUmVxdWVzdBokLmJsdWVhcGkudm9ydGV4LnYxLkNyZWF0ZU9yZ1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9vcmdhbml6YXRpb25zEmoKB0dldFVzZXISIS5ibHVlYXBpLnZvcnRleC52MS5HZXRVc2VyUmVxdWVzdBoiLmJsdWVhcGkudm9ydGV4LnYxLkdldFVzZXJSZXNwb25zZSIYgtPkkwISEhAvdjEvdXNlci97ZW1haWx9GpsBkkGXARJFKEFscGhhKSBWb3J0ZXggQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvdm9ydGV4Gk4KElNlcnZpY2UgZGVmaW5pdGlvbhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL3ZvcnRleC9CTgoYY2xvdWQuYWxwaGF1cy5hcGkudm9ydGV4QgtWb3J0ZXhQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3ZvcnRleGIGcHJvdG8z", [file_google_protobuf_empty, file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * @generated from message blueapi.vortex.v1.TestResponse
@@ -34,6 +34,104 @@ export const TestResponseSchema: GenMessage<TestResponse> = /*@__PURE__*/
   messageDesc(file_vortex_v1_vortex, 0);
 
 /**
+ * @generated from message blueapi.vortex.v1.CreateOrgRequest
+ */
+export type CreateOrgRequest = Message<"blueapi.vortex.v1.CreateOrgRequest"> & {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string email = 2;
+   */
+  email: string;
+};
+
+/**
+ * Describes the message blueapi.vortex.v1.CreateOrgRequest.
+ * Use `create(CreateOrgRequestSchema)` to create a new message.
+ */
+export const CreateOrgRequestSchema: GenMessage<CreateOrgRequest> = /*@__PURE__*/
+  messageDesc(file_vortex_v1_vortex, 1);
+
+/**
+ * @generated from message blueapi.vortex.v1.CreateOrgResponse
+ */
+export type CreateOrgResponse = Message<"blueapi.vortex.v1.CreateOrgResponse"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string email = 3;
+   */
+  email: string;
+};
+
+/**
+ * Describes the message blueapi.vortex.v1.CreateOrgResponse.
+ * Use `create(CreateOrgResponseSchema)` to create a new message.
+ */
+export const CreateOrgResponseSchema: GenMessage<CreateOrgResponse> = /*@__PURE__*/
+  messageDesc(file_vortex_v1_vortex, 2);
+
+/**
+ * @generated from message blueapi.vortex.v1.GetUserRequest
+ */
+export type GetUserRequest = Message<"blueapi.vortex.v1.GetUserRequest"> & {
+  /**
+   * @generated from field: string email = 1;
+   */
+  email: string;
+};
+
+/**
+ * Describes the message blueapi.vortex.v1.GetUserRequest.
+ * Use `create(GetUserRequestSchema)` to create a new message.
+ */
+export const GetUserRequestSchema: GenMessage<GetUserRequest> = /*@__PURE__*/
+  messageDesc(file_vortex_v1_vortex, 3);
+
+/**
+ * @generated from message blueapi.vortex.v1.GetUserResponse
+ */
+export type GetUserResponse = Message<"blueapi.vortex.v1.GetUserResponse"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string email = 2;
+   */
+  email: string;
+
+  /**
+   * @generated from field: string name = 3;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string orgId = 4;
+   */
+  orgId: string;
+};
+
+/**
+ * Describes the message blueapi.vortex.v1.GetUserResponse.
+ * Use `create(GetUserResponseSchema)` to create a new message.
+ */
+export const GetUserResponseSchema: GenMessage<GetUserResponse> = /*@__PURE__*/
+  messageDesc(file_vortex_v1_vortex, 4);
+
+/**
  * Vortex service definition.
  *
  * @generated from service blueapi.vortex.v1.Vortex
@@ -48,6 +146,24 @@ export const Vortex: GenService<{
     methodKind: "unary";
     input: typeof EmptySchema;
     output: typeof TestResponseSchema;
+  },
+  /**
+   * Create an org in Vortex
+   *
+   * @generated from rpc blueapi.vortex.v1.Vortex.CreateOrg
+   */
+  createOrg: {
+    methodKind: "unary";
+    input: typeof CreateOrgRequestSchema;
+    output: typeof CreateOrgResponseSchema;
+  },
+  /**
+   * @generated from rpc blueapi.vortex.v1.Vortex.GetUser
+   */
+  getUser: {
+    methodKind: "unary";
+    input: typeof GetUserRequestSchema;
+    output: typeof GetUserResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_vortex_v1_vortex, 0);
