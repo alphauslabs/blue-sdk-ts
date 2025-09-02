@@ -10,58 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/cover/attribute.proto.
  */
 export const file_api_cover_attribute: GenFile = /*@__PURE__*/
-  fileDesc("ChlhcGkvY292ZXIvYXR0cmlidXRlLnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciKLAQoJRGltZW5zaW9uEhMKCWRpbWVuc2lvbhgBIAEoCUgAEjkKCGtleVZhbHVlGAIgASgLMiUuYmx1ZWFwaS5hcGkuY292ZXIuRGltZW5zaW9uLktleVZhbHVlSAAaJgoIS2V5VmFsdWUSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJQgYKBGtpbmQiKgoIQ2F0ZWdvcnkSDwoHZGlzcGxheRgBIAEoCRINCgVxdWVyeRgCIAEoCSIiCgZSZXN1bHQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCUJnCh9jbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmNvdmVyQhZBcGlDb3ZlckF0dHJpYnV0ZVByb3RvWixnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9jb3ZlcmIGcHJvdG8z");
-
-/**
- * @generated from message blueapi.api.cover.Dimension
- */
-export type Dimension = Message<"blueapi.api.cover.Dimension"> & {
-  /**
-   * @generated from oneof blueapi.api.cover.Dimension.kind
-   */
-  kind: {
-    /**
-     * @generated from field: string dimension = 1;
-     */
-    value: string;
-    case: "dimension";
-  } | {
-    /**
-     * @generated from field: blueapi.api.cover.Dimension.KeyValue keyValue = 2;
-     */
-    value: Dimension_KeyValue;
-    case: "keyValue";
-  } | { case: undefined; value?: undefined };
-};
-
-/**
- * Describes the message blueapi.api.cover.Dimension.
- * Use `create(DimensionSchema)` to create a new message.
- */
-export const DimensionSchema: GenMessage<Dimension> = /*@__PURE__*/
-  messageDesc(file_api_cover_attribute, 0);
-
-/**
- * @generated from message blueapi.api.cover.Dimension.KeyValue
- */
-export type Dimension_KeyValue = Message<"blueapi.api.cover.Dimension.KeyValue"> & {
-  /**
-   * @generated from field: string key = 1;
-   */
-  key: string;
-
-  /**
-   * @generated from field: string value = 2;
-   */
-  value: string;
-};
-
-/**
- * Describes the message blueapi.api.cover.Dimension.KeyValue.
- * Use `create(Dimension_KeyValueSchema)` to create a new message.
- */
-export const Dimension_KeyValueSchema: GenMessage<Dimension_KeyValue> = /*@__PURE__*/
-  messageDesc(file_api_cover_attribute, 0, 0);
+  fileDesc("ChlhcGkvY292ZXIvYXR0cmlidXRlLnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciIqCghDYXRlZ29yeRIPCgdkaXNwbGF5GAEgASgJEg0KBXF1ZXJ5GAIgASgJIiIKBlJlc3VsdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJQmcKH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCFkFwaUNvdmVyQXR0cmlidXRlUHJvdG9aLGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2NvdmVyYgZwcm90bzM");
 
 /**
  * @generated from message blueapi.api.cover.Category
@@ -83,7 +32,7 @@ export type Category = Message<"blueapi.api.cover.Category"> & {
  * Use `create(CategorySchema)` to create a new message.
  */
 export const CategorySchema: GenMessage<Category> = /*@__PURE__*/
-  messageDesc(file_api_cover_attribute, 1);
+  messageDesc(file_api_cover_attribute, 0);
 
 /**
  * @generated from message blueapi.api.cover.Result
@@ -105,5 +54,5 @@ export type Result = Message<"blueapi.api.cover.Result"> & {
  * Use `create(ResultSchema)` to create a new message.
  */
 export const ResultSchema: GenMessage<Result> = /*@__PURE__*/
-  messageDesc(file_api_cover_attribute, 2);
+  messageDesc(file_api_cover_attribute, 1);
 

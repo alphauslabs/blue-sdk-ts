@@ -3,29 +3,19 @@
 // @generated from file api/cover/attribute.proto (package blueapi.api.cover, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ResultSchema = exports.CategorySchema = exports.Dimension_KeyValueSchema = exports.DimensionSchema = exports.file_api_cover_attribute = void 0;
+exports.ResultSchema = exports.CategorySchema = exports.file_api_cover_attribute = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file api/cover/attribute.proto.
  */
-exports.file_api_cover_attribute = (0, codegenv2_1.fileDesc)("ChlhcGkvY292ZXIvYXR0cmlidXRlLnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciKLAQoJRGltZW5zaW9uEhMKCWRpbWVuc2lvbhgBIAEoCUgAEjkKCGtleVZhbHVlGAIgASgLMiUuYmx1ZWFwaS5hcGkuY292ZXIuRGltZW5zaW9uLktleVZhbHVlSAAaJgoIS2V5VmFsdWUSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJQgYKBGtpbmQiKgoIQ2F0ZWdvcnkSDwoHZGlzcGxheRgBIAEoCRINCgVxdWVyeRgCIAEoCSIiCgZSZXN1bHQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCUJnCh9jbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmNvdmVyQhZBcGlDb3ZlckF0dHJpYnV0ZVByb3RvWixnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9jb3ZlcmIGcHJvdG8z");
-/**
- * Describes the message blueapi.api.cover.Dimension.
- * Use `create(DimensionSchema)` to create a new message.
- */
-exports.DimensionSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 0);
-/**
- * Describes the message blueapi.api.cover.Dimension.KeyValue.
- * Use `create(Dimension_KeyValueSchema)` to create a new message.
- */
-exports.Dimension_KeyValueSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 0, 0);
+exports.file_api_cover_attribute = (0, codegenv2_1.fileDesc)("ChlhcGkvY292ZXIvYXR0cmlidXRlLnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciIqCghDYXRlZ29yeRIPCgdkaXNwbGF5GAEgASgJEg0KBXF1ZXJ5GAIgASgJIiIKBlJlc3VsdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJQmcKH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCFkFwaUNvdmVyQXR0cmlidXRlUHJvdG9aLGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2NvdmVyYgZwcm90bzM");
 /**
  * Describes the message blueapi.api.cover.Category.
  * Use `create(CategorySchema)` to create a new message.
  */
-exports.CategorySchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 1);
+exports.CategorySchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 0);
 /**
  * Describes the message blueapi.api.cover.Result.
  * Use `create(ResultSchema)` to create a new message.
  */
-exports.ResultSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 2);
+exports.ResultSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_attribute, 1);
