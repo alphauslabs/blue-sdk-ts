@@ -1,0 +1,52 @@
+"use strict";
+// Copied from {root}/google/longrunning/operations.proto
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Operations = exports.WaitOperationRequestSchema = exports.CancelOperationRequestSchema = exports.DeleteOperationRequestSchema = exports.GetOperationRequestSchema = exports.ListOperationsRequestSchema = exports.file_operations_v1_operations = void 0;
+const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
+const operation_pb_1 = require("../../protos/operation_pb");
+const annotations_pb_1 = require("../../google/api/annotations_pb");
+const wkt_1 = require("@bufbuild/protobuf/wkt");
+const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations_pb");
+/**
+ * Describes the file operations/v1/operations.proto.
+ */
+exports.file_operations_v1_operations = (0, codegenv2_1.fileDesc)("Ch5vcGVyYXRpb25zL3YxL29wZXJhdGlvbnMucHJvdG8SFWJsdWVhcGkub3BlcmF0aW9ucy52MSJKChVMaXN0T3BlcmF0aW9uc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEgwKBGFzT2YYAiABKAkSEwoLaW5jbHVkZURvbmUYAyABKAgiIwoTR2V0T3BlcmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIiYKFkRlbGV0ZU9wZXJhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSImChZDYW5jZWxPcGVyYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiUAoUV2FpdE9wZXJhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCRIqCgd0aW1lb3V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uMr0FCgpPcGVyYXRpb25zEmQKDkxpc3RPcGVyYXRpb25zEiwuYmx1ZWFwaS5vcGVyYXRpb25zLnYxLkxpc3RPcGVyYXRpb25zUmVxdWVzdBoRLnByb3Rvcy5PcGVyYXRpb24iD4LT5JMCCRIHL29wcy92MTABEmUKDEdldE9wZXJhdGlvbhIqLmJsdWVhcGkub3BlcmF0aW9ucy52MS5HZXRPcGVyYXRpb25SZXF1ZXN0GhEucHJvdG9zLk9wZXJhdGlvbiIWgtPkkwIQEg4vb3BzL3YxL3tuYW1lfRJwCg9EZWxldGVPcGVyYXRpb24SLS5ibHVlYXBpLm9wZXJhdGlvbnMudjEuRGVsZXRlT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIWgtPkkwIQKg4vb3BzL3YxL3tuYW1lfRJ6Cg9DYW5jZWxPcGVyYXRpb24SLS5ibHVlYXBpLm9wZXJhdGlvbnMudjEuQ2FuY2VsT3BlcmF0aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIggtPkkwIaOgEqIhUvb3BzL3YxL3tuYW1lfTpjYW5jZWwSUQoNV2FpdE9wZXJhdGlvbhIrLmJsdWVhcGkub3BlcmF0aW9ucy52MS5XYWl0T3BlcmF0aW9uUmVxdWVzdBoRLnByb3Rvcy5PcGVyYXRpb24iABqgAZJBnAESRihCRVRBKSBMb25nIG9wZXJhdGlvbnMgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaUgoSU2VydmljZSBkZWZpbml0aW9uEjxodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vb3BlcmF0aW9ucy9CWgocY2xvdWQuYWxwaGF1cy5hcGkub3BlcmF0aW9uc0IPT3BlcmF0aW9uc1Byb3RvWilnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvb3BlcmF0aW9uc2IGcHJvdG8z", [operation_pb_1.file_protos_operation, annotations_pb_1.file_google_api_annotations, wkt_1.file_google_protobuf_duration, wkt_1.file_google_protobuf_empty, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+/**
+ * Describes the message blueapi.operations.v1.ListOperationsRequest.
+ * Use `create(ListOperationsRequestSchema)` to create a new message.
+ */
+exports.ListOperationsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_operations_v1_operations, 0);
+/**
+ * Describes the message blueapi.operations.v1.GetOperationRequest.
+ * Use `create(GetOperationRequestSchema)` to create a new message.
+ */
+exports.GetOperationRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_operations_v1_operations, 1);
+/**
+ * Describes the message blueapi.operations.v1.DeleteOperationRequest.
+ * Use `create(DeleteOperationRequestSchema)` to create a new message.
+ */
+exports.DeleteOperationRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_operations_v1_operations, 2);
+/**
+ * Describes the message blueapi.operations.v1.CancelOperationRequest.
+ * Use `create(CancelOperationRequestSchema)` to create a new message.
+ */
+exports.CancelOperationRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_operations_v1_operations, 3);
+/**
+ * Describes the message blueapi.operations.v1.WaitOperationRequest.
+ * Use `create(WaitOperationRequestSchema)` to create a new message.
+ */
+exports.WaitOperationRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_operations_v1_operations, 4);
+/**
+ * Manages long-running operations with an API service.
+ *
+ * When an API method normally takes long time to complete, it can be designed
+ * to return [Operation][google.longrunning.Operation] to the client, and the client can use this
+ * interface to receive the real response asynchronously by polling the
+ * operation resource, or pass the operation resource to another API (such as
+ * Google Cloud Pub/Sub API) to receive the response.  Any API service that
+ * returns long-running operations should implement the `Operations` interface
+ * so developers can have a consistent client experience.
+ *
+ * @generated from service blueapi.operations.v1.Operations
+ */
+exports.Operations = (0, codegenv2_1.serviceDesc)(exports.file_operations_v1_operations, 0);
