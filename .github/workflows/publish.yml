@@ -24,9 +24,10 @@ jobs:
         run: |
           npm install
           npm run build
+          npm version patch
 
-      # - name: Publish package
-      #   env:
-      #     NODE_AUTH_TOKEN: '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'
-      #   run: |
-      #     npm publish
+      - name: Publish package
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm publish
