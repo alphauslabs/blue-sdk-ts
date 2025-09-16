@@ -26,8 +26,7 @@ jobs:
           npm run build
           git config user.email "dev@mobingi.com"
           git config user.name "mobingideployer"
-          git add .
-          git commit -m "update"
+          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
           git push
           npm version patch
 
