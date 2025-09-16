@@ -25,7 +25,7 @@ jobs:
           npm install
           npm run build
           git add .
-          git commmit -m "update"
+          git commit -m "update"
           git push
           npm version patch
 
