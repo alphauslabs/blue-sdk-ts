@@ -27,7 +27,7 @@ jobs:
           git config user.email "dev@mobingi.com"
           git config user.name "mobingideployer"
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
-          git push
+          git push origin main
           npm version patch
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
       - name: Publish package
