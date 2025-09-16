@@ -24,6 +24,9 @@ jobs:
         run: |
           npm install
           npm run build
+          git add .
+          git commmit -m "update"
+          git push
           npm version patch
 
       - name: Publish package
