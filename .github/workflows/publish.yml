@@ -28,11 +28,8 @@ jobs:
           git config user.name "mobingideployer"
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
           git push
-
           npm version patch
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
-        
-
       - name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
