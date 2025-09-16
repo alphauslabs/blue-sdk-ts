@@ -29,8 +29,9 @@ jobs:
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
           git push
 
-          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
           npm version patch
+          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
+        
 
       - name: Publish package
         env:
