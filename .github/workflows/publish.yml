@@ -24,11 +24,13 @@ jobs:
         run: |
           npm install
           npm run build
-          npm version patch
           git config user.email "dev@mobingi.com"
           git config user.name "mobingideployer"
           git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
           git push
+
+          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
+          npm version patch
 
       - name: Publish package
         env:
