@@ -27,5 +27,7 @@ jobs:
 
       - name: Publish package
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.REPO_TOKEN }}
-        run: npm publish
+          NODE_AUTH_TOKEN: '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'
+        run: |
+          npm version patch
+          npm publish
