@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flow/v1/flow.proto.
  */
 export const file_flow_v1_flow: GenFile = /*@__PURE__*/
-  fileDesc("ChJmbG93L3YxL2Zsb3cucHJvdG8SD2JsdWVhcGkuZmxvdy52MSIQCg5HZXRJbmZvUmVxdWVzdCLfAQoSU2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEg8KB3BheWVySWQYCiABKAkiIAoSR2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJIi0KH0dldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QSCgoCaWQYASABKAkiKQonR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0IicKGUdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QSCgoCaWQYASABKAkiMQofQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVxdWVzdBIOCgZ0YXJnZXQYASABKAkiVgofR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBIPCgdwYXllcklkGAEgASgJEhEKCXN0YXJ0RGF0ZRgCIAEoCRIPCgdlbmREYXRlGAMgASgJIicKJUdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QiLwodQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QSDgoGdGFyZ2V0GAEgASgJIjYKI0dldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXF1ZXN0Eg8KB3BheWVySWQYASABKAkixQcKG0NyZWF0ZU1lc3NhZ2VUb1NsYWNrUmVxdWVzdBJTCg5jb25maWd1cmF0aW9ucxgBIAEoCzI7LmJsdWVhcGkuZmxvdy52MS5DcmVhdGVNZXNzYWdlVG9TbGFja1JlcXVlc3QuQ29uZmlndXJhdGlvbnMSUwoOcmVjb21tZW5kYXRpb24YAiABKAsyOy5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlTWVzc2FnZVRvU2xhY2tSZXF1ZXN0LlJlY29tbWVuZGF0aW9uGtcBCg5Db25maWd1cmF0aW9ucxIVCg1hY2NvdW50X3Njb3BlGAEgASgJEhUKDWN1c3RvbWl6YXRpb24YAiABKAkSEQoJcGxhbl90ZXJtGAMgASgJEhYKDnBheW1lbnRfb3B0aW9uGAQgASgJEhgKEGxvb2tfYmFja19wZXJpb2QYBSABKAkSFwoPaW5zdGFuY2VfZmFtaWx5GAYgASgJEhUKDWFubnVhbF9idWRnZXQYByABKAESEAoIYXBwcm92YWwYCCABKAgSEAoIcGF5ZXJfaWQYCSABKAkaoQQKDlJlY29tbWVuZGF0aW9uEgoKAmlkGAEgASgJEicKH2N1cnJlbnRfbW9udGhseV9vbl9kZW1hbmRfc3BlbmQYAiABKAESHwoXZXN0aW1hdGVkX21vbnRobHlfc3BlbmQYAyABKAESKQohZXN0aW1hdGVkX21vbnRobHlfc2F2aW5nc19kZXJpdmVkGAQgASgBEhgKEHRvdGFsX2RhaWx5X2Nvc3QYBSABKAESHQoVY3VycmVudF9zcF9jb21taXRtZW50GAYgASgBEiAKGGVzdGltYXRlZF9vbl9kZW1hbmRfY29zdBgHIAEoARIZChFob3VybHlfY29tbWl0bWVudBgIIAEoARIhChllc3RpbWF0ZWRfbW9udGhseV9zYXZpbmdzGAkgASgBEhkKEWVzdGltYXRlZF9zYXZpbmdzGAogASgBEhwKFHJlY29tbWVuZGF0aW9uX2xldmVsGAsgASgJEhEKCXBsYW5fdHlwZRgMIAEoCRIRCglwbGFuX3Rlcm0YDSABKAkSFgoOcGF5bWVudF9vcHRpb24YDiABKAkSGAoQbG9va19iYWNrX3BlcmlvZBgPIAEoCRIVCg1lc3RpbWF0ZWRfcm9pGBAgASgBEhkKEWVzdGltYXRlZF9zcF9jb3N0GBEgASgBEhwKFGVzdGltYXRlZF90b3RhbF9jb3N0GBIgASgBEhQKDGxhc3RfdXBkYXRlZBgTIAEoCSIjCg9HZXRJbmZvUmVzcG9uc2USEAoIcmVzcG9uc2UYASABKAkiJwoTU2V0U2V0dGluZ3NSZXNwb25zZRIQCghyZXNwb25zZRgBIAEoCSL1AQoTR2V0U2V0dGluZ3NSZXNwb25zZRIKCgJpZBgBIAEoCRIUCgxhY2NvdW50U2NvcGUYAiABKAkSFQoNY3VzdG9taXphdGlvbhgDIAEoCRIQCghwbGFuVGVybRgEIAEoCRIVCg1wYXltZW50T3B0aW9uGAUgASgJEhYKDmxvb2tCYWNrUGVyaW9kGAYgASgJEhYKDmluc3RhbmNlRmFtaWx5GAcgASgJEhQKDGFubnVhbEJ1ZGdldBgIIAEoARIQCghhcHByb3ZhbBgJIAEoCBITCgtsYXN0VXBkYXRlZBgKIAEoCRIPCgdwYXllcklkGAsgASgJIpMECiBHZXRSZWNvbW1lbmRhdGlvbkRldGFpbHNSZXNwb25zZRIKCgJpZBgBIAEoCRIjChtjdXJyZW50TW9udGhseU9uRGVtYW5kU3BlbmQYAiABKAESHQoVZXN0aW1hdGVkTW9udGhseVNwZW5kGAMgASgBEiYKHmVzdGltYXRlZE1vbnRobHlTYXZpbmdzRGVyaXZlZBgEIAEoARIWCg50b3RhbERhaWx5Q29zdBgFIAEoARIbChNjdXJyZW50U1BDb21taXRtZW50GAYgASgBEh0KFWVzdGltYXRlZE9uRGVtYW5kQ29zdBgHIAEoARIYChBob3VybHlDb21taXRtZW50GAggASgBEh8KF2VzdGltYXRlZE1vbnRobHlTYXZpbmdzGAkgASgBEhgKEGVzdGltYXRlZFNhdmluZ3MYCiABKAESGwoTcmVjb21tZW5kYXRpb25MZXZlbBgLIAEoCRIQCghwbGFuVHlwZRgMIAEoCRIQCghwbGFuVGVybRgNIAEoCRIVCg1wYXltZW50T3B0aW9uGA4gASgJEhYKDmxvb2tCYWNrUGVyaW9kGA8gASgJEhQKDGVzdGltYXRlZFJPSRgQIAEoARIXCg9lc3RpbWF0ZWRTUENvc3QYESABKAESGgoSZXN0aW1hdGVkVG90YWxDb3N0GBIgASgBEhMKC2xhc3RVcGRhdGVkGBMgASgJIowBCihHZXRDb3N0RXhwbG9yZXJBY2Nlc3NUZW1wbGF0ZVVybFJlc3BvbnNlEhEKCWxhdW5jaFVybBgBIAEoCRITCgt0ZW1wbGF0ZVVybBgCIAEoCRIRCglzdGFja05hbWUYAyABKAkSEQoJcHJpbmNpcGFsGAQgASgJEhIKCmV4dGVybmFsSWQYBSABKAki4AEKD1NldHRpbmdzSGlzdG9yeRIKCgJpZBgBIAEoCRIUCgxhY2NvdW50U2NvcGUYAiABKAkSFQoNY3VzdG9taXphdGlvbhgDIAEoCRIQCghwbGFuVGVybRgEIAEoCRIVCg1wYXltZW50T3B0aW9uGAUgASgJEhYKDmxvb2tCYWNrUGVyaW9kGAYgASgJEhYKDmluc3RhbmNlRmFtaWx5GAcgASgJEhQKDGFubnVhbEJ1ZGdldBgIIAEoARIQCghhcHByb3ZhbBgJIAEoCBITCgtsYXN0VXBkYXRlZBgKIAEoCSJXChpHZXRTZXR0aW5nc0hpc3RvcnlSZXNwb25zZRI5Cg9zZXR0aW5nc0hpc3RvcnkYASADKAsyIC5ibHVlYXBpLmZsb3cudjEuU2V0dGluZ3NIaXN0b3J5IscBCiBDcmVhdGVDb3N0RXhwbG9yZXJBY2Nlc3NSZXNwb25zZRIOCgZ0YXJnZXQYASABKAkSDwoHcm9sZUFybhgCIAEoCRISCgpleHRlcm5hbElkGAMgASgJEg8KB3N0YWNrSWQYBCABKAkSEwoLc3RhY2tSZWdpb24YBSABKAkSEwoLdGVtcGxhdGVVcmwYBiABKAkSDgoGc3RhdHVzGAcgASgJEhMKC2xhc3RVcGRhdGVkGAggASgJEg4KBmFjY2VzcxgJIAEoCSJmCgxNb250aGx5Q29zdHMSGwoTbW9udGhseU9uRGVtYW5kQ29zdBgBIAEoARIcChRtb250aGx5RWZmZWN0aXZlQ29zdBgCIAEoARIbChNtb250aGx5VG90YWxTYXZpbmdzGAMgASgBItECCglTcERldGFpbHMSFwoPc2F2aW5nc1BsYW5UeXBlGAEgASgJEg0KBXN0YXRlGAIgASgJEhEKCXN0YXJ0VGltZRgDIAEoCRIPCgdlbmRUaW1lGAQgASgJEhcKD3JldHVybmFibGVVbnRpbBgFIAEoCRISCgpjb21taXRtZW50GAYgASgBEhAKCGN1cnJlbmN5GAcgASgJEhAKCHBsYW5UZXJtGAggASgJEhUKDXBheW1lbnRPcHRpb24YCSABKAkSFAoMcHJvZHVjdFR5cGVzGAogAygJEhwKFHVwZnJvbnRQYXltZW50QW1vdW50GAsgASgBEh4KFnJlY3VycmluZ1BheW1lbnRBbW91bnQYDCABKAESGQoRZWMySW5zdGFuY2VGYW1pbHkYDSADKAkSDAoEdGFncxgOIAEoCRITCgtwdXJjaGFzZWRCeRgPIAEoCSLUAQoQVXNhZ2VDb3N0RGV0YWlscxITCgtjdXJyZW50RGF0ZRgBIAEoCRITCgtwcm9kdWN0Q29kZRgCIAEoCRIUCgxvbmRlbWFuZENvc3QYAyABKAESFAoMcmVzZXJ2ZWRDb3N0GAQgASgBEh0KFXNhdmluZ3NQbGFuQ29zdEJ5RmxvdxgFIAEoARIdChVzYXZpbmdzUGxhbkNvc3RCeVVzZXIYBiABKAESEAoIc3BvdENvc3QYByABKAESGgoSY292ZXJhZ2VQZXJjZW50YWdlGAggASgBIkYKEERhaWx5VXRpbGl6YXRpb24SEwoLY3VycmVudERhdGUYASABKAkSHQoVdXRpbGl6YXRpb25QZXJjZW50YWdlGAIgASgBIoMBChJVdGlsaXphdGlvbkRldGFpbHMSFwoPc2F2aW5nc1BsYW5OYW1lGAEgASgJEhYKDnNhdmluZ3NQbGFuQXJuGAIgASgJEjwKEXBlckRheVV0aWxpemF0aW9uGAMgAygLMiEuYmx1ZWFwaS5mbG93LnYxLkRhaWx5VXRpbGl6YXRpb24ilQIKIEdldERhaWx5VXNhZ2VDb3N0RGV0YWlsc1Jlc3BvbnNlEg8KB3BheWVySWQYASABKAkSMwoMbW9udGhseUNvc3RzGAIgASgLMh0uYmx1ZWFwaS5mbG93LnYxLk1vbnRobHlDb3N0cxItCglzcERldGFpbHMYAyADKAsyGi5ibHVlYXBpLmZsb3cudjEuU3BEZXRhaWxzEjsKEHVzYWdlQ29zdERldGFpbHMYBCADKAsyIS5ibHVlYXBpLmZsb3cudjEuVXNhZ2VDb3N0RGV0YWlscxI/ChJ1dGlsaXphdGlvbkRldGFpbHMYBSADKAsyIy5ibHVlYXBpLmZsb3cudjEuVXRpbGl6YXRpb25EZXRhaWxzIjIKFUdldEF3c0FjY291bnRzUmVxdWVzdBIZChFiaWxsaW5nSW50ZXJuYWxJZBgBIAEoCSL3AQoWR2V0QXdzQWNjb3VudHNSZXNwb25zZRIPCgdncm91cElkGAEgASgJEhEKCWdyb3VwTmFtZRgCIAEoCRIVCg1wYXllckFjY291bnRzGAMgAygJEmMKFmxpbmtlZEFjY291bnRUb1BheWVySWQYBCADKAsyQy5ibHVlYXBpLmZsb3cudjEuR2V0QXdzQWNjb3VudHNSZXNwb25zZS5MaW5rZWRBY2NvdW50VG9QYXllcklkRW50cnkaPQobTGlua2VkQWNjb3VudFRvUGF5ZXJJZEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiigEKJkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlc3BvbnNlEhEKCWxhdW5jaFVybBgBIAEoCRITCgt0ZW1wbGF0ZVVybBgCIAEoCRIRCglzdGFja05hbWUYAyABKAkSEQoJcHJpbmNpcGFsGAQgASgJEhIKCmV4dGVybmFsSWQYBSABKAkixQEKHkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3NSZXNwb25zZRIOCgZ0YXJnZXQYASABKAkSDwoHcm9sZUFybhgCIAEoCRISCgpleHRlcm5hbElkGAMgASgJEg8KB3N0YWNrSWQYBCABKAkSEwoLc3RhY2tSZWdpb24YBSABKAkSEwoLdGVtcGxhdGVVcmwYBiABKAkSDgoGc3RhdHVzGAcgASgJEhMKC2xhc3RVcGRhdGVkGAggASgJEg4KBmFjY2VzcxgJIAEoCSJyCiRHZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzUmVzcG9uc2USDgoGdGFyZ2V0GAEgASgJEjoKB2RldGFpbHMYAiADKAsyKS5ibHVlYXBpLmZsb3cudjEuQ3Jvc3NBY2NvdW50QWNjZXNzRGV0YWlsIpoBChhDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWwSDwoHcm9sZUFybhgBIAEoCRISCgpleHRlcm5hbElkGAIgASgJEg8KB3N0YWNrSWQYAyABKAkSEwoLc3RhY2tSZWdpb24YBCABKAkSEwoLdGVtcGxhdGVVcmwYBSABKAkSDgoGc3RhdHVzGAYgASgJEg4KBmFjY2VzcxgHIAEoCSJAChxDcmVhdGVNZXNzYWdlVG9TbGFja1Jlc3BvbnNlEg8KB21lc3NhZ2UYASABKAkSDwoHc3VjY2VzcxgCIAEoCDLJEAoERmxvdxJeCgdHZXRJbmZvEh8uYmx1ZWFwaS5mbG93LnYxLkdldEluZm9SZXF1ZXN0GiAuYmx1ZWFwaS5mbG93LnYxLkdldEluZm9SZXNwb25zZSIQgtPkkwIKEggvdjEvaW5mbxJ2CgtTZXRTZXR0aW5ncxIjLmJsdWVhcGkuZmxvdy52MS5TZXRTZXR0aW5nc1JlcXVlc3QaJC5ibHVlYXBpLmZsb3cudjEuU2V0U2V0dGluZ3NSZXNwb25zZSIcgtPkkwIWOgEqGhEvdjEvc2V0dGluZ3Mve2lkfRJzCgtHZXRTZXR0aW5ncxIjLmJsdWVhcGkuZmxvdy52MS5HZXRTZXR0aW5nc1JlcXVlc3QaJC5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NSZXNwb25zZSIZgtPkkwITEhEvdjEvc2V0dGluZ3Mve2lkfRKqAQoYR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzEjAuYmx1ZWFwaS5mbG93LnYxLkdldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QaMS5ibHVlYXBpLmZsb3cudjEuR2V0UmVjb21tZW5kYXRpb25EZXRhaWxzUmVzcG9uc2UiKYLT5JMCIxIhL3YxL3NldHRpbmdzL3JlY29tbWVuZGF0aW9ucy97aWR9ErIBCiBHZXRDb3N0RXhwbG9yZXJBY2Nlc3NUZW1wbGF0ZVVybBI4LmJsdWVhcGkuZmxvdy52MS5HZXRDb3N0RXhwbG9yZXJBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QaOS5ibHVlYXBpLmZsb3cudjEuR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXNwb25zZSIZgtPkkwITEhEvdjEvYXdzL3hhY2N0L2NlYRKQAQoSR2V0U2V0dGluZ3NIaXN0b3J5EiouYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QaKy5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NIaXN0b3J5UmVzcG9uc2UiIYLT5JMCGxIZL3YxL3NldHRpbmdzL2hpc3Rvcnkve2lkfRKdAQoYQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzEjAuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZUNvc3RFeHBsb3JlckFjY2Vzc1JlcXVlc3QaMS5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVzcG9uc2UiHILT5JMCFjoBKiIRL3YxL2F3cy94YWNjdC9jZWESmQEKGEdldERhaWx5VXNhZ2VDb3N0RGV0YWlscxIwLmJsdWVhcGkuZmxvdy52MS5HZXREYWlseVVzYWdlQ29zdERldGFpbHNSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkdldERhaWx5VXNhZ2VDb3N0RGV0YWlsc1Jlc3BvbnNlIhiC0+STAhI6ASoiDS92MS91c2FnZWNvc3QSkgEKDkdldEF3c0FjY291bnRzEiYuYmx1ZWFwaS5mbG93LnYxLkdldEF3c0FjY291bnRzUmVxdWVzdBonLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1Jlc3BvbnNlIi+C0+STAik6ASoiJC92MS9hd3Mve2JpbGxpbmdJbnRlcm5hbElkfS9hY2NvdW50cxKsAQoeR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsEjYuYmx1ZWFwaS5mbG93LnYxLkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QaNy5ibHVlYXBpLmZsb3cudjEuR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2UiGYLT5JMCExIRL3YxL2F3cy94YWNjdC9zcGESlwEKFkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3MSLi5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QaLy5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9hd3MveGFjY3Qvc3BhErMBChxHZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzEjQuYmx1ZWFwaS5mbG93LnYxLkdldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXF1ZXN0GjUuYmx1ZWFwaS5mbG93LnYxLkdldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXNwb25zZSImgtPkkwIgEh4vdjEvYXdzL3hhY2N0L3twYXllcklkfS9hY2Nlc3MSlgEKFENyZWF0ZU1lc3NhZ2VUb1NsYWNrEiwuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZU1lc3NhZ2VUb1NsYWNrUmVxdWVzdBotLmJsdWVhcGkuZmxvdy52MS5DcmVhdGVNZXNzYWdlVG9TbGFja1Jlc3BvbnNlIiGC0+STAhs6ASoiFi92MS9ub3RpZmljYXRpb24vc2xhY2salQGSQZEBEkEoQUxQSEEpIEZsb3cgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvZmxvdxpMChJTZXJ2aWNlIGRlZmluaXRpb24SNmh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9mbG93L0JIChZjbG91ZC5hbHBoYXVzLmFwaS5mbG93QglGbG93UHJvdG9aI2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbG93YgZwcm90bzM", [file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChJmbG93L3YxL2Zsb3cucHJvdG8SD2JsdWVhcGkuZmxvdy52MSIQCg5HZXRJbmZvUmVxdWVzdCLfAQoSU2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEg8KB3BheWVySWQYCiABKAkiIAoSR2V0U2V0dGluZ3NSZXF1ZXN0EgoKAmlkGAEgASgJIi0KH0dldFJlY29tbWVuZGF0aW9uRGV0YWlsc1JlcXVlc3QSCgoCaWQYASABKAkiKQonR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0IicKGUdldFNldHRpbmdzSGlzdG9yeVJlcXVlc3QSCgoCaWQYASABKAkiMQofQ3JlYXRlQ29zdEV4cGxvcmVyQWNjZXNzUmVxdWVzdBIOCgZ0YXJnZXQYASABKAkiVgofR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBIPCgdwYXllcklkGAEgASgJEhEKCXN0YXJ0RGF0ZRgCIAEoCRIPCgdlbmREYXRlGAMgASgJIicKJUdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlcXVlc3QiLwodQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1JlcXVlc3QSDgoGdGFyZ2V0GAEgASgJIjYKI0dldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXF1ZXN0Eg8KB3BheWVySWQYASABKAkinQcKG0NyZWF0ZU1lc3NhZ2VUb1NsYWNrUmVxdWVzdBJTCg5jb25maWd1cmF0aW9ucxgBIAEoCzI7LmJsdWVhcGkuZmxvdy52MS5DcmVhdGVNZXNzYWdlVG9TbGFja1JlcXVlc3QuQ29uZmlndXJhdGlvbnMSUwoOcmVjb21tZW5kYXRpb24YAiABKAsyOy5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlTWVzc2FnZVRvU2xhY2tSZXF1ZXN0LlJlY29tbWVuZGF0aW9uGs8BCg5Db25maWd1cmF0aW9ucxIUCgxhY2NvdW50U2NvcGUYASABKAkSFQoNY3VzdG9taXphdGlvbhgCIAEoCRIQCghwbGFuVGVybRgDIAEoCRIVCg1wYXltZW50T3B0aW9uGAQgASgJEhYKDmxvb2tCYWNrUGVyaW9kGAUgASgJEhYKDmluc3RhbmNlRmFtaWx5GAYgASgJEhQKDGFubnVhbEJ1ZGdldBgHIAEoARIQCghhcHByb3ZhbBgIIAEoCBIPCgdwYXllcklkGAkgASgJGoEECg5SZWNvbW1lbmRhdGlvbhIKCgJpZBgBIAEoCRIjChtjdXJyZW50TW9udGhseU9uRGVtYW5kU3BlbmQYAiABKAESHQoVZXN0aW1hdGVkTW9udGhseVNwZW5kGAMgASgBEiYKHmVzdGltYXRlZE1vbnRobHlTYXZpbmdzRGVyaXZlZBgEIAEoARIWCg50b3RhbERhaWx5Q29zdBgFIAEoARIbChNjdXJyZW50U1BDb21taXRtZW50GAYgASgBEh0KFWVzdGltYXRlZE9uRGVtYW5kQ29zdBgHIAEoARIYChBob3VybHlDb21taXRtZW50GAggASgBEh8KF2VzdGltYXRlZE1vbnRobHlTYXZpbmdzGAkgASgBEhgKEGVzdGltYXRlZFNhdmluZ3MYCiABKAESGwoTcmVjb21tZW5kYXRpb25MZXZlbBgLIAEoCRIQCghwbGFuVHlwZRgMIAEoCRIQCghwbGFuVGVybRgNIAEoCRIVCg1wYXltZW50T3B0aW9uGA4gASgJEhYKDmxvb2tCYWNrUGVyaW9kGA8gASgJEhQKDGVzdGltYXRlZFJPSRgQIAEoARIXCg9lc3RpbWF0ZWRTUENvc3QYESABKAESGgoSZXN0aW1hdGVkVG90YWxDb3N0GBIgASgBEhMKC2xhc3RVcGRhdGVkGBMgASgJIkMKHUdldFNQVG9QdXJjaGFzZURldGFpbHNSZXF1ZXN0Eg8KB3BheWVySWQYASABKAkSEQoJeWVhck1vbnRoGAIgASgJIiMKD0dldEluZm9SZXNwb25zZRIQCghyZXNwb25zZRgBIAEoCSInChNTZXRTZXR0aW5nc1Jlc3BvbnNlEhAKCHJlc3BvbnNlGAEgASgJIvUBChNHZXRTZXR0aW5nc1Jlc3BvbnNlEgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEhMKC2xhc3RVcGRhdGVkGAogASgJEg8KB3BheWVySWQYCyABKAkikwQKIEdldFJlY29tbWVuZGF0aW9uRGV0YWlsc1Jlc3BvbnNlEgoKAmlkGAEgASgJEiMKG2N1cnJlbnRNb250aGx5T25EZW1hbmRTcGVuZBgCIAEoARIdChVlc3RpbWF0ZWRNb250aGx5U3BlbmQYAyABKAESJgoeZXN0aW1hdGVkTW9udGhseVNhdmluZ3NEZXJpdmVkGAQgASgBEhYKDnRvdGFsRGFpbHlDb3N0GAUgASgBEhsKE2N1cnJlbnRTUENvbW1pdG1lbnQYBiABKAESHQoVZXN0aW1hdGVkT25EZW1hbmRDb3N0GAcgASgBEhgKEGhvdXJseUNvbW1pdG1lbnQYCCABKAESHwoXZXN0aW1hdGVkTW9udGhseVNhdmluZ3MYCSABKAESGAoQZXN0aW1hdGVkU2F2aW5ncxgKIAEoARIbChNyZWNvbW1lbmRhdGlvbkxldmVsGAsgASgJEhAKCHBsYW5UeXBlGAwgASgJEhAKCHBsYW5UZXJtGA0gASgJEhUKDXBheW1lbnRPcHRpb24YDiABKAkSFgoObG9va0JhY2tQZXJpb2QYDyABKAkSFAoMZXN0aW1hdGVkUk9JGBAgASgBEhcKD2VzdGltYXRlZFNQQ29zdBgRIAEoARIaChJlc3RpbWF0ZWRUb3RhbENvc3QYEiABKAESEwoLbGFzdFVwZGF0ZWQYEyABKAkijAEKKEdldENvc3RFeHBsb3JlckFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2USEQoJbGF1bmNoVXJsGAEgASgJEhMKC3RlbXBsYXRlVXJsGAIgASgJEhEKCXN0YWNrTmFtZRgDIAEoCRIRCglwcmluY2lwYWwYBCABKAkSEgoKZXh0ZXJuYWxJZBgFIAEoCSLgAQoPU2V0dGluZ3NIaXN0b3J5EgoKAmlkGAEgASgJEhQKDGFjY291bnRTY29wZRgCIAEoCRIVCg1jdXN0b21pemF0aW9uGAMgASgJEhAKCHBsYW5UZXJtGAQgASgJEhUKDXBheW1lbnRPcHRpb24YBSABKAkSFgoObG9va0JhY2tQZXJpb2QYBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSFAoMYW5udWFsQnVkZ2V0GAggASgBEhAKCGFwcHJvdmFsGAkgASgIEhMKC2xhc3RVcGRhdGVkGAogASgJIlcKGkdldFNldHRpbmdzSGlzdG9yeVJlc3BvbnNlEjkKD3NldHRpbmdzSGlzdG9yeRgBIAMoCzIgLmJsdWVhcGkuZmxvdy52MS5TZXR0aW5nc0hpc3RvcnkixwEKIENyZWF0ZUNvc3RFeHBsb3JlckFjY2Vzc1Jlc3BvbnNlEg4KBnRhcmdldBgBIAEoCRIPCgdyb2xlQXJuGAIgASgJEhIKCmV4dGVybmFsSWQYAyABKAkSDwoHc3RhY2tJZBgEIAEoCRITCgtzdGFja1JlZ2lvbhgFIAEoCRITCgt0ZW1wbGF0ZVVybBgGIAEoCRIOCgZzdGF0dXMYByABKAkSEwoLbGFzdFVwZGF0ZWQYCCABKAkSDgoGYWNjZXNzGAkgASgJImYKDE1vbnRobHlDb3N0cxIbChNtb250aGx5T25EZW1hbmRDb3N0GAEgASgBEhwKFG1vbnRobHlFZmZlY3RpdmVDb3N0GAIgASgBEhsKE21vbnRobHlUb3RhbFNhdmluZ3MYAyABKAEi0QIKCVNwRGV0YWlscxIXCg9zYXZpbmdzUGxhblR5cGUYASABKAkSDQoFc3RhdGUYAiABKAkSEQoJc3RhcnRUaW1lGAMgASgJEg8KB2VuZFRpbWUYBCABKAkSFwoPcmV0dXJuYWJsZVVudGlsGAUgASgJEhIKCmNvbW1pdG1lbnQYBiABKAESEAoIY3VycmVuY3kYByABKAkSEAoIcGxhblRlcm0YCCABKAkSFQoNcGF5bWVudE9wdGlvbhgJIAEoCRIUCgxwcm9kdWN0VHlwZXMYCiADKAkSHAoUdXBmcm9udFBheW1lbnRBbW91bnQYCyABKAESHgoWcmVjdXJyaW5nUGF5bWVudEFtb3VudBgMIAEoARIZChFlYzJJbnN0YW5jZUZhbWlseRgNIAMoCRIMCgR0YWdzGA4gASgJEhMKC3B1cmNoYXNlZEJ5GA8gASgJItQBChBVc2FnZUNvc3REZXRhaWxzEhMKC2N1cnJlbnREYXRlGAEgASgJEhMKC3Byb2R1Y3RDb2RlGAIgASgJEhQKDG9uZGVtYW5kQ29zdBgDIAEoARIUCgxyZXNlcnZlZENvc3QYBCABKAESHQoVc2F2aW5nc1BsYW5Db3N0QnlGbG93GAUgASgBEh0KFXNhdmluZ3NQbGFuQ29zdEJ5VXNlchgGIAEoARIQCghzcG90Q29zdBgHIAEoARIaChJjb3ZlcmFnZVBlcmNlbnRhZ2UYCCABKAEiRgoQRGFpbHlVdGlsaXphdGlvbhITCgtjdXJyZW50RGF0ZRgBIAEoCRIdChV1dGlsaXphdGlvblBlcmNlbnRhZ2UYAiABKAEigwEKElV0aWxpemF0aW9uRGV0YWlscxIXCg9zYXZpbmdzUGxhbk5hbWUYASABKAkSFgoOc2F2aW5nc1BsYW5Bcm4YAiABKAkSPAoRcGVyRGF5VXRpbGl6YXRpb24YAyADKAsyIS5ibHVlYXBpLmZsb3cudjEuRGFpbHlVdGlsaXphdGlvbiKVAgogR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVzcG9uc2USDwoHcGF5ZXJJZBgBIAEoCRIzCgxtb250aGx5Q29zdHMYAiABKAsyHS5ibHVlYXBpLmZsb3cudjEuTW9udGhseUNvc3RzEi0KCXNwRGV0YWlscxgDIAMoCzIaLmJsdWVhcGkuZmxvdy52MS5TcERldGFpbHMSOwoQdXNhZ2VDb3N0RGV0YWlscxgEIAMoCzIhLmJsdWVhcGkuZmxvdy52MS5Vc2FnZUNvc3REZXRhaWxzEj8KEnV0aWxpemF0aW9uRGV0YWlscxgFIAMoCzIjLmJsdWVhcGkuZmxvdy52MS5VdGlsaXphdGlvbkRldGFpbHMiMgoVR2V0QXdzQWNjb3VudHNSZXF1ZXN0EhkKEWJpbGxpbmdJbnRlcm5hbElkGAEgASgJIvcBChZHZXRBd3NBY2NvdW50c1Jlc3BvbnNlEg8KB2dyb3VwSWQYASABKAkSEQoJZ3JvdXBOYW1lGAIgASgJEhUKDXBheWVyQWNjb3VudHMYAyADKAkSYwoWbGlua2VkQWNjb3VudFRvUGF5ZXJJZBgEIAMoCzJDLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1Jlc3BvbnNlLkxpbmtlZEFjY291bnRUb1BheWVySWRFbnRyeRo9ChtMaW5rZWRBY2NvdW50VG9QYXllcklkRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKKAQomR2V0U1BQdXJjaGFzZUFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2USEQoJbGF1bmNoVXJsGAEgASgJEhMKC3RlbXBsYXRlVXJsGAIgASgJEhEKCXN0YWNrTmFtZRgDIAEoCRIRCglwcmluY2lwYWwYBCABKAkSEgoKZXh0ZXJuYWxJZBgFIAEoCSLFAQoeQ3JlYXRlU1BQdXJjaGFzZUFjY2Vzc1Jlc3BvbnNlEg4KBnRhcmdldBgBIAEoCRIPCgdyb2xlQXJuGAIgASgJEhIKCmV4dGVybmFsSWQYAyABKAkSDwoHc3RhY2tJZBgEIAEoCRITCgtzdGFja1JlZ2lvbhgFIAEoCRITCgt0ZW1wbGF0ZVVybBgGIAEoCRIOCgZzdGF0dXMYByABKAkSEwoLbGFzdFVwZGF0ZWQYCCABKAkSDgoGYWNjZXNzGAkgASgJInIKJEdldENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbHNSZXNwb25zZRIOCgZ0YXJnZXQYASABKAkSOgoHZGV0YWlscxgCIAMoCzIpLmJsdWVhcGkuZmxvdy52MS5Dcm9zc0FjY291bnRBY2Nlc3NEZXRhaWwimgEKGENyb3NzQWNjb3VudEFjY2Vzc0RldGFpbBIPCgdyb2xlQXJuGAEgASgJEhIKCmV4dGVybmFsSWQYAiABKAkSDwoHc3RhY2tJZBgDIAEoCRITCgtzdGFja1JlZ2lvbhgEIAEoCRITCgt0ZW1wbGF0ZVVybBgFIAEoCRIOCgZzdGF0dXMYBiABKAkSDgoGYWNjZXNzGAcgASgJIkAKHENyZWF0ZU1lc3NhZ2VUb1NsYWNrUmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCRIPCgdzdWNjZXNzGAIgASgIIqQBCh5HZXRTUFRvUHVyY2hhc2VEZXRhaWxzUmVzcG9uc2USQgoOcmVjb21tZW5kYXRpb24YASABKAsyKi5ibHVlYXBpLmZsb3cudjEuU2F2aW5nc1BsYW5SZWNvbW1lbmRhdGlvbhI+CglwdXJjaGFzZXMYAiADKAsyKy5ibHVlYXBpLmZsb3cudjEuU2F2aW5nc1BsYW5EZXRhaWxzUHVyY2hhc2UitgIKGVNhdmluZ3NQbGFuUmVjb21tZW5kYXRpb24SDwoHcGF5ZXJJZBgBIAEoCRIWCg5saW5rZWRBY2NvdW50cxgCIAEoCRIUCgxhY2NvdW50U2NvcGUYAyABKAkSFwoPc2F2aW5nc1BsYW5UeXBlGAQgASgJEgwKBHRlcm0YBSABKAUSDgoGcmVnaW9uGAYgASgJEhYKDmluc3RhbmNlRmFtaWx5GAcgASgJEiMKG3JlY29tbWVuZGVkSG91cmx5Q29tbWl0bWVudBgIIAEoARIVCg1wYXltZW50T3B0aW9uGAkgASgJEhMKC3VwZnJvbnRDb3N0GAogASgBEhMKC21vbnRobHlDb3N0GAsgASgBEhEKCXRvdGFsQ29zdBgMIAEoARISCgpleHBpcnlEYXRlGA0gASgJIrcCChpTYXZpbmdzUGxhbkRldGFpbHNQdXJjaGFzZRIPCgdwYXllcklkGAEgASgJEhYKDmxpbmtlZEFjY291bnRzGAIgASgJEhQKDGFjY291bnRTY29wZRgDIAEoCRIXCg9zYXZpbmdzUGxhblR5cGUYBCABKAkSDAoEdGVybRgFIAEoBRIOCgZyZWdpb24YBiABKAkSFgoOaW5zdGFuY2VGYW1pbHkYByABKAkSIwobcmVjb21tZW5kZWRIb3VybHlDb21taXRtZW50GAggASgBEhUKDXBheW1lbnRPcHRpb24YCSABKAkSEwoLdXBmcm9udENvc3QYCiABKAESEwoLbW9udGhseUNvc3QYCyABKAESEQoJdG90YWxDb3N0GAwgASgBEhIKCmV4cGlyeURhdGUYDSABKAky+xEKBEZsb3cSXgoHR2V0SW5mbxIfLmJsdWVhcGkuZmxvdy52MS5HZXRJbmZvUmVxdWVzdBogLmJsdWVhcGkuZmxvdy52MS5HZXRJbmZvUmVzcG9uc2UiEILT5JMCChIIL3YxL2luZm8SdgoLU2V0U2V0dGluZ3MSIy5ibHVlYXBpLmZsb3cudjEuU2V0U2V0dGluZ3NSZXF1ZXN0GiQuYmx1ZWFwaS5mbG93LnYxLlNldFNldHRpbmdzUmVzcG9uc2UiHILT5JMCFjoBKhoRL3YxL3NldHRpbmdzL3tpZH0ScwoLR2V0U2V0dGluZ3MSIy5ibHVlYXBpLmZsb3cudjEuR2V0U2V0dGluZ3NSZXF1ZXN0GiQuYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzUmVzcG9uc2UiGYLT5JMCExIRL3YxL3NldHRpbmdzL3tpZH0SqgEKGEdldFJlY29tbWVuZGF0aW9uRGV0YWlscxIwLmJsdWVhcGkuZmxvdy52MS5HZXRSZWNvbW1lbmRhdGlvbkRldGFpbHNSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkdldFJlY29tbWVuZGF0aW9uRGV0YWlsc1Jlc3BvbnNlIimC0+STAiMSIS92MS9zZXR0aW5ncy9yZWNvbW1lbmRhdGlvbnMve2lkfRKyAQogR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmwSOC5ibHVlYXBpLmZsb3cudjEuR2V0Q29zdEV4cGxvcmVyQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0GjkuYmx1ZWFwaS5mbG93LnYxLkdldENvc3RFeHBsb3JlckFjY2Vzc1RlbXBsYXRlVXJsUmVzcG9uc2UiGYLT5JMCExIRL3YxL2F3cy94YWNjdC9jZWESkAEKEkdldFNldHRpbmdzSGlzdG9yeRIqLmJsdWVhcGkuZmxvdy52MS5HZXRTZXR0aW5nc0hpc3RvcnlSZXF1ZXN0GisuYmx1ZWFwaS5mbG93LnYxLkdldFNldHRpbmdzSGlzdG9yeVJlc3BvbnNlIiGC0+STAhsSGS92MS9zZXR0aW5ncy9oaXN0b3J5L3tpZH0SnQEKGENyZWF0ZUNvc3RFeHBsb3JlckFjY2VzcxIwLmJsdWVhcGkuZmxvdy52MS5DcmVhdGVDb3N0RXhwbG9yZXJBY2Nlc3NSZXF1ZXN0GjEuYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZUNvc3RFeHBsb3JlckFjY2Vzc1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9hd3MveGFjY3QvY2VhEpkBChhHZXREYWlseVVzYWdlQ29zdERldGFpbHMSMC5ibHVlYXBpLmZsb3cudjEuR2V0RGFpbHlVc2FnZUNvc3REZXRhaWxzUmVxdWVzdBoxLmJsdWVhcGkuZmxvdy52MS5HZXREYWlseVVzYWdlQ29zdERldGFpbHNSZXNwb25zZSIYgtPkkwISOgEqIg0vdjEvdXNhZ2Vjb3N0EpIBCg5HZXRBd3NBY2NvdW50cxImLmJsdWVhcGkuZmxvdy52MS5HZXRBd3NBY2NvdW50c1JlcXVlc3QaJy5ibHVlYXBpLmZsb3cudjEuR2V0QXdzQWNjb3VudHNSZXNwb25zZSIvgtPkkwIpOgEqIiQvdjEvYXdzL3tiaWxsaW5nSW50ZXJuYWxJZH0vYWNjb3VudHMSrAEKHkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybBI2LmJsdWVhcGkuZmxvdy52MS5HZXRTUFB1cmNoYXNlQWNjZXNzVGVtcGxhdGVVcmxSZXF1ZXN0GjcuYmx1ZWFwaS5mbG93LnYxLkdldFNQUHVyY2hhc2VBY2Nlc3NUZW1wbGF0ZVVybFJlc3BvbnNlIhmC0+STAhMSES92MS9hd3MveGFjY3Qvc3BhEpcBChZDcmVhdGVTUFB1cmNoYXNlQWNjZXNzEi4uYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3NSZXF1ZXN0Gi8uYmx1ZWFwaS5mbG93LnYxLkNyZWF0ZVNQUHVyY2hhc2VBY2Nlc3NSZXNwb25zZSIcgtPkkwIWOgEqIhEvdjEvYXdzL3hhY2N0L3NwYRKzAQocR2V0Q3Jvc3NBY2NvdW50QWNjZXNzRGV0YWlscxI0LmJsdWVhcGkuZmxvdy52MS5HZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzUmVxdWVzdBo1LmJsdWVhcGkuZmxvdy52MS5HZXRDcm9zc0FjY291bnRBY2Nlc3NEZXRhaWxzUmVzcG9uc2UiJoLT5JMCIBIeL3YxL2F3cy94YWNjdC97cGF5ZXJJZH0vYWNjZXNzEpYBChRDcmVhdGVNZXNzYWdlVG9TbGFjaxIsLmJsdWVhcGkuZmxvdy52MS5DcmVhdGVNZXNzYWdlVG9TbGFja1JlcXVlc3QaLS5ibHVlYXBpLmZsb3cudjEuQ3JlYXRlTWVzc2FnZVRvU2xhY2tSZXNwb25zZSIhgtPkkwIbOgEqIhYvdjEvbm90aWZpY2F0aW9uL3NsYWNrEq8BChZHZXRTUFRvUHVyY2hhc2VEZXRhaWxzEi4uYmx1ZWFwaS5mbG93LnYxLkdldFNQVG9QdXJjaGFzZURldGFpbHNSZXF1ZXN0Gi8uYmx1ZWFwaS5mbG93LnYxLkdldFNQVG9QdXJjaGFzZURldGFpbHNSZXNwb25zZSI0gtPkkwIuEiwvdjEvc3AvcHVyY2hhc2VEZXRhaWxzL3twYXllcklkfS97eWVhck1vbnRofRqVAZJBkQESQShBTFBIQSkgRmxvdyBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9mbG93GkwKElNlcnZpY2UgZGVmaW5pdGlvbhI2aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2Zsb3cvQkgKFmNsb3VkLmFscGhhdXMuYXBpLmZsb3dCCUZsb3dQcm90b1ojZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL2Zsb3diBnByb3RvMw", [file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * Request message for the Flow.GetInfo rpc.
@@ -335,7 +335,7 @@ export const CreateMessageToSlackRequestSchema: GenMessage<CreateMessageToSlackR
  */
 export type CreateMessageToSlackRequest_Configurations = Message<"blueapi.flow.v1.CreateMessageToSlackRequest.Configurations"> & {
   /**
-   * @generated from field: string account_scope = 1;
+   * @generated from field: string accountScope = 1;
    */
   accountScope: string;
 
@@ -345,27 +345,27 @@ export type CreateMessageToSlackRequest_Configurations = Message<"blueapi.flow.v
   customization: string;
 
   /**
-   * @generated from field: string plan_term = 3;
+   * @generated from field: string planTerm = 3;
    */
   planTerm: string;
 
   /**
-   * @generated from field: string payment_option = 4;
+   * @generated from field: string paymentOption = 4;
    */
   paymentOption: string;
 
   /**
-   * @generated from field: string look_back_period = 5;
+   * @generated from field: string lookBackPeriod = 5;
    */
   lookBackPeriod: string;
 
   /**
-   * @generated from field: string instance_family = 6;
+   * @generated from field: string instanceFamily = 6;
    */
   instanceFamily: string;
 
   /**
-   * @generated from field: double annual_budget = 7;
+   * @generated from field: double annualBudget = 7;
    */
   annualBudget: number;
 
@@ -375,7 +375,7 @@ export type CreateMessageToSlackRequest_Configurations = Message<"blueapi.flow.v
   approval: boolean;
 
   /**
-   * @generated from field: string payer_id = 9;
+   * @generated from field: string payerId = 9;
    */
   payerId: string;
 };
@@ -399,92 +399,92 @@ export type CreateMessageToSlackRequest_Recommendation = Message<"blueapi.flow.v
   id: string;
 
   /**
-   * @generated from field: double current_monthly_on_demand_spend = 2;
+   * @generated from field: double currentMonthlyOnDemandSpend = 2;
    */
   currentMonthlyOnDemandSpend: number;
 
   /**
-   * @generated from field: double estimated_monthly_spend = 3;
+   * @generated from field: double estimatedMonthlySpend = 3;
    */
   estimatedMonthlySpend: number;
 
   /**
-   * @generated from field: double estimated_monthly_savings_derived = 4;
+   * @generated from field: double estimatedMonthlySavingsDerived = 4;
    */
   estimatedMonthlySavingsDerived: number;
 
   /**
-   * @generated from field: double total_daily_cost = 5;
+   * @generated from field: double totalDailyCost = 5;
    */
   totalDailyCost: number;
 
   /**
-   * @generated from field: double current_sp_commitment = 6;
+   * @generated from field: double currentSPCommitment = 6;
    */
-  currentSpCommitment: number;
+  currentSPCommitment: number;
 
   /**
-   * @generated from field: double estimated_on_demand_cost = 7;
+   * @generated from field: double estimatedOnDemandCost = 7;
    */
   estimatedOnDemandCost: number;
 
   /**
-   * @generated from field: double hourly_commitment = 8;
+   * @generated from field: double hourlyCommitment = 8;
    */
   hourlyCommitment: number;
 
   /**
-   * @generated from field: double estimated_monthly_savings = 9;
+   * @generated from field: double estimatedMonthlySavings = 9;
    */
   estimatedMonthlySavings: number;
 
   /**
-   * @generated from field: double estimated_savings = 10;
+   * @generated from field: double estimatedSavings = 10;
    */
   estimatedSavings: number;
 
   /**
-   * @generated from field: string recommendation_level = 11;
+   * @generated from field: string recommendationLevel = 11;
    */
   recommendationLevel: string;
 
   /**
-   * @generated from field: string plan_type = 12;
+   * @generated from field: string planType = 12;
    */
   planType: string;
 
   /**
-   * @generated from field: string plan_term = 13;
+   * @generated from field: string planTerm = 13;
    */
   planTerm: string;
 
   /**
-   * @generated from field: string payment_option = 14;
+   * @generated from field: string paymentOption = 14;
    */
   paymentOption: string;
 
   /**
-   * @generated from field: string look_back_period = 15;
+   * @generated from field: string lookBackPeriod = 15;
    */
   lookBackPeriod: string;
 
   /**
-   * @generated from field: double estimated_roi = 16;
+   * @generated from field: double estimatedROI = 16;
    */
-  estimatedRoi: number;
+  estimatedROI: number;
 
   /**
-   * @generated from field: double estimated_sp_cost = 17;
+   * @generated from field: double estimatedSPCost = 17;
    */
-  estimatedSpCost: number;
+  estimatedSPCost: number;
 
   /**
-   * @generated from field: double estimated_total_cost = 18;
+   * @generated from field: double estimatedTotalCost = 18;
    */
   estimatedTotalCost: number;
 
   /**
-   * @generated from field: string last_updated = 19;
+   * @generated from field: string lastUpdated = 19;
    */
   lastUpdated: string;
 };
@@ -495,6 +495,34 @@ export type CreateMessageToSlackRequest_Recommendation = Message<"blueapi.flow.v
  */
 export const CreateMessageToSlackRequest_RecommendationSchema: GenMessage<CreateMessageToSlackRequest_Recommendation> = /*@__PURE__*/
   messageDesc(file_flow_v1_flow, 11, 1);
+
+/**
+ * Request message for the Flow.GetSPToPurchaseDetails rpc.
+ *
+ * @generated from message blueapi.flow.v1.GetSPToPurchaseDetailsRequest
+ */
+export type GetSPToPurchaseDetailsRequest = Message<"blueapi.flow.v1.GetSPToPurchaseDetailsRequest"> & {
+  /**
+   * Required. The id of the payer account.
+   *
+   * @generated from field: string payerId = 1;
+   */
+  payerId: string;
+
+  /**
+   * Required. The year and month  for which the savings plan details are requested, formatted as "YYYYMM".
+   *
+   * @generated from field: string yearMonth = 2;
+   */
+  yearMonth: string;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.GetSPToPurchaseDetailsRequest.
+ * Use `create(GetSPToPurchaseDetailsRequestSchema)` to create a new message.
+ */
+export const GetSPToPurchaseDetailsRequestSchema: GenMessage<GetSPToPurchaseDetailsRequest> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 12);
 
 /**
  * Response message for the Flow.GetInfo rpc.
@@ -513,7 +541,7 @@ export type GetInfoResponse = Message<"blueapi.flow.v1.GetInfoResponse"> & {
  * Use `create(GetInfoResponseSchema)` to create a new message.
  */
 export const GetInfoResponseSchema: GenMessage<GetInfoResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 12);
+  messageDesc(file_flow_v1_flow, 13);
 
 /**
  * Response message for the Flow.CreateSettings rpc.
@@ -532,7 +560,7 @@ export type SetSettingsResponse = Message<"blueapi.flow.v1.SetSettingsResponse">
  * Use `create(SetSettingsResponseSchema)` to create a new message.
  */
 export const SetSettingsResponseSchema: GenMessage<SetSettingsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 13);
+  messageDesc(file_flow_v1_flow, 14);
 
 /**
  * Response message for fetching previous settings configuration of a user.
@@ -601,7 +629,7 @@ export type GetSettingsResponse = Message<"blueapi.flow.v1.GetSettingsResponse">
  * Use `create(GetSettingsResponseSchema)` to create a new message.
  */
 export const GetSettingsResponseSchema: GenMessage<GetSettingsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 14);
+  messageDesc(file_flow_v1_flow, 15);
 
 /**
  * @generated from message blueapi.flow.v1.GetRecommendationDetailsResponse
@@ -746,7 +774,7 @@ export type GetRecommendationDetailsResponse = Message<"blueapi.flow.v1.GetRecom
  * Use `create(GetRecommendationDetailsResponseSchema)` to create a new message.
  */
 export const GetRecommendationDetailsResponseSchema: GenMessage<GetRecommendationDetailsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 15);
+  messageDesc(file_flow_v1_flow, 16);
 
 /**
  * Response message for the Flow.GetCostExplorerAccessTemplateUrl rpc.
@@ -795,7 +823,7 @@ export type GetCostExplorerAccessTemplateUrlResponse = Message<"blueapi.flow.v1.
  * Use `create(GetCostExplorerAccessTemplateUrlResponseSchema)` to create a new message.
  */
 export const GetCostExplorerAccessTemplateUrlResponseSchema: GenMessage<GetCostExplorerAccessTemplateUrlResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 16);
+  messageDesc(file_flow_v1_flow, 17);
 
 /**
  * Settings history message.
@@ -879,7 +907,7 @@ export type SettingsHistory = Message<"blueapi.flow.v1.SettingsHistory"> & {
  * Use `create(SettingsHistorySchema)` to create a new message.
  */
 export const SettingsHistorySchema: GenMessage<SettingsHistory> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 17);
+  messageDesc(file_flow_v1_flow, 18);
 
 /**
  * Response message for the Flow.GetSettingsHistory rpc.
@@ -898,7 +926,7 @@ export type GetSettingsHistoryResponse = Message<"blueapi.flow.v1.GetSettingsHis
  * Use `create(GetSettingsHistoryResponseSchema)` to create a new message.
  */
 export const GetSettingsHistoryResponseSchema: GenMessage<GetSettingsHistoryResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 18);
+  messageDesc(file_flow_v1_flow, 19);
 
 /**
  * Response message for the Flow.CreateCostExplorerAccess rpc.
@@ -975,7 +1003,7 @@ export type CreateCostExplorerAccessResponse = Message<"blueapi.flow.v1.CreateCo
  * Use `create(CreateCostExplorerAccessResponseSchema)` to create a new message.
  */
 export const CreateCostExplorerAccessResponseSchema: GenMessage<CreateCostExplorerAccessResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 19);
+  messageDesc(file_flow_v1_flow, 20);
 
 /**
  * Summary of monthly cost values associated with a single Savings Plan.
@@ -1010,7 +1038,7 @@ export type MonthlyCosts = Message<"blueapi.flow.v1.MonthlyCosts"> & {
  * Use `create(MonthlyCostsSchema)` to create a new message.
  */
 export const MonthlyCostsSchema: GenMessage<MonthlyCosts> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 20);
+  messageDesc(file_flow_v1_flow, 21);
 
 /**
  * Savings Plan Details to be used in the GetDailyUsageCostDetailsResponse.
@@ -1129,7 +1157,7 @@ export type SpDetails = Message<"blueapi.flow.v1.SpDetails"> & {
  * Use `create(SpDetailsSchema)` to create a new message.
  */
 export const SpDetailsSchema: GenMessage<SpDetails> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 21);
+  messageDesc(file_flow_v1_flow, 22);
 
 /**
  * Usage and Cost Details to be used in the GetDailyUsageCostDetailsResponse.
@@ -1199,7 +1227,7 @@ export type UsageCostDetails = Message<"blueapi.flow.v1.UsageCostDetails"> & {
  * Use `create(UsageCostDetailsSchema)` to create a new message.
  */
 export const UsageCostDetailsSchema: GenMessage<UsageCostDetails> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 22);
+  messageDesc(file_flow_v1_flow, 23);
 
 /**
  * Daily utilization data for a specific date range.
@@ -1227,7 +1255,7 @@ export type DailyUtilization = Message<"blueapi.flow.v1.DailyUtilization"> & {
  * Use `create(DailyUtilizationSchema)` to create a new message.
  */
 export const DailyUtilizationSchema: GenMessage<DailyUtilization> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 23);
+  messageDesc(file_flow_v1_flow, 24);
 
 /**
  * Utilization details for Savings Plans, including ARN and utilization percentage.
@@ -1262,7 +1290,7 @@ export type UtilizationDetails = Message<"blueapi.flow.v1.UtilizationDetails"> &
  * Use `create(UtilizationDetailsSchema)` to create a new message.
  */
 export const UtilizationDetailsSchema: GenMessage<UtilizationDetails> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 24);
+  messageDesc(file_flow_v1_flow, 25);
 
 /**
  * A single entry containing Savings Plan, monthly cost summary, and usage breakdown.
@@ -1311,7 +1339,7 @@ export type GetDailyUsageCostDetailsResponse = Message<"blueapi.flow.v1.GetDaily
  * Use `create(GetDailyUsageCostDetailsResponseSchema)` to create a new message.
  */
 export const GetDailyUsageCostDetailsResponseSchema: GenMessage<GetDailyUsageCostDetailsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 25);
+  messageDesc(file_flow_v1_flow, 26);
 
 /**
  * Response message for the Flow.GetAwsAccounts rpc.
@@ -1330,7 +1358,7 @@ export type GetAwsAccountsRequest = Message<"blueapi.flow.v1.GetAwsAccountsReque
  * Use `create(GetAwsAccountsRequestSchema)` to create a new message.
  */
 export const GetAwsAccountsRequestSchema: GenMessage<GetAwsAccountsRequest> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 26);
+  messageDesc(file_flow_v1_flow, 27);
 
 /**
  * Response message for the Flow.GetAwsAccounts rpc.
@@ -1368,7 +1396,7 @@ export type GetAwsAccountsResponse = Message<"blueapi.flow.v1.GetAwsAccountsResp
  * Use `create(GetAwsAccountsResponseSchema)` to create a new message.
  */
 export const GetAwsAccountsResponseSchema: GenMessage<GetAwsAccountsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 27);
+  messageDesc(file_flow_v1_flow, 28);
 
 /**
  * Response message for the Flow.GetSPPurchaseAccessTemplateUrl rpc.
@@ -1417,7 +1445,7 @@ export type GetSPPurchaseAccessTemplateUrlResponse = Message<"blueapi.flow.v1.Ge
  * Use `create(GetSPPurchaseAccessTemplateUrlResponseSchema)` to create a new message.
  */
 export const GetSPPurchaseAccessTemplateUrlResponseSchema: GenMessage<GetSPPurchaseAccessTemplateUrlResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 28);
+  messageDesc(file_flow_v1_flow, 29);
 
 /**
  * Response message for the Flow.CreateSPPurchaseAccess rpc.
@@ -1494,7 +1522,7 @@ export type CreateSPPurchaseAccessResponse = Message<"blueapi.flow.v1.CreateSPPu
  * Use `create(CreateSPPurchaseAccessResponseSchema)` to create a new message.
  */
 export const CreateSPPurchaseAccessResponseSchema: GenMessage<CreateSPPurchaseAccessResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 29);
+  messageDesc(file_flow_v1_flow, 30);
 
 /**
  * Response message for the Flow.GetCrossAccountAccessDetails rpc.
@@ -1522,7 +1550,7 @@ export type GetCrossAccountAccessDetailsResponse = Message<"blueapi.flow.v1.GetC
  * Use `create(GetCrossAccountAccessDetailsResponseSchema)` to create a new message.
  */
 export const GetCrossAccountAccessDetailsResponseSchema: GenMessage<GetCrossAccountAccessDetailsResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 30);
+  messageDesc(file_flow_v1_flow, 31);
 
 /**
  * Individual cross-access detail record.
@@ -1585,7 +1613,7 @@ export type CrossAccountAccessDetail = Message<"blueapi.flow.v1.CrossAccountAcce
  * Use `create(CrossAccountAccessDetailSchema)` to create a new message.
  */
 export const CrossAccountAccessDetailSchema: GenMessage<CrossAccountAccessDetail> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 31);
+  messageDesc(file_flow_v1_flow, 32);
 
 /**
  * Response after sending to Slack
@@ -1609,7 +1637,193 @@ export type CreateMessageToSlackResponse = Message<"blueapi.flow.v1.CreateMessag
  * Use `create(CreateMessageToSlackResponseSchema)` to create a new message.
  */
 export const CreateMessageToSlackResponseSchema: GenMessage<CreateMessageToSlackResponse> = /*@__PURE__*/
-  messageDesc(file_flow_v1_flow, 32);
+  messageDesc(file_flow_v1_flow, 33);
+
+/**
+ * Response message for the Flow.GetSPToPurchaseDetails rpc.
+ *
+ * @generated from message blueapi.flow.v1.GetSPToPurchaseDetailsResponse
+ */
+export type GetSPToPurchaseDetailsResponse = Message<"blueapi.flow.v1.GetSPToPurchaseDetailsResponse"> & {
+  /**
+   * Recommendation details
+   *
+   * @generated from field: blueapi.flow.v1.SavingsPlanRecommendation recommendation = 1;
+   */
+  recommendation?: SavingsPlanRecommendation;
+
+  /**
+   * List of purchase items
+   *
+   * @generated from field: repeated blueapi.flow.v1.SavingsPlanDetailsPurchase purchases = 2;
+   */
+  purchases: SavingsPlanDetailsPurchase[];
+};
+
+/**
+ * Describes the message blueapi.flow.v1.GetSPToPurchaseDetailsResponse.
+ * Use `create(GetSPToPurchaseDetailsResponseSchema)` to create a new message.
+ */
+export const GetSPToPurchaseDetailsResponseSchema: GenMessage<GetSPToPurchaseDetailsResponse> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 34);
+
+/**
+ * Savings plan recommendation details
+ *
+ * @generated from message blueapi.flow.v1.SavingsPlanRecommendation
+ */
+export type SavingsPlanRecommendation = Message<"blueapi.flow.v1.SavingsPlanRecommendation"> & {
+  /**
+   * @generated from field: string payerId = 1;
+   */
+  payerId: string;
+
+  /**
+   * @generated from field: string linkedAccounts = 2;
+   */
+  linkedAccounts: string;
+
+  /**
+   * @generated from field: string accountScope = 3;
+   */
+  accountScope: string;
+
+  /**
+   * @generated from field: string savingsPlanType = 4;
+   */
+  savingsPlanType: string;
+
+  /**
+   * @generated from field: int32 term = 5;
+   */
+  term: number;
+
+  /**
+   * @generated from field: string region = 6;
+   */
+  region: string;
+
+  /**
+   * @generated from field: string instanceFamily = 7;
+   */
+  instanceFamily: string;
+
+  /**
+   * @generated from field: double recommendedHourlyCommitment = 8;
+   */
+  recommendedHourlyCommitment: number;
+
+  /**
+   * @generated from field: string paymentOption = 9;
+   */
+  paymentOption: string;
+
+  /**
+   * @generated from field: double upfrontCost = 10;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double monthlyCost = 11;
+   */
+  monthlyCost: number;
+
+  /**
+   * @generated from field: double totalCost = 12;
+   */
+  totalCost: number;
+
+  /**
+   * @generated from field: string expiryDate = 13;
+   */
+  expiryDate: string;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.SavingsPlanRecommendation.
+ * Use `create(SavingsPlanRecommendationSchema)` to create a new message.
+ */
+export const SavingsPlanRecommendationSchema: GenMessage<SavingsPlanRecommendation> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 35);
+
+/**
+ * Savings plan details to be purchased
+ *
+ * @generated from message blueapi.flow.v1.SavingsPlanDetailsPurchase
+ */
+export type SavingsPlanDetailsPurchase = Message<"blueapi.flow.v1.SavingsPlanDetailsPurchase"> & {
+  /**
+   * @generated from field: string payerId = 1;
+   */
+  payerId: string;
+
+  /**
+   * @generated from field: string linkedAccounts = 2;
+   */
+  linkedAccounts: string;
+
+  /**
+   * @generated from field: string accountScope = 3;
+   */
+  accountScope: string;
+
+  /**
+   * @generated from field: string savingsPlanType = 4;
+   */
+  savingsPlanType: string;
+
+  /**
+   * @generated from field: int32 term = 5;
+   */
+  term: number;
+
+  /**
+   * @generated from field: string region = 6;
+   */
+  region: string;
+
+  /**
+   * @generated from field: string instanceFamily = 7;
+   */
+  instanceFamily: string;
+
+  /**
+   * @generated from field: double recommendedHourlyCommitment = 8;
+   */
+  recommendedHourlyCommitment: number;
+
+  /**
+   * @generated from field: string paymentOption = 9;
+   */
+  paymentOption: string;
+
+  /**
+   * @generated from field: double upfrontCost = 10;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double monthlyCost = 11;
+   */
+  monthlyCost: number;
+
+  /**
+   * @generated from field: double totalCost = 12;
+   */
+  totalCost: number;
+
+  /**
+   * @generated from field: string expiryDate = 13;
+   */
+  expiryDate: string;
+};
+
+/**
+ * Describes the message blueapi.flow.v1.SavingsPlanDetailsPurchase.
+ * Use `create(SavingsPlanDetailsPurchaseSchema)` to create a new message.
+ */
+export const SavingsPlanDetailsPurchaseSchema: GenMessage<SavingsPlanDetailsPurchase> = /*@__PURE__*/
+  messageDesc(file_flow_v1_flow, 36);
 
 /**
  * Flow service definition.
@@ -1746,6 +1960,16 @@ export const Flow: GenService<{
     methodKind: "unary";
     input: typeof CreateMessageToSlackRequestSchema;
     output: typeof CreateMessageToSlackResponseSchema;
+  },
+  /**
+   * Get savings plan details to be purchased .
+   *
+   * @generated from rpc blueapi.flow.v1.Flow.GetSPToPurchaseDetails
+   */
+  getSPToPurchaseDetails: {
+    methodKind: "unary";
+    input: typeof GetSPToPurchaseDetailsRequestSchema;
+    output: typeof GetSPToPurchaseDetailsResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_flow_v1_flow, 0);
