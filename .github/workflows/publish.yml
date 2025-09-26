@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           registry-url: "https://npm.pkg.github.com"
           scope: "@alphauslabs"
 
@@ -26,13 +26,14 @@ jobs:
         run: |
           npm install
           npm run build
+
+      - name: Commit version bump and push
+        run: |
           git config user.email "dev@mobingi.com"
           git config user.name "mobingideployer"
-          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
-          git push
-          npm version patch
-          git add . && git commit -am "$GITHUB_REF $GITHUB_SHA" || true
-          git push
+
+          npm version patch -m "ci: bump version to %s [ci skip]"
+          git push origin HEAD:main --tags
       - name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
