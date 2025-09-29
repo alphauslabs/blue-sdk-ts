@@ -8,7 +8,7 @@ const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file protos/message.proto.
  */
-exports.file_protos_message = (0, codegenv2_1.fileDesc)("ChRwcm90b3MvbWVzc2FnZS5wcm90bxIGcHJvdG9zIigKB01lc3NhZ2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJQkkKFGNsb3VkLmFscGhhdXMucHJvdG9zQgxNZXNzYWdlUHJvdG9aI2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvdG9iZXJlcGxhY2VkYgZwcm90bzM");
+exports.file_protos_message = (0, codegenv2_1.fileDesc)("ChRwcm90b3MvbWVzc2FnZS5wcm90bxIGcHJvdG9zIigKB01lc3NhZ2USDAoEY29kZRgBIAEoBRIPCgdtZXNzYWdlGAIgASgJQkMKFGNsb3VkLmFscGhhdXMucHJvdG9zQgxNZXNzYWdlUHJvdG9aHWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvcHJvdG9zYgZwcm90bzM");
 /**
  * Describes the message protos.Message.
  * Use `create(MessageSchema)` to create a new message.
