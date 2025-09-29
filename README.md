@@ -21,11 +21,12 @@ import { WithAccessToken } from '@alphauslabs/blue-sdk-ts/conn/conn'
 
 const coverClient = NewCoverClient(new WithAccessToken('your-access-token'))
 
-// Get User Details
-try {
-    const user = await coverClient.getUserDetails({})
-    console.log(user)
-} catch (e) {
-    console.error('Failed to fetch user details:', error);
+async function test() {
+    try {
+        const user = await coverClient.getUserDetails({}) // Get User Details
+        console.log(user)
+    } catch (e) {
+        console.error('Failed to fetch user details:', error);
+    }
 }
 ```
