@@ -1,0 +1,29 @@
+name: package updater
+
+on:
+    push:
+        tags:
+            - "v*.*.*"
+jobs:
+    build:
+        name: update package
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: setup-node@v4
+              with:
+                  node-version: "20"
+            
+            - name: publish
+                run: |
+                git config user.name "mobingideployer"
+                git config user.email "dev@mobingi.com"
+                VERSION=${GITHUB_REF#refs/tags/v}
+                echo "Publishing version $VERSION"
+                npm version $VERSION --no-git-tag-version
+                npm publish
+
+            
