@@ -23,9 +23,14 @@ jobs:
 
       - name: Publish
         run: |
+          git config user.name "mobingideployer"
+          git config user.email "dev@mobingi.com"
           VERSION=${GITHUB_REF#refs/tags/v}
           echo "Publishing version $VERSION"
           npm pkg set version=$VERSION
+          git add package.json
+          git commit -m "chore: update package.json version to $VERSION"
+          git push
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
