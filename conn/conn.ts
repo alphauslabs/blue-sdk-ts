@@ -41,6 +41,6 @@ export class WithAccessToken implements ConnectOption {
     constructor(private accessToken: string) {}
 
     apply(req: Headers): void {
-        req.set("Authorization", this.accessToken);
+        req.set("Authorization", `Bearer ${this.accessToken}`);
     }
 }
