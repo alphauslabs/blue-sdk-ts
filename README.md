@@ -12,7 +12,7 @@ npm install @alphauslabs/blue-sdk-ts@latest
 
 ## Usage
 You must pass an access token to create a client instance.
-Use the WithAccessToken option when instantiating a client.
+Use the `WithAccessToken` option when instantiating a client.
 
 ### Example in cover service
 ```ts
