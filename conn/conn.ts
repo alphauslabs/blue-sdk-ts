@@ -22,7 +22,6 @@ export class BlueAPIService<Service extends DescService> {
       interceptors: [
         (next) => async (req) => {
           req.header.set('service-name', this.serviceName)
-          req.header.set('x-agent', 'blue-sdk-ts')
           connectOptions.forEach(option => option.apply(req.header))
           return await next(req)
         }
@@ -42,6 +41,6 @@ export class WithAccessToken implements ConnectOption {
     constructor(private accessToken: string) {}
 
     apply(req: Headers): void {
-        req.set("access-token", this.accessToken);
+        req.set("Authorization", this.accessToken);
     }
 }
