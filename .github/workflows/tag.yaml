@@ -30,6 +30,6 @@ jobs:
           npm pkg set version=$VERSION
           git add package.json
           git commit -m "chore: update package.json version to $VERSION"
-          git push origin main
+          git push origin HEAD
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
