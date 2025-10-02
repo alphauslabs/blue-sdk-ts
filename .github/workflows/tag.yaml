@@ -10,7 +10,6 @@ jobs:
     name: update package
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -18,8 +17,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@alphauslabs"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@ninyolittle"
 
       - name: Publish
         run: |
@@ -31,6 +30,7 @@ jobs:
           git add package.json
           git commit -m "chore: update package.json version to $VERSION"
           git push origin HEAD:main
-          npm publish
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

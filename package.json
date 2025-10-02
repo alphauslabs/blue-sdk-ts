@@ -1,13 +1,12 @@
 {
-  "name": "@alphauslabs/blue-sdk-ts",
-  "version": "0.0.16",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "name": "@ninyolittle/blue-sdk-ts",
+  "version": "1.0.1",
   "scripts": {
     "build": "tsc"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@connectrpc/connect": "^2.1.0",
