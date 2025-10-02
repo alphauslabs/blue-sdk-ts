@@ -1,46 +1,57 @@
-import { createClient, type Client } from '@connectrpc/connect'
-import { createGrpcWebTransport } from '@connectrpc/connect-web'
-import type { DescService } from '@bufbuild/protobuf'
+import { createClient, Interceptor, type Client } from "@connectrpc/connect";
+import { createGrpcWebTransport } from "@connectrpc/connect-web";
+import type { DescService } from "@bufbuild/protobuf";
+import { devtoolsInterceptor } from "connect-devtools";
 
 export class BlueAPIService<Service extends DescService> {
-  private client: Client<Service>
-  private host: string = 'https://bluerpc.alphaus.cloud:8443'
+  private client: Client<Service>;
+  private host: string = "https://bluerpc.alphaus.cloud:8443";
 
   get clientInstance(): Client<Service> {
-    return this.client
+    return this.client;
   }
 
-  constructor(service: Service, 
-    private serviceName: string, 
-    connectOptions: ConnectOption[] = []) {
+  constructor(
+    service: Service,
+    private serviceName: string,
+    connectOptions: ConnectOption[] = []
+  ) {
     if (!connectOptions.length) {
-        throw new Error("At least one ConnectOption is required")
+      throw new Error("At least one ConnectOption is required");
+    }
+
+    const interceptors: Interceptor[] = [
+      (next) => async (req) => {
+        req.header.set("service-name", this.serviceName);
+        connectOptions.forEach((option) => option.apply(req.header));
+        return await next(req);
+      },
+    ];
+
+    if (
+      "window" in globalThis &&
+      "__CONNECT_WEB_DEVTOOLS__" in globalThis.window
+    ) {
+      interceptors.push(devtoolsInterceptor);
     }
 
     const transport = createGrpcWebTransport({
       baseUrl: this.host,
-      interceptors: [
-        (next) => async (req) => {
-          req.header.set('service-name', this.serviceName)
-          connectOptions.forEach(option => option.apply(req.header))
-          return await next(req)
-        }
-      ]
-    })
+      interceptors: interceptors,
+    });
 
-    this.client = createClient(service, transport)
+    this.client = createClient(service, transport);
   }
 }
 
-
 export interface ConnectOption {
-    apply(req: Headers): void;
+  apply(req: Headers): void;
 }
 
 export class WithAccessToken implements ConnectOption {
-    constructor(private accessToken: string) {}
+  constructor(private accessToken: string) {}
 
-    apply(req: Headers): void {
-        req.set("Authorization", `Bearer ${this.accessToken}`);
-    }
+  apply(req: Headers): void {
+    req.set("Authorization", `Bearer ${this.accessToken}`);
+  }
 }

@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@connectrpc/connect": "^2.1.0",
-    "@connectrpc/connect-web": "^2.1.0"
+    "@connectrpc/connect-web": "^2.1.0",
+    "connect-devtools": "^1.0.0"
   },
   "repository": {
     "type": "git",
