@@ -34,4 +34,5 @@ jobs:
           git commit -m "chore: update package.json version to $VERSION"
           git push origin HEAD:main
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
