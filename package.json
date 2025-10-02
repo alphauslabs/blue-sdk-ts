@@ -1,6 +1,6 @@
 {
-  "name": "@ninyolittle/blue-sdk-typescript",
-  "version": "1.0.0",
+  "name": "@ninyolittle/blue-sdk-ts",
+  "version": "1.0.2",
   "scripts": {
     "build": "tsc"
   },
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alphauslabs/blue-sdk-ts.git"
+    "url": "git+https://github.com/alphauslabs/blue-sdk-ts.git"
   },
   "devDependencies": {
     "typescript": "^5.9.2"
