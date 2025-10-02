@@ -1,5 +1,5 @@
 {
-  "name": "@ninyolittle/blue-sdk-ts",
+  "name": "@ninyolittle/blue-sdk-typescript",
   "version": "1.0.0",
   "scripts": {
     "build": "tsc"
