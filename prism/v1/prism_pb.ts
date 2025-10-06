@@ -1176,6 +1176,8 @@ export const Prism: GenService<{
     output: typeof ProjectSchema;
   },
   /**
+   * Creates a new organization.
+   *
    * @generated from rpc blueapi.prism.v1.Prism.CreateOrganization
    */
   createOrganization: {
@@ -1184,6 +1186,8 @@ export const Prism: GenService<{
     output: typeof EmptySchema;
   },
   /**
+   * Gets information about an organization by ID.
+   *
    * @generated from rpc blueapi.prism.v1.Prism.GetOrganization
    */
   getOrganization: {
