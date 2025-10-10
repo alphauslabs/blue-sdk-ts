@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/cover/costforecast.proto.
  */
 export const file_api_cover_costforecast: GenFile = /*@__PURE__*/
-  fileDesc("ChxhcGkvY292ZXIvY29zdGZvcmVjYXN0LnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciLMAQoPQXdzQ29zdEZvcmVjYXN0EgwKBGRhdGUYASABKAkSDwoHYWNjb3VudBgCIAEoCRITCgtwcm9kdWN0Q29kZRgDIAEoCRIMCgRjb3N0GAQgASgBEhIKCmxvd2VyQm91bmQYBSABKAESEgoKdXBwZXJCb3VuZBgGIAEoARIVCg11bmJsZW5kZWRDb3N0GAcgASgBEhsKE3VuYmxlbmRlZExvd2VyQm91bmQYCCABKAESGwoTdW5ibGVuZGVkVXBwZXJCb3VuZBgJIAEoAUJqCh9jbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmNvdmVyQhlBcGlDb3ZlckNvc3RGb3JlY2FzdFByb3RvWixnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9jb3ZlcmIGcHJvdG8z");
+  fileDesc("ChxhcGkvY292ZXIvY29zdGZvcmVjYXN0LnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciLMAQoPQXdzQ29zdEZvcmVjYXN0EgwKBGRhdGUYASABKAkSDwoHYWNjb3VudBgCIAEoCRITCgtwcm9kdWN0Q29kZRgDIAEoCRIMCgRjb3N0GAQgASgBEhIKCmxvd2VyQm91bmQYBSABKAESEgoKdXBwZXJCb3VuZBgGIAEoARIVCg11bmJsZW5kZWRDb3N0GAcgASgBEhsKE3VuYmxlbmRlZExvd2VyQm91bmQYCCABKAESGwoTdW5ibGVuZGVkVXBwZXJCb3VuZBgJIAEoASIlCglDb3N0R3JvdXASCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSLjAQoTQ29zdEZvcmVjYXN0RGV0YWlscxIKCgJpZBgBIAEoCRIUCgxmb3JlY2FzdE5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSLwoJY29zdGdyb3VwGAQgASgLMhwuYmx1ZWFwaS5hcGkuY292ZXIuQ29zdEdyb3VwEhEKCXN0YXJ0RGF0ZRgFIAEoCRIPCgdlbmREYXRlGAYgASgJEhEKCWNyZWF0ZWRCeRgHIAEoCRIUCgxjcmVhdGlvbkRhdGUYCCABKAkSFwoPbGFzdFVwZGF0ZWREYXRlGAkgASgJIoMBChJFeHRlcm5hbEFkanVzdG1lbnQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRI+CgthZGp1c3RtZW50cxgEIAMoCzIpLmJsdWVhcGkuYXBpLmNvdmVyLkNvc3RGb3JlY2FzdEFkanVzdG1lbnQiOwoWQ29zdEZvcmVjYXN0QWRqdXN0bWVudBINCgVtb250aBgBIAEoCRISCgphZGp1c3RtZW50GAIgASgBQmoKH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCGUFwaUNvdmVyQ29zdEZvcmVjYXN0UHJvdG9aLGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2NvdmVyYgZwcm90bzM");
 
 /**
  * @generated from message blueapi.api.cover.AwsCostForecast
@@ -78,4 +78,143 @@ export type AwsCostForecast = Message<"blueapi.api.cover.AwsCostForecast"> & {
  */
 export const AwsCostForecastSchema: GenMessage<AwsCostForecast> = /*@__PURE__*/
   messageDesc(file_api_cover_costforecast, 0);
+
+/**
+ * @generated from message blueapi.api.cover.CostGroup
+ */
+export type CostGroup = Message<"blueapi.api.cover.CostGroup"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * cost group name
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message blueapi.api.cover.CostGroup.
+ * Use `create(CostGroupSchema)` to create a new message.
+ */
+export const CostGroupSchema: GenMessage<CostGroup> = /*@__PURE__*/
+  messageDesc(file_api_cover_costforecast, 1);
+
+/**
+ * @generated from message blueapi.api.cover.CostForecastDetails
+ */
+export type CostForecastDetails = Message<"blueapi.api.cover.CostForecastDetails"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string forecastName = 2;
+   */
+  forecastName: string;
+
+  /**
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: blueapi.api.cover.CostGroup costgroup = 4;
+   */
+  costgroup?: CostGroup;
+
+  /**
+   * @generated from field: string startDate = 5;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 6;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: string createdBy = 7;
+   */
+  createdBy: string;
+
+  /**
+   * @generated from field: string creationDate = 8;
+   */
+  creationDate: string;
+
+  /**
+   * @generated from field: string lastUpdatedDate = 9;
+   */
+  lastUpdatedDate: string;
+};
+
+/**
+ * Describes the message blueapi.api.cover.CostForecastDetails.
+ * Use `create(CostForecastDetailsSchema)` to create a new message.
+ */
+export const CostForecastDetailsSchema: GenMessage<CostForecastDetails> = /*@__PURE__*/
+  messageDesc(file_api_cover_costforecast, 2);
+
+/**
+ * @generated from message blueapi.api.cover.ExternalAdjustment
+ */
+export type ExternalAdjustment = Message<"blueapi.api.cover.ExternalAdjustment"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * Name of the adjustment
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: repeated blueapi.api.cover.CostForecastAdjustment adjustments = 4;
+   */
+  adjustments: CostForecastAdjustment[];
+};
+
+/**
+ * Describes the message blueapi.api.cover.ExternalAdjustment.
+ * Use `create(ExternalAdjustmentSchema)` to create a new message.
+ */
+export const ExternalAdjustmentSchema: GenMessage<ExternalAdjustment> = /*@__PURE__*/
+  messageDesc(file_api_cover_costforecast, 3);
+
+/**
+ * @generated from message blueapi.api.cover.CostForecastAdjustment
+ */
+export type CostForecastAdjustment = Message<"blueapi.api.cover.CostForecastAdjustment"> & {
+  /**
+   * For monthly adjustment, format is yyyy-mm.
+   *
+   * @generated from field: string month = 1;
+   */
+  month: string;
+
+  /**
+   * @generated from field: double adjustment = 2;
+   */
+  adjustment: number;
+};
+
+/**
+ * Describes the message blueapi.api.cover.CostForecastAdjustment.
+ * Use `create(CostForecastAdjustmentSchema)` to create a new message.
+ */
+export const CostForecastAdjustmentSchema: GenMessage<CostForecastAdjustment> = /*@__PURE__*/
+  messageDesc(file_api_cover_costforecast, 4);
 
