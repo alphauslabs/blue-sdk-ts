@@ -3,14 +3,34 @@
 // @generated from file api/cover/costforecast.proto (package blueapi.api.cover, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AwsCostForecastSchema = exports.file_api_cover_costforecast = void 0;
+exports.CostForecastAdjustmentSchema = exports.ExternalAdjustmentSchema = exports.CostForecastDetailsSchema = exports.CostGroupSchema = exports.AwsCostForecastSchema = exports.file_api_cover_costforecast = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file api/cover/costforecast.proto.
  */
-exports.file_api_cover_costforecast = (0, codegenv2_1.fileDesc)("ChxhcGkvY292ZXIvY29zdGZvcmVjYXN0LnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciLMAQoPQXdzQ29zdEZvcmVjYXN0EgwKBGRhdGUYASABKAkSDwoHYWNjb3VudBgCIAEoCRITCgtwcm9kdWN0Q29kZRgDIAEoCRIMCgRjb3N0GAQgASgBEhIKCmxvd2VyQm91bmQYBSABKAESEgoKdXBwZXJCb3VuZBgGIAEoARIVCg11bmJsZW5kZWRDb3N0GAcgASgBEhsKE3VuYmxlbmRlZExvd2VyQm91bmQYCCABKAESGwoTdW5ibGVuZGVkVXBwZXJCb3VuZBgJIAEoAUJqCh9jbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmNvdmVyQhlBcGlDb3ZlckNvc3RGb3JlY2FzdFByb3RvWixnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9jb3ZlcmIGcHJvdG8z");
+exports.file_api_cover_costforecast = (0, codegenv2_1.fileDesc)("ChxhcGkvY292ZXIvY29zdGZvcmVjYXN0LnByb3RvEhFibHVlYXBpLmFwaS5jb3ZlciLMAQoPQXdzQ29zdEZvcmVjYXN0EgwKBGRhdGUYASABKAkSDwoHYWNjb3VudBgCIAEoCRITCgtwcm9kdWN0Q29kZRgDIAEoCRIMCgRjb3N0GAQgASgBEhIKCmxvd2VyQm91bmQYBSABKAESEgoKdXBwZXJCb3VuZBgGIAEoARIVCg11bmJsZW5kZWRDb3N0GAcgASgBEhsKE3VuYmxlbmRlZExvd2VyQm91bmQYCCABKAESGwoTdW5ibGVuZGVkVXBwZXJCb3VuZBgJIAEoASIlCglDb3N0R3JvdXASCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSLjAQoTQ29zdEZvcmVjYXN0RGV0YWlscxIKCgJpZBgBIAEoCRIUCgxmb3JlY2FzdE5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSLwoJY29zdGdyb3VwGAQgASgLMhwuYmx1ZWFwaS5hcGkuY292ZXIuQ29zdEdyb3VwEhEKCXN0YXJ0RGF0ZRgFIAEoCRIPCgdlbmREYXRlGAYgASgJEhEKCWNyZWF0ZWRCeRgHIAEoCRIUCgxjcmVhdGlvbkRhdGUYCCABKAkSFwoPbGFzdFVwZGF0ZWREYXRlGAkgASgJIoMBChJFeHRlcm5hbEFkanVzdG1lbnQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRI+CgthZGp1c3RtZW50cxgEIAMoCzIpLmJsdWVhcGkuYXBpLmNvdmVyLkNvc3RGb3JlY2FzdEFkanVzdG1lbnQiOwoWQ29zdEZvcmVjYXN0QWRqdXN0bWVudBINCgVtb250aBgBIAEoCRISCgphZGp1c3RtZW50GAIgASgBQmoKH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCGUFwaUNvdmVyQ29zdEZvcmVjYXN0UHJvdG9aLGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2NvdmVyYgZwcm90bzM");
 /**
  * Describes the message blueapi.api.cover.AwsCostForecast.
  * Use `create(AwsCostForecastSchema)` to create a new message.
  */
 exports.AwsCostForecastSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_costforecast, 0);
+/**
+ * Describes the message blueapi.api.cover.CostGroup.
+ * Use `create(CostGroupSchema)` to create a new message.
+ */
+exports.CostGroupSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_costforecast, 1);
+/**
+ * Describes the message blueapi.api.cover.CostForecastDetails.
+ * Use `create(CostForecastDetailsSchema)` to create a new message.
+ */
+exports.CostForecastDetailsSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_costforecast, 2);
+/**
+ * Describes the message blueapi.api.cover.ExternalAdjustment.
+ * Use `create(ExternalAdjustmentSchema)` to create a new message.
+ */
+exports.ExternalAdjustmentSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_costforecast, 3);
+/**
+ * Describes the message blueapi.api.cover.CostForecastAdjustment.
+ * Use `create(CostForecastAdjustmentSchema)` to create a new message.
+ */
+exports.CostForecastAdjustmentSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_costforecast, 4);
