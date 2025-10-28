@@ -47,7 +47,7 @@ import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client"
 const creds = new BlueCredentials({
     clientId: 'your client id',
     clientSecret: 'your client secret',
-    userName: 'your username' // optional
+    userName: 'your username', // optional
     password: 'your password' // optional
 })
 const client = NewCoverClient(new WithNewBlueCredentials(creds))
