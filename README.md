@@ -35,7 +35,7 @@ Authenticate using an access token.
 import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client"
 import { WithAccessToken } from "@alphauspkgs/blue-sdk-ts/conn/conn";
 
-const client = New CoverClient(new WithAccessToken('your-access-token'))
+const client = NewCoverClient(new WithAccessToken('your-access-token'))
 ```
 
 #### WithNewCredentials()
