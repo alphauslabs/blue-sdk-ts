@@ -19,10 +19,10 @@ The SDK supports three authentication methods.
 #### WithDefaultCredentials()
 
 Uses credentials from environment variables automatically.
-See the [documentation](https://labs.alphaus.cloud/docs/blueapi/authentication/#using-environment-variables) for the list of supported keys.
+See the [documentation](https://labs.alphaus.cloud/docs/blueapi/authentication/#using-environment-variables){target="blank"} for the list of supported keys.
 
 ```ts
-import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client"
+import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client";
 const client = NewCoverClient();
 ```
 
@@ -31,6 +31,7 @@ const client = NewCoverClient();
 #### WithAccessToken()
 
 Authenticate using an access token.
+
 ```ts
 import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client"
 import { WithAccessToken } from "@alphauspkgs/blue-sdk-ts/conn/conn";
@@ -41,6 +42,7 @@ const client = New CoverClient(new WithAccessToken('your-access-token'))
 #### WithNewCredentials()
 
 Manually create credentials supported by the Blue API.
+
 ```ts
 import { BlueCredentials, WithNewBlueCredentials } from "@alphauspkgs/blue-sdk-ts/conn/conn"
 import { NewCoverClient } from "@alphauspkgs/blue-sdk-ts/cover/v1/client"
@@ -53,7 +55,7 @@ const creds = new BlueCredentials({
 const client = NewCoverClient(new WithNewBlueCredentials(creds))
 ```
 
-See the [authentication guide](https://labs.alphaus.cloud/docs/blueapi/authentication/) for more details.
+See the [authentication guide](https://labs.alphaus.cloud/docs/blueapi/authentication/){target="blank"} for more details.
 
 ### Example using the cover service
 
