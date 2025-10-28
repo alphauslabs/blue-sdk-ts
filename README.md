@@ -38,7 +38,7 @@ import { WithAccessToken } from "@alphauspkgs/blue-sdk-ts/conn/conn";
 const client = NewCoverClient(new WithAccessToken('your-access-token'))
 ```
 
-#### WithNewCredentials()
+#### WithNewBlueCredentials()
 
 Manually create credentials supported by the Blue API.
 ```ts
