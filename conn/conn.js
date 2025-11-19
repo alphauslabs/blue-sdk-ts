@@ -39,13 +39,13 @@ class WithDefaultCredentials {
     constructor() {
         this.env = process.env;
         this.clientId =
-            this.env.ALPHAUS_CLIENT_ID ||
-                this.env.ALPHAUS_RIPPLE_CLIENT_ID ||
-                this.env.ALPHAUS_WAVE_CLIENT_ID;
+            this.env["ALPHAUS_CLIENT_ID"] ||
+                this.env["ALPHAUS_RIPPLE_CLIENT_ID"] ||
+                this.env["ALPHAUS_WAVE_CLIENT_ID"];
         this.clientSecret =
-            this.env.ALPHAUS_CLIENT_SECRET ||
-                this.env.ALPHAUS_RIPPLE_CLIENT_SECRET ||
-                this.env.ALPHAUS_WAVE_CLIENT_SECRET;
+            this.env["ALPHAUS_CLIENT_SECRET"] ||
+                this.env["ALPHAUS_RIPPLE_CLIENT_SECRET"] ||
+                this.env["ALPHAUS_WAVE_CLIENT_SECRET"];
         if (!this.clientId && !this.clientSecret) {
             throw new Error("Missing client ID and client secret");
         }
@@ -58,9 +58,9 @@ class WithDefaultCredentials {
         const creds = new BlueCredentials({
             clientId: this.clientId,
             clientSecret: this.clientSecret,
-            authUrl: this.env.ALPHAUS_AUTH_URL,
-            userName: this.env.ALPHAUS_USERNAME,
-            password: this.env.ALPHAUS_PASSWORD,
+            authUrl: this.env["ALPHAUS_AUTH_URL"],
+            userName: this.env["ALPHAUS_USERNAME"],
+            password: this.env["ALPHAUS_PASSWORD"],
         });
         req.set("Authorization", `Bearer ${await creds.getAccessToken()}`);
     }
