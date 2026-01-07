@@ -31,7 +31,7 @@ jobs:
           VERSION=${GITHUB_REF#refs/tags/v}
           echo "Publishing version $VERSION"
           npm pkg set version=$VERSION
-          npm publish
+          npm publish --access public
           git add package.json
           git commit -m "chore: update package.json version to $VERSION"
           git push origin HEAD:main
