@@ -2,17 +2,515 @@
 // @generated from file archera/v1/archera.proto (package blueapi.archera.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
+import type { Value } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_struct } from "@bufbuild/protobuf/wkt";
 import { file_protoc_gen_openapiv2_options_annotations } from "../../protoc-gen-openapiv2/options/annotations_pb";
-import type { Message } from "@bufbuild/protobuf";
+import type { JsonObject, Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file archera/v1/archera.proto.
  */
 export const file_archera_v1_archera: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcmNoZXJhL3YxL2FyY2hlcmEucHJvdG8SEmJsdWVhcGkuYXJjaGVyYS52MSIxCgNPcmcSDQoFb3JnSWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCSIRCg9MaXN0T3Jnc1JlcXVlc3QymQIKB0FyY2hlcmESbQoITGlzdE9yZ3MSIy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdE9yZ3NSZXF1ZXN0GhcuYmx1ZWFwaS5hcmNoZXJhLnYxLk9yZyIhgtPkkwIbOgEqIhYvdjEvb3JnYW5pemF0aW9uczpyZWFkMAEangGSQZoBEkcoQWxwaGEpIEFyY2hlcmEgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvYXJjaGVyYRpPChJTZXJ2aWNlIGRlZmluaXRpb24SOWh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9hcmNoZXJhL0JRChljbG91ZC5hbHBoYXVzLmFwaS5hcmNoZXJhQgxBcmNoZXJhUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9hcmNoZXJhYgZwcm90bzM", [file_google_api_annotations, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChhhcmNoZXJhL3YxL2FyY2hlcmEucHJvdG8SEmJsdWVhcGkuYXJjaGVyYS52MSIRCg9MaXN0T3Jnc1JlcXVlc3QiQAofR2V0Q29tbWl0bWVudFBsYW5EZXRhaWxzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIOCgZwbGFuSWQYAiABKAkiOwoaQ29tbWl0bWVudFBsYW5BcHBseVJlcXVlc3QSDQoFb3JnSWQYASABKAkSDgoGcGxhbklkGAIgASgJImIKIUxpc3REZWZhdWx0Q29tbWl0bWVudFBsYW5zUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciJkCiNHZXRSZWNvbW1lbmRlZENvbW1pdG1lbnRQbGFuUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciKvAQoiTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIOCgZwbGFuSWQYAiABKAkSDwoHb3JkZXJCeRgDIAEoCRIMCgRkZXNjGAQgASgIEhEKCXNlZ21lbnRJZBgFIAEoCRIYChByZXNvdXJjZU1hdGNoSWRzGAYgAygJEgwKBHBhZ2UYByABKAUSEAoIcGFnZVNpemUYCCABKAUiwQEKKExpc3RDb21taXRtZW50UGxhblJlc291cmNlTWF0Y2hlc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSDgoGcGxhbklkGAIgASgJEg8KB29yZGVyQnkYAyABKAkSDAoEZGVzYxgEIAEoCBIRCglzdGFydERhdGUYBSABKAkSDwoHZW5kRGF0ZRgGIAEoCRITCgtsaW5lSXRlbUlkcxgHIAMoCRIMCgRwYWdlGAggASgFEhAKCHBhZ2VTaXplGAkgASgFIvMBChZMaXN0Q29tbWl0bWVudHNSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEg4KBnNlYXJjaBgCIAEoCRInCgZmaWx0ZXIYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EgwKBGRlc2MYBCABKAgSDwoHb3JkZXJCeRgFIAEoCRIuCghwcm92aWRlchgGIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlchIRCglzdGFydERhdGUYByABKAkSDwoHZW5kRGF0ZRgIIAEoCRIMCgRwYWdlGAkgASgFEhAKCHBhZ2VTaXplGAogASgFIqgBChpHZXRDb21taXRtZW50c0NoYXJ0UmVxdWVzdBINCgVvcmdJZBgBIAEoCRInCgZmaWx0ZXIYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Ei4KCHByb3ZpZGVyGAMgASgOMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlByb3ZpZGVyEhEKCXN0YXJ0RGF0ZRgEIAEoCRIPCgdlbmREYXRlGAUgASgJIlIKEUdldE1ldHJpY3NSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEi4KCHByb3ZpZGVyGAIgASgOMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlByb3ZpZGVyIrcBChRMaXN0UmVzb3VyY2VzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlchIRCglzZWdtZW50SWQYAyABKAkSDgoGc2VhcmNoGAQgASgJEgwKBGRlc2MYBSABKAgSDwoHb3JkZXJCeRgGIAEoCRIMCgRwYWdlGAcgASgFEhAKCHBhZ2VTaXplGAggASgFIpsBChxHZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEhIKCnJlc291cmNlSWQYAiABKAkSEQoJc3RhcnREYXRlGAMgASgJEg8KB2VuZERhdGUYBCABKAkSFAoMY2F0YWxvZ1NrdUlkGAUgASgJEgwKBHBhZ2UYBiABKAUSEAoIcGFnZVNpemUYByABKAUiVAoTTGlzdFNlZ21lbnRzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciI8ChhHZXRTZWdtZW50RGV0YWlsc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSEQoJc2VnbWVudElkGAIgASgJIkMKH0xpc3REZWZhdWx0UHVyY2hhc2VQbGFuc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSEQoJc2VnbWVudElkGAIgASgJIjEKA09yZxINCgVvcmdJZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJIvMEChVDb21taXRtZW50UGxhbkRldGFpbHMSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRINCgVvcmdJZBgEIAEoCRIRCgljcmVhdGVkQXQYBSABKAkSFQoNaXNDYWxjdWxhdGluZxgGIAEoCBIOCgZzdGF0dXMYByABKAkSDwoHbWF4VGVybRgIIAEoCRIhChljb3ZlcmVkT25kZW1hbmRDb3N0SG91cmx5GAkgASgBEiAKGGJlZm9yZU9uZGVtYW5kQ29zdEhvdXJseRgKIAEoARIgChhiZWZvcmVSZXNlcnZlZENvc3RIb3VybHkYCyABKAESGwoTYW1vcnRpemVkQ29zdEhvdXJseRgMIAEoARIbChNyZWN1cnJpbmdDb3N0SG91cmx5GA0gASgBEhkKEXVwZnJvbnRDb3N0SG91cmx5GA4gASgBEhgKEGJlZm9yZUNvc3RIb3VybHkYDyABKAESFwoPYWZ0ZXJDb3N0SG91cmx5GBAgASgBEhcKD3RvdGFsQ29zdEhvdXJseRgRIAEoARIVCg1zYXZpbmdzSG91cmx5GBIgASgBEhEKCWZlZUhvdXJseRgTIAEoARIaChJjb21taXRtZW50Q292ZXJhZ2UYFCABKAESHQoVbWluaW11bUNvbW1pdG1lbnRDb3N0GBUgASgBEhYKDmJyZWFrZXZlbkhvdXJzGBYgASgBEhQKDHRvdGFsU2F2aW5ncxgXIAEoARIWCg5tb250aGx5U2F2aW5ncxgYIAEoARIeChZ0b3RhbE1vbnRobHlCZWZvcmVDb3N0GBkgASgBIl4KIkxpc3REZWZhdWx0Q29tbWl0bWVudFBsYW5zUmVzcG9uc2USOAoFcGxhbnMYASADKAsyKS5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5EZXRhaWxzIukFChZDb21taXRtZW50UGxhbkxpbmVJdGVtEgoKAmlkGAEgASgJEg4KBnBsYW5JZBgCIAEoCRIPCgdvZmZlcklkGAMgASgJEhcKD2xlYXNlTWVudUl0ZW1JZBgEIAEoCRIRCglhY2NvdW50SWQYBSABKAkSGwoTcmVjb21tZW5kZWRRdWFudGl0eRgGIAEoARIYChBzZWxlY3RlZFF1YW50aXR5GAcgASgBEh0KFXJlY29tbWVuZGVkQ29tbWl0bWVudBgIIAEoARIaChJzZWxlY3RlZENvbW1pdG1lbnQYCSABKAESEgoKaXNTZWxlY3RlZBgKIAEoCBIaChJhZnRlckFtb3J0aXplZENvc3QYCyABKAESEwoLdXBmcm9udENvc3QYDCABKAESFQoNcmVjdXJyaW5nQ29zdBgNIAEoARISCgpiZWZvcmVDb3N0GA4gASgBEhoKEmJlZm9yZU9uZGVtYW5kQ29zdBgPIAEoARIaChJiZWZvcmVSZXNlcnZlZENvc3QYECABKAESGwoTY292ZXJlZE9uZGVtYW5kQ29zdBgRIAEoARIZChFhZnRlckNvdmVyZWRVbml0cxgSIAEoARIRCgl0b3RhbENvc3QYEyABKAESEwoLbW9udGhseUNvc3QYFCABKAESDwoHc2F2aW5ncxgVIAEoARIWCg5tb250aGx5U2F2aW5ncxgWIAEoARIUCgx0b3RhbFNhdmluZ3MYFyABKAESCwoDZmVlGBggASgBEhQKDGRpc2NvdW50UmF0ZRgZIAEoARIWCg5icmVha2V2ZW5Ib3VycxgaIAEoARIUCgxjb250cmFjdFRlcm0YGyABKAkSFQoNcGF5bWVudE9wdGlvbhgcIAEoCRItCgxjb250cmFjdFNwZWMYHSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EiYKBW9mZmVyGB4gASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdCJkCiNMaXN0Q29tbWl0bWVudFBsYW5MaW5lSXRlbXNSZXNwb25zZRI9CglsaW5lSXRlbXMYASADKAsyKi5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5MaW5lSXRlbSL3BAobQ29tbWl0bWVudFBsYW5SZXNvdXJjZU1hdGNoEgoKAmlkGAEgASgJEhIKCnRvdGFsVW5pdHMYAiABKAESHAoUYmVmb3JlVW5jb3ZlcmVkVW5pdHMYAyABKAESGQoRYWZ0ZXJDb3ZlcmVkVW5pdHMYBCABKAESGwoTYWZ0ZXJVbmNvdmVyZWRVbml0cxgFIAEoARIVCg1vbmRlbWFuZFByaWNlGAYgASgBEhkKEWlmQWxsT25kZW1hbmRDb3N0GAcgASgBEhoKEmJlZm9yZU9uZGVtYW5kQ29zdBgIIAEoARIZChFhZnRlck9uZGVtYW5kQ29zdBgJIAEoARIbChNjb3ZlcmVkT25kZW1hbmRDb3N0GAogASgBEhoKEmJlZm9yZVJlc2VydmVkQ29zdBgLIAEoARIZChFhZnRlclJlc2VydmVkQ29zdBgMIAEoARISCgpiZWZvcmVDb3N0GA0gASgBEhEKCWFmdGVyQ29zdBgOIAEoARIZChFtb250aGx5QmVmb3JlQ29zdBgPIAEoARIYChBtb250aGx5QWZ0ZXJDb3N0GBAgASgBEiAKGG1vbnRobHlBZnRlclJlc2VydmVkQ29zdBgRIAEoARIgChhtb250aGx5QWZ0ZXJPbmRlbWFuZENvc3QYEiABKAESFgoOYXZlcmFnZVNhdmluZ3MYEyABKAESHQoVYXZlcmFnZU1vbnRobHlTYXZpbmdzGBQgASgBEhEKCXVzYWdlVHlwZRgVIAEoCRIQCghjb3ZlcmFnZRgWIAEoARIpCghyZXNvdXJjZRgXIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QidQopTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzUmVzcG9uc2USSAoPcmVzb3VyY2VNYXRjaGVzGAEgAygLMi8uYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaCLuAQoFTGVhc2USCgoCaWQYASABKAkSDQoFb3JnSWQYAiABKAkSHQoVcHJvdmlkZXJSZXNlcnZhdGlvbklkGAMgASgJEhEKCWFjY291bnRJZBgEIAEoCRIOCgZzdGF0dXMYBSABKAkSEQoJc3RhcnREYXRlGAYgASgJEg8KB2VuZERhdGUYByABKAkSEgoKbG9ja2luRGF0ZRgIIAEoCRITCgt1cGZyb250Q29zdBgJIAEoARIVCg1yZWN1cnJpbmdDb3N0GAogASgBEhEKCWNyZWF0ZWRBdBgLIAEoCRIRCgl1cGRhdGVkQXQYDCABKAkiSQoQRGFpbHlVdGlsaXphdGlvbhIMCgRkYXRlGAEgASgJEhMKC3V0aWxpemF0aW9uGAIgASgBEhIKCm5ldFNhdmluZ3MYAyABKAEi0wkKCkNvbW1pdG1lbnQSCgoCaWQYASABKAkSLgoIcHJvdmlkZXIYAiABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISEwoLZGlzcGxheU5hbWUYAyABKAkSGQoRbGVhc2VkRGlzcGxheU5hbWUYBCABKAkSHQoVcHJvdmlkZXJSZXNlcnZhdGlvbklkGAUgASgJEhEKCWFjY291bnRJZBgGIAEoCRIXCg9tYXN0ZXJBY2NvdW50SWQYByABKAkSGAoQYmlsbGluZ0FjY291bnRJZBgIIAEoCRIMCgR0eXBlGAkgASgJEg4KBnJlZ2lvbhgKIAEoCRIXCg9kdXJhdGlvblNlY29uZHMYCyABKAMSFgoOcmVzZXJ2YXRpb25FbmQYDCABKAkSGAoQcmVzZXJ2YXRpb25TdGFydBgNIAEoCRIgChh0cmFuc2ZlclJlc2VydmF0aW9uU3RhcnQYDiABKAkSHgoWdHJhbnNmZXJSZXNlcnZhdGlvbkVuZBgPIAEoCRIRCglzdGFydERhdGUYECABKAkSDwoHZW5kRGF0ZRgRIAEoCRIOCgZzdGF0dXMYEiABKAkSEAoIaXNMZWFzZWQYEyABKAgSEAoIaXNBY3RpdmUYFCABKAgSKAoFbGVhc2UYFSABKAsyGS5ibHVlYXBpLmFyY2hlcmEudjEuTGVhc2USEgoKbGVhc2VTdGFydBgWIAEoCRIXCg9sZWFzZUxvY2tpbkRhdGUYFyABKAkSEwoLdXBmcm9udENvc3QYGCABKAESFQoNcmVjdXJyaW5nQ29zdBgZIAEoARISCgppc0ZsZXhpYmxlGBogASgIEhUKDXBheW1lbnRPcHRpb24YGyABKAkSFQoNb2ZmZXJpbmdDbGFzcxgcIAEoCRISCgpvZmZlcmluZ0lkGB0gASgJEhUKDWluc3RhbmNlQ291bnQYHiABKAUSHgoWZWZmZWN0aXZlSW5zdGFuY2VDb3VudBgfIAEoARIaChJwcm9kdWN0RGVzY3JpcHRpb24YICABKAkSFgoOaW5zdGFuY2VGYW1pbHkYISABKAkSFAoMaW5zdGFuY2VUeXBlGCIgASgJEg8KB3RlbmFuY3kYIyABKAkSCgoCYXoYJCABKAkSEQoJaXNNdWx0aUF6GCUgASgIEhAKCHBsYW5UeXBlGCYgASgJEigKBXNjb3BlGCcgASgOMhkuYmx1ZWFwaS5hcmNoZXJhLnYxLlNjb3BlEgwKBG5hbWUYKCABKAkSDwoHb3JkZXJJZBgpIAEoCRIVCg1yZXNvdXJjZUdyb3VwGCogASgJEhsKE2luc3RhbmNlRmxleGliaWxpdHkYKyABKAgSDwoHc2F2aW5ncxgsIAEoARIWCg5tb250aGx5U2F2aW5ncxgtIAEoARISCgpuZXRTYXZpbmdzGC4gASgBEhMKC3V0aWxpemF0aW9uGC8gASgBEhgKEHBvdGVudGlhbFNhdmluZ3MYMCABKAESFAoMcnVubmluZ0hvdXJzGDEgASgBEhUKDWFtb3J0aXplZENvc3QYMiABKAESPwoRZGFpbHlVdGlsaXphdGlvbnMYMyADKAsyJC5ibHVlYXBpLmFyY2hlcmEudjEuRGFpbHlVdGlsaXphdGlvbiJOChdMaXN0Q29tbWl0bWVudHNSZXNwb25zZRIzCgtjb21taXRtZW50cxgBIAMoCzIeLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50Ir4BChlDb21taXRtZW50c0NoYXJ0RGF0YVBvaW50EgwKBGRhdGUYASABKAkSFwoPY29tbWl0bWVudFNwZW5kGAIgASgBEhMKC3V0aWxpemF0aW9uGAMgASgBEhkKEWxvY2tlZENvbW1pdG1lbnRzGAQgASgBEhsKE3VubG9ja2VkQ29tbWl0bWVudHMYBSABKAESFwoPcmVhbGl6ZWRTYXZpbmdzGAYgASgBEhQKDGlzUHJvamVjdGlvbhgHIAEoCCJXChhDb21taXRtZW50c0NoYXJ0UmVzcG9uc2USOwoEZGF0YRgBIAMoCzItLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50c0NoYXJ0RGF0YVBvaW50Is0DCg9NZXRyaWNzUmVzcG9uc2USFwoPbGlmZXRpbWVTYXZpbmdzGAEgASgBEhIKCm10ZFNhdmluZ3MYAiABKAESIQoZcHVyY2hhc2VBdXRvbWF0aW9uRW5hYmxlZBgDIAEoCBIgChhidXliYWNrQXV0b21hdGlvbkVuYWJsZWQYBCABKAgSFwoPaGFzQWN0aW9uZWRQbGFuGAUgASgIEhkKEWhhc1BlbmRpbmdBY3Rpb25zGAYgASgIEhsKE2xhdGVzdEV4ZWN1dGlvbkRhdGUYByABKAkSHQoVcHVyY2hhc2VNaXNzZWRTYXZpbmdzGAggASgBEhwKFGJ1eWJhY2tNaXNzZWRTYXZpbmdzGAkgASgBEh8KF3RvdGFsRGFpbHlNaXNzZWRTYXZpbmdzGAogASgBEhsKE2hvdXJseU1pc3NlZFNhdmluZ3MYCyABKAESHgoWbWlzc2VkU2F2aW5nc1N0YXJ0RGF0ZRgMIAEoCRIcChRtaXNzZWRTYXZpbmdzRW5kRGF0ZRgNIAEoCRIXCg9leHBpcmluZ1NhdmluZ3MYDiABKAESEAoIY292ZXJhZ2UYDyABKAESEwoLdXRpbGl6YXRpb24YECABKAEijQgKCFJlc291cmNlEgoKAmlkGAEgASgJEhIKCnJlc291cmNlSWQYAiABKAkSLgoIcHJvdmlkZXIYAyABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISGgoScHJvdmlkZXJSZXNvdXJjZUlkGAQgASgJEg4KBmlzU3BvdBgFIAEoCBIMCgRuYW1lGAYgASgJEhUKDXJlc291cmNlR3JvdXAYByABKAkSEAoIdXNhZ2VFbmQYCCABKAkSEgoKdXNhZ2VTdGFydBgJIAEoCRIlCgR0YWdzGAogASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIRCgljcmVhdGVkQXQYCyABKAkSEQoJdXBkYXRlZEF0GAwgASgJEhIKCmluc3RhbmNlSWQYDSABKAkSGAoQYmlsbGluZ0FjY291bnRJZBgOIAEoCRIUCgxzdWJBY2NvdW50SWQYDyABKAkSGwoTbWFuYWdlbWVudEFjY291bnRJZBgQIAEoCRIWCg5vd25lckFjY291bnRJZBgRIAEoCRIQCghza3VUaXRsZRgSIAEoCRIPCgdza3VOYW1lGBMgASgJEhgKEGF2YWlsYWJpbGl0eVpvbmUYFCABKAkSEwoLY2FjaGVFbmdpbmUYFSABKAkSFgoOZGF0YWJhc2VFbmdpbmUYFiABKAkSEwoLZGVzY3JpcHRpb24YFyABKAkSDgoGZmFtaWx5GBggASgJEhYKDmZ1bGxSZWdpb25OYW1lGBkgASgJEhgKEGhhc09uZGVtYW5kVGVybXMYGiABKAgSFAoMaW5zdGFuY2VUeXBlGBsgASgJEhoKEmluc3RhbmNlVHlwZUZhbWlseRgcIAEoCRIUCgxpc1Jlc2VydmFibGUYHSABKAgSFAoMbGljZW5zZU1vZGVsGB4gASgJEhQKDGxvY2F0aW9uVHlwZRgfIAEoCRIfChdub3JtYWxpemF0aW9uU2l6ZUZhY3RvchggIAEoCRIXCg9vcGVyYXRpbmdTeXN0ZW0YISABKAkSFgoOcHJlSW5zdGFsbGVkU3cYIiABKAkSFQoNcHJpY2VDdXJyZW5jeRgjIAEoCRIXCg9wcm92aWRlclNlcnZpY2UYJCABKAkSFQoNcHJvdmlkZXJTa3VJZBglIAEoCRIXCg9wdWJsaWNhdGlvbkRhdGUYJiABKAkSDgoGcmVnaW9uGCcgASgJEg8KB3NlcnZpY2UYKCABKAkSDwoHdGVuYW5jeRgpIAEoCRIRCgl1c2FnZVR5cGUYKiABKAkSDwoHdmVyc2lvbhgrIAEoCRIcChR2cGNOZXR3b3JraW5nU3VwcG9ydBgsIAEoCBIZChFvbmRlbWFuZFVzYWdlVW5pdBgtIAEoCSJIChVMaXN0UmVzb3VyY2VzUmVzcG9uc2USLwoJcmVzb3VyY2VzGAEgAygLMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlJlc291cmNlItQCChJSZXNvdXJjZURhaWx5VXNhZ2USDAoEZGF0ZRgBIAEoCRIWCg51c2FnZUFjY291bnRJZBgCIAEoCRIUCgxzdWJBY2NvdW50SWQYAyABKAkSDQoFdXNhZ2UYBCABKAESGAoQcmVzZXJ2YXRpb25Vc2FnZRgFIAEoARIVCg1mcmVlVGllclVzYWdlGAYgASgBEhQKDG9uZGVtYW5kQ29zdBgHIAEoARIUCgxyZXNlcnZlZENvc3QYCCABKAESGQoRaWZBbGxPbmRlbWFuZENvc3QYCSABKAESEAoIc3BvdENvc3QYCiABKAESFwoPZnJlZVRpZXJTYXZpbmdzGAsgASgBEhEKCXVzYWdlVHlwZRgMIAEoCRIXCg9jb21tb25Vc2FnZVR5cGUYDSABKAkSFAoMY292ZXJlZFVzYWdlGA4gASgBEg4KBnVwdGltZRgPIAEoASJbCh1HZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXNwb25zZRI6CgpkYWlseVVzYWdlGAEgAygLMiYuYmx1ZWFwaS5hcmNoZXJhLnYxLlJlc291cmNlRGFpbHlVc2FnZSJ5CgdTZWdtZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSLgoIcHJvdmlkZXIYAyABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISEQoJaXNEZWZhdWx0GAQgASgIEhEKCWNyZWF0ZWRBdBgFIAEoCSJFChRMaXN0U2VnbWVudHNSZXNwb25zZRItCghzZWdtZW50cxgBIAMoCzIbLmJsdWVhcGkuYXJjaGVyYS52MS5TZWdtZW50IkAKDlNlZ21lbnRDcmVhdG9yEgoKAmlkGAEgASgJEhAKCHVzZXJuYW1lGAIgASgJEhAKCGZ1bGxOYW1lGAMgASgJIksKDFB1cmNoYXNlUGxhbhIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBnN0YXR1cxgDIAEoCRIRCglpc1JlbmV3YWwYBCABKAgitAUKDlNlZ21lbnREZXRhaWxzEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSLgoIcHJvdmlkZXIYBCABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISFgoOY2xvdWRQcm92aWRlcnMYBSADKAkSEQoJaXNEZWZhdWx0GAYgASgIEhEKCWNyZWF0ZWRBdBgHIAEoCRI1CgljcmVhdGVkQnkYCCABKAsyIi5ibHVlYXBpLmFyY2hlcmEudjEuU2VnbWVudENyZWF0b3ISEAoIcGFyZW50SWQYCSABKAkSDgoGc3RhdHVzGAogASgJEhQKDHNlZ21lbnRDbGFzcxgLIAEoCRInCgZwYXJhbXMYDCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhMKC21vbnRobHlDb3N0GA0gASgBEhYKDm1vbnRobHlOZXRDb3N0GA4gASgBEiAKGG1vbnRobHlJZkFsbE9uZGVtYW5kQ29zdBgPIAEoARIbChNtb250aGx5T25kZW1hbmRDb3N0GBAgASgBEhsKE21vbnRobHlSZXNlcnZlZENvc3QYESABKAESFwoPbW9udGhseVNwb3RDb3N0GBIgASgBEhYKDm1vbnRobHlTYXZpbmdzGBMgASgBEhUKDW1vbnRobHlCdWRnZXQYFCABKAESEAoIY292ZXJhZ2UYFSABKAESGwoTcmVjb21tZW5kZWRDb3ZlcmFnZRgWIAEoARIWCg50YXJnZXRDb3ZlcmFnZRgXIAEoARIcChRtb250aGx5UmVzb3VyY2VDb3VudBgYIAEoBRI3Cg1wdXJjaGFzZVBsYW5zGBkgAygLMiAuYmx1ZWFwaS5hcmNoZXJhLnYxLlB1cmNoYXNlUGxhbiJ4CgxDb250cmFjdFNwZWMSFgoOY29tbWl0bWVudFR5cGUYASABKAkSFQoNcGF5bWVudE9wdGlvbhgCIAEoCRIMCgR0ZXJtGAMgASgJEisKCnByb3BlcnRpZXMYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0It4CCgtQbGFuU3VtbWFyeRILCgNrZXkYASABKAkSEAoIcHJvdmlkZXIYAiABKAkSFgoObnVtQ29tbWl0bWVudHMYAyABKAUSFQoNbWluQ29tbWl0bWVudBgEIAEoARIZChFtb250aGx5Q29tbWl0bWVudBgFIAEoARITCgt1cGZyb250Q29zdBgGIAEoARISCgptaW5TYXZpbmdzGAcgASgBEhIKCm1heFNhdmluZ3MYCCABKAESFgoObW9udGhseVNhdmluZ3MYCSABKAESFAoMbWluVGVybUhvdXJzGAogASgFEhQKDG1heFRlcm1Ib3VycxgLIAEoBRITCgtncmlQcmVtaXVtcxgMIAEoARIaChJiZWZvcmVPbmRlbWFuZENvc3QYDSABKAESGQoRYWZ0ZXJPbmRlbWFuZENvc3QYDiABKAESGQoRaWZBbGxPbmRlbWFuZENvc3QYDyABKAEi5QIKDlNlcnZpY2VTdW1tYXJ5EgsKA2tleRgBIAEoCRIMCgRuYW1lGAIgASgJEhMKC3NlcnZpY2VOYW1lGAMgASgJEhAKCHByb3ZpZGVyGAQgASgJEhYKDm51bUNvbW1pdG1lbnRzGAUgASgFEhcKD2N1cnJlbnRDb3ZlcmFnZRgGIAEoARIZChFwb3RlbnRpYWxDb3ZlcmFnZRgHIAEoARIVCg1taW5Db21taXRtZW50GAggASgBEhkKEW1vbnRobHlDb21taXRtZW50GAkgASgBEhMKC3VwZnJvbnRDb3N0GAogASgBEhIKCm1pblNhdmluZ3MYCyABKAESEgoKbWF4U2F2aW5ncxgMIAEoARIWCg5tb250aGx5U2F2aW5ncxgNIAEoARIUCgxtaW5UZXJtSG91cnMYDiABKAUSFAoMbWF4VGVybUhvdXJzGA8gASgFEhIKCmdyaVByZW1pdW0YECABKAEi5AEKEEFnZ3JlZ2F0ZU1ldHJpY3MSFwoPY3VycmVudENvdmVyYWdlGAEgASgBEhkKEXBvdGVudGlhbENvdmVyYWdlGAIgASgBEkYKCXN1bW1hcmllcxgDIAMoCzIzLmJsdWVhcGkuYXJjaGVyYS52MS5BZ2dyZWdhdGVNZXRyaWNzLlN1bW1hcmllc0VudHJ5GlQKDlN1bW1hcmllc0VudHJ5EgsKA2tleRgBIAEoCRIxCgV2YWx1ZRgCIAEoCzIiLmJsdWVhcGkuYXJjaGVyYS52MS5TZXJ2aWNlU3VtbWFyeToCOAEi6QoKE0RlZmF1bHRQdXJjaGFzZVBsYW4SCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRINCgVvcmdJZBgEIAEoCRIRCglzZWdtZW50SWQYBSABKAkSLAoHc2VnbWVudBgGIAEoCzIbLmJsdWVhcGkuYXJjaGVyYS52MS5TZWdtZW50Eg4KBnN0YXR1cxgHIAEoCRIQCghwbGFuVHlwZRgIIAEoCRIRCgljcmVhdGVkQXQYCSABKAkSFAoMbGFzdE1vZGlmaWVkGAogASgJEikKCWNyZWF0ZWRCeRgLIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIvCg9leGVjdXRpb25Qb2xpY3kYDCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSEQoJaXNEZWZhdWx0GA0gASgIEhUKDWlzUmVjb21tZW5kZWQYDiABKAgSEQoJaXNSZW5ld2FsGA8gASgIEhUKDWlzQ2FsY3VsYXRpbmcYECABKAgSEAoIaXNMb2NrZWQYESABKAgSDwoHaXNTYXZlZBgSIAEoCBI/ChVpbmNsdWRlZENvbnRyYWN0U3BlY3MYEyADKAsyIC5ibHVlYXBpLmFyY2hlcmEudjEuQ29udHJhY3RTcGVjEh0KFWluY2x1ZGVkQ29udHJhY3RUZXJtcxgUIAMoCRIPCgdtYXhUZXJtGBUgASgJEh4KFnByZWZlcnJlZFBheW1lbnRPcHRpb24YFiABKAkSFgoObWF4VXBmcm9udENvc3QYFyABKAESIgoabWluaW11bVVwZnJvbnRJbnRlcmVzdFJhdGUYGCABKAESPgoecmVjb21tZW5kV2l0aGluQ292ZXJlZEFjY291bnRzGBkgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEhEKCXN0YXJ0RGF0ZRgaIAEoCRIPCgdlbmREYXRlGBsgASgJEhIKCmRhdGFTb3VyY2UYHCABKAkSEgoKYmVmb3JlQ29zdBgdIAEoARIRCglhZnRlckNvc3QYHiABKAESGgoSYmVmb3JlT25kZW1hbmRDb3N0GB8gASgBEhoKEmJlZm9yZVJlc2VydmVkQ29zdBggIAEoARIbChNjb3ZlcmVkT25kZW1hbmRDb3N0GCEgASgBEhUKDWFtb3J0aXplZENvc3QYIiABKAESFQoNcmVjdXJyaW5nQ29zdBgjIAEoARITCgt1cGZyb250Q29zdBgkIAEoARIRCgl0b3RhbENvc3QYJSABKAESHgoWdG90YWxNb250aGx5QmVmb3JlQ29zdBgmIAEoARIPCgdzYXZpbmdzGCcgASgBEhYKDm1vbnRobHlTYXZpbmdzGCggASgBEhQKDHRvdGFsU2F2aW5ncxgpIAEoARILCgNmZWUYKiABKAESGgoSY29tbWl0bWVudENvdmVyYWdlGCsgASgBEh0KFW1pbmltdW1Db21taXRtZW50Q29zdBgsIAEoARIWCg5icmVha2V2ZW5Ib3VycxgtIAEoARI+ChBhZ2dyZWdhdGVNZXRyaWNzGC4gASgLMiQuYmx1ZWFwaS5hcmNoZXJhLnYxLkFnZ3JlZ2F0ZU1ldHJpY3MSMgoJc3VtbWFyaWVzGC8gAygLMh8uYmx1ZWFwaS5hcmNoZXJhLnYxLlBsYW5TdW1tYXJ5EhYKDnJlc2VydmF0aW9uSWRzGDAgAygJEhMKC3Jlc291cmNlSWRzGDEgAygJEhYKDmZsYWdnZWRBY3Rpb25zGDIgAygJEhIKCm1ldGFQbGFuSWQYMyABKAkSEgoKY292ZXJhZ2VJZBg0IAEoCSJaCiBMaXN0RGVmYXVsdFB1cmNoYXNlUGxhbnNSZXNwb25zZRI2CgVwbGFucxgBIAMoCzInLmJsdWVhcGkuYXJjaGVyYS52MS5EZWZhdWx0UHVyY2hhc2VQbGFuKl4KCFByb3ZpZGVyEhgKFFBST1ZJREVSX1VOU1BFQ0lGSUVEEAASBwoDQVdTEAESCQoFQVpVUkUQAhIHCgNHQ1AQAxIOCgpLVUJFUk5FVEVTEAQSCwoHVU5LTk9XThAFKpgBChBDb21taXRtZW50U3RhdHVzEiEKHUNPTU1JVE1FTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESDAoIUkVWSUVXRUQQAhINCglTQ0hFRFVMRUQQAxINCglDT01QTEVURUQQBBIJCgVEUkFGVBAFEhAKDE5FRURTX1JFVklFVxAGEg8KC0lOX1BST0dSRVNTEAcqigEKGUNvbW1pdG1lbnRJbnZlbnRvcnlTdGF0dXMSKwonQ09NTUlUTUVOVF9JTlZFTlRPUllfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESCwoHUkVUSVJFRBACEhMKD1BBWU1FTlRfUEVORElORxADEhIKDlBBWU1FTlRfRkFJTEVEEAQqQwoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIKCgZTSEFSRUQQARIMCghSRUdJT05BTBACEgkKBVpPTkFMEAMqQQoJVXNhZ2VUeXBlEhoKFlVTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCwoHU1RPUFBFRBACMvgUCgdBcmNoZXJhEm0KCExpc3RPcmdzEiMuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RPcmdzUmVxdWVzdBoXLmJsdWVhcGkuYXJjaGVyYS52MS5PcmciIYLT5JMCGzoBKiIWL3YxL29yZ2FuaXphdGlvbnM6cmVhZDABEq0BChhHZXRDb21taXRtZW50UGxhbkRldGFpbHMSMy5ibHVlYXBpLmFyY2hlcmEudjEuR2V0Q29tbWl0bWVudFBsYW5EZXRhaWxzUmVxdWVzdBopLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50UGxhbkRldGFpbHMiMYLT5JMCKxIpL3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0SrAEKE0NvbW1pdG1lbnRQbGFuQXBwbHkSLi5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5BcHBseVJlcXVlc3QaKS5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5EZXRhaWxzIjqC0+STAjQ6ASoiLy92MS9vcmcve29yZ0lkfS9jb21taXRtZW50LXBsYW5zL3twbGFuSWR9L2FwcGx5Er0BChpMaXN0RGVmYXVsdENvbW1pdG1lbnRQbGFucxI1LmJsdWVhcGkuYXJjaGVyYS52MS5MaXN0RGVmYXVsdENvbW1pdG1lbnRQbGFuc1JlcXVlc3QaNi5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdERlZmF1bHRDb21taXRtZW50UGxhbnNSZXNwb25zZSIwgtPkkwIqEigvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudC1wbGFucy9kZWZhdWx0ErgBChxHZXRSZWNvbW1lbmRlZENvbW1pdG1lbnRQbGFuEjcuYmx1ZWFwaS5hcmNoZXJhLnYxLkdldFJlY29tbWVuZGVkQ29tbWl0bWVudFBsYW5SZXF1ZXN0GikuYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRQbGFuRGV0YWlscyI0gtPkkwIuEiwvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudC1wbGFucy9yZWNvbW1lbmRlZBLMAQobTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zEjYuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50UGxhbkxpbmVJdGVtc1JlcXVlc3QaNy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zUmVzcG9uc2UiPILT5JMCNhI0L3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0vbGluZS1pdGVtcxLkAQohTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzEjwuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50UGxhblJlc291cmNlTWF0Y2hlc1JlcXVlc3QaPS5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzUmVzcG9uc2UiQoLT5JMCPBI6L3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0vcmVzb3VyY2UtbWF0Y2hlcxKPAQoPTGlzdENvbW1pdG1lbnRzEiouYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50c1JlcXVlc3QaKy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRzUmVzcG9uc2UiI4LT5JMCHRIbL3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnRzEp4BChNHZXRDb21taXRtZW50c0NoYXJ0Ei4uYmx1ZWFwaS5hcmNoZXJhLnYxLkdldENvbW1pdG1lbnRzQ2hhcnRSZXF1ZXN0GiwuYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRzQ2hhcnRSZXNwb25zZSIpgtPkkwIjEiEvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudHMvY2hhcnQSeQoKR2V0TWV0cmljcxIlLmJsdWVhcGkuYXJjaGVyYS52MS5HZXRNZXRyaWNzUmVxdWVzdBojLmJsdWVhcGkuYXJjaGVyYS52MS5NZXRyaWNzUmVzcG9uc2UiH4LT5JMCGRIXL3YxL29yZy97b3JnSWR9L21ldHJpY3MShwEKDUxpc3RSZXNvdXJjZXMSKC5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFJlc291cmNlc1JlcXVlc3QaKS5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFJlc291cmNlc1Jlc3BvbnNlIiGC0+STAhsSGS92MS9vcmcve29yZ0lkfS9yZXNvdXJjZXMSuAEKFUdldFJlc291cmNlRGFpbHlVc2FnZRIwLmJsdWVhcGkuYXJjaGVyYS52MS5HZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXF1ZXN0GjEuYmx1ZWFwaS5hcmNoZXJhLnYxLkdldFJlc291cmNlRGFpbHlVc2FnZVJlc3BvbnNlIjqC0+STAjQSMi92MS9vcmcve29yZ0lkfS9yZXNvdXJjZXMve3Jlc291cmNlSWR9L2RhaWx5LXVzYWdlEogBCgxMaXN0U2VnbWVudHMSJy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFNlZ21lbnRzUmVxdWVzdBooLmJsdWVhcGkuYXJjaGVyYS52MS5MaXN0U2VnbWVudHNSZXNwb25zZSIlgtPkkwIfEh0vdjEvb3JnL3tvcmdJZH0vc2VnbWVudHMvaW5mbxKTAQoRR2V0U2VnbWVudERldGFpbHMSLC5ibHVlYXBpLmFyY2hlcmEudjEuR2V0U2VnbWVudERldGFpbHNSZXF1ZXN0GiIuYmx1ZWFwaS5hcmNoZXJhLnYxLlNlZ21lbnREZXRhaWxzIiyC0+STAiYSJC92MS9vcmcve29yZ0lkfS9zZWdtZW50cy97c2VnbWVudElkfRK4AQoYTGlzdERlZmF1bHRQdXJjaGFzZVBsYW5zEjMuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3REZWZhdWx0UHVyY2hhc2VQbGFuc1JlcXVlc3QaNC5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdERlZmF1bHRQdXJjaGFzZVBsYW5zUmVzcG9uc2UiMYLT5JMCKxIpL3YxL29yZy97b3JnSWR9L3B1cmNoYXNlLXBsYW5zLXYxL2RlZmF1bHQangGSQZoBEkcoQWxwaGEpIEFyY2hlcmEgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvYXJjaGVyYRpPChJTZXJ2aWNlIGRlZmluaXRpb24SOWh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9hcmNoZXJhL0JRChljbG91ZC5hbHBoYXVzLmFwaS5hcmNoZXJhQgxBcmNoZXJhUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9hcmNoZXJhYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_struct, file_protoc_gen_openapiv2_options_annotations]);
+
+/**
+ * @generated from message blueapi.archera.v1.ListOrgsRequest
+ */
+export type ListOrgsRequest = Message<"blueapi.archera.v1.ListOrgsRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListOrgsRequest.
+ * Use `create(ListOrgsRequestSchema)` to create a new message.
+ */
+export const ListOrgsRequestSchema: GenMessage<ListOrgsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 0);
+
+/**
+ * @generated from message blueapi.archera.v1.GetCommitmentPlanDetailsRequest
+ */
+export type GetCommitmentPlanDetailsRequest = Message<"blueapi.archera.v1.GetCommitmentPlanDetailsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string planId = 2;
+   */
+  planId: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetCommitmentPlanDetailsRequest.
+ * Use `create(GetCommitmentPlanDetailsRequestSchema)` to create a new message.
+ */
+export const GetCommitmentPlanDetailsRequestSchema: GenMessage<GetCommitmentPlanDetailsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 1);
+
+/**
+ * @generated from message blueapi.archera.v1.CommitmentPlanApplyRequest
+ */
+export type CommitmentPlanApplyRequest = Message<"blueapi.archera.v1.CommitmentPlanApplyRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string planId = 2;
+   */
+  planId: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanApplyRequest.
+ * Use `create(CommitmentPlanApplyRequestSchema)` to create a new message.
+ */
+export const CommitmentPlanApplyRequestSchema: GenMessage<CommitmentPlanApplyRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 2);
+
+/**
+ * @generated from message blueapi.archera.v1.ListDefaultCommitmentPlansRequest
+ */
+export type ListDefaultCommitmentPlansRequest = Message<"blueapi.archera.v1.ListDefaultCommitmentPlansRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultCommitmentPlansRequest.
+ * Use `create(ListDefaultCommitmentPlansRequestSchema)` to create a new message.
+ */
+export const ListDefaultCommitmentPlansRequestSchema: GenMessage<ListDefaultCommitmentPlansRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 3);
+
+/**
+ * @generated from message blueapi.archera.v1.GetRecommendedCommitmentPlanRequest
+ */
+export type GetRecommendedCommitmentPlanRequest = Message<"blueapi.archera.v1.GetRecommendedCommitmentPlanRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetRecommendedCommitmentPlanRequest.
+ * Use `create(GetRecommendedCommitmentPlanRequestSchema)` to create a new message.
+ */
+export const GetRecommendedCommitmentPlanRequestSchema: GenMessage<GetRecommendedCommitmentPlanRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 4);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentPlanLineItemsRequest
+ */
+export type ListCommitmentPlanLineItemsRequest = Message<"blueapi.archera.v1.ListCommitmentPlanLineItemsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string planId = 2;
+   */
+  planId: string;
+
+  /**
+   * @generated from field: string orderBy = 3;
+   */
+  orderBy: string;
+
+  /**
+   * @generated from field: bool desc = 4;
+   */
+  desc: boolean;
+
+  /**
+   * @generated from field: string segmentId = 5;
+   */
+  segmentId: string;
+
+  /**
+   * @generated from field: repeated string resourceMatchIds = 6;
+   */
+  resourceMatchIds: string[];
+
+  /**
+   * @generated from field: int32 page = 7;
+   */
+  page: number;
+
+  /**
+   * @generated from field: int32 pageSize = 8;
+   */
+  pageSize: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanLineItemsRequest.
+ * Use `create(ListCommitmentPlanLineItemsRequestSchema)` to create a new message.
+ */
+export const ListCommitmentPlanLineItemsRequestSchema: GenMessage<ListCommitmentPlanLineItemsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 5);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentPlanResourceMatchesRequest
+ */
+export type ListCommitmentPlanResourceMatchesRequest = Message<"blueapi.archera.v1.ListCommitmentPlanResourceMatchesRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string planId = 2;
+   */
+  planId: string;
+
+  /**
+   * @generated from field: string orderBy = 3;
+   */
+  orderBy: string;
+
+  /**
+   * @generated from field: bool desc = 4;
+   */
+  desc: boolean;
+
+  /**
+   * @generated from field: string startDate = 5;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 6;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: repeated string lineItemIds = 7;
+   */
+  lineItemIds: string[];
+
+  /**
+   * @generated from field: int32 page = 8;
+   */
+  page: number;
+
+  /**
+   * @generated from field: int32 pageSize = 9;
+   */
+  pageSize: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanResourceMatchesRequest.
+ * Use `create(ListCommitmentPlanResourceMatchesRequestSchema)` to create a new message.
+ */
+export const ListCommitmentPlanResourceMatchesRequestSchema: GenMessage<ListCommitmentPlanResourceMatchesRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 6);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentsRequest
+ */
+export type ListCommitmentsRequest = Message<"blueapi.archera.v1.ListCommitmentsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string search = 2;
+   */
+  search: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct filter = 3;
+   */
+  filter?: JsonObject;
+
+  /**
+   * @generated from field: bool desc = 4;
+   */
+  desc: boolean;
+
+  /**
+   * @generated from field: string orderBy = 5;
+   */
+  orderBy: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 6;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: string startDate = 7;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 8;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: int32 page = 9;
+   */
+  page: number;
+
+  /**
+   * @generated from field: int32 pageSize = 10;
+   */
+  pageSize: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentsRequest.
+ * Use `create(ListCommitmentsRequestSchema)` to create a new message.
+ */
+export const ListCommitmentsRequestSchema: GenMessage<ListCommitmentsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 7);
+
+/**
+ * @generated from message blueapi.archera.v1.GetCommitmentsChartRequest
+ */
+export type GetCommitmentsChartRequest = Message<"blueapi.archera.v1.GetCommitmentsChartRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct filter = 2;
+   */
+  filter?: JsonObject;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 3;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: string startDate = 4;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 5;
+   */
+  endDate: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetCommitmentsChartRequest.
+ * Use `create(GetCommitmentsChartRequestSchema)` to create a new message.
+ */
+export const GetCommitmentsChartRequestSchema: GenMessage<GetCommitmentsChartRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 8);
+
+/**
+ * @generated from message blueapi.archera.v1.GetMetricsRequest
+ */
+export type GetMetricsRequest = Message<"blueapi.archera.v1.GetMetricsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetMetricsRequest.
+ * Use `create(GetMetricsRequestSchema)` to create a new message.
+ */
+export const GetMetricsRequestSchema: GenMessage<GetMetricsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 9);
+
+/**
+ * @generated from message blueapi.archera.v1.ListResourcesRequest
+ */
+export type ListResourcesRequest = Message<"blueapi.archera.v1.ListResourcesRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: string segmentId = 3;
+   */
+  segmentId: string;
+
+  /**
+   * @generated from field: string search = 4;
+   */
+  search: string;
+
+  /**
+   * @generated from field: bool desc = 5;
+   */
+  desc: boolean;
+
+  /**
+   * @generated from field: string orderBy = 6;
+   */
+  orderBy: string;
+
+  /**
+   * @generated from field: int32 page = 7;
+   */
+  page: number;
+
+  /**
+   * @generated from field: int32 pageSize = 8;
+   */
+  pageSize: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListResourcesRequest.
+ * Use `create(ListResourcesRequestSchema)` to create a new message.
+ */
+export const ListResourcesRequestSchema: GenMessage<ListResourcesRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 10);
+
+/**
+ * @generated from message blueapi.archera.v1.GetResourceDailyUsageRequest
+ */
+export type GetResourceDailyUsageRequest = Message<"blueapi.archera.v1.GetResourceDailyUsageRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string resourceId = 2;
+   */
+  resourceId: string;
+
+  /**
+   * @generated from field: string startDate = 3;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 4;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: string catalogSkuId = 5;
+   */
+  catalogSkuId: string;
+
+  /**
+   * @generated from field: int32 page = 6;
+   */
+  page: number;
+
+  /**
+   * @generated from field: int32 pageSize = 7;
+   */
+  pageSize: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetResourceDailyUsageRequest.
+ * Use `create(GetResourceDailyUsageRequestSchema)` to create a new message.
+ */
+export const GetResourceDailyUsageRequestSchema: GenMessage<GetResourceDailyUsageRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 11);
+
+/**
+ * @generated from message blueapi.archera.v1.ListSegmentsRequest
+ */
+export type ListSegmentsRequest = Message<"blueapi.archera.v1.ListSegmentsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListSegmentsRequest.
+ * Use `create(ListSegmentsRequestSchema)` to create a new message.
+ */
+export const ListSegmentsRequestSchema: GenMessage<ListSegmentsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 12);
+
+/**
+ * @generated from message blueapi.archera.v1.GetSegmentDetailsRequest
+ */
+export type GetSegmentDetailsRequest = Message<"blueapi.archera.v1.GetSegmentDetailsRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string segmentId = 2;
+   */
+  segmentId: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetSegmentDetailsRequest.
+ * Use `create(GetSegmentDetailsRequestSchema)` to create a new message.
+ */
+export const GetSegmentDetailsRequestSchema: GenMessage<GetSegmentDetailsRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 13);
+
+/**
+ * @generated from message blueapi.archera.v1.ListDefaultPurchasePlansRequest
+ */
+export type ListDefaultPurchasePlansRequest = Message<"blueapi.archera.v1.ListDefaultPurchasePlansRequest"> & {
+  /**
+   * @generated from field: string orgId = 1;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string segmentId = 2;
+   */
+  segmentId: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultPurchasePlansRequest.
+ * Use `create(ListDefaultPurchasePlansRequestSchema)` to create a new message.
+ */
+export const ListDefaultPurchasePlansRequestSchema: GenMessage<ListDefaultPurchasePlansRequest> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 14);
 
 /**
  * @generated from message blueapi.archera.v1.Org
@@ -39,20 +537,2367 @@ export type Org = Message<"blueapi.archera.v1.Org"> & {
  * Use `create(OrgSchema)` to create a new message.
  */
 export const OrgSchema: GenMessage<Org> = /*@__PURE__*/
-  messageDesc(file_archera_v1_archera, 0);
+  messageDesc(file_archera_v1_archera, 15);
 
 /**
- * @generated from message blueapi.archera.v1.ListOrgsRequest
+ * @generated from message blueapi.archera.v1.CommitmentPlanDetails
  */
-export type ListOrgsRequest = Message<"blueapi.archera.v1.ListOrgsRequest"> & {
+export type CommitmentPlanDetails = Message<"blueapi.archera.v1.CommitmentPlanDetails"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: string orgId = 4;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string createdAt = 5;
+   */
+  createdAt: string;
+
+  /**
+   * @generated from field: bool isCalculating = 6;
+   */
+  isCalculating: boolean;
+
+  /**
+   * @generated from field: string status = 7;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string maxTerm = 8;
+   */
+  maxTerm: string;
+
+  /**
+   * @generated from field: double coveredOndemandCostHourly = 9;
+   */
+  coveredOndemandCostHourly: number;
+
+  /**
+   * @generated from field: double beforeOndemandCostHourly = 10;
+   */
+  beforeOndemandCostHourly: number;
+
+  /**
+   * @generated from field: double beforeReservedCostHourly = 11;
+   */
+  beforeReservedCostHourly: number;
+
+  /**
+   * @generated from field: double amortizedCostHourly = 12;
+   */
+  amortizedCostHourly: number;
+
+  /**
+   * @generated from field: double recurringCostHourly = 13;
+   */
+  recurringCostHourly: number;
+
+  /**
+   * @generated from field: double upfrontCostHourly = 14;
+   */
+  upfrontCostHourly: number;
+
+  /**
+   * @generated from field: double beforeCostHourly = 15;
+   */
+  beforeCostHourly: number;
+
+  /**
+   * @generated from field: double afterCostHourly = 16;
+   */
+  afterCostHourly: number;
+
+  /**
+   * @generated from field: double totalCostHourly = 17;
+   */
+  totalCostHourly: number;
+
+  /**
+   * @generated from field: double savingsHourly = 18;
+   */
+  savingsHourly: number;
+
+  /**
+   * @generated from field: double feeHourly = 19;
+   */
+  feeHourly: number;
+
+  /**
+   * @generated from field: double commitmentCoverage = 20;
+   */
+  commitmentCoverage: number;
+
+  /**
+   * @generated from field: double minimumCommitmentCost = 21;
+   */
+  minimumCommitmentCost: number;
+
+  /**
+   * @generated from field: double breakevenHours = 22;
+   */
+  breakevenHours: number;
+
+  /**
+   * @generated from field: double totalSavings = 23;
+   */
+  totalSavings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 24;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: double totalMonthlyBeforeCost = 25;
+   */
+  totalMonthlyBeforeCost: number;
 };
 
 /**
- * Describes the message blueapi.archera.v1.ListOrgsRequest.
- * Use `create(ListOrgsRequestSchema)` to create a new message.
+ * Describes the message blueapi.archera.v1.CommitmentPlanDetails.
+ * Use `create(CommitmentPlanDetailsSchema)` to create a new message.
  */
-export const ListOrgsRequestSchema: GenMessage<ListOrgsRequest> = /*@__PURE__*/
-  messageDesc(file_archera_v1_archera, 1);
+export const CommitmentPlanDetailsSchema: GenMessage<CommitmentPlanDetails> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 16);
+
+/**
+ * @generated from message blueapi.archera.v1.ListDefaultCommitmentPlansResponse
+ */
+export type ListDefaultCommitmentPlansResponse = Message<"blueapi.archera.v1.ListDefaultCommitmentPlansResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.CommitmentPlanDetails plans = 1;
+   */
+  plans: CommitmentPlanDetails[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultCommitmentPlansResponse.
+ * Use `create(ListDefaultCommitmentPlansResponseSchema)` to create a new message.
+ */
+export const ListDefaultCommitmentPlansResponseSchema: GenMessage<ListDefaultCommitmentPlansResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 17);
+
+/**
+ * @generated from message blueapi.archera.v1.CommitmentPlanLineItem
+ */
+export type CommitmentPlanLineItem = Message<"blueapi.archera.v1.CommitmentPlanLineItem"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string planId = 2;
+   */
+  planId: string;
+
+  /**
+   * @generated from field: string offerId = 3;
+   */
+  offerId: string;
+
+  /**
+   * @generated from field: string leaseMenuItemId = 4;
+   */
+  leaseMenuItemId: string;
+
+  /**
+   * @generated from field: string accountId = 5;
+   */
+  accountId: string;
+
+  /**
+   * @generated from field: double recommendedQuantity = 6;
+   */
+  recommendedQuantity: number;
+
+  /**
+   * @generated from field: double selectedQuantity = 7;
+   */
+  selectedQuantity: number;
+
+  /**
+   * @generated from field: double recommendedCommitment = 8;
+   */
+  recommendedCommitment: number;
+
+  /**
+   * @generated from field: double selectedCommitment = 9;
+   */
+  selectedCommitment: number;
+
+  /**
+   * @generated from field: bool isSelected = 10;
+   */
+  isSelected: boolean;
+
+  /**
+   * @generated from field: double afterAmortizedCost = 11;
+   */
+  afterAmortizedCost: number;
+
+  /**
+   * @generated from field: double upfrontCost = 12;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double recurringCost = 13;
+   */
+  recurringCost: number;
+
+  /**
+   * @generated from field: double beforeCost = 14;
+   */
+  beforeCost: number;
+
+  /**
+   * @generated from field: double beforeOndemandCost = 15;
+   */
+  beforeOndemandCost: number;
+
+  /**
+   * @generated from field: double beforeReservedCost = 16;
+   */
+  beforeReservedCost: number;
+
+  /**
+   * @generated from field: double coveredOndemandCost = 17;
+   */
+  coveredOndemandCost: number;
+
+  /**
+   * @generated from field: double afterCoveredUnits = 18;
+   */
+  afterCoveredUnits: number;
+
+  /**
+   * @generated from field: double totalCost = 19;
+   */
+  totalCost: number;
+
+  /**
+   * @generated from field: double monthlyCost = 20;
+   */
+  monthlyCost: number;
+
+  /**
+   * @generated from field: double savings = 21;
+   */
+  savings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 22;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: double totalSavings = 23;
+   */
+  totalSavings: number;
+
+  /**
+   * @generated from field: double fee = 24;
+   */
+  fee: number;
+
+  /**
+   * @generated from field: double discountRate = 25;
+   */
+  discountRate: number;
+
+  /**
+   * @generated from field: double breakevenHours = 26;
+   */
+  breakevenHours: number;
+
+  /**
+   * @generated from field: string contractTerm = 27;
+   */
+  contractTerm: string;
+
+  /**
+   * @generated from field: string paymentOption = 28;
+   */
+  paymentOption: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct contractSpec = 29;
+   */
+  contractSpec?: JsonObject;
+
+  /**
+   * @generated from field: google.protobuf.Struct offer = 30;
+   */
+  offer?: JsonObject;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanLineItem.
+ * Use `create(CommitmentPlanLineItemSchema)` to create a new message.
+ */
+export const CommitmentPlanLineItemSchema: GenMessage<CommitmentPlanLineItem> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 18);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentPlanLineItemsResponse
+ */
+export type ListCommitmentPlanLineItemsResponse = Message<"blueapi.archera.v1.ListCommitmentPlanLineItemsResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.CommitmentPlanLineItem lineItems = 1;
+   */
+  lineItems: CommitmentPlanLineItem[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanLineItemsResponse.
+ * Use `create(ListCommitmentPlanLineItemsResponseSchema)` to create a new message.
+ */
+export const ListCommitmentPlanLineItemsResponseSchema: GenMessage<ListCommitmentPlanLineItemsResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 19);
+
+/**
+ * @generated from message blueapi.archera.v1.CommitmentPlanResourceMatch
+ */
+export type CommitmentPlanResourceMatch = Message<"blueapi.archera.v1.CommitmentPlanResourceMatch"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: double totalUnits = 2;
+   */
+  totalUnits: number;
+
+  /**
+   * @generated from field: double beforeUncoveredUnits = 3;
+   */
+  beforeUncoveredUnits: number;
+
+  /**
+   * @generated from field: double afterCoveredUnits = 4;
+   */
+  afterCoveredUnits: number;
+
+  /**
+   * @generated from field: double afterUncoveredUnits = 5;
+   */
+  afterUncoveredUnits: number;
+
+  /**
+   * @generated from field: double ondemandPrice = 6;
+   */
+  ondemandPrice: number;
+
+  /**
+   * @generated from field: double ifAllOndemandCost = 7;
+   */
+  ifAllOndemandCost: number;
+
+  /**
+   * @generated from field: double beforeOndemandCost = 8;
+   */
+  beforeOndemandCost: number;
+
+  /**
+   * @generated from field: double afterOndemandCost = 9;
+   */
+  afterOndemandCost: number;
+
+  /**
+   * @generated from field: double coveredOndemandCost = 10;
+   */
+  coveredOndemandCost: number;
+
+  /**
+   * @generated from field: double beforeReservedCost = 11;
+   */
+  beforeReservedCost: number;
+
+  /**
+   * @generated from field: double afterReservedCost = 12;
+   */
+  afterReservedCost: number;
+
+  /**
+   * @generated from field: double beforeCost = 13;
+   */
+  beforeCost: number;
+
+  /**
+   * @generated from field: double afterCost = 14;
+   */
+  afterCost: number;
+
+  /**
+   * @generated from field: double monthlyBeforeCost = 15;
+   */
+  monthlyBeforeCost: number;
+
+  /**
+   * @generated from field: double monthlyAfterCost = 16;
+   */
+  monthlyAfterCost: number;
+
+  /**
+   * @generated from field: double monthlyAfterReservedCost = 17;
+   */
+  monthlyAfterReservedCost: number;
+
+  /**
+   * @generated from field: double monthlyAfterOndemandCost = 18;
+   */
+  monthlyAfterOndemandCost: number;
+
+  /**
+   * @generated from field: double averageSavings = 19;
+   */
+  averageSavings: number;
+
+  /**
+   * @generated from field: double averageMonthlySavings = 20;
+   */
+  averageMonthlySavings: number;
+
+  /**
+   * @generated from field: string usageType = 21;
+   */
+  usageType: string;
+
+  /**
+   * @generated from field: double coverage = 22;
+   */
+  coverage: number;
+
+  /**
+   * @generated from field: google.protobuf.Struct resource = 23;
+   */
+  resource?: JsonObject;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanResourceMatch.
+ * Use `create(CommitmentPlanResourceMatchSchema)` to create a new message.
+ */
+export const CommitmentPlanResourceMatchSchema: GenMessage<CommitmentPlanResourceMatch> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 20);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentPlanResourceMatchesResponse
+ */
+export type ListCommitmentPlanResourceMatchesResponse = Message<"blueapi.archera.v1.ListCommitmentPlanResourceMatchesResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.CommitmentPlanResourceMatch resourceMatches = 1;
+   */
+  resourceMatches: CommitmentPlanResourceMatch[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanResourceMatchesResponse.
+ * Use `create(ListCommitmentPlanResourceMatchesResponseSchema)` to create a new message.
+ */
+export const ListCommitmentPlanResourceMatchesResponseSchema: GenMessage<ListCommitmentPlanResourceMatchesResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 21);
+
+/**
+ * @generated from message blueapi.archera.v1.Lease
+ */
+export type Lease = Message<"blueapi.archera.v1.Lease"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string orgId = 2;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string providerReservationId = 3;
+   */
+  providerReservationId: string;
+
+  /**
+   * @generated from field: string accountId = 4;
+   */
+  accountId: string;
+
+  /**
+   * @generated from field: string status = 5;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string startDate = 6;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 7;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: string lockinDate = 8;
+   */
+  lockinDate: string;
+
+  /**
+   * @generated from field: double upfrontCost = 9;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double recurringCost = 10;
+   */
+  recurringCost: number;
+
+  /**
+   * @generated from field: string createdAt = 11;
+   */
+  createdAt: string;
+
+  /**
+   * @generated from field: string updatedAt = 12;
+   */
+  updatedAt: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.Lease.
+ * Use `create(LeaseSchema)` to create a new message.
+ */
+export const LeaseSchema: GenMessage<Lease> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 22);
+
+/**
+ * @generated from message blueapi.archera.v1.DailyUtilization
+ */
+export type DailyUtilization = Message<"blueapi.archera.v1.DailyUtilization"> & {
+  /**
+   * @generated from field: string date = 1;
+   */
+  date: string;
+
+  /**
+   * @generated from field: double utilization = 2;
+   */
+  utilization: number;
+
+  /**
+   * @generated from field: double netSavings = 3;
+   */
+  netSavings: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.DailyUtilization.
+ * Use `create(DailyUtilizationSchema)` to create a new message.
+ */
+export const DailyUtilizationSchema: GenMessage<DailyUtilization> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 23);
+
+/**
+ * @generated from message blueapi.archera.v1.Commitment
+ */
+export type Commitment = Message<"blueapi.archera.v1.Commitment"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 2;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: string displayName = 3;
+   */
+  displayName: string;
+
+  /**
+   * @generated from field: string leasedDisplayName = 4;
+   */
+  leasedDisplayName: string;
+
+  /**
+   * @generated from field: string providerReservationId = 5;
+   */
+  providerReservationId: string;
+
+  /**
+   * @generated from field: string accountId = 6;
+   */
+  accountId: string;
+
+  /**
+   * @generated from field: string masterAccountId = 7;
+   */
+  masterAccountId: string;
+
+  /**
+   * @generated from field: string billingAccountId = 8;
+   */
+  billingAccountId: string;
+
+  /**
+   * @generated from field: string type = 9;
+   */
+  type: string;
+
+  /**
+   * @generated from field: string region = 10;
+   */
+  region: string;
+
+  /**
+   * @generated from field: int64 durationSeconds = 11;
+   */
+  durationSeconds: bigint;
+
+  /**
+   * @generated from field: string reservationEnd = 12;
+   */
+  reservationEnd: string;
+
+  /**
+   * @generated from field: string reservationStart = 13;
+   */
+  reservationStart: string;
+
+  /**
+   * @generated from field: string transferReservationStart = 14;
+   */
+  transferReservationStart: string;
+
+  /**
+   * @generated from field: string transferReservationEnd = 15;
+   */
+  transferReservationEnd: string;
+
+  /**
+   * @generated from field: string startDate = 16;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 17;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: string status = 18;
+   */
+  status: string;
+
+  /**
+   * @generated from field: bool isLeased = 19;
+   */
+  isLeased: boolean;
+
+  /**
+   * @generated from field: bool isActive = 20;
+   */
+  isActive: boolean;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Lease lease = 21;
+   */
+  lease?: Lease;
+
+  /**
+   * @generated from field: string leaseStart = 22;
+   */
+  leaseStart: string;
+
+  /**
+   * @generated from field: string leaseLockinDate = 23;
+   */
+  leaseLockinDate: string;
+
+  /**
+   * @generated from field: double upfrontCost = 24;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double recurringCost = 25;
+   */
+  recurringCost: number;
+
+  /**
+   * @generated from field: bool isFlexible = 26;
+   */
+  isFlexible: boolean;
+
+  /**
+   * @generated from field: string paymentOption = 27;
+   */
+  paymentOption: string;
+
+  /**
+   * @generated from field: string offeringClass = 28;
+   */
+  offeringClass: string;
+
+  /**
+   * @generated from field: string offeringId = 29;
+   */
+  offeringId: string;
+
+  /**
+   * @generated from field: int32 instanceCount = 30;
+   */
+  instanceCount: number;
+
+  /**
+   * @generated from field: double effectiveInstanceCount = 31;
+   */
+  effectiveInstanceCount: number;
+
+  /**
+   * @generated from field: string productDescription = 32;
+   */
+  productDescription: string;
+
+  /**
+   * @generated from field: string instanceFamily = 33;
+   */
+  instanceFamily: string;
+
+  /**
+   * @generated from field: string instanceType = 34;
+   */
+  instanceType: string;
+
+  /**
+   * @generated from field: string tenancy = 35;
+   */
+  tenancy: string;
+
+  /**
+   * @generated from field: string az = 36;
+   */
+  az: string;
+
+  /**
+   * @generated from field: bool isMultiAz = 37;
+   */
+  isMultiAz: boolean;
+
+  /**
+   * @generated from field: string planType = 38;
+   */
+  planType: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Scope scope = 39;
+   */
+  scope: Scope;
+
+  /**
+   * @generated from field: string name = 40;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string orderId = 41;
+   */
+  orderId: string;
+
+  /**
+   * @generated from field: string resourceGroup = 42;
+   */
+  resourceGroup: string;
+
+  /**
+   * @generated from field: bool instanceFlexibility = 43;
+   */
+  instanceFlexibility: boolean;
+
+  /**
+   * @generated from field: double savings = 44;
+   */
+  savings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 45;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: double netSavings = 46;
+   */
+  netSavings: number;
+
+  /**
+   * @generated from field: double utilization = 47;
+   */
+  utilization: number;
+
+  /**
+   * @generated from field: double potentialSavings = 48;
+   */
+  potentialSavings: number;
+
+  /**
+   * @generated from field: double runningHours = 49;
+   */
+  runningHours: number;
+
+  /**
+   * @generated from field: double amortizedCost = 50;
+   */
+  amortizedCost: number;
+
+  /**
+   * @generated from field: repeated blueapi.archera.v1.DailyUtilization dailyUtilizations = 51;
+   */
+  dailyUtilizations: DailyUtilization[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.Commitment.
+ * Use `create(CommitmentSchema)` to create a new message.
+ */
+export const CommitmentSchema: GenMessage<Commitment> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 24);
+
+/**
+ * @generated from message blueapi.archera.v1.ListCommitmentsResponse
+ */
+export type ListCommitmentsResponse = Message<"blueapi.archera.v1.ListCommitmentsResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.Commitment commitments = 1;
+   */
+  commitments: Commitment[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentsResponse.
+ * Use `create(ListCommitmentsResponseSchema)` to create a new message.
+ */
+export const ListCommitmentsResponseSchema: GenMessage<ListCommitmentsResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 25);
+
+/**
+ * @generated from message blueapi.archera.v1.CommitmentsChartDataPoint
+ */
+export type CommitmentsChartDataPoint = Message<"blueapi.archera.v1.CommitmentsChartDataPoint"> & {
+  /**
+   * @generated from field: string date = 1;
+   */
+  date: string;
+
+  /**
+   * @generated from field: double commitmentSpend = 2;
+   */
+  commitmentSpend: number;
+
+  /**
+   * @generated from field: double utilization = 3;
+   */
+  utilization: number;
+
+  /**
+   * @generated from field: double lockedCommitments = 4;
+   */
+  lockedCommitments: number;
+
+  /**
+   * @generated from field: double unlockedCommitments = 5;
+   */
+  unlockedCommitments: number;
+
+  /**
+   * @generated from field: double realizedSavings = 6;
+   */
+  realizedSavings: number;
+
+  /**
+   * @generated from field: bool isProjection = 7;
+   */
+  isProjection: boolean;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.CommitmentsChartDataPoint.
+ * Use `create(CommitmentsChartDataPointSchema)` to create a new message.
+ */
+export const CommitmentsChartDataPointSchema: GenMessage<CommitmentsChartDataPoint> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 26);
+
+/**
+ * @generated from message blueapi.archera.v1.CommitmentsChartResponse
+ */
+export type CommitmentsChartResponse = Message<"blueapi.archera.v1.CommitmentsChartResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.CommitmentsChartDataPoint data = 1;
+   */
+  data: CommitmentsChartDataPoint[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.CommitmentsChartResponse.
+ * Use `create(CommitmentsChartResponseSchema)` to create a new message.
+ */
+export const CommitmentsChartResponseSchema: GenMessage<CommitmentsChartResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 27);
+
+/**
+ * @generated from message blueapi.archera.v1.MetricsResponse
+ */
+export type MetricsResponse = Message<"blueapi.archera.v1.MetricsResponse"> & {
+  /**
+   * @generated from field: double lifetimeSavings = 1;
+   */
+  lifetimeSavings: number;
+
+  /**
+   * @generated from field: double mtdSavings = 2;
+   */
+  mtdSavings: number;
+
+  /**
+   * @generated from field: bool purchaseAutomationEnabled = 3;
+   */
+  purchaseAutomationEnabled: boolean;
+
+  /**
+   * @generated from field: bool buybackAutomationEnabled = 4;
+   */
+  buybackAutomationEnabled: boolean;
+
+  /**
+   * @generated from field: bool hasActionedPlan = 5;
+   */
+  hasActionedPlan: boolean;
+
+  /**
+   * @generated from field: bool hasPendingActions = 6;
+   */
+  hasPendingActions: boolean;
+
+  /**
+   * @generated from field: string latestExecutionDate = 7;
+   */
+  latestExecutionDate: string;
+
+  /**
+   * @generated from field: double purchaseMissedSavings = 8;
+   */
+  purchaseMissedSavings: number;
+
+  /**
+   * @generated from field: double buybackMissedSavings = 9;
+   */
+  buybackMissedSavings: number;
+
+  /**
+   * @generated from field: double totalDailyMissedSavings = 10;
+   */
+  totalDailyMissedSavings: number;
+
+  /**
+   * @generated from field: double hourlyMissedSavings = 11;
+   */
+  hourlyMissedSavings: number;
+
+  /**
+   * @generated from field: string missedSavingsStartDate = 12;
+   */
+  missedSavingsStartDate: string;
+
+  /**
+   * @generated from field: string missedSavingsEndDate = 13;
+   */
+  missedSavingsEndDate: string;
+
+  /**
+   * @generated from field: double expiringSavings = 14;
+   */
+  expiringSavings: number;
+
+  /**
+   * @generated from field: double coverage = 15;
+   */
+  coverage: number;
+
+  /**
+   * @generated from field: double utilization = 16;
+   */
+  utilization: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.MetricsResponse.
+ * Use `create(MetricsResponseSchema)` to create a new message.
+ */
+export const MetricsResponseSchema: GenMessage<MetricsResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 28);
+
+/**
+ * @generated from message blueapi.archera.v1.Resource
+ */
+export type Resource = Message<"blueapi.archera.v1.Resource"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string resourceId = 2;
+   */
+  resourceId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 3;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: string providerResourceId = 4;
+   */
+  providerResourceId: string;
+
+  /**
+   * @generated from field: bool isSpot = 5;
+   */
+  isSpot: boolean;
+
+  /**
+   * @generated from field: string name = 6;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string resourceGroup = 7;
+   */
+  resourceGroup: string;
+
+  /**
+   * @generated from field: string usageEnd = 8;
+   */
+  usageEnd: string;
+
+  /**
+   * @generated from field: string usageStart = 9;
+   */
+  usageStart: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct tags = 10;
+   */
+  tags?: JsonObject;
+
+  /**
+   * @generated from field: string createdAt = 11;
+   */
+  createdAt: string;
+
+  /**
+   * @generated from field: string updatedAt = 12;
+   */
+  updatedAt: string;
+
+  /**
+   * @generated from field: string instanceId = 13;
+   */
+  instanceId: string;
+
+  /**
+   * @generated from field: string billingAccountId = 14;
+   */
+  billingAccountId: string;
+
+  /**
+   * @generated from field: string subAccountId = 15;
+   */
+  subAccountId: string;
+
+  /**
+   * @generated from field: string managementAccountId = 16;
+   */
+  managementAccountId: string;
+
+  /**
+   * @generated from field: string ownerAccountId = 17;
+   */
+  ownerAccountId: string;
+
+  /**
+   * @generated from field: string skuTitle = 18;
+   */
+  skuTitle: string;
+
+  /**
+   * @generated from field: string skuName = 19;
+   */
+  skuName: string;
+
+  /**
+   * @generated from field: string availabilityZone = 20;
+   */
+  availabilityZone: string;
+
+  /**
+   * @generated from field: string cacheEngine = 21;
+   */
+  cacheEngine: string;
+
+  /**
+   * @generated from field: string databaseEngine = 22;
+   */
+  databaseEngine: string;
+
+  /**
+   * @generated from field: string description = 23;
+   */
+  description: string;
+
+  /**
+   * @generated from field: string family = 24;
+   */
+  family: string;
+
+  /**
+   * @generated from field: string fullRegionName = 25;
+   */
+  fullRegionName: string;
+
+  /**
+   * @generated from field: bool hasOndemandTerms = 26;
+   */
+  hasOndemandTerms: boolean;
+
+  /**
+   * @generated from field: string instanceType = 27;
+   */
+  instanceType: string;
+
+  /**
+   * @generated from field: string instanceTypeFamily = 28;
+   */
+  instanceTypeFamily: string;
+
+  /**
+   * @generated from field: bool isReservable = 29;
+   */
+  isReservable: boolean;
+
+  /**
+   * @generated from field: string licenseModel = 30;
+   */
+  licenseModel: string;
+
+  /**
+   * @generated from field: string locationType = 31;
+   */
+  locationType: string;
+
+  /**
+   * @generated from field: string normalizationSizeFactor = 32;
+   */
+  normalizationSizeFactor: string;
+
+  /**
+   * @generated from field: string operatingSystem = 33;
+   */
+  operatingSystem: string;
+
+  /**
+   * @generated from field: string preInstalledSw = 34;
+   */
+  preInstalledSw: string;
+
+  /**
+   * @generated from field: string priceCurrency = 35;
+   */
+  priceCurrency: string;
+
+  /**
+   * @generated from field: string providerService = 36;
+   */
+  providerService: string;
+
+  /**
+   * @generated from field: string providerSkuId = 37;
+   */
+  providerSkuId: string;
+
+  /**
+   * @generated from field: string publicationDate = 38;
+   */
+  publicationDate: string;
+
+  /**
+   * @generated from field: string region = 39;
+   */
+  region: string;
+
+  /**
+   * @generated from field: string service = 40;
+   */
+  service: string;
+
+  /**
+   * @generated from field: string tenancy = 41;
+   */
+  tenancy: string;
+
+  /**
+   * @generated from field: string usageType = 42;
+   */
+  usageType: string;
+
+  /**
+   * @generated from field: string version = 43;
+   */
+  version: string;
+
+  /**
+   * @generated from field: bool vpcNetworkingSupport = 44;
+   */
+  vpcNetworkingSupport: boolean;
+
+  /**
+   * @generated from field: string ondemandUsageUnit = 45;
+   */
+  ondemandUsageUnit: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.Resource.
+ * Use `create(ResourceSchema)` to create a new message.
+ */
+export const ResourceSchema: GenMessage<Resource> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 29);
+
+/**
+ * @generated from message blueapi.archera.v1.ListResourcesResponse
+ */
+export type ListResourcesResponse = Message<"blueapi.archera.v1.ListResourcesResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.Resource resources = 1;
+   */
+  resources: Resource[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListResourcesResponse.
+ * Use `create(ListResourcesResponseSchema)` to create a new message.
+ */
+export const ListResourcesResponseSchema: GenMessage<ListResourcesResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 30);
+
+/**
+ * @generated from message blueapi.archera.v1.ResourceDailyUsage
+ */
+export type ResourceDailyUsage = Message<"blueapi.archera.v1.ResourceDailyUsage"> & {
+  /**
+   * @generated from field: string date = 1;
+   */
+  date: string;
+
+  /**
+   * @generated from field: string usageAccountId = 2;
+   */
+  usageAccountId: string;
+
+  /**
+   * @generated from field: string subAccountId = 3;
+   */
+  subAccountId: string;
+
+  /**
+   * @generated from field: double usage = 4;
+   */
+  usage: number;
+
+  /**
+   * @generated from field: double reservationUsage = 5;
+   */
+  reservationUsage: number;
+
+  /**
+   * @generated from field: double freeTierUsage = 6;
+   */
+  freeTierUsage: number;
+
+  /**
+   * @generated from field: double ondemandCost = 7;
+   */
+  ondemandCost: number;
+
+  /**
+   * @generated from field: double reservedCost = 8;
+   */
+  reservedCost: number;
+
+  /**
+   * @generated from field: double ifAllOndemandCost = 9;
+   */
+  ifAllOndemandCost: number;
+
+  /**
+   * @generated from field: double spotCost = 10;
+   */
+  spotCost: number;
+
+  /**
+   * @generated from field: double freeTierSavings = 11;
+   */
+  freeTierSavings: number;
+
+  /**
+   * @generated from field: string usageType = 12;
+   */
+  usageType: string;
+
+  /**
+   * @generated from field: string commonUsageType = 13;
+   */
+  commonUsageType: string;
+
+  /**
+   * @generated from field: double coveredUsage = 14;
+   */
+  coveredUsage: number;
+
+  /**
+   * @generated from field: double uptime = 15;
+   */
+  uptime: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ResourceDailyUsage.
+ * Use `create(ResourceDailyUsageSchema)` to create a new message.
+ */
+export const ResourceDailyUsageSchema: GenMessage<ResourceDailyUsage> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 31);
+
+/**
+ * @generated from message blueapi.archera.v1.GetResourceDailyUsageResponse
+ */
+export type GetResourceDailyUsageResponse = Message<"blueapi.archera.v1.GetResourceDailyUsageResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.ResourceDailyUsage dailyUsage = 1;
+   */
+  dailyUsage: ResourceDailyUsage[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.GetResourceDailyUsageResponse.
+ * Use `create(GetResourceDailyUsageResponseSchema)` to create a new message.
+ */
+export const GetResourceDailyUsageResponseSchema: GenMessage<GetResourceDailyUsageResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 32);
+
+/**
+ * @generated from message blueapi.archera.v1.Segment
+ */
+export type Segment = Message<"blueapi.archera.v1.Segment"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 3;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: bool isDefault = 4;
+   */
+  isDefault: boolean;
+
+  /**
+   * @generated from field: string createdAt = 5;
+   */
+  createdAt: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.Segment.
+ * Use `create(SegmentSchema)` to create a new message.
+ */
+export const SegmentSchema: GenMessage<Segment> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 33);
+
+/**
+ * @generated from message blueapi.archera.v1.ListSegmentsResponse
+ */
+export type ListSegmentsResponse = Message<"blueapi.archera.v1.ListSegmentsResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.Segment segments = 1;
+   */
+  segments: Segment[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListSegmentsResponse.
+ * Use `create(ListSegmentsResponseSchema)` to create a new message.
+ */
+export const ListSegmentsResponseSchema: GenMessage<ListSegmentsResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 34);
+
+/**
+ * @generated from message blueapi.archera.v1.SegmentCreator
+ */
+export type SegmentCreator = Message<"blueapi.archera.v1.SegmentCreator"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string username = 2;
+   */
+  username: string;
+
+  /**
+   * @generated from field: string fullName = 3;
+   */
+  fullName: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.SegmentCreator.
+ * Use `create(SegmentCreatorSchema)` to create a new message.
+ */
+export const SegmentCreatorSchema: GenMessage<SegmentCreator> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 35);
+
+/**
+ * @generated from message blueapi.archera.v1.PurchasePlan
+ */
+export type PurchasePlan = Message<"blueapi.archera.v1.PurchasePlan"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string status = 3;
+   */
+  status: string;
+
+  /**
+   * @generated from field: bool isRenewal = 4;
+   */
+  isRenewal: boolean;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.PurchasePlan.
+ * Use `create(PurchasePlanSchema)` to create a new message.
+ */
+export const PurchasePlanSchema: GenMessage<PurchasePlan> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 36);
+
+/**
+ * @generated from message blueapi.archera.v1.SegmentDetails
+ */
+export type SegmentDetails = Message<"blueapi.archera.v1.SegmentDetails"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Provider provider = 4;
+   */
+  provider: Provider;
+
+  /**
+   * @generated from field: repeated string cloudProviders = 5;
+   */
+  cloudProviders: string[];
+
+  /**
+   * @generated from field: bool isDefault = 6;
+   */
+  isDefault: boolean;
+
+  /**
+   * @generated from field: string createdAt = 7;
+   */
+  createdAt: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.SegmentCreator createdBy = 8;
+   */
+  createdBy?: SegmentCreator;
+
+  /**
+   * @generated from field: string parentId = 9;
+   */
+  parentId: string;
+
+  /**
+   * @generated from field: string status = 10;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string segmentClass = 11;
+   */
+  segmentClass: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct params = 12;
+   */
+  params?: JsonObject;
+
+  /**
+   * Cost metrics
+   *
+   * @generated from field: double monthlyCost = 13;
+   */
+  monthlyCost: number;
+
+  /**
+   * @generated from field: double monthlyNetCost = 14;
+   */
+  monthlyNetCost: number;
+
+  /**
+   * @generated from field: double monthlyIfAllOndemandCost = 15;
+   */
+  monthlyIfAllOndemandCost: number;
+
+  /**
+   * @generated from field: double monthlyOndemandCost = 16;
+   */
+  monthlyOndemandCost: number;
+
+  /**
+   * @generated from field: double monthlyReservedCost = 17;
+   */
+  monthlyReservedCost: number;
+
+  /**
+   * @generated from field: double monthlySpotCost = 18;
+   */
+  monthlySpotCost: number;
+
+  /**
+   * @generated from field: double monthlySavings = 19;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: double monthlyBudget = 20;
+   */
+  monthlyBudget: number;
+
+  /**
+   * Coverage metrics
+   *
+   * @generated from field: double coverage = 21;
+   */
+  coverage: number;
+
+  /**
+   * @generated from field: double recommendedCoverage = 22;
+   */
+  recommendedCoverage: number;
+
+  /**
+   * @generated from field: double targetCoverage = 23;
+   */
+  targetCoverage: number;
+
+  /**
+   * Resource metrics
+   *
+   * @generated from field: int32 monthlyResourceCount = 24;
+   */
+  monthlyResourceCount: number;
+
+  /**
+   * Purchase plans
+   *
+   * @generated from field: repeated blueapi.archera.v1.PurchasePlan purchasePlans = 25;
+   */
+  purchasePlans: PurchasePlan[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.SegmentDetails.
+ * Use `create(SegmentDetailsSchema)` to create a new message.
+ */
+export const SegmentDetailsSchema: GenMessage<SegmentDetails> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 37);
+
+/**
+ * @generated from message blueapi.archera.v1.ContractSpec
+ */
+export type ContractSpec = Message<"blueapi.archera.v1.ContractSpec"> & {
+  /**
+   * @generated from field: string commitmentType = 1;
+   */
+  commitmentType: string;
+
+  /**
+   * @generated from field: string paymentOption = 2;
+   */
+  paymentOption: string;
+
+  /**
+   * @generated from field: string term = 3;
+   */
+  term: string;
+
+  /**
+   * @generated from field: google.protobuf.Struct properties = 4;
+   */
+  properties?: JsonObject;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ContractSpec.
+ * Use `create(ContractSpecSchema)` to create a new message.
+ */
+export const ContractSpecSchema: GenMessage<ContractSpec> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 38);
+
+/**
+ * @generated from message blueapi.archera.v1.PlanSummary
+ */
+export type PlanSummary = Message<"blueapi.archera.v1.PlanSummary"> & {
+  /**
+   * @generated from field: string key = 1;
+   */
+  key: string;
+
+  /**
+   * @generated from field: string provider = 2;
+   */
+  provider: string;
+
+  /**
+   * @generated from field: int32 numCommitments = 3;
+   */
+  numCommitments: number;
+
+  /**
+   * @generated from field: double minCommitment = 4;
+   */
+  minCommitment: number;
+
+  /**
+   * @generated from field: double monthlyCommitment = 5;
+   */
+  monthlyCommitment: number;
+
+  /**
+   * @generated from field: double upfrontCost = 6;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double minSavings = 7;
+   */
+  minSavings: number;
+
+  /**
+   * @generated from field: double maxSavings = 8;
+   */
+  maxSavings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 9;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: int32 minTermHours = 10;
+   */
+  minTermHours: number;
+
+  /**
+   * @generated from field: int32 maxTermHours = 11;
+   */
+  maxTermHours: number;
+
+  /**
+   * @generated from field: double griPremiums = 12;
+   */
+  griPremiums: number;
+
+  /**
+   * @generated from field: double beforeOndemandCost = 13;
+   */
+  beforeOndemandCost: number;
+
+  /**
+   * @generated from field: double afterOndemandCost = 14;
+   */
+  afterOndemandCost: number;
+
+  /**
+   * @generated from field: double ifAllOndemandCost = 15;
+   */
+  ifAllOndemandCost: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.PlanSummary.
+ * Use `create(PlanSummarySchema)` to create a new message.
+ */
+export const PlanSummarySchema: GenMessage<PlanSummary> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 39);
+
+/**
+ * @generated from message blueapi.archera.v1.ServiceSummary
+ */
+export type ServiceSummary = Message<"blueapi.archera.v1.ServiceSummary"> & {
+  /**
+   * @generated from field: string key = 1;
+   */
+  key: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string serviceName = 3;
+   */
+  serviceName: string;
+
+  /**
+   * @generated from field: string provider = 4;
+   */
+  provider: string;
+
+  /**
+   * @generated from field: int32 numCommitments = 5;
+   */
+  numCommitments: number;
+
+  /**
+   * @generated from field: double currentCoverage = 6;
+   */
+  currentCoverage: number;
+
+  /**
+   * @generated from field: double potentialCoverage = 7;
+   */
+  potentialCoverage: number;
+
+  /**
+   * @generated from field: double minCommitment = 8;
+   */
+  minCommitment: number;
+
+  /**
+   * @generated from field: double monthlyCommitment = 9;
+   */
+  monthlyCommitment: number;
+
+  /**
+   * @generated from field: double upfrontCost = 10;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double minSavings = 11;
+   */
+  minSavings: number;
+
+  /**
+   * @generated from field: double maxSavings = 12;
+   */
+  maxSavings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 13;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: int32 minTermHours = 14;
+   */
+  minTermHours: number;
+
+  /**
+   * @generated from field: int32 maxTermHours = 15;
+   */
+  maxTermHours: number;
+
+  /**
+   * @generated from field: double griPremium = 16;
+   */
+  griPremium: number;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ServiceSummary.
+ * Use `create(ServiceSummarySchema)` to create a new message.
+ */
+export const ServiceSummarySchema: GenMessage<ServiceSummary> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 40);
+
+/**
+ * @generated from message blueapi.archera.v1.AggregateMetrics
+ */
+export type AggregateMetrics = Message<"blueapi.archera.v1.AggregateMetrics"> & {
+  /**
+   * @generated from field: double currentCoverage = 1;
+   */
+  currentCoverage: number;
+
+  /**
+   * @generated from field: double potentialCoverage = 2;
+   */
+  potentialCoverage: number;
+
+  /**
+   * @generated from field: map<string, blueapi.archera.v1.ServiceSummary> summaries = 3;
+   */
+  summaries: { [key: string]: ServiceSummary };
+};
+
+/**
+ * Describes the message blueapi.archera.v1.AggregateMetrics.
+ * Use `create(AggregateMetricsSchema)` to create a new message.
+ */
+export const AggregateMetricsSchema: GenMessage<AggregateMetrics> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 41);
+
+/**
+ * @generated from message blueapi.archera.v1.DefaultPurchasePlan
+ */
+export type DefaultPurchasePlan = Message<"blueapi.archera.v1.DefaultPurchasePlan"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * @generated from field: string orgId = 4;
+   */
+  orgId: string;
+
+  /**
+   * @generated from field: string segmentId = 5;
+   */
+  segmentId: string;
+
+  /**
+   * @generated from field: blueapi.archera.v1.Segment segment = 6;
+   */
+  segment?: Segment;
+
+  /**
+   * @generated from field: string status = 7;
+   */
+  status: string;
+
+  /**
+   * @generated from field: string planType = 8;
+   */
+  planType: string;
+
+  /**
+   * @generated from field: string createdAt = 9;
+   */
+  createdAt: string;
+
+  /**
+   * @generated from field: string lastModified = 10;
+   */
+  lastModified: string;
+
+  /**
+   * @generated from field: google.protobuf.Value createdBy = 11;
+   */
+  createdBy?: Value;
+
+  /**
+   * @generated from field: google.protobuf.Value executionPolicy = 12;
+   */
+  executionPolicy?: Value;
+
+  /**
+   * Flags
+   *
+   * @generated from field: bool isDefault = 13;
+   */
+  isDefault: boolean;
+
+  /**
+   * @generated from field: bool isRecommended = 14;
+   */
+  isRecommended: boolean;
+
+  /**
+   * @generated from field: bool isRenewal = 15;
+   */
+  isRenewal: boolean;
+
+  /**
+   * @generated from field: bool isCalculating = 16;
+   */
+  isCalculating: boolean;
+
+  /**
+   * @generated from field: bool isLocked = 17;
+   */
+  isLocked: boolean;
+
+  /**
+   * @generated from field: bool isSaved = 18;
+   */
+  isSaved: boolean;
+
+  /**
+   * Contract details
+   *
+   * @generated from field: repeated blueapi.archera.v1.ContractSpec includedContractSpecs = 19;
+   */
+  includedContractSpecs: ContractSpec[];
+
+  /**
+   * @generated from field: repeated string includedContractTerms = 20;
+   */
+  includedContractTerms: string[];
+
+  /**
+   * @generated from field: string maxTerm = 21;
+   */
+  maxTerm: string;
+
+  /**
+   * @generated from field: string preferredPaymentOption = 22;
+   */
+  preferredPaymentOption: string;
+
+  /**
+   * @generated from field: double maxUpfrontCost = 23;
+   */
+  maxUpfrontCost: number;
+
+  /**
+   * @generated from field: double minimumUpfrontInterestRate = 24;
+   */
+  minimumUpfrontInterestRate: number;
+
+  /**
+   * @generated from field: google.protobuf.Value recommendWithinCoveredAccounts = 25;
+   */
+  recommendWithinCoveredAccounts?: Value;
+
+  /**
+   * Dates
+   *
+   * @generated from field: string startDate = 26;
+   */
+  startDate: string;
+
+  /**
+   * @generated from field: string endDate = 27;
+   */
+  endDate: string;
+
+  /**
+   * @generated from field: string dataSource = 28;
+   */
+  dataSource: string;
+
+  /**
+   * Cost metrics
+   *
+   * @generated from field: double beforeCost = 29;
+   */
+  beforeCost: number;
+
+  /**
+   * @generated from field: double afterCost = 30;
+   */
+  afterCost: number;
+
+  /**
+   * @generated from field: double beforeOndemandCost = 31;
+   */
+  beforeOndemandCost: number;
+
+  /**
+   * @generated from field: double beforeReservedCost = 32;
+   */
+  beforeReservedCost: number;
+
+  /**
+   * @generated from field: double coveredOndemandCost = 33;
+   */
+  coveredOndemandCost: number;
+
+  /**
+   * @generated from field: double amortizedCost = 34;
+   */
+  amortizedCost: number;
+
+  /**
+   * @generated from field: double recurringCost = 35;
+   */
+  recurringCost: number;
+
+  /**
+   * @generated from field: double upfrontCost = 36;
+   */
+  upfrontCost: number;
+
+  /**
+   * @generated from field: double totalCost = 37;
+   */
+  totalCost: number;
+
+  /**
+   * @generated from field: double totalMonthlyBeforeCost = 38;
+   */
+  totalMonthlyBeforeCost: number;
+
+  /**
+   * Savings metrics
+   *
+   * @generated from field: double savings = 39;
+   */
+  savings: number;
+
+  /**
+   * @generated from field: double monthlySavings = 40;
+   */
+  monthlySavings: number;
+
+  /**
+   * @generated from field: double totalSavings = 41;
+   */
+  totalSavings: number;
+
+  /**
+   * @generated from field: double fee = 42;
+   */
+  fee: number;
+
+  /**
+   * Coverage metrics
+   *
+   * @generated from field: double commitmentCoverage = 43;
+   */
+  commitmentCoverage: number;
+
+  /**
+   * @generated from field: double minimumCommitmentCost = 44;
+   */
+  minimumCommitmentCost: number;
+
+  /**
+   * @generated from field: double breakevenHours = 45;
+   */
+  breakevenHours: number;
+
+  /**
+   * Aggregate data
+   *
+   * @generated from field: blueapi.archera.v1.AggregateMetrics aggregateMetrics = 46;
+   */
+  aggregateMetrics?: AggregateMetrics;
+
+  /**
+   * @generated from field: repeated blueapi.archera.v1.PlanSummary summaries = 47;
+   */
+  summaries: PlanSummary[];
+
+  /**
+   * IDs
+   *
+   * @generated from field: repeated string reservationIds = 48;
+   */
+  reservationIds: string[];
+
+  /**
+   * @generated from field: repeated string resourceIds = 49;
+   */
+  resourceIds: string[];
+
+  /**
+   * @generated from field: repeated string flaggedActions = 50;
+   */
+  flaggedActions: string[];
+
+  /**
+   * @generated from field: string metaPlanId = 51;
+   */
+  metaPlanId: string;
+
+  /**
+   * @generated from field: string coverageId = 52;
+   */
+  coverageId: string;
+};
+
+/**
+ * Describes the message blueapi.archera.v1.DefaultPurchasePlan.
+ * Use `create(DefaultPurchasePlanSchema)` to create a new message.
+ */
+export const DefaultPurchasePlanSchema: GenMessage<DefaultPurchasePlan> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 42);
+
+/**
+ * @generated from message blueapi.archera.v1.ListDefaultPurchasePlansResponse
+ */
+export type ListDefaultPurchasePlansResponse = Message<"blueapi.archera.v1.ListDefaultPurchasePlansResponse"> & {
+  /**
+   * @generated from field: repeated blueapi.archera.v1.DefaultPurchasePlan plans = 1;
+   */
+  plans: DefaultPurchasePlan[];
+};
+
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultPurchasePlansResponse.
+ * Use `create(ListDefaultPurchasePlansResponseSchema)` to create a new message.
+ */
+export const ListDefaultPurchasePlansResponseSchema: GenMessage<ListDefaultPurchasePlansResponse> = /*@__PURE__*/
+  messageDesc(file_archera_v1_archera, 43);
+
+/**
+ * @generated from enum blueapi.archera.v1.Provider
+ */
+export enum Provider {
+  /**
+   * @generated from enum value: PROVIDER_UNSPECIFIED = 0;
+   */
+  PROVIDER_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: AWS = 1;
+   */
+  AWS = 1,
+
+  /**
+   * @generated from enum value: AZURE = 2;
+   */
+  AZURE = 2,
+
+  /**
+   * @generated from enum value: GCP = 3;
+   */
+  GCP = 3,
+
+  /**
+   * @generated from enum value: KUBERNETES = 4;
+   */
+  KUBERNETES = 4,
+
+  /**
+   * @generated from enum value: UNKNOWN = 5;
+   */
+  UNKNOWN = 5,
+}
+
+/**
+ * Describes the enum blueapi.archera.v1.Provider.
+ */
+export const ProviderSchema: GenEnum<Provider> = /*@__PURE__*/
+  enumDesc(file_archera_v1_archera, 0);
+
+/**
+ * @generated from enum blueapi.archera.v1.CommitmentStatus
+ */
+export enum CommitmentStatus {
+  /**
+   * @generated from enum value: COMMITMENT_STATUS_UNSPECIFIED = 0;
+   */
+  COMMITMENT_STATUS_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: NEW = 1;
+   */
+  NEW = 1,
+
+  /**
+   * @generated from enum value: REVIEWED = 2;
+   */
+  REVIEWED = 2,
+
+  /**
+   * @generated from enum value: SCHEDULED = 3;
+   */
+  SCHEDULED = 3,
+
+  /**
+   * @generated from enum value: COMPLETED = 4;
+   */
+  COMPLETED = 4,
+
+  /**
+   * @generated from enum value: DRAFT = 5;
+   */
+  DRAFT = 5,
+
+  /**
+   * @generated from enum value: NEEDS_REVIEW = 6;
+   */
+  NEEDS_REVIEW = 6,
+
+  /**
+   * @generated from enum value: IN_PROGRESS = 7;
+   */
+  IN_PROGRESS = 7,
+}
+
+/**
+ * Describes the enum blueapi.archera.v1.CommitmentStatus.
+ */
+export const CommitmentStatusSchema: GenEnum<CommitmentStatus> = /*@__PURE__*/
+  enumDesc(file_archera_v1_archera, 1);
+
+/**
+ * @generated from enum blueapi.archera.v1.CommitmentInventoryStatus
+ */
+export enum CommitmentInventoryStatus {
+  /**
+   * @generated from enum value: COMMITMENT_INVENTORY_STATUS_UNSPECIFIED = 0;
+   */
+  COMMITMENT_INVENTORY_STATUS_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: ACTIVE = 1;
+   */
+  ACTIVE = 1,
+
+  /**
+   * @generated from enum value: RETIRED = 2;
+   */
+  RETIRED = 2,
+
+  /**
+   * @generated from enum value: PAYMENT_PENDING = 3;
+   */
+  PAYMENT_PENDING = 3,
+
+  /**
+   * @generated from enum value: PAYMENT_FAILED = 4;
+   */
+  PAYMENT_FAILED = 4,
+}
+
+/**
+ * Describes the enum blueapi.archera.v1.CommitmentInventoryStatus.
+ */
+export const CommitmentInventoryStatusSchema: GenEnum<CommitmentInventoryStatus> = /*@__PURE__*/
+  enumDesc(file_archera_v1_archera, 2);
+
+/**
+ * @generated from enum blueapi.archera.v1.Scope
+ */
+export enum Scope {
+  /**
+   * @generated from enum value: SCOPE_UNSPECIFIED = 0;
+   */
+  SCOPE_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: SHARED = 1;
+   */
+  SHARED = 1,
+
+  /**
+   * @generated from enum value: REGIONAL = 2;
+   */
+  REGIONAL = 2,
+
+  /**
+   * @generated from enum value: ZONAL = 3;
+   */
+  ZONAL = 3,
+}
+
+/**
+ * Describes the enum blueapi.archera.v1.Scope.
+ */
+export const ScopeSchema: GenEnum<Scope> = /*@__PURE__*/
+  enumDesc(file_archera_v1_archera, 3);
+
+/**
+ * @generated from enum blueapi.archera.v1.UsageType
+ */
+export enum UsageType {
+  /**
+   * @generated from enum value: USAGE_TYPE_UNSPECIFIED = 0;
+   */
+  USAGE_TYPE_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: RUNNING = 1;
+   */
+  RUNNING = 1,
+
+  /**
+   * @generated from enum value: STOPPED = 2;
+   */
+  STOPPED = 2,
+}
+
+/**
+ * Describes the enum blueapi.archera.v1.UsageType.
+ */
+export const UsageTypeSchema: GenEnum<UsageType> = /*@__PURE__*/
+  enumDesc(file_archera_v1_archera, 4);
 
 /**
  * Archera service definition.
@@ -67,6 +2912,146 @@ export const Archera: GenService<{
     methodKind: "server_streaming";
     input: typeof ListOrgsRequestSchema;
     output: typeof OrgSchema;
+  },
+  /**
+   * Retrieves detailed information about a specific commitment plan, including costs, savings projections, and commitment coverage.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetCommitmentPlanDetails
+   */
+  getCommitmentPlanDetails: {
+    methodKind: "unary";
+    input: typeof GetCommitmentPlanDetailsRequestSchema;
+    output: typeof CommitmentPlanDetailsSchema;
+  },
+  /**
+   * Executes a commitment purchase plan, initiating the commitment purchase process.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.CommitmentPlanApply
+   */
+  commitmentPlanApply: {
+    methodKind: "unary";
+    input: typeof CommitmentPlanApplyRequestSchema;
+    output: typeof CommitmentPlanDetailsSchema;
+  },
+  /**
+   * Retrieves the three default Archera commitment plans (High Savings, Balanced, Recommended) for the specified cloud provider.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListDefaultCommitmentPlans
+   */
+  listDefaultCommitmentPlans: {
+    methodKind: "unary";
+    input: typeof ListDefaultCommitmentPlansRequestSchema;
+    output: typeof ListDefaultCommitmentPlansResponseSchema;
+  },
+  /**
+   * Retrieves only the recommended Archera commitment plan for the specified cloud provider.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetRecommendedCommitmentPlan
+   */
+  getRecommendedCommitmentPlan: {
+    methodKind: "unary";
+    input: typeof GetRecommendedCommitmentPlanRequestSchema;
+    output: typeof CommitmentPlanDetailsSchema;
+  },
+  /**
+   * Retrieves line items for a specific commitment plan.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListCommitmentPlanLineItems
+   */
+  listCommitmentPlanLineItems: {
+    methodKind: "unary";
+    input: typeof ListCommitmentPlanLineItemsRequestSchema;
+    output: typeof ListCommitmentPlanLineItemsResponseSchema;
+  },
+  /**
+   * Retrieves resource matches for a specific commitment plan.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListCommitmentPlanResourceMatches
+   */
+  listCommitmentPlanResourceMatches: {
+    methodKind: "unary";
+    input: typeof ListCommitmentPlanResourceMatchesRequestSchema;
+    output: typeof ListCommitmentPlanResourceMatchesResponseSchema;
+  },
+  /**
+   * Retrieves a paginated list of commitments for the specified organization and time period.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListCommitments
+   */
+  listCommitments: {
+    methodKind: "unary";
+    input: typeof ListCommitmentsRequestSchema;
+    output: typeof ListCommitmentsResponseSchema;
+  },
+  /**
+   * Generates time-series chart data for commitment metrics over the specified time period.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetCommitmentsChart
+   */
+  getCommitmentsChart: {
+    methodKind: "unary";
+    input: typeof GetCommitmentsChartRequestSchema;
+    output: typeof CommitmentsChartResponseSchema;
+  },
+  /**
+   * Retrieves key performance metrics for cloud commitments.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetMetrics
+   */
+  getMetrics: {
+    methodKind: "unary";
+    input: typeof GetMetricsRequestSchema;
+    output: typeof MetricsResponseSchema;
+  },
+  /**
+   * Retrieves a list of infrastructure resources for the organization.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListResources
+   */
+  listResources: {
+    methodKind: "unary";
+    input: typeof ListResourcesRequestSchema;
+    output: typeof ListResourcesResponseSchema;
+  },
+  /**
+   * Retrieves daily usage data for a specific resource within the specified date range.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetResourceDailyUsage
+   */
+  getResourceDailyUsage: {
+    methodKind: "unary";
+    input: typeof GetResourceDailyUsageRequestSchema;
+    output: typeof GetResourceDailyUsageResponseSchema;
+  },
+  /**
+   * Retrieves all segments for the specified organization and provider.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListSegments
+   */
+  listSegments: {
+    methodKind: "unary";
+    input: typeof ListSegmentsRequestSchema;
+    output: typeof ListSegmentsResponseSchema;
+  },
+  /**
+   * Retrieves detailed information about a specific segment.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.GetSegmentDetails
+   */
+  getSegmentDetails: {
+    methodKind: "unary";
+    input: typeof GetSegmentDetailsRequestSchema;
+    output: typeof SegmentDetailsSchema;
+  },
+  /**
+   * Retrieves default purchase plans for a specific segment.
+   *
+   * @generated from rpc blueapi.archera.v1.Archera.ListDefaultPurchasePlans
+   */
+  listDefaultPurchasePlans: {
+    methodKind: "unary";
+    input: typeof ListDefaultPurchasePlansRequestSchema;
+    output: typeof ListDefaultPurchasePlansResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_archera_v1_archera, 0);
