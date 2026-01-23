@@ -9,7 +9,7 @@ const field_behavior_pb_1 = require("../../../google/api/field_behavior_pb");
 /**
  * Describes the file api/ripple/v1/accountsupportplan.proto.
  */
-exports.file_api_ripple_v1_accountsupportplan = (0, codegenv2_1.fileDesc)("CiZhcGkvcmlwcGxlL3YxL2FjY291bnRzdXBwb3J0cGxhbi5wcm90bxIVYmx1ZWFwaS5hcGkucmlwcGxlLnYxInIKHkJpbGxpbmdHcm91cEFjY291bnRTdXBwb3J0UGxhbhIKCgJpZBgBIAEoCRISCgRuYW1lGAIgASgJQgTiQQEDEjAKBHBsYW4YAyABKA4yIi5ibHVlYXBpLmFwaS5yaXBwbGUudjEuU3VwcG9ydFBsYW4qcgoLU3VwcG9ydFBsYW4SDgoKTk9fU1VQUE9SVBAAEhEKDUFXU19ERVZFTE9QRVIQARIQCgxBV1NfQlVTSU5FU1MQAhISCg5BV1NfRU5URVJQUklTRRADEhoKFkFXU19FTlRFUlBSSVNFX09OX1JBTVAQBEJ5CiNjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLnJpcHBsZS52MUIgQXBpUmlwcGxlQWNjb3VudFN1cHBvcnRQbGFuUHJvdG9aMGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL3JpcHBsZS92MWIGcHJvdG8z", [field_behavior_pb_1.file_google_api_field_behavior]);
+exports.file_api_ripple_v1_accountsupportplan = (0, codegenv2_1.fileDesc)("CiZhcGkvcmlwcGxlL3YxL2FjY291bnRzdXBwb3J0cGxhbi5wcm90bxIVYmx1ZWFwaS5hcGkucmlwcGxlLnYxInIKHkJpbGxpbmdHcm91cEFjY291bnRTdXBwb3J0UGxhbhIKCgJpZBgBIAEoCRISCgRuYW1lGAIgASgJQgTiQQEDEjAKBHBsYW4YAyABKA4yIi5ibHVlYXBpLmFwaS5yaXBwbGUudjEuU3VwcG9ydFBsYW4qwQEKC1N1cHBvcnRQbGFuEg4KCk5PX1NVUFBPUlQQABIRCg1BV1NfREVWRUxPUEVSEAESEAoMQVdTX0JVU0lORVNTEAISEgoOQVdTX0VOVEVSUFJJU0UQAxIaChZBV1NfRU5URVJQUklTRV9PTl9SQU1QEAQSFQoRQVdTX0JVU0lORVNTX1BMVVMQBRIaChZBV1NfRU5URVJQUklTRV9TVVBQT1JUEAYSGgoWQVdTX1VOSUZJRURfT1BFUkFUSU9OUxAHQnkKI2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkucmlwcGxlLnYxQiBBcGlSaXBwbGVBY2NvdW50U3VwcG9ydFBsYW5Qcm90b1owZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvcmlwcGxlL3YxYgZwcm90bzM", [field_behavior_pb_1.file_google_api_field_behavior]);
 /**
  * Describes the message blueapi.api.ripple.v1.BillingGroupAccountSupportPlan.
  * Use `create(BillingGroupAccountSupportPlanSchema)` to create a new message.
@@ -52,6 +52,24 @@ var SupportPlan;
      * @generated from enum value: AWS_ENTERPRISE_ON_RAMP = 4;
      */
     SupportPlan[SupportPlan["AWS_ENTERPRISE_ON_RAMP"] = 4] = "AWS_ENTERPRISE_ON_RAMP";
+    /**
+     * aws_business_plus
+     *
+     * @generated from enum value: AWS_BUSINESS_PLUS = 5;
+     */
+    SupportPlan[SupportPlan["AWS_BUSINESS_PLUS"] = 5] = "AWS_BUSINESS_PLUS";
+    /**
+     * aws_enterprise_v2
+     *
+     * @generated from enum value: AWS_ENTERPRISE_SUPPORT = 6;
+     */
+    SupportPlan[SupportPlan["AWS_ENTERPRISE_SUPPORT"] = 6] = "AWS_ENTERPRISE_SUPPORT";
+    /**
+     * aws_unified_operations
+     *
+     * @generated from enum value: AWS_UNIFIED_OPERATIONS = 7;
+     */
+    SupportPlan[SupportPlan["AWS_UNIFIED_OPERATIONS"] = 7] = "AWS_UNIFIED_OPERATIONS";
 })(SupportPlan || (exports.SupportPlan = SupportPlan = {}));
 /**
  * Describes the enum blueapi.api.ripple.v1.SupportPlan.
