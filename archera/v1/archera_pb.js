@@ -3,24 +3,390 @@
 // @generated from file archera/v1/archera.proto (package blueapi.archera.v1, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Archera = exports.ListOrgsRequestSchema = exports.OrgSchema = exports.file_archera_v1_archera = void 0;
+exports.CommitmentInventoryStatus = exports.CommitmentStatusSchema = exports.CommitmentStatus = exports.ProviderSchema = exports.Provider = exports.ListDefaultPurchasePlansResponseSchema = exports.DefaultPurchasePlanSchema = exports.AggregateMetricsSchema = exports.ServiceSummarySchema = exports.PlanSummarySchema = exports.ContractSpecSchema = exports.SegmentDetailsSchema = exports.PurchasePlanSchema = exports.SegmentCreatorSchema = exports.ListSegmentsResponseSchema = exports.SegmentSchema = exports.GetResourceDailyUsageResponseSchema = exports.ResourceDailyUsageSchema = exports.ListResourcesResponseSchema = exports.ResourceSchema = exports.MetricsResponseSchema = exports.CommitmentsChartResponseSchema = exports.CommitmentsChartDataPointSchema = exports.ListCommitmentsResponseSchema = exports.CommitmentSchema = exports.DailyUtilizationSchema = exports.LeaseSchema = exports.ListCommitmentPlanResourceMatchesResponseSchema = exports.CommitmentPlanResourceMatchSchema = exports.ListCommitmentPlanLineItemsResponseSchema = exports.CommitmentPlanLineItemSchema = exports.ListDefaultCommitmentPlansResponseSchema = exports.CommitmentPlanDetailsSchema = exports.OrgSchema = exports.ListDefaultPurchasePlansRequestSchema = exports.GetSegmentDetailsRequestSchema = exports.ListSegmentsRequestSchema = exports.GetResourceDailyUsageRequestSchema = exports.ListResourcesRequestSchema = exports.GetMetricsRequestSchema = exports.GetCommitmentsChartRequestSchema = exports.ListCommitmentsRequestSchema = exports.ListCommitmentPlanResourceMatchesRequestSchema = exports.ListCommitmentPlanLineItemsRequestSchema = exports.GetRecommendedCommitmentPlanRequestSchema = exports.ListDefaultCommitmentPlansRequestSchema = exports.CommitmentPlanApplyRequestSchema = exports.GetCommitmentPlanDetailsRequestSchema = exports.ListOrgsRequestSchema = exports.file_archera_v1_archera = void 0;
+exports.Archera = exports.UsageTypeSchema = exports.UsageType = exports.ScopeSchema = exports.Scope = exports.CommitmentInventoryStatusSchema = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const annotations_pb_1 = require("../../google/api/annotations_pb");
+const wkt_1 = require("@bufbuild/protobuf/wkt");
 const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations_pb");
 /**
  * Describes the file archera/v1/archera.proto.
  */
-exports.file_archera_v1_archera = (0, codegenv2_1.fileDesc)("ChhhcmNoZXJhL3YxL2FyY2hlcmEucHJvdG8SEmJsdWVhcGkuYXJjaGVyYS52MSIxCgNPcmcSDQoFb3JnSWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCSIRCg9MaXN0T3Jnc1JlcXVlc3QymQIKB0FyY2hlcmESbQoITGlzdE9yZ3MSIy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdE9yZ3NSZXF1ZXN0GhcuYmx1ZWFwaS5hcmNoZXJhLnYxLk9yZyIhgtPkkwIbOgEqIhYvdjEvb3JnYW5pemF0aW9uczpyZWFkMAEangGSQZoBEkcoQWxwaGEpIEFyY2hlcmEgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvYXJjaGVyYRpPChJTZXJ2aWNlIGRlZmluaXRpb24SOWh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9hcmNoZXJhL0JRChljbG91ZC5hbHBoYXVzLmFwaS5hcmNoZXJhQgxBcmNoZXJhUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9hcmNoZXJhYgZwcm90bzM", [annotations_pb_1.file_google_api_annotations, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
-/**
- * Describes the message blueapi.archera.v1.Org.
- * Use `create(OrgSchema)` to create a new message.
- */
-exports.OrgSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 0);
+exports.file_archera_v1_archera = (0, codegenv2_1.fileDesc)("ChhhcmNoZXJhL3YxL2FyY2hlcmEucHJvdG8SEmJsdWVhcGkuYXJjaGVyYS52MSIRCg9MaXN0T3Jnc1JlcXVlc3QiQAofR2V0Q29tbWl0bWVudFBsYW5EZXRhaWxzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIOCgZwbGFuSWQYAiABKAkiOwoaQ29tbWl0bWVudFBsYW5BcHBseVJlcXVlc3QSDQoFb3JnSWQYASABKAkSDgoGcGxhbklkGAIgASgJImIKIUxpc3REZWZhdWx0Q29tbWl0bWVudFBsYW5zUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciJkCiNHZXRSZWNvbW1lbmRlZENvbW1pdG1lbnRQbGFuUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciKvAQoiTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIOCgZwbGFuSWQYAiABKAkSDwoHb3JkZXJCeRgDIAEoCRIMCgRkZXNjGAQgASgIEhEKCXNlZ21lbnRJZBgFIAEoCRIYChByZXNvdXJjZU1hdGNoSWRzGAYgAygJEgwKBHBhZ2UYByABKAUSEAoIcGFnZVNpemUYCCABKAUiwQEKKExpc3RDb21taXRtZW50UGxhblJlc291cmNlTWF0Y2hlc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSDgoGcGxhbklkGAIgASgJEg8KB29yZGVyQnkYAyABKAkSDAoEZGVzYxgEIAEoCBIRCglzdGFydERhdGUYBSABKAkSDwoHZW5kRGF0ZRgGIAEoCRITCgtsaW5lSXRlbUlkcxgHIAMoCRIMCgRwYWdlGAggASgFEhAKCHBhZ2VTaXplGAkgASgFIvMBChZMaXN0Q29tbWl0bWVudHNSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEg4KBnNlYXJjaBgCIAEoCRInCgZmaWx0ZXIYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EgwKBGRlc2MYBCABKAgSDwoHb3JkZXJCeRgFIAEoCRIuCghwcm92aWRlchgGIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlchIRCglzdGFydERhdGUYByABKAkSDwoHZW5kRGF0ZRgIIAEoCRIMCgRwYWdlGAkgASgFEhAKCHBhZ2VTaXplGAogASgFIqgBChpHZXRDb21taXRtZW50c0NoYXJ0UmVxdWVzdBINCgVvcmdJZBgBIAEoCRInCgZmaWx0ZXIYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Ei4KCHByb3ZpZGVyGAMgASgOMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlByb3ZpZGVyEhEKCXN0YXJ0RGF0ZRgEIAEoCRIPCgdlbmREYXRlGAUgASgJIlIKEUdldE1ldHJpY3NSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEi4KCHByb3ZpZGVyGAIgASgOMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlByb3ZpZGVyIrcBChRMaXN0UmVzb3VyY2VzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlchIRCglzZWdtZW50SWQYAyABKAkSDgoGc2VhcmNoGAQgASgJEgwKBGRlc2MYBSABKAgSDwoHb3JkZXJCeRgGIAEoCRIMCgRwYWdlGAcgASgFEhAKCHBhZ2VTaXplGAggASgFIpsBChxHZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXF1ZXN0Eg0KBW9yZ0lkGAEgASgJEhIKCnJlc291cmNlSWQYAiABKAkSEQoJc3RhcnREYXRlGAMgASgJEg8KB2VuZERhdGUYBCABKAkSFAoMY2F0YWxvZ1NrdUlkGAUgASgJEgwKBHBhZ2UYBiABKAUSEAoIcGFnZVNpemUYByABKAUiVAoTTGlzdFNlZ21lbnRzUmVxdWVzdBINCgVvcmdJZBgBIAEoCRIuCghwcm92aWRlchgCIAEoDjIcLmJsdWVhcGkuYXJjaGVyYS52MS5Qcm92aWRlciI8ChhHZXRTZWdtZW50RGV0YWlsc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSEQoJc2VnbWVudElkGAIgASgJIkMKH0xpc3REZWZhdWx0UHVyY2hhc2VQbGFuc1JlcXVlc3QSDQoFb3JnSWQYASABKAkSEQoJc2VnbWVudElkGAIgASgJIjEKA09yZxINCgVvcmdJZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJIvMEChVDb21taXRtZW50UGxhbkRldGFpbHMSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRINCgVvcmdJZBgEIAEoCRIRCgljcmVhdGVkQXQYBSABKAkSFQoNaXNDYWxjdWxhdGluZxgGIAEoCBIOCgZzdGF0dXMYByABKAkSDwoHbWF4VGVybRgIIAEoCRIhChljb3ZlcmVkT25kZW1hbmRDb3N0SG91cmx5GAkgASgBEiAKGGJlZm9yZU9uZGVtYW5kQ29zdEhvdXJseRgKIAEoARIgChhiZWZvcmVSZXNlcnZlZENvc3RIb3VybHkYCyABKAESGwoTYW1vcnRpemVkQ29zdEhvdXJseRgMIAEoARIbChNyZWN1cnJpbmdDb3N0SG91cmx5GA0gASgBEhkKEXVwZnJvbnRDb3N0SG91cmx5GA4gASgBEhgKEGJlZm9yZUNvc3RIb3VybHkYDyABKAESFwoPYWZ0ZXJDb3N0SG91cmx5GBAgASgBEhcKD3RvdGFsQ29zdEhvdXJseRgRIAEoARIVCg1zYXZpbmdzSG91cmx5GBIgASgBEhEKCWZlZUhvdXJseRgTIAEoARIaChJjb21taXRtZW50Q292ZXJhZ2UYFCABKAESHQoVbWluaW11bUNvbW1pdG1lbnRDb3N0GBUgASgBEhYKDmJyZWFrZXZlbkhvdXJzGBYgASgBEhQKDHRvdGFsU2F2aW5ncxgXIAEoARIWCg5tb250aGx5U2F2aW5ncxgYIAEoARIeChZ0b3RhbE1vbnRobHlCZWZvcmVDb3N0GBkgASgBIl4KIkxpc3REZWZhdWx0Q29tbWl0bWVudFBsYW5zUmVzcG9uc2USOAoFcGxhbnMYASADKAsyKS5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5EZXRhaWxzIukFChZDb21taXRtZW50UGxhbkxpbmVJdGVtEgoKAmlkGAEgASgJEg4KBnBsYW5JZBgCIAEoCRIPCgdvZmZlcklkGAMgASgJEhcKD2xlYXNlTWVudUl0ZW1JZBgEIAEoCRIRCglhY2NvdW50SWQYBSABKAkSGwoTcmVjb21tZW5kZWRRdWFudGl0eRgGIAEoARIYChBzZWxlY3RlZFF1YW50aXR5GAcgASgBEh0KFXJlY29tbWVuZGVkQ29tbWl0bWVudBgIIAEoARIaChJzZWxlY3RlZENvbW1pdG1lbnQYCSABKAESEgoKaXNTZWxlY3RlZBgKIAEoCBIaChJhZnRlckFtb3J0aXplZENvc3QYCyABKAESEwoLdXBmcm9udENvc3QYDCABKAESFQoNcmVjdXJyaW5nQ29zdBgNIAEoARISCgpiZWZvcmVDb3N0GA4gASgBEhoKEmJlZm9yZU9uZGVtYW5kQ29zdBgPIAEoARIaChJiZWZvcmVSZXNlcnZlZENvc3QYECABKAESGwoTY292ZXJlZE9uZGVtYW5kQ29zdBgRIAEoARIZChFhZnRlckNvdmVyZWRVbml0cxgSIAEoARIRCgl0b3RhbENvc3QYEyABKAESEwoLbW9udGhseUNvc3QYFCABKAESDwoHc2F2aW5ncxgVIAEoARIWCg5tb250aGx5U2F2aW5ncxgWIAEoARIUCgx0b3RhbFNhdmluZ3MYFyABKAESCwoDZmVlGBggASgBEhQKDGRpc2NvdW50UmF0ZRgZIAEoARIWCg5icmVha2V2ZW5Ib3VycxgaIAEoARIUCgxjb250cmFjdFRlcm0YGyABKAkSFQoNcGF5bWVudE9wdGlvbhgcIAEoCRItCgxjb250cmFjdFNwZWMYHSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EiYKBW9mZmVyGB4gASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdCJkCiNMaXN0Q29tbWl0bWVudFBsYW5MaW5lSXRlbXNSZXNwb25zZRI9CglsaW5lSXRlbXMYASADKAsyKi5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5MaW5lSXRlbSL3BAobQ29tbWl0bWVudFBsYW5SZXNvdXJjZU1hdGNoEgoKAmlkGAEgASgJEhIKCnRvdGFsVW5pdHMYAiABKAESHAoUYmVmb3JlVW5jb3ZlcmVkVW5pdHMYAyABKAESGQoRYWZ0ZXJDb3ZlcmVkVW5pdHMYBCABKAESGwoTYWZ0ZXJVbmNvdmVyZWRVbml0cxgFIAEoARIVCg1vbmRlbWFuZFByaWNlGAYgASgBEhkKEWlmQWxsT25kZW1hbmRDb3N0GAcgASgBEhoKEmJlZm9yZU9uZGVtYW5kQ29zdBgIIAEoARIZChFhZnRlck9uZGVtYW5kQ29zdBgJIAEoARIbChNjb3ZlcmVkT25kZW1hbmRDb3N0GAogASgBEhoKEmJlZm9yZVJlc2VydmVkQ29zdBgLIAEoARIZChFhZnRlclJlc2VydmVkQ29zdBgMIAEoARISCgpiZWZvcmVDb3N0GA0gASgBEhEKCWFmdGVyQ29zdBgOIAEoARIZChFtb250aGx5QmVmb3JlQ29zdBgPIAEoARIYChBtb250aGx5QWZ0ZXJDb3N0GBAgASgBEiAKGG1vbnRobHlBZnRlclJlc2VydmVkQ29zdBgRIAEoARIgChhtb250aGx5QWZ0ZXJPbmRlbWFuZENvc3QYEiABKAESFgoOYXZlcmFnZVNhdmluZ3MYEyABKAESHQoVYXZlcmFnZU1vbnRobHlTYXZpbmdzGBQgASgBEhEKCXVzYWdlVHlwZRgVIAEoCRIQCghjb3ZlcmFnZRgWIAEoARIpCghyZXNvdXJjZRgXIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QidQopTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzUmVzcG9uc2USSAoPcmVzb3VyY2VNYXRjaGVzGAEgAygLMi8uYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaCLuAQoFTGVhc2USCgoCaWQYASABKAkSDQoFb3JnSWQYAiABKAkSHQoVcHJvdmlkZXJSZXNlcnZhdGlvbklkGAMgASgJEhEKCWFjY291bnRJZBgEIAEoCRIOCgZzdGF0dXMYBSABKAkSEQoJc3RhcnREYXRlGAYgASgJEg8KB2VuZERhdGUYByABKAkSEgoKbG9ja2luRGF0ZRgIIAEoCRITCgt1cGZyb250Q29zdBgJIAEoARIVCg1yZWN1cnJpbmdDb3N0GAogASgBEhEKCWNyZWF0ZWRBdBgLIAEoCRIRCgl1cGRhdGVkQXQYDCABKAkiSQoQRGFpbHlVdGlsaXphdGlvbhIMCgRkYXRlGAEgASgJEhMKC3V0aWxpemF0aW9uGAIgASgBEhIKCm5ldFNhdmluZ3MYAyABKAEi0wkKCkNvbW1pdG1lbnQSCgoCaWQYASABKAkSLgoIcHJvdmlkZXIYAiABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISEwoLZGlzcGxheU5hbWUYAyABKAkSGQoRbGVhc2VkRGlzcGxheU5hbWUYBCABKAkSHQoVcHJvdmlkZXJSZXNlcnZhdGlvbklkGAUgASgJEhEKCWFjY291bnRJZBgGIAEoCRIXCg9tYXN0ZXJBY2NvdW50SWQYByABKAkSGAoQYmlsbGluZ0FjY291bnRJZBgIIAEoCRIMCgR0eXBlGAkgASgJEg4KBnJlZ2lvbhgKIAEoCRIXCg9kdXJhdGlvblNlY29uZHMYCyABKAMSFgoOcmVzZXJ2YXRpb25FbmQYDCABKAkSGAoQcmVzZXJ2YXRpb25TdGFydBgNIAEoCRIgChh0cmFuc2ZlclJlc2VydmF0aW9uU3RhcnQYDiABKAkSHgoWdHJhbnNmZXJSZXNlcnZhdGlvbkVuZBgPIAEoCRIRCglzdGFydERhdGUYECABKAkSDwoHZW5kRGF0ZRgRIAEoCRIOCgZzdGF0dXMYEiABKAkSEAoIaXNMZWFzZWQYEyABKAgSEAoIaXNBY3RpdmUYFCABKAgSKAoFbGVhc2UYFSABKAsyGS5ibHVlYXBpLmFyY2hlcmEudjEuTGVhc2USEgoKbGVhc2VTdGFydBgWIAEoCRIXCg9sZWFzZUxvY2tpbkRhdGUYFyABKAkSEwoLdXBmcm9udENvc3QYGCABKAESFQoNcmVjdXJyaW5nQ29zdBgZIAEoARISCgppc0ZsZXhpYmxlGBogASgIEhUKDXBheW1lbnRPcHRpb24YGyABKAkSFQoNb2ZmZXJpbmdDbGFzcxgcIAEoCRISCgpvZmZlcmluZ0lkGB0gASgJEhUKDWluc3RhbmNlQ291bnQYHiABKAUSHgoWZWZmZWN0aXZlSW5zdGFuY2VDb3VudBgfIAEoARIaChJwcm9kdWN0RGVzY3JpcHRpb24YICABKAkSFgoOaW5zdGFuY2VGYW1pbHkYISABKAkSFAoMaW5zdGFuY2VUeXBlGCIgASgJEg8KB3RlbmFuY3kYIyABKAkSCgoCYXoYJCABKAkSEQoJaXNNdWx0aUF6GCUgASgIEhAKCHBsYW5UeXBlGCYgASgJEigKBXNjb3BlGCcgASgOMhkuYmx1ZWFwaS5hcmNoZXJhLnYxLlNjb3BlEgwKBG5hbWUYKCABKAkSDwoHb3JkZXJJZBgpIAEoCRIVCg1yZXNvdXJjZUdyb3VwGCogASgJEhsKE2luc3RhbmNlRmxleGliaWxpdHkYKyABKAgSDwoHc2F2aW5ncxgsIAEoARIWCg5tb250aGx5U2F2aW5ncxgtIAEoARISCgpuZXRTYXZpbmdzGC4gASgBEhMKC3V0aWxpemF0aW9uGC8gASgBEhgKEHBvdGVudGlhbFNhdmluZ3MYMCABKAESFAoMcnVubmluZ0hvdXJzGDEgASgBEhUKDWFtb3J0aXplZENvc3QYMiABKAESPwoRZGFpbHlVdGlsaXphdGlvbnMYMyADKAsyJC5ibHVlYXBpLmFyY2hlcmEudjEuRGFpbHlVdGlsaXphdGlvbiJOChdMaXN0Q29tbWl0bWVudHNSZXNwb25zZRIzCgtjb21taXRtZW50cxgBIAMoCzIeLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50Ir4BChlDb21taXRtZW50c0NoYXJ0RGF0YVBvaW50EgwKBGRhdGUYASABKAkSFwoPY29tbWl0bWVudFNwZW5kGAIgASgBEhMKC3V0aWxpemF0aW9uGAMgASgBEhkKEWxvY2tlZENvbW1pdG1lbnRzGAQgASgBEhsKE3VubG9ja2VkQ29tbWl0bWVudHMYBSABKAESFwoPcmVhbGl6ZWRTYXZpbmdzGAYgASgBEhQKDGlzUHJvamVjdGlvbhgHIAEoCCJXChhDb21taXRtZW50c0NoYXJ0UmVzcG9uc2USOwoEZGF0YRgBIAMoCzItLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50c0NoYXJ0RGF0YVBvaW50Is0DCg9NZXRyaWNzUmVzcG9uc2USFwoPbGlmZXRpbWVTYXZpbmdzGAEgASgBEhIKCm10ZFNhdmluZ3MYAiABKAESIQoZcHVyY2hhc2VBdXRvbWF0aW9uRW5hYmxlZBgDIAEoCBIgChhidXliYWNrQXV0b21hdGlvbkVuYWJsZWQYBCABKAgSFwoPaGFzQWN0aW9uZWRQbGFuGAUgASgIEhkKEWhhc1BlbmRpbmdBY3Rpb25zGAYgASgIEhsKE2xhdGVzdEV4ZWN1dGlvbkRhdGUYByABKAkSHQoVcHVyY2hhc2VNaXNzZWRTYXZpbmdzGAggASgBEhwKFGJ1eWJhY2tNaXNzZWRTYXZpbmdzGAkgASgBEh8KF3RvdGFsRGFpbHlNaXNzZWRTYXZpbmdzGAogASgBEhsKE2hvdXJseU1pc3NlZFNhdmluZ3MYCyABKAESHgoWbWlzc2VkU2F2aW5nc1N0YXJ0RGF0ZRgMIAEoCRIcChRtaXNzZWRTYXZpbmdzRW5kRGF0ZRgNIAEoCRIXCg9leHBpcmluZ1NhdmluZ3MYDiABKAESEAoIY292ZXJhZ2UYDyABKAESEwoLdXRpbGl6YXRpb24YECABKAEijQgKCFJlc291cmNlEgoKAmlkGAEgASgJEhIKCnJlc291cmNlSWQYAiABKAkSLgoIcHJvdmlkZXIYAyABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISGgoScHJvdmlkZXJSZXNvdXJjZUlkGAQgASgJEg4KBmlzU3BvdBgFIAEoCBIMCgRuYW1lGAYgASgJEhUKDXJlc291cmNlR3JvdXAYByABKAkSEAoIdXNhZ2VFbmQYCCABKAkSEgoKdXNhZ2VTdGFydBgJIAEoCRIlCgR0YWdzGAogASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIRCgljcmVhdGVkQXQYCyABKAkSEQoJdXBkYXRlZEF0GAwgASgJEhIKCmluc3RhbmNlSWQYDSABKAkSGAoQYmlsbGluZ0FjY291bnRJZBgOIAEoCRIUCgxzdWJBY2NvdW50SWQYDyABKAkSGwoTbWFuYWdlbWVudEFjY291bnRJZBgQIAEoCRIWCg5vd25lckFjY291bnRJZBgRIAEoCRIQCghza3VUaXRsZRgSIAEoCRIPCgdza3VOYW1lGBMgASgJEhgKEGF2YWlsYWJpbGl0eVpvbmUYFCABKAkSEwoLY2FjaGVFbmdpbmUYFSABKAkSFgoOZGF0YWJhc2VFbmdpbmUYFiABKAkSEwoLZGVzY3JpcHRpb24YFyABKAkSDgoGZmFtaWx5GBggASgJEhYKDmZ1bGxSZWdpb25OYW1lGBkgASgJEhgKEGhhc09uZGVtYW5kVGVybXMYGiABKAgSFAoMaW5zdGFuY2VUeXBlGBsgASgJEhoKEmluc3RhbmNlVHlwZUZhbWlseRgcIAEoCRIUCgxpc1Jlc2VydmFibGUYHSABKAgSFAoMbGljZW5zZU1vZGVsGB4gASgJEhQKDGxvY2F0aW9uVHlwZRgfIAEoCRIfChdub3JtYWxpemF0aW9uU2l6ZUZhY3RvchggIAEoCRIXCg9vcGVyYXRpbmdTeXN0ZW0YISABKAkSFgoOcHJlSW5zdGFsbGVkU3cYIiABKAkSFQoNcHJpY2VDdXJyZW5jeRgjIAEoCRIXCg9wcm92aWRlclNlcnZpY2UYJCABKAkSFQoNcHJvdmlkZXJTa3VJZBglIAEoCRIXCg9wdWJsaWNhdGlvbkRhdGUYJiABKAkSDgoGcmVnaW9uGCcgASgJEg8KB3NlcnZpY2UYKCABKAkSDwoHdGVuYW5jeRgpIAEoCRIRCgl1c2FnZVR5cGUYKiABKAkSDwoHdmVyc2lvbhgrIAEoCRIcChR2cGNOZXR3b3JraW5nU3VwcG9ydBgsIAEoCBIZChFvbmRlbWFuZFVzYWdlVW5pdBgtIAEoCSJIChVMaXN0UmVzb3VyY2VzUmVzcG9uc2USLwoJcmVzb3VyY2VzGAEgAygLMhwuYmx1ZWFwaS5hcmNoZXJhLnYxLlJlc291cmNlItQCChJSZXNvdXJjZURhaWx5VXNhZ2USDAoEZGF0ZRgBIAEoCRIWCg51c2FnZUFjY291bnRJZBgCIAEoCRIUCgxzdWJBY2NvdW50SWQYAyABKAkSDQoFdXNhZ2UYBCABKAESGAoQcmVzZXJ2YXRpb25Vc2FnZRgFIAEoARIVCg1mcmVlVGllclVzYWdlGAYgASgBEhQKDG9uZGVtYW5kQ29zdBgHIAEoARIUCgxyZXNlcnZlZENvc3QYCCABKAESGQoRaWZBbGxPbmRlbWFuZENvc3QYCSABKAESEAoIc3BvdENvc3QYCiABKAESFwoPZnJlZVRpZXJTYXZpbmdzGAsgASgBEhEKCXVzYWdlVHlwZRgMIAEoCRIXCg9jb21tb25Vc2FnZVR5cGUYDSABKAkSFAoMY292ZXJlZFVzYWdlGA4gASgBEg4KBnVwdGltZRgPIAEoASJbCh1HZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXNwb25zZRI6CgpkYWlseVVzYWdlGAEgAygLMiYuYmx1ZWFwaS5hcmNoZXJhLnYxLlJlc291cmNlRGFpbHlVc2FnZSJ5CgdTZWdtZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSLgoIcHJvdmlkZXIYAyABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISEQoJaXNEZWZhdWx0GAQgASgIEhEKCWNyZWF0ZWRBdBgFIAEoCSJFChRMaXN0U2VnbWVudHNSZXNwb25zZRItCghzZWdtZW50cxgBIAMoCzIbLmJsdWVhcGkuYXJjaGVyYS52MS5TZWdtZW50IkAKDlNlZ21lbnRDcmVhdG9yEgoKAmlkGAEgASgJEhAKCHVzZXJuYW1lGAIgASgJEhAKCGZ1bGxOYW1lGAMgASgJIksKDFB1cmNoYXNlUGxhbhIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBnN0YXR1cxgDIAEoCRIRCglpc1JlbmV3YWwYBCABKAgitAUKDlNlZ21lbnREZXRhaWxzEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSLgoIcHJvdmlkZXIYBCABKA4yHC5ibHVlYXBpLmFyY2hlcmEudjEuUHJvdmlkZXISFgoOY2xvdWRQcm92aWRlcnMYBSADKAkSEQoJaXNEZWZhdWx0GAYgASgIEhEKCWNyZWF0ZWRBdBgHIAEoCRI1CgljcmVhdGVkQnkYCCABKAsyIi5ibHVlYXBpLmFyY2hlcmEudjEuU2VnbWVudENyZWF0b3ISEAoIcGFyZW50SWQYCSABKAkSDgoGc3RhdHVzGAogASgJEhQKDHNlZ21lbnRDbGFzcxgLIAEoCRInCgZwYXJhbXMYDCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhMKC21vbnRobHlDb3N0GA0gASgBEhYKDm1vbnRobHlOZXRDb3N0GA4gASgBEiAKGG1vbnRobHlJZkFsbE9uZGVtYW5kQ29zdBgPIAEoARIbChNtb250aGx5T25kZW1hbmRDb3N0GBAgASgBEhsKE21vbnRobHlSZXNlcnZlZENvc3QYESABKAESFwoPbW9udGhseVNwb3RDb3N0GBIgASgBEhYKDm1vbnRobHlTYXZpbmdzGBMgASgBEhUKDW1vbnRobHlCdWRnZXQYFCABKAESEAoIY292ZXJhZ2UYFSABKAESGwoTcmVjb21tZW5kZWRDb3ZlcmFnZRgWIAEoARIWCg50YXJnZXRDb3ZlcmFnZRgXIAEoARIcChRtb250aGx5UmVzb3VyY2VDb3VudBgYIAEoBRI3Cg1wdXJjaGFzZVBsYW5zGBkgAygLMiAuYmx1ZWFwaS5hcmNoZXJhLnYxLlB1cmNoYXNlUGxhbiJ4CgxDb250cmFjdFNwZWMSFgoOY29tbWl0bWVudFR5cGUYASABKAkSFQoNcGF5bWVudE9wdGlvbhgCIAEoCRIMCgR0ZXJtGAMgASgJEisKCnByb3BlcnRpZXMYBCABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0It4CCgtQbGFuU3VtbWFyeRILCgNrZXkYASABKAkSEAoIcHJvdmlkZXIYAiABKAkSFgoObnVtQ29tbWl0bWVudHMYAyABKAUSFQoNbWluQ29tbWl0bWVudBgEIAEoARIZChFtb250aGx5Q29tbWl0bWVudBgFIAEoARITCgt1cGZyb250Q29zdBgGIAEoARISCgptaW5TYXZpbmdzGAcgASgBEhIKCm1heFNhdmluZ3MYCCABKAESFgoObW9udGhseVNhdmluZ3MYCSABKAESFAoMbWluVGVybUhvdXJzGAogASgFEhQKDG1heFRlcm1Ib3VycxgLIAEoBRITCgtncmlQcmVtaXVtcxgMIAEoARIaChJiZWZvcmVPbmRlbWFuZENvc3QYDSABKAESGQoRYWZ0ZXJPbmRlbWFuZENvc3QYDiABKAESGQoRaWZBbGxPbmRlbWFuZENvc3QYDyABKAEi5QIKDlNlcnZpY2VTdW1tYXJ5EgsKA2tleRgBIAEoCRIMCgRuYW1lGAIgASgJEhMKC3NlcnZpY2VOYW1lGAMgASgJEhAKCHByb3ZpZGVyGAQgASgJEhYKDm51bUNvbW1pdG1lbnRzGAUgASgFEhcKD2N1cnJlbnRDb3ZlcmFnZRgGIAEoARIZChFwb3RlbnRpYWxDb3ZlcmFnZRgHIAEoARIVCg1taW5Db21taXRtZW50GAggASgBEhkKEW1vbnRobHlDb21taXRtZW50GAkgASgBEhMKC3VwZnJvbnRDb3N0GAogASgBEhIKCm1pblNhdmluZ3MYCyABKAESEgoKbWF4U2F2aW5ncxgMIAEoARIWCg5tb250aGx5U2F2aW5ncxgNIAEoARIUCgxtaW5UZXJtSG91cnMYDiABKAUSFAoMbWF4VGVybUhvdXJzGA8gASgFEhIKCmdyaVByZW1pdW0YECABKAEi5AEKEEFnZ3JlZ2F0ZU1ldHJpY3MSFwoPY3VycmVudENvdmVyYWdlGAEgASgBEhkKEXBvdGVudGlhbENvdmVyYWdlGAIgASgBEkYKCXN1bW1hcmllcxgDIAMoCzIzLmJsdWVhcGkuYXJjaGVyYS52MS5BZ2dyZWdhdGVNZXRyaWNzLlN1bW1hcmllc0VudHJ5GlQKDlN1bW1hcmllc0VudHJ5EgsKA2tleRgBIAEoCRIxCgV2YWx1ZRgCIAEoCzIiLmJsdWVhcGkuYXJjaGVyYS52MS5TZXJ2aWNlU3VtbWFyeToCOAEi6QoKE0RlZmF1bHRQdXJjaGFzZVBsYW4SCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRINCgVvcmdJZBgEIAEoCRIRCglzZWdtZW50SWQYBSABKAkSLAoHc2VnbWVudBgGIAEoCzIbLmJsdWVhcGkuYXJjaGVyYS52MS5TZWdtZW50Eg4KBnN0YXR1cxgHIAEoCRIQCghwbGFuVHlwZRgIIAEoCRIRCgljcmVhdGVkQXQYCSABKAkSFAoMbGFzdE1vZGlmaWVkGAogASgJEikKCWNyZWF0ZWRCeRgLIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIvCg9leGVjdXRpb25Qb2xpY3kYDCABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSEQoJaXNEZWZhdWx0GA0gASgIEhUKDWlzUmVjb21tZW5kZWQYDiABKAgSEQoJaXNSZW5ld2FsGA8gASgIEhUKDWlzQ2FsY3VsYXRpbmcYECABKAgSEAoIaXNMb2NrZWQYESABKAgSDwoHaXNTYXZlZBgSIAEoCBI/ChVpbmNsdWRlZENvbnRyYWN0U3BlY3MYEyADKAsyIC5ibHVlYXBpLmFyY2hlcmEudjEuQ29udHJhY3RTcGVjEh0KFWluY2x1ZGVkQ29udHJhY3RUZXJtcxgUIAMoCRIPCgdtYXhUZXJtGBUgASgJEh4KFnByZWZlcnJlZFBheW1lbnRPcHRpb24YFiABKAkSFgoObWF4VXBmcm9udENvc3QYFyABKAESIgoabWluaW11bVVwZnJvbnRJbnRlcmVzdFJhdGUYGCABKAESPgoecmVjb21tZW5kV2l0aGluQ292ZXJlZEFjY291bnRzGBkgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEhEKCXN0YXJ0RGF0ZRgaIAEoCRIPCgdlbmREYXRlGBsgASgJEhIKCmRhdGFTb3VyY2UYHCABKAkSEgoKYmVmb3JlQ29zdBgdIAEoARIRCglhZnRlckNvc3QYHiABKAESGgoSYmVmb3JlT25kZW1hbmRDb3N0GB8gASgBEhoKEmJlZm9yZVJlc2VydmVkQ29zdBggIAEoARIbChNjb3ZlcmVkT25kZW1hbmRDb3N0GCEgASgBEhUKDWFtb3J0aXplZENvc3QYIiABKAESFQoNcmVjdXJyaW5nQ29zdBgjIAEoARITCgt1cGZyb250Q29zdBgkIAEoARIRCgl0b3RhbENvc3QYJSABKAESHgoWdG90YWxNb250aGx5QmVmb3JlQ29zdBgmIAEoARIPCgdzYXZpbmdzGCcgASgBEhYKDm1vbnRobHlTYXZpbmdzGCggASgBEhQKDHRvdGFsU2F2aW5ncxgpIAEoARILCgNmZWUYKiABKAESGgoSY29tbWl0bWVudENvdmVyYWdlGCsgASgBEh0KFW1pbmltdW1Db21taXRtZW50Q29zdBgsIAEoARIWCg5icmVha2V2ZW5Ib3VycxgtIAEoARI+ChBhZ2dyZWdhdGVNZXRyaWNzGC4gASgLMiQuYmx1ZWFwaS5hcmNoZXJhLnYxLkFnZ3JlZ2F0ZU1ldHJpY3MSMgoJc3VtbWFyaWVzGC8gAygLMh8uYmx1ZWFwaS5hcmNoZXJhLnYxLlBsYW5TdW1tYXJ5EhYKDnJlc2VydmF0aW9uSWRzGDAgAygJEhMKC3Jlc291cmNlSWRzGDEgAygJEhYKDmZsYWdnZWRBY3Rpb25zGDIgAygJEhIKCm1ldGFQbGFuSWQYMyABKAkSEgoKY292ZXJhZ2VJZBg0IAEoCSJaCiBMaXN0RGVmYXVsdFB1cmNoYXNlUGxhbnNSZXNwb25zZRI2CgVwbGFucxgBIAMoCzInLmJsdWVhcGkuYXJjaGVyYS52MS5EZWZhdWx0UHVyY2hhc2VQbGFuKl4KCFByb3ZpZGVyEhgKFFBST1ZJREVSX1VOU1BFQ0lGSUVEEAASBwoDQVdTEAESCQoFQVpVUkUQAhIHCgNHQ1AQAxIOCgpLVUJFUk5FVEVTEAQSCwoHVU5LTk9XThAFKpgBChBDb21taXRtZW50U3RhdHVzEiEKHUNPTU1JVE1FTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASBwoDTkVXEAESDAoIUkVWSUVXRUQQAhINCglTQ0hFRFVMRUQQAxINCglDT01QTEVURUQQBBIJCgVEUkFGVBAFEhAKDE5FRURTX1JFVklFVxAGEg8KC0lOX1BST0dSRVNTEAcqigEKGUNvbW1pdG1lbnRJbnZlbnRvcnlTdGF0dXMSKwonQ09NTUlUTUVOVF9JTlZFTlRPUllfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESCwoHUkVUSVJFRBACEhMKD1BBWU1FTlRfUEVORElORxADEhIKDlBBWU1FTlRfRkFJTEVEEAQqQwoFU2NvcGUSFQoRU0NPUEVfVU5TUEVDSUZJRUQQABIKCgZTSEFSRUQQARIMCghSRUdJT05BTBACEgkKBVpPTkFMEAMqQQoJVXNhZ2VUeXBlEhoKFlVTQUdFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCwoHU1RPUFBFRBACMvgUCgdBcmNoZXJhEm0KCExpc3RPcmdzEiMuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RPcmdzUmVxdWVzdBoXLmJsdWVhcGkuYXJjaGVyYS52MS5PcmciIYLT5JMCGzoBKiIWL3YxL29yZ2FuaXphdGlvbnM6cmVhZDABEq0BChhHZXRDb21taXRtZW50UGxhbkRldGFpbHMSMy5ibHVlYXBpLmFyY2hlcmEudjEuR2V0Q29tbWl0bWVudFBsYW5EZXRhaWxzUmVxdWVzdBopLmJsdWVhcGkuYXJjaGVyYS52MS5Db21taXRtZW50UGxhbkRldGFpbHMiMYLT5JMCKxIpL3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0SrAEKE0NvbW1pdG1lbnRQbGFuQXBwbHkSLi5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5BcHBseVJlcXVlc3QaKS5ibHVlYXBpLmFyY2hlcmEudjEuQ29tbWl0bWVudFBsYW5EZXRhaWxzIjqC0+STAjQ6ASoiLy92MS9vcmcve29yZ0lkfS9jb21taXRtZW50LXBsYW5zL3twbGFuSWR9L2FwcGx5Er0BChpMaXN0RGVmYXVsdENvbW1pdG1lbnRQbGFucxI1LmJsdWVhcGkuYXJjaGVyYS52MS5MaXN0RGVmYXVsdENvbW1pdG1lbnRQbGFuc1JlcXVlc3QaNi5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdERlZmF1bHRDb21taXRtZW50UGxhbnNSZXNwb25zZSIwgtPkkwIqEigvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudC1wbGFucy9kZWZhdWx0ErgBChxHZXRSZWNvbW1lbmRlZENvbW1pdG1lbnRQbGFuEjcuYmx1ZWFwaS5hcmNoZXJhLnYxLkdldFJlY29tbWVuZGVkQ29tbWl0bWVudFBsYW5SZXF1ZXN0GikuYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRQbGFuRGV0YWlscyI0gtPkkwIuEiwvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudC1wbGFucy9yZWNvbW1lbmRlZBLMAQobTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zEjYuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50UGxhbkxpbmVJdGVtc1JlcXVlc3QaNy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRQbGFuTGluZUl0ZW1zUmVzcG9uc2UiPILT5JMCNhI0L3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0vbGluZS1pdGVtcxLkAQohTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzEjwuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50UGxhblJlc291cmNlTWF0Y2hlc1JlcXVlc3QaPS5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRQbGFuUmVzb3VyY2VNYXRjaGVzUmVzcG9uc2UiQoLT5JMCPBI6L3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnQtcGxhbnMve3BsYW5JZH0vcmVzb3VyY2UtbWF0Y2hlcxKPAQoPTGlzdENvbW1pdG1lbnRzEiouYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3RDb21taXRtZW50c1JlcXVlc3QaKy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdENvbW1pdG1lbnRzUmVzcG9uc2UiI4LT5JMCHRIbL3YxL29yZy97b3JnSWR9L2NvbW1pdG1lbnRzEp4BChNHZXRDb21taXRtZW50c0NoYXJ0Ei4uYmx1ZWFwaS5hcmNoZXJhLnYxLkdldENvbW1pdG1lbnRzQ2hhcnRSZXF1ZXN0GiwuYmx1ZWFwaS5hcmNoZXJhLnYxLkNvbW1pdG1lbnRzQ2hhcnRSZXNwb25zZSIpgtPkkwIjEiEvdjEvb3JnL3tvcmdJZH0vY29tbWl0bWVudHMvY2hhcnQSeQoKR2V0TWV0cmljcxIlLmJsdWVhcGkuYXJjaGVyYS52MS5HZXRNZXRyaWNzUmVxdWVzdBojLmJsdWVhcGkuYXJjaGVyYS52MS5NZXRyaWNzUmVzcG9uc2UiH4LT5JMCGRIXL3YxL29yZy97b3JnSWR9L21ldHJpY3MShwEKDUxpc3RSZXNvdXJjZXMSKC5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFJlc291cmNlc1JlcXVlc3QaKS5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFJlc291cmNlc1Jlc3BvbnNlIiGC0+STAhsSGS92MS9vcmcve29yZ0lkfS9yZXNvdXJjZXMSuAEKFUdldFJlc291cmNlRGFpbHlVc2FnZRIwLmJsdWVhcGkuYXJjaGVyYS52MS5HZXRSZXNvdXJjZURhaWx5VXNhZ2VSZXF1ZXN0GjEuYmx1ZWFwaS5hcmNoZXJhLnYxLkdldFJlc291cmNlRGFpbHlVc2FnZVJlc3BvbnNlIjqC0+STAjQSMi92MS9vcmcve29yZ0lkfS9yZXNvdXJjZXMve3Jlc291cmNlSWR9L2RhaWx5LXVzYWdlEogBCgxMaXN0U2VnbWVudHMSJy5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdFNlZ21lbnRzUmVxdWVzdBooLmJsdWVhcGkuYXJjaGVyYS52MS5MaXN0U2VnbWVudHNSZXNwb25zZSIlgtPkkwIfEh0vdjEvb3JnL3tvcmdJZH0vc2VnbWVudHMvaW5mbxKTAQoRR2V0U2VnbWVudERldGFpbHMSLC5ibHVlYXBpLmFyY2hlcmEudjEuR2V0U2VnbWVudERldGFpbHNSZXF1ZXN0GiIuYmx1ZWFwaS5hcmNoZXJhLnYxLlNlZ21lbnREZXRhaWxzIiyC0+STAiYSJC92MS9vcmcve29yZ0lkfS9zZWdtZW50cy97c2VnbWVudElkfRK4AQoYTGlzdERlZmF1bHRQdXJjaGFzZVBsYW5zEjMuYmx1ZWFwaS5hcmNoZXJhLnYxLkxpc3REZWZhdWx0UHVyY2hhc2VQbGFuc1JlcXVlc3QaNC5ibHVlYXBpLmFyY2hlcmEudjEuTGlzdERlZmF1bHRQdXJjaGFzZVBsYW5zUmVzcG9uc2UiMYLT5JMCKxIpL3YxL29yZy97b3JnSWR9L3B1cmNoYXNlLXBsYW5zLXYxL2RlZmF1bHQangGSQZoBEkcoQWxwaGEpIEFyY2hlcmEgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvYXJjaGVyYRpPChJTZXJ2aWNlIGRlZmluaXRpb24SOWh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9hcmNoZXJhL0JRChljbG91ZC5hbHBoYXVzLmFwaS5hcmNoZXJhQgxBcmNoZXJhUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9hcmNoZXJhYgZwcm90bzM", [annotations_pb_1.file_google_api_annotations, wkt_1.file_google_protobuf_struct, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
 /**
  * Describes the message blueapi.archera.v1.ListOrgsRequest.
  * Use `create(ListOrgsRequestSchema)` to create a new message.
  */
-exports.ListOrgsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 1);
+exports.ListOrgsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 0);
+/**
+ * Describes the message blueapi.archera.v1.GetCommitmentPlanDetailsRequest.
+ * Use `create(GetCommitmentPlanDetailsRequestSchema)` to create a new message.
+ */
+exports.GetCommitmentPlanDetailsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 1);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanApplyRequest.
+ * Use `create(CommitmentPlanApplyRequestSchema)` to create a new message.
+ */
+exports.CommitmentPlanApplyRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 2);
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultCommitmentPlansRequest.
+ * Use `create(ListDefaultCommitmentPlansRequestSchema)` to create a new message.
+ */
+exports.ListDefaultCommitmentPlansRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 3);
+/**
+ * Describes the message blueapi.archera.v1.GetRecommendedCommitmentPlanRequest.
+ * Use `create(GetRecommendedCommitmentPlanRequestSchema)` to create a new message.
+ */
+exports.GetRecommendedCommitmentPlanRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 4);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanLineItemsRequest.
+ * Use `create(ListCommitmentPlanLineItemsRequestSchema)` to create a new message.
+ */
+exports.ListCommitmentPlanLineItemsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 5);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanResourceMatchesRequest.
+ * Use `create(ListCommitmentPlanResourceMatchesRequestSchema)` to create a new message.
+ */
+exports.ListCommitmentPlanResourceMatchesRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 6);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentsRequest.
+ * Use `create(ListCommitmentsRequestSchema)` to create a new message.
+ */
+exports.ListCommitmentsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 7);
+/**
+ * Describes the message blueapi.archera.v1.GetCommitmentsChartRequest.
+ * Use `create(GetCommitmentsChartRequestSchema)` to create a new message.
+ */
+exports.GetCommitmentsChartRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 8);
+/**
+ * Describes the message blueapi.archera.v1.GetMetricsRequest.
+ * Use `create(GetMetricsRequestSchema)` to create a new message.
+ */
+exports.GetMetricsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 9);
+/**
+ * Describes the message blueapi.archera.v1.ListResourcesRequest.
+ * Use `create(ListResourcesRequestSchema)` to create a new message.
+ */
+exports.ListResourcesRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 10);
+/**
+ * Describes the message blueapi.archera.v1.GetResourceDailyUsageRequest.
+ * Use `create(GetResourceDailyUsageRequestSchema)` to create a new message.
+ */
+exports.GetResourceDailyUsageRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 11);
+/**
+ * Describes the message blueapi.archera.v1.ListSegmentsRequest.
+ * Use `create(ListSegmentsRequestSchema)` to create a new message.
+ */
+exports.ListSegmentsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 12);
+/**
+ * Describes the message blueapi.archera.v1.GetSegmentDetailsRequest.
+ * Use `create(GetSegmentDetailsRequestSchema)` to create a new message.
+ */
+exports.GetSegmentDetailsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 13);
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultPurchasePlansRequest.
+ * Use `create(ListDefaultPurchasePlansRequestSchema)` to create a new message.
+ */
+exports.ListDefaultPurchasePlansRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 14);
+/**
+ * Describes the message blueapi.archera.v1.Org.
+ * Use `create(OrgSchema)` to create a new message.
+ */
+exports.OrgSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 15);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanDetails.
+ * Use `create(CommitmentPlanDetailsSchema)` to create a new message.
+ */
+exports.CommitmentPlanDetailsSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 16);
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultCommitmentPlansResponse.
+ * Use `create(ListDefaultCommitmentPlansResponseSchema)` to create a new message.
+ */
+exports.ListDefaultCommitmentPlansResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 17);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanLineItem.
+ * Use `create(CommitmentPlanLineItemSchema)` to create a new message.
+ */
+exports.CommitmentPlanLineItemSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 18);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanLineItemsResponse.
+ * Use `create(ListCommitmentPlanLineItemsResponseSchema)` to create a new message.
+ */
+exports.ListCommitmentPlanLineItemsResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 19);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentPlanResourceMatch.
+ * Use `create(CommitmentPlanResourceMatchSchema)` to create a new message.
+ */
+exports.CommitmentPlanResourceMatchSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 20);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentPlanResourceMatchesResponse.
+ * Use `create(ListCommitmentPlanResourceMatchesResponseSchema)` to create a new message.
+ */
+exports.ListCommitmentPlanResourceMatchesResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 21);
+/**
+ * Describes the message blueapi.archera.v1.Lease.
+ * Use `create(LeaseSchema)` to create a new message.
+ */
+exports.LeaseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 22);
+/**
+ * Describes the message blueapi.archera.v1.DailyUtilization.
+ * Use `create(DailyUtilizationSchema)` to create a new message.
+ */
+exports.DailyUtilizationSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 23);
+/**
+ * Describes the message blueapi.archera.v1.Commitment.
+ * Use `create(CommitmentSchema)` to create a new message.
+ */
+exports.CommitmentSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 24);
+/**
+ * Describes the message blueapi.archera.v1.ListCommitmentsResponse.
+ * Use `create(ListCommitmentsResponseSchema)` to create a new message.
+ */
+exports.ListCommitmentsResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 25);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentsChartDataPoint.
+ * Use `create(CommitmentsChartDataPointSchema)` to create a new message.
+ */
+exports.CommitmentsChartDataPointSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 26);
+/**
+ * Describes the message blueapi.archera.v1.CommitmentsChartResponse.
+ * Use `create(CommitmentsChartResponseSchema)` to create a new message.
+ */
+exports.CommitmentsChartResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 27);
+/**
+ * Describes the message blueapi.archera.v1.MetricsResponse.
+ * Use `create(MetricsResponseSchema)` to create a new message.
+ */
+exports.MetricsResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 28);
+/**
+ * Describes the message blueapi.archera.v1.Resource.
+ * Use `create(ResourceSchema)` to create a new message.
+ */
+exports.ResourceSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 29);
+/**
+ * Describes the message blueapi.archera.v1.ListResourcesResponse.
+ * Use `create(ListResourcesResponseSchema)` to create a new message.
+ */
+exports.ListResourcesResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 30);
+/**
+ * Describes the message blueapi.archera.v1.ResourceDailyUsage.
+ * Use `create(ResourceDailyUsageSchema)` to create a new message.
+ */
+exports.ResourceDailyUsageSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 31);
+/**
+ * Describes the message blueapi.archera.v1.GetResourceDailyUsageResponse.
+ * Use `create(GetResourceDailyUsageResponseSchema)` to create a new message.
+ */
+exports.GetResourceDailyUsageResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 32);
+/**
+ * Describes the message blueapi.archera.v1.Segment.
+ * Use `create(SegmentSchema)` to create a new message.
+ */
+exports.SegmentSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 33);
+/**
+ * Describes the message blueapi.archera.v1.ListSegmentsResponse.
+ * Use `create(ListSegmentsResponseSchema)` to create a new message.
+ */
+exports.ListSegmentsResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 34);
+/**
+ * Describes the message blueapi.archera.v1.SegmentCreator.
+ * Use `create(SegmentCreatorSchema)` to create a new message.
+ */
+exports.SegmentCreatorSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 35);
+/**
+ * Describes the message blueapi.archera.v1.PurchasePlan.
+ * Use `create(PurchasePlanSchema)` to create a new message.
+ */
+exports.PurchasePlanSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 36);
+/**
+ * Describes the message blueapi.archera.v1.SegmentDetails.
+ * Use `create(SegmentDetailsSchema)` to create a new message.
+ */
+exports.SegmentDetailsSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 37);
+/**
+ * Describes the message blueapi.archera.v1.ContractSpec.
+ * Use `create(ContractSpecSchema)` to create a new message.
+ */
+exports.ContractSpecSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 38);
+/**
+ * Describes the message blueapi.archera.v1.PlanSummary.
+ * Use `create(PlanSummarySchema)` to create a new message.
+ */
+exports.PlanSummarySchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 39);
+/**
+ * Describes the message blueapi.archera.v1.ServiceSummary.
+ * Use `create(ServiceSummarySchema)` to create a new message.
+ */
+exports.ServiceSummarySchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 40);
+/**
+ * Describes the message blueapi.archera.v1.AggregateMetrics.
+ * Use `create(AggregateMetricsSchema)` to create a new message.
+ */
+exports.AggregateMetricsSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 41);
+/**
+ * Describes the message blueapi.archera.v1.DefaultPurchasePlan.
+ * Use `create(DefaultPurchasePlanSchema)` to create a new message.
+ */
+exports.DefaultPurchasePlanSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 42);
+/**
+ * Describes the message blueapi.archera.v1.ListDefaultPurchasePlansResponse.
+ * Use `create(ListDefaultPurchasePlansResponseSchema)` to create a new message.
+ */
+exports.ListDefaultPurchasePlansResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_archera_v1_archera, 43);
+/**
+ * @generated from enum blueapi.archera.v1.Provider
+ */
+var Provider;
+(function (Provider) {
+    /**
+     * @generated from enum value: PROVIDER_UNSPECIFIED = 0;
+     */
+    Provider[Provider["PROVIDER_UNSPECIFIED"] = 0] = "PROVIDER_UNSPECIFIED";
+    /**
+     * @generated from enum value: AWS = 1;
+     */
+    Provider[Provider["AWS"] = 1] = "AWS";
+    /**
+     * @generated from enum value: AZURE = 2;
+     */
+    Provider[Provider["AZURE"] = 2] = "AZURE";
+    /**
+     * @generated from enum value: GCP = 3;
+     */
+    Provider[Provider["GCP"] = 3] = "GCP";
+    /**
+     * @generated from enum value: KUBERNETES = 4;
+     */
+    Provider[Provider["KUBERNETES"] = 4] = "KUBERNETES";
+    /**
+     * @generated from enum value: UNKNOWN = 5;
+     */
+    Provider[Provider["UNKNOWN"] = 5] = "UNKNOWN";
+})(Provider || (exports.Provider = Provider = {}));
+/**
+ * Describes the enum blueapi.archera.v1.Provider.
+ */
+exports.ProviderSchema = (0, codegenv2_1.enumDesc)(exports.file_archera_v1_archera, 0);
+/**
+ * @generated from enum blueapi.archera.v1.CommitmentStatus
+ */
+var CommitmentStatus;
+(function (CommitmentStatus) {
+    /**
+     * @generated from enum value: COMMITMENT_STATUS_UNSPECIFIED = 0;
+     */
+    CommitmentStatus[CommitmentStatus["COMMITMENT_STATUS_UNSPECIFIED"] = 0] = "COMMITMENT_STATUS_UNSPECIFIED";
+    /**
+     * @generated from enum value: NEW = 1;
+     */
+    CommitmentStatus[CommitmentStatus["NEW"] = 1] = "NEW";
+    /**
+     * @generated from enum value: REVIEWED = 2;
+     */
+    CommitmentStatus[CommitmentStatus["REVIEWED"] = 2] = "REVIEWED";
+    /**
+     * @generated from enum value: SCHEDULED = 3;
+     */
+    CommitmentStatus[CommitmentStatus["SCHEDULED"] = 3] = "SCHEDULED";
+    /**
+     * @generated from enum value: COMPLETED = 4;
+     */
+    CommitmentStatus[CommitmentStatus["COMPLETED"] = 4] = "COMPLETED";
+    /**
+     * @generated from enum value: DRAFT = 5;
+     */
+    CommitmentStatus[CommitmentStatus["DRAFT"] = 5] = "DRAFT";
+    /**
+     * @generated from enum value: NEEDS_REVIEW = 6;
+     */
+    CommitmentStatus[CommitmentStatus["NEEDS_REVIEW"] = 6] = "NEEDS_REVIEW";
+    /**
+     * @generated from enum value: IN_PROGRESS = 7;
+     */
+    CommitmentStatus[CommitmentStatus["IN_PROGRESS"] = 7] = "IN_PROGRESS";
+})(CommitmentStatus || (exports.CommitmentStatus = CommitmentStatus = {}));
+/**
+ * Describes the enum blueapi.archera.v1.CommitmentStatus.
+ */
+exports.CommitmentStatusSchema = (0, codegenv2_1.enumDesc)(exports.file_archera_v1_archera, 1);
+/**
+ * @generated from enum blueapi.archera.v1.CommitmentInventoryStatus
+ */
+var CommitmentInventoryStatus;
+(function (CommitmentInventoryStatus) {
+    /**
+     * @generated from enum value: COMMITMENT_INVENTORY_STATUS_UNSPECIFIED = 0;
+     */
+    CommitmentInventoryStatus[CommitmentInventoryStatus["COMMITMENT_INVENTORY_STATUS_UNSPECIFIED"] = 0] = "COMMITMENT_INVENTORY_STATUS_UNSPECIFIED";
+    /**
+     * @generated from enum value: ACTIVE = 1;
+     */
+    CommitmentInventoryStatus[CommitmentInventoryStatus["ACTIVE"] = 1] = "ACTIVE";
+    /**
+     * @generated from enum value: RETIRED = 2;
+     */
+    CommitmentInventoryStatus[CommitmentInventoryStatus["RETIRED"] = 2] = "RETIRED";
+    /**
+     * @generated from enum value: PAYMENT_PENDING = 3;
+     */
+    CommitmentInventoryStatus[CommitmentInventoryStatus["PAYMENT_PENDING"] = 3] = "PAYMENT_PENDING";
+    /**
+     * @generated from enum value: PAYMENT_FAILED = 4;
+     */
+    CommitmentInventoryStatus[CommitmentInventoryStatus["PAYMENT_FAILED"] = 4] = "PAYMENT_FAILED";
+})(CommitmentInventoryStatus || (exports.CommitmentInventoryStatus = CommitmentInventoryStatus = {}));
+/**
+ * Describes the enum blueapi.archera.v1.CommitmentInventoryStatus.
+ */
+exports.CommitmentInventoryStatusSchema = (0, codegenv2_1.enumDesc)(exports.file_archera_v1_archera, 2);
+/**
+ * @generated from enum blueapi.archera.v1.Scope
+ */
+var Scope;
+(function (Scope) {
+    /**
+     * @generated from enum value: SCOPE_UNSPECIFIED = 0;
+     */
+    Scope[Scope["SCOPE_UNSPECIFIED"] = 0] = "SCOPE_UNSPECIFIED";
+    /**
+     * @generated from enum value: SHARED = 1;
+     */
+    Scope[Scope["SHARED"] = 1] = "SHARED";
+    /**
+     * @generated from enum value: REGIONAL = 2;
+     */
+    Scope[Scope["REGIONAL"] = 2] = "REGIONAL";
+    /**
+     * @generated from enum value: ZONAL = 3;
+     */
+    Scope[Scope["ZONAL"] = 3] = "ZONAL";
+})(Scope || (exports.Scope = Scope = {}));
+/**
+ * Describes the enum blueapi.archera.v1.Scope.
+ */
+exports.ScopeSchema = (0, codegenv2_1.enumDesc)(exports.file_archera_v1_archera, 3);
+/**
+ * @generated from enum blueapi.archera.v1.UsageType
+ */
+var UsageType;
+(function (UsageType) {
+    /**
+     * @generated from enum value: USAGE_TYPE_UNSPECIFIED = 0;
+     */
+    UsageType[UsageType["USAGE_TYPE_UNSPECIFIED"] = 0] = "USAGE_TYPE_UNSPECIFIED";
+    /**
+     * @generated from enum value: RUNNING = 1;
+     */
+    UsageType[UsageType["RUNNING"] = 1] = "RUNNING";
+    /**
+     * @generated from enum value: STOPPED = 2;
+     */
+    UsageType[UsageType["STOPPED"] = 2] = "STOPPED";
+})(UsageType || (exports.UsageType = UsageType = {}));
+/**
+ * Describes the enum blueapi.archera.v1.UsageType.
+ */
+exports.UsageTypeSchema = (0, codegenv2_1.enumDesc)(exports.file_archera_v1_archera, 4);
 /**
  * Archera service definition.
  *
