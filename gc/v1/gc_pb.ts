@@ -3446,6 +3446,8 @@ export const UsageTypeSchema: GenEnum<UsageType> = /*@__PURE__*/
  */
 export const GuaranteedCommitment: GenService<{
   /**
+   * List all the registered orgs
+   *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListOrgs
    */
   listOrgs: {
