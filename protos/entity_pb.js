@@ -9,7 +9,7 @@ const wkt_1 = require("@bufbuild/protobuf/wkt");
 /**
  * Describes the file protos/entity.proto.
  */
-exports.file_protos_entity = (0, codegenv2_1.fileDesc)("ChNwcm90b3MvZW50aXR5LnByb3RvEgZwcm90b3MiXQoGRW50aXR5EgwKBHR5cGUYASABKAkSCgoCaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgphdHRyaWJ1dGVzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEJCChRjbG91ZC5hbHBoYXVzLnByb3Rvc0ILRW50aXR5UHJvdG9aHWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvcHJvdG9zYgZwcm90bzM", [wkt_1.file_google_protobuf_struct]);
+exports.file_protos_entity = (0, codegenv2_1.fileDesc)("ChNwcm90b3MvZW50aXR5LnByb3RvEgZwcm90b3MiXQoGRW50aXR5EgwKBHR5cGUYASABKAkSCgoCaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgphdHRyaWJ1dGVzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEJIChRjbG91ZC5hbHBoYXVzLnByb3Rvc0ILRW50aXR5UHJvdG9aI2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvdG9iZXJlcGxhY2VkYgZwcm90bzM", [wkt_1.file_google_protobuf_struct]);
 /**
  * Describes the message protos.Entity.
  * Use `create(EntitySchema)` to create a new message.
