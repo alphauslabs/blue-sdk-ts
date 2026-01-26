@@ -11,7 +11,7 @@ import type { JsonObject, Message } from "@bufbuild/protobuf";
  * Describes the file protos/entity.proto.
  */
 export const file_protos_entity: GenFile = /*@__PURE__*/
-  fileDesc("ChNwcm90b3MvZW50aXR5LnByb3RvEgZwcm90b3MiXQoGRW50aXR5EgwKBHR5cGUYASABKAkSCgoCaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgphdHRyaWJ1dGVzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEJIChRjbG91ZC5hbHBoYXVzLnByb3Rvc0ILRW50aXR5UHJvdG9aI2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvdG9iZXJlcGxhY2VkYgZwcm90bzM", [file_google_protobuf_struct]);
+  fileDesc("ChNwcm90b3MvZW50aXR5LnByb3RvEgZwcm90b3MiXQoGRW50aXR5EgwKBHR5cGUYASABKAkSCgoCaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIrCgphdHRyaWJ1dGVzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEJCChRjbG91ZC5hbHBoYXVzLnByb3Rvc0ILRW50aXR5UHJvdG9aHWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvcHJvdG9zYgZwcm90bzM", [file_google_protobuf_struct]);
 
 /**
  * A generic entity with a type, id, name, and an attributes object.
