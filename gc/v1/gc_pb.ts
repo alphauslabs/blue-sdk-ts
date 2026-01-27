@@ -3446,7 +3446,7 @@ export const UsageTypeSchema: GenEnum<UsageType> = /*@__PURE__*/
  */
 export const GuaranteedCommitment: GenService<{
   /**
-   * List all the registered orgs
+   * WORK-IN-PROGRESS: List all the registered orgs
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListOrgs
    */
@@ -3456,7 +3456,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof OrgSchema;
   },
   /**
-   * Retrieves detailed information about a specific commitment plan, including costs, savings projections, and commitment coverage.
+   * WORK-IN-PROGRESS: Do not use. Retrieves detailed information about a specific commitment plan, including costs, savings projections, and commitment coverage.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetCommitmentPlanDetails
    */
@@ -3466,7 +3466,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof CommitmentPlanDetailsSchema;
   },
   /**
-   * Executes a commitment purchase plan, initiating the commitment purchase process.
+   * WORK-IN-PROGRESS: Do not use. Executes a commitment purchase plan, initiating the commitment purchase process.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.CommitmentPlanApply
    */
@@ -3476,7 +3476,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof CommitmentPlanDetailsSchema;
   },
   /**
-   * Retrieves the three default GuaranteedCommitment commitment plans (High Savings, Balanced, Recommended) for the specified cloud provider.
+   * WORK-IN-PROGRESS: Do not use. Retrieves the three default GuaranteedCommitment commitment plans (High Savings, Balanced, Recommended) for the specified cloud provider.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListDefaultCommitmentPlans
    */
@@ -3486,7 +3486,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListDefaultCommitmentPlansResponseSchema;
   },
   /**
-   * Retrieves only the recommended GuaranteedCommitment commitment plan for the specified cloud provider.
+   * WORK-IN-PROGRESS: Do not use. Retrieves only the recommended GuaranteedCommitment commitment plan for the specified cloud provider.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetRecommendedCommitmentPlan
    */
@@ -3496,7 +3496,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof CommitmentPlanDetailsSchema;
   },
   /**
-   * Retrieves line items for a specific commitment plan.
+   * WORK-IN-PROGRESS: Do not use. Retrieves line items for a specific commitment plan.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListCommitmentPlanLineItems
    */
@@ -3506,7 +3506,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListCommitmentPlanLineItemsResponseSchema;
   },
   /**
-   * Retrieves resource matches for a specific commitment plan.
+   * WORK-IN-PROGRESS: Do not use. Retrieves resource matches for a specific commitment plan.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListCommitmentPlanResourceMatches
    */
@@ -3516,7 +3516,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListCommitmentPlanResourceMatchesResponseSchema;
   },
   /**
-   * Retrieves a paginated list of commitments for the specified organization and time period.
+   * WORK-IN-PROGRESS: Do not use. Retrieves a paginated list of commitments for the specified organization and time period.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListCommitments
    */
@@ -3526,7 +3526,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListCommitmentsResponseSchema;
   },
   /**
-   * Generates time-series chart data for commitment metrics over the specified time period.
+   * WORK-IN-PROGRESS: Do not use. Generates time-series chart data for commitment metrics over the specified time period.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetCommitmentsChart
    */
@@ -3536,7 +3536,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof CommitmentsChartResponseSchema;
   },
   /**
-   * Retrieves key performance metrics for cloud commitments.
+   * WORK-IN-PROGRESS: Do not use. Retrieves key performance metrics for cloud commitments.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetMetrics
    */
@@ -3546,7 +3546,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof MetricsResponseSchema;
   },
   /**
-   * Retrieves a list of infrastructure resources for the organization.
+   * WORK-IN-PROGRESS: Do not use. Retrieves a list of infrastructure resources for the organization.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListResources
    */
@@ -3556,7 +3556,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListResourcesResponseSchema;
   },
   /**
-   * Retrieves daily usage data for a specific resource within the specified date range.
+   * WORK-IN-PROGRESS: Do not use. Retrieves daily usage data for a specific resource within the specified date range.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetResourceDailyUsage
    */
@@ -3566,7 +3566,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof GetResourceDailyUsageResponseSchema;
   },
   /**
-   * Retrieves all segments for the specified organization and provider.
+   * WORK-IN-PROGRESS: Do not use. Retrieves all segments for the specified organization and provider.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListSegments
    */
@@ -3576,7 +3576,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListSegmentsResponseSchema;
   },
   /**
-   * Retrieves detailed information about a specific segment.
+   * WORK-IN-PROGRESS: Retrieves detailed information about a specific segment.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetSegmentDetails
    */
@@ -3586,7 +3586,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof SegmentDetailsSchema;
   },
   /**
-   * Retrieves default purchase plans for a specific segment.
+   * WORK-IN-PROGRESS: Do not use. Retrieves default purchase plans for a specific segment.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.ListDefaultPurchasePlans
    */
@@ -3596,7 +3596,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof ListDefaultPurchasePlansResponseSchema;
   },
   /**
-   * Registers a new child organization under the channel partner.
+   * WORK-IN-PROGRESS: Registers a new child organization under the channel partner.
    * Creates the organization, sets up user memberships, and establishes the partnership relationship.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.RegisterOrg
@@ -3607,7 +3607,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof RegisterOrgResponseSchema;
   },
   /**
-   * Starts the onboarding process for an organization.
+   * WORK-IN-PROGRESS: Starts the onboarding process for an organization.
    * Creates or retrieves an onboarding record and sets the provider to AWS.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.StartAwsOnboarding
@@ -3618,7 +3618,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof StartAwsOnboardingResponseSchema;
   },
   /**
-   * Generates CloudFormation template for AWS integration.
+   * WORK-IN-PROGRESS: Generates CloudFormation template for AWS integration.
    * Creates the necessary IAM role and policy template for setting up AWS access.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetAwsCloudFormationTemplate
@@ -3629,7 +3629,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof GetAwsCloudFormationTemplateResponseSchema;
   },
   /**
-   * Generates AWS CloudFormation launch stack URL.
+   * WORK-IN-PROGRESS: Generates AWS CloudFormation launch stack URL.
    * Creates a pre-configured URL to deploy the CloudFormation stack in the AWS console.
    *
    * @generated from rpc blueapi.gc.v1.GuaranteedCommitment.GetAwsLaunchStackUrl
@@ -3640,7 +3640,7 @@ export const GuaranteedCommitment: GenService<{
     output: typeof GetAwsLaunchStackUrlResponseSchema;
   },
   /**
-   * Runs AWS onboarding verification process.
+   * WORK-IN-PROGRESS: Runs AWS onboarding verification process.
    * Creates a new CUR or uses an existing CUR and verifies AWS integration setup
    * and returns validation status for all required features.
    *
