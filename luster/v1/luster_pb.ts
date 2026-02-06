@@ -8,6 +8,7 @@ import type { SpaceSchema } from "../../api/luster/space_pb";
 import { file_api_luster_space } from "../../api/luster/space_pb";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
 import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
+import type { EmptySchema } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_empty } from "@bufbuild/protobuf/wkt";
 import { file_protoc_gen_openapiv2_options_annotations } from "../../protoc-gen-openapiv2/options/annotations_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -16,10 +17,10 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file luster/v1/luster.proto.
  */
 export const file_luster_v1_luster: GenFile = /*@__PURE__*/
-  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdDKoAgoGTHVzdGVyEmMKClJlYWRTcGFjZXMSJC5ibHVlYXBpLmx1c3Rlci52MS5SZWFkU3BhY2VzUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSISgtPkkwIMEgovdjEvc3BhY2VzMAEauAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdCIRCg9HZXRTcGFjZVJlcXVlc3QiFAoSQ3JlYXRlU3BhY2VSZXF1ZXN0IhQKElVwZGF0ZVNwYWNlUmVxdWVzdCIUChJEZWxldGVTcGFjZVJlcXVlc3Qy0AUKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRq4AZJBtAESRShBTFBIQSkgTHVzdGVyIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2x1c3RlchprCi9MdXN0ZXIgaXMgYSBzZXJ2aWNlIHRoYXQgbWFuYWdlcyB1c2VyIGNvbnRleHRzLhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2x1c3Rlci9CTgoYY2xvdWQuYWxwaGF1cy5hcGkubHVzdGVyQgtMdXN0ZXJQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL2x1c3RlcmIGcHJvdG8z", [file_api_luster_space, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
- * The space read request.
+ * Request message for the Luster.ReadSpaces rpc.
  *
  * @generated from message blueapi.luster.v1.ReadSpacesRequest
  */
@@ -34,13 +35,73 @@ export const ReadSpacesRequestSchema: GenMessage<ReadSpacesRequest> = /*@__PURE_
   messageDesc(file_luster_v1_luster, 0);
 
 /**
+ * Request message for the Luster.GetSpace rpc.
+ *
+ * @generated from message blueapi.luster.v1.GetSpaceRequest
+ */
+export type GetSpaceRequest = Message<"blueapi.luster.v1.GetSpaceRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.luster.v1.GetSpaceRequest.
+ * Use `create(GetSpaceRequestSchema)` to create a new message.
+ */
+export const GetSpaceRequestSchema: GenMessage<GetSpaceRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 1);
+
+/**
+ * Request message for the Luster.CreateSpace rpc.
+ *
+ * @generated from message blueapi.luster.v1.CreateSpaceRequest
+ */
+export type CreateSpaceRequest = Message<"blueapi.luster.v1.CreateSpaceRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.luster.v1.CreateSpaceRequest.
+ * Use `create(CreateSpaceRequestSchema)` to create a new message.
+ */
+export const CreateSpaceRequestSchema: GenMessage<CreateSpaceRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 2);
+
+/**
+ * Request message for the Luster.UpdateSpace rpc.
+ *
+ * @generated from message blueapi.luster.v1.UpdateSpaceRequest
+ */
+export type UpdateSpaceRequest = Message<"blueapi.luster.v1.UpdateSpaceRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.luster.v1.UpdateSpaceRequest.
+ * Use `create(UpdateSpaceRequestSchema)` to create a new message.
+ */
+export const UpdateSpaceRequestSchema: GenMessage<UpdateSpaceRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 3);
+
+/**
+ * Request message for the Luster.DeleteSpace rpc.
+ *
+ * @generated from message blueapi.luster.v1.DeleteSpaceRequest
+ */
+export type DeleteSpaceRequest = Message<"blueapi.luster.v1.DeleteSpaceRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.luster.v1.DeleteSpaceRequest.
+ * Use `create(DeleteSpaceRequestSchema)` to create a new message.
+ */
+export const DeleteSpaceRequestSchema: GenMessage<DeleteSpaceRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 4);
+
+/**
  * Luster service definition.
  *
  * @generated from service blueapi.luster.v1.Luster
  */
 export const Luster: GenService<{
   /**
-   * (ALPHA) Read spaces.
+   * (ALPHA) Reads spaces.
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadSpaces
    */
@@ -48,6 +109,46 @@ export const Luster: GenService<{
     methodKind: "server_streaming";
     input: typeof ReadSpacesRequestSchema;
     output: typeof SpaceSchema;
+  },
+  /**
+   * (ALPHA) Gets space.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.GetSpace
+   */
+  getSpace: {
+    methodKind: "unary";
+    input: typeof GetSpaceRequestSchema;
+    output: typeof SpaceSchema;
+  },
+  /**
+   * (ALPHA) Creates space.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.CreateSpace
+   */
+  createSpace: {
+    methodKind: "unary";
+    input: typeof CreateSpaceRequestSchema;
+    output: typeof SpaceSchema;
+  },
+  /**
+   * (ALPHA) Updates space.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.UpdateSpace
+   */
+  updateSpace: {
+    methodKind: "unary";
+    input: typeof UpdateSpaceRequestSchema;
+    output: typeof SpaceSchema;
+  },
+  /**
+   * (ALPHA) Deletes space.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.DeleteSpace
+   */
+  deleteSpace: {
+    methodKind: "unary";
+    input: typeof DeleteSpaceRequestSchema;
+    output: typeof EmptySchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_luster_v1_luster, 0);
