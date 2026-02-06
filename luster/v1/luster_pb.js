@@ -3,7 +3,7 @@
 // @generated from file luster/v1/luster.proto (package blueapi.luster.v1, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Luster = exports.ReadSpacesRequestSchema = exports.file_luster_v1_luster = void 0;
+exports.Luster = exports.DeleteSpaceRequestSchema = exports.UpdateSpaceRequestSchema = exports.CreateSpaceRequestSchema = exports.GetSpaceRequestSchema = exports.ReadSpacesRequestSchema = exports.file_luster_v1_luster = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const space_pb_1 = require("../../api/luster/space_pb");
 const annotations_pb_1 = require("../../google/api/annotations_pb");
@@ -13,12 +13,32 @@ const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations
 /**
  * Describes the file luster/v1/luster.proto.
  */
-exports.file_luster_v1_luster = (0, codegenv2_1.fileDesc)("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdDKoAgoGTHVzdGVyEmMKClJlYWRTcGFjZXMSJC5ibHVlYXBpLmx1c3Rlci52MS5SZWFkU3BhY2VzUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSISgtPkkwIMEgovdjEvc3BhY2VzMAEauAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [space_pb_1.file_api_luster_space, annotations_pb_1.file_google_api_annotations, field_behavior_pb_1.file_google_api_field_behavior, wkt_1.file_google_protobuf_empty, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+exports.file_luster_v1_luster = (0, codegenv2_1.fileDesc)("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdCIRCg9HZXRTcGFjZVJlcXVlc3QiFAoSQ3JlYXRlU3BhY2VSZXF1ZXN0IhQKElVwZGF0ZVNwYWNlUmVxdWVzdCIUChJEZWxldGVTcGFjZVJlcXVlc3Qy0AUKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRq4AZJBtAESRShBTFBIQSkgTHVzdGVyIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2x1c3RlchprCi9MdXN0ZXIgaXMgYSBzZXJ2aWNlIHRoYXQgbWFuYWdlcyB1c2VyIGNvbnRleHRzLhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2x1c3Rlci9CTgoYY2xvdWQuYWxwaGF1cy5hcGkubHVzdGVyQgtMdXN0ZXJQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL2x1c3RlcmIGcHJvdG8z", [space_pb_1.file_api_luster_space, annotations_pb_1.file_google_api_annotations, field_behavior_pb_1.file_google_api_field_behavior, wkt_1.file_google_protobuf_empty, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
 /**
  * Describes the message blueapi.luster.v1.ReadSpacesRequest.
  * Use `create(ReadSpacesRequestSchema)` to create a new message.
  */
 exports.ReadSpacesRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_luster_v1_luster, 0);
+/**
+ * Describes the message blueapi.luster.v1.GetSpaceRequest.
+ * Use `create(GetSpaceRequestSchema)` to create a new message.
+ */
+exports.GetSpaceRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_luster_v1_luster, 1);
+/**
+ * Describes the message blueapi.luster.v1.CreateSpaceRequest.
+ * Use `create(CreateSpaceRequestSchema)` to create a new message.
+ */
+exports.CreateSpaceRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_luster_v1_luster, 2);
+/**
+ * Describes the message blueapi.luster.v1.UpdateSpaceRequest.
+ * Use `create(UpdateSpaceRequestSchema)` to create a new message.
+ */
+exports.UpdateSpaceRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_luster_v1_luster, 3);
+/**
+ * Describes the message blueapi.luster.v1.DeleteSpaceRequest.
+ * Use `create(DeleteSpaceRequestSchema)` to create a new message.
+ */
+exports.DeleteSpaceRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_luster_v1_luster, 4);
 /**
  * Luster service definition.
  *
