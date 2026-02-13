@@ -4,10 +4,15 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { SpaceSchema } from "../../api/luster/space_pb";
+import type { Space, SpaceSchema } from "../../api/luster/space_pb";
 import { file_api_luster_space } from "../../api/luster/space_pb";
+import type { Context, ContextSchema } from "../../api/luster/context_pb";
+import { file_api_luster_context } from "../../api/luster/context_pb";
+import type { Comment, CommentSchema } from "../../api/luster/comment_pb";
+import { file_api_luster_comment } from "../../api/luster/comment_pb";
+import type { LabelSchema } from "../../api/luster/label_pb";
+import { file_api_luster_label } from "../../api/luster/label_pb";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
-import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
 import type { EmptySchema } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_empty } from "@bufbuild/protobuf/wkt";
 import { file_protoc_gen_openapiv2_options_annotations } from "../../protoc-gen-openapiv2/options/annotations_pb";
@@ -17,7 +22,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file luster/v1/luster.proto.
  */
 export const file_luster_v1_luster: GenFile = /*@__PURE__*/
-  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdCIRCg9HZXRTcGFjZVJlcXVlc3QiFAoSQ3JlYXRlU3BhY2VSZXF1ZXN0IhQKElVwZGF0ZVNwYWNlUmVxdWVzdCIUChJEZWxldGVTcGFjZVJlcXVlc3Qy0AUKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRq4AZJBtAESRShBTFBIQSkgTHVzdGVyIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2x1c3RlchprCi9MdXN0ZXIgaXMgYSBzZXJ2aWNlIHRoYXQgbWFuYWdlcyB1c2VyIGNvbnRleHRzLhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2x1c3Rlci9CTgoYY2xvdWQuYWxwaGF1cy5hcGkubHVzdGVyQgtMdXN0ZXJQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL2x1c3RlcmIGcHJvdG8z", [file_api_luster_space, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdCIdCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkiNwoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkiIAoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIiAKEkRlbGV0ZVNwYWNlUmVxdWVzdBIKCgJpZBgBIAEoCSIVChNSZWFkQ29udGV4dHNSZXF1ZXN0Ih8KEUdldENvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIpoBChJHZXRDb250ZXh0UmVzcG9uc2USKAoFc3BhY2UYASABKAsyGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2USLAoHY29udGV4dBgCIAEoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0EiwKB2NvbW1lbnQYAyADKAsyGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29tbWVudCI2ChRDcmVhdGVDb250ZXh0UmVxdWVzdBINCgV0aXRsZRgBIAEoCRIPCgdjb250ZW50GAIgASgJIiIKFFVwZGF0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIiIKFERlbGV0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIjoKG0NyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIPCgdjb250ZW50GAIgASgJIjwKG1VwZGF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIRCgljb21tZW50SWQYAiABKAkiPAobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhEKCWNvbW1lbnRJZBgCIAEoCSJGChJDcmVhdGVMYWJlbFJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVjb2xvchgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCTKxDgoGTHVzdGVyEmsKClJlYWRTcGFjZXMSJC5ibHVlYXBpLmx1c3Rlci52MS5SZWFkU3BhY2VzUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIagtPkkwIUOgEqIg8vdjEvc3BhY2VzOnJlYWQwARJiCghHZXRTcGFjZRIiLmJsdWVhcGkubHVzdGVyLnYxLkdldFNwYWNlUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIXgtPkkwIREg8vdjEvc3BhY2VzL3tpZH0SZgoLQ3JlYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiFYLT5JMCDzoBKiIKL3YxL3NwYWNlcxJrCgtVcGRhdGVTcGFjZRIlLmJsdWVhcGkubHVzdGVyLnYxLlVwZGF0ZVNwYWNlUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIagtPkkwIUOgEqGg8vdjEvc3BhY2VzL3tpZH0SZQoLRGVsZXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVTcGFjZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiF4LT5JMCESoPL3YxL3NwYWNlcy97aWR9EnMKDFJlYWRDb250ZXh0cxImLmJsdWVhcGkubHVzdGVyLnYxLlJlYWRDb250ZXh0c1JlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIcgtPkkwIWOgEqIhEvdjEvY29udGV4dHM6cmVhZDABEnQKCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIZgtPkkwITEhEvdjEvY29udGV4dHMve2lkfRJuCg1DcmVhdGVDb250ZXh0EicuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dFJlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIXgtPkkwIROgEqIgwvdjEvY29udGV4dHMScwoNVXBkYXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLlVwZGF0ZUNvbnRleHRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiHILT5JMCFjoBKhoRL3YxL2NvbnRleHRzL3tpZH0SawoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhmC0+STAhMqES92MS9jb250ZXh0cy97aWR9EokBChRDcmVhdGVDb250ZXh0Q29tbWVudBIuLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IiSC0+STAh46ASoiGS92MS9jb250ZXh0cy97aWR9L2NvbW1lbnQSlQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiMILT5JMCKjoBKholL3YxL2NvbnRleHRzL3tpZH0vY29tbWVudC97Y29tbWVudElkfRKNAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiLYLT5JMCJyolL3YxL2NvbnRleHRzL3tpZH0vY29tbWVudC97Y29tbWVudElkfRJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwauAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * Request message for the Luster.ReadSpaces rpc.
@@ -40,6 +45,12 @@ export const ReadSpacesRequestSchema: GenMessage<ReadSpacesRequest> = /*@__PURE_
  * @generated from message blueapi.luster.v1.GetSpaceRequest
  */
 export type GetSpaceRequest = Message<"blueapi.luster.v1.GetSpaceRequest"> & {
+  /**
+   * the space id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
 };
 
 /**
@@ -55,6 +66,19 @@ export const GetSpaceRequestSchema: GenMessage<GetSpaceRequest> = /*@__PURE__*/
  * @generated from message blueapi.luster.v1.CreateSpaceRequest
  */
 export type CreateSpaceRequest = Message<"blueapi.luster.v1.CreateSpaceRequest"> & {
+  /**
+   * the space name.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * the space description.
+   *
+   * @generated from field: string description = 2;
+   */
+  description: string;
 };
 
 /**
@@ -70,6 +94,12 @@ export const CreateSpaceRequestSchema: GenMessage<CreateSpaceRequest> = /*@__PUR
  * @generated from message blueapi.luster.v1.UpdateSpaceRequest
  */
 export type UpdateSpaceRequest = Message<"blueapi.luster.v1.UpdateSpaceRequest"> & {
+  /**
+   * the space id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
 };
 
 /**
@@ -85,6 +115,12 @@ export const UpdateSpaceRequestSchema: GenMessage<UpdateSpaceRequest> = /*@__PUR
  * @generated from message blueapi.luster.v1.DeleteSpaceRequest
  */
 export type DeleteSpaceRequest = Message<"blueapi.luster.v1.DeleteSpaceRequest"> & {
+  /**
+   * the space id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
 };
 
 /**
@@ -95,6 +131,260 @@ export const DeleteSpaceRequestSchema: GenMessage<DeleteSpaceRequest> = /*@__PUR
   messageDesc(file_luster_v1_luster, 4);
 
 /**
+ * Request message for the Luster.ReadContexts rpc.
+ *
+ * @generated from message blueapi.luster.v1.ReadContextsRequest
+ */
+export type ReadContextsRequest = Message<"blueapi.luster.v1.ReadContextsRequest"> & {
+};
+
+/**
+ * Describes the message blueapi.luster.v1.ReadContextsRequest.
+ * Use `create(ReadContextsRequestSchema)` to create a new message.
+ */
+export const ReadContextsRequestSchema: GenMessage<ReadContextsRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 5);
+
+/**
+ * Request message for the Luster.GetContext rpc.
+ *
+ * @generated from message blueapi.luster.v1.GetContextRequest
+ */
+export type GetContextRequest = Message<"blueapi.luster.v1.GetContextRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.GetContextRequest.
+ * Use `create(GetContextRequestSchema)` to create a new message.
+ */
+export const GetContextRequestSchema: GenMessage<GetContextRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 6);
+
+/**
+ * Response message for the Luster.GetContextResponse rpc.
+ *
+ * @generated from message blueapi.luster.v1.GetContextResponse
+ */
+export type GetContextResponse = Message<"blueapi.luster.v1.GetContextResponse"> & {
+  /**
+   * @generated from field: blueapi.api.luster.Space space = 1;
+   */
+  space?: Space;
+
+  /**
+   * @generated from field: blueapi.api.luster.Context context = 2;
+   */
+  context?: Context;
+
+  /**
+   * @generated from field: repeated blueapi.api.luster.Comment comment = 3;
+   */
+  comment: Comment[];
+};
+
+/**
+ * Describes the message blueapi.luster.v1.GetContextResponse.
+ * Use `create(GetContextResponseSchema)` to create a new message.
+ */
+export const GetContextResponseSchema: GenMessage<GetContextResponse> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 7);
+
+/**
+ * Request message for the Luster.CreateContext rpc.
+ *
+ * @generated from message blueapi.luster.v1.CreateContextRequest
+ */
+export type CreateContextRequest = Message<"blueapi.luster.v1.CreateContextRequest"> & {
+  /**
+   * The context title.
+   *
+   * @generated from field: string title = 1;
+   */
+  title: string;
+
+  /**
+   * The context content.
+   *
+   * @generated from field: string content = 2;
+   */
+  content: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.CreateContextRequest.
+ * Use `create(CreateContextRequestSchema)` to create a new message.
+ */
+export const CreateContextRequestSchema: GenMessage<CreateContextRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 8);
+
+/**
+ * Request message for the Luster.UpdateContext rpc.
+ *
+ * @generated from message blueapi.luster.v1.UpdateContextRequest
+ */
+export type UpdateContextRequest = Message<"blueapi.luster.v1.UpdateContextRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.UpdateContextRequest.
+ * Use `create(UpdateContextRequestSchema)` to create a new message.
+ */
+export const UpdateContextRequestSchema: GenMessage<UpdateContextRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 9);
+
+/**
+ * Request message for the Luster.DeleteContext rpc.
+ *
+ * @generated from message blueapi.luster.v1.DeleteContextRequest
+ */
+export type DeleteContextRequest = Message<"blueapi.luster.v1.DeleteContextRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.DeleteContextRequest.
+ * Use `create(DeleteContextRequestSchema)` to create a new message.
+ */
+export const DeleteContextRequestSchema: GenMessage<DeleteContextRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 10);
+
+/**
+ * Request message for the Luster.CreateContextComment rpc.
+ *
+ * @generated from message blueapi.luster.v1.CreateContextCommentRequest
+ */
+export type CreateContextCommentRequest = Message<"blueapi.luster.v1.CreateContextCommentRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * The comment content.
+   *
+   * @generated from field: string content = 2;
+   */
+  content: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.CreateContextCommentRequest.
+ * Use `create(CreateContextCommentRequestSchema)` to create a new message.
+ */
+export const CreateContextCommentRequestSchema: GenMessage<CreateContextCommentRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 11);
+
+/**
+ * Request message for the Luster.UpdateContextComment rpc.
+ *
+ * @generated from message blueapi.luster.v1.UpdateContextCommentRequest
+ */
+export type UpdateContextCommentRequest = Message<"blueapi.luster.v1.UpdateContextCommentRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * the context comment id.
+   *
+   * @generated from field: string commentId = 2;
+   */
+  commentId: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.UpdateContextCommentRequest.
+ * Use `create(UpdateContextCommentRequestSchema)` to create a new message.
+ */
+export const UpdateContextCommentRequestSchema: GenMessage<UpdateContextCommentRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 12);
+
+/**
+ * Request message for the Luster.DeleteContextComment rpc.
+ *
+ * @generated from message blueapi.luster.v1.DeleteContextCommentRequest
+ */
+export type DeleteContextCommentRequest = Message<"blueapi.luster.v1.DeleteContextCommentRequest"> & {
+  /**
+   * the context id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * the context comment id.
+   *
+   * @generated from field: string commentId = 2;
+   */
+  commentId: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.DeleteContextCommentRequest.
+ * Use `create(DeleteContextCommentRequestSchema)` to create a new message.
+ */
+export const DeleteContextCommentRequestSchema: GenMessage<DeleteContextCommentRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 13);
+
+/**
+ * Request message for the Luster.CreateLabel rpc.
+ *
+ * @generated from message blueapi.luster.v1.CreateLabelRequest
+ */
+export type CreateLabelRequest = Message<"blueapi.luster.v1.CreateLabelRequest"> & {
+  /**
+   * The label name.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * The label color.
+   *
+   * @generated from field: string color = 2;
+   */
+  color: string;
+
+  /**
+   * The label description.
+   *
+   * @generated from field: string description = 3;
+   */
+  description: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.CreateLabelRequest.
+ * Use `create(CreateLabelRequestSchema)` to create a new message.
+ */
+export const CreateLabelRequestSchema: GenMessage<CreateLabelRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 14);
+
+/**
  * Luster service definition.
  *
  * @generated from service blueapi.luster.v1.Luster
@@ -102,6 +392,7 @@ export const DeleteSpaceRequestSchema: GenMessage<DeleteSpaceRequest> = /*@__PUR
 export const Luster: GenService<{
   /**
    * (ALPHA) Reads spaces.
+   * スペースの読み取り。
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadSpaces
    */
@@ -112,6 +403,7 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Gets space.
+   * スペースの取得。
    *
    * @generated from rpc blueapi.luster.v1.Luster.GetSpace
    */
@@ -122,6 +414,7 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Creates space.
+   * スペースの作成。
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateSpace
    */
@@ -132,6 +425,7 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Updates space.
+   * スペースの更新。
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateSpace
    */
@@ -142,6 +436,7 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Deletes space.
+   * スペースの削除。 削除する場合はスペース内で作成したコンテクストも削除され閲覧できなくなります。
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteSpace
    */
@@ -149,6 +444,97 @@ export const Luster: GenService<{
     methodKind: "unary";
     input: typeof DeleteSpaceRequestSchema;
     output: typeof EmptySchema;
+  },
+  /**
+   * (ALPHA) Reads contexts.
+   * スペースの読み取り。
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.ReadContexts
+   */
+  readContexts: {
+    methodKind: "server_streaming";
+    input: typeof ReadContextsRequestSchema;
+    output: typeof ContextSchema;
+  },
+  /**
+   * (ALPHA) Gets context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.GetContext
+   */
+  getContext: {
+    methodKind: "unary";
+    input: typeof GetContextRequestSchema;
+    output: typeof GetContextResponseSchema;
+  },
+  /**
+   * (ALPHA) Creates context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.CreateContext
+   */
+  createContext: {
+    methodKind: "unary";
+    input: typeof CreateContextRequestSchema;
+    output: typeof ContextSchema;
+  },
+  /**
+   * (ALPHA) Updates context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.UpdateContext
+   */
+  updateContext: {
+    methodKind: "unary";
+    input: typeof UpdateContextRequestSchema;
+    output: typeof ContextSchema;
+  },
+  /**
+   * (ALPHA) Deletes context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.DeleteContext
+   */
+  deleteContext: {
+    methodKind: "unary";
+    input: typeof DeleteContextRequestSchema;
+    output: typeof EmptySchema;
+  },
+  /**
+   * (ALPHA) Creates comment in context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.CreateContextComment
+   */
+  createContextComment: {
+    methodKind: "unary";
+    input: typeof CreateContextCommentRequestSchema;
+    output: typeof CommentSchema;
+  },
+  /**
+   * (ALPHA) Updates comment in context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.UpdateContextComment
+   */
+  updateContextComment: {
+    methodKind: "unary";
+    input: typeof UpdateContextCommentRequestSchema;
+    output: typeof CommentSchema;
+  },
+  /**
+   * (ALPHA) Deletes comment in context.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.DeleteContextComment
+   */
+  deleteContextComment: {
+    methodKind: "unary";
+    input: typeof DeleteContextCommentRequestSchema;
+    output: typeof EmptySchema;
+  },
+  /**
+   * (ALPHA) Creates label.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.CreateLabel
+   */
+  createLabel: {
+    methodKind: "unary";
+    input: typeof CreateLabelRequestSchema;
+    output: typeof LabelSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_luster_v1_luster, 0);
