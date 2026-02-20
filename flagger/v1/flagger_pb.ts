@@ -13,21 +13,21 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flagger/v1/flagger.proto.
  */
 export const file_flagger_v1_flagger: GenFile = /*@__PURE__*/
-  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSI5ChVHZXRCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJIicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyygIKB0ZsYWdnZXISoAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIjeC0+STAjESLy92MS9uYW1lc3BhY2Uve25hbWVzcGFjZV9pZH0vZmxhZ3MvYm9vbGVhbi97aWR9GpsBkkGXARJFKEFMUEhBKSBGbGFnIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL2ZsYWdnZ2VyGk4KElNlcnZpY2UgZGVmaW5pdGlvbhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2x1c3Rlci9CUQoZY2xvdWQuYWxwaGF1cy5hcGkuZmxhZ2dlckIMRmxhZ2dlclByb3RvWiZnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvZmxhZ2dlcmIGcHJvdG8z", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSI5ChVHZXRCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJIicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyyQIKB0ZsYWdnZXISqAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIj+C0+STAjkSNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * @generated from message blueapi.flagger.v1.GetBooleanFlagRequest
  */
 export type GetBooleanFlagRequest = Message<"blueapi.flagger.v1.GetBooleanFlagRequest"> & {
   /**
-   * Required. The namespace ID for the flag.
+   * Required. The namespaceId that the flag belongs to.
    *
    * @generated from field: string namespace_id = 1;
    */
   namespaceId: string;
 
   /**
-   * Required. The flag ID.
+   * Required. The flagId
    *
    * @generated from field: string id = 2;
    */
@@ -61,7 +61,7 @@ export const GetBooleanFlagResponseSchema: GenMessage<GetBooleanFlagResponse> = 
   messageDesc(file_flagger_v1_flagger, 1);
 
 /**
- * Flag service definition.
+ * Flagger service definition.
  *
  * @generated from service blueapi.flagger.v1.Flagger
  */
