@@ -13,12 +13,12 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flagger/v1/flagger.proto.
  */
 export const file_flagger_v1_flagger: GenFile = /*@__PURE__*/
-  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLFAQoVR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0EhQKDG5hbWVzcGFjZV9pZBgBIAEoCRIKCgJpZBgCIAEoCRIUCgdzZWdtZW50GAMgASgJSACIAQESPQoCa3YYBCADKAsyMS5ibHVlYXBpLmZsYWdnZXIudjEuR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0Lkt2RW50cnkaKQoHS3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCF9zZWdtZW50IicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyyQIKB0ZsYWdnZXISqAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIj+C0+STAjkSNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLPAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARJCCgJrdhgEIAMoCzI2LmJsdWVhcGkuZmxhZ2dlci52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCghfc2VnbWVudCIsChtFdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgy2wIKB0ZsYWdnZXISugEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QaLy5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1Jlc3BvbnNlIkKC0+STAjw6ASoiNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
- * @generated from message blueapi.flagger.v1.GetBooleanFlagRequest
+ * @generated from message blueapi.flagger.v1.EvaluateBooleanFlagRequest
  */
-export type GetBooleanFlagRequest = Message<"blueapi.flagger.v1.GetBooleanFlagRequest"> & {
+export type EvaluateBooleanFlagRequest = Message<"blueapi.flagger.v1.EvaluateBooleanFlagRequest"> & {
   /**
    * Required. The namespaceId that the flag belongs to.
    *
@@ -49,16 +49,16 @@ export type GetBooleanFlagRequest = Message<"blueapi.flagger.v1.GetBooleanFlagRe
 };
 
 /**
- * Describes the message blueapi.flagger.v1.GetBooleanFlagRequest.
- * Use `create(GetBooleanFlagRequestSchema)` to create a new message.
+ * Describes the message blueapi.flagger.v1.EvaluateBooleanFlagRequest.
+ * Use `create(EvaluateBooleanFlagRequestSchema)` to create a new message.
  */
-export const GetBooleanFlagRequestSchema: GenMessage<GetBooleanFlagRequest> = /*@__PURE__*/
+export const EvaluateBooleanFlagRequestSchema: GenMessage<EvaluateBooleanFlagRequest> = /*@__PURE__*/
   messageDesc(file_flagger_v1_flagger, 0);
 
 /**
- * @generated from message blueapi.flagger.v1.GetBooleanFlagResponse
+ * @generated from message blueapi.flagger.v1.EvaluateBooleanFlagResponse
  */
-export type GetBooleanFlagResponse = Message<"blueapi.flagger.v1.GetBooleanFlagResponse"> & {
+export type EvaluateBooleanFlagResponse = Message<"blueapi.flagger.v1.EvaluateBooleanFlagResponse"> & {
   /**
    * The boolean value of the flag.
    *
@@ -68,10 +68,10 @@ export type GetBooleanFlagResponse = Message<"blueapi.flagger.v1.GetBooleanFlagR
 };
 
 /**
- * Describes the message blueapi.flagger.v1.GetBooleanFlagResponse.
- * Use `create(GetBooleanFlagResponseSchema)` to create a new message.
+ * Describes the message blueapi.flagger.v1.EvaluateBooleanFlagResponse.
+ * Use `create(EvaluateBooleanFlagResponseSchema)` to create a new message.
  */
-export const GetBooleanFlagResponseSchema: GenMessage<GetBooleanFlagResponse> = /*@__PURE__*/
+export const EvaluateBooleanFlagResponseSchema: GenMessage<EvaluateBooleanFlagResponse> = /*@__PURE__*/
   messageDesc(file_flagger_v1_flagger, 1);
 
 /**
@@ -81,14 +81,14 @@ export const GetBooleanFlagResponseSchema: GenMessage<GetBooleanFlagResponse> = 
  */
 export const Flagger: GenService<{
   /**
-   * GetBooleanFlag returns the boolean value of a flag for a given namespace.
+   * EvaluateBooleanFlag returns the boolean value of a flag for a given namespace.
    *
-   * @generated from rpc blueapi.flagger.v1.Flagger.GetBooleanFlag
+   * @generated from rpc blueapi.flagger.v1.Flagger.EvaluateBooleanFlag
    */
-  getBooleanFlag: {
+  evaluateBooleanFlag: {
     methodKind: "unary";
-    input: typeof GetBooleanFlagRequestSchema;
-    output: typeof GetBooleanFlagResponseSchema;
+    input: typeof EvaluateBooleanFlagRequestSchema;
+    output: typeof EvaluateBooleanFlagResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_flagger_v1_flagger, 0);
