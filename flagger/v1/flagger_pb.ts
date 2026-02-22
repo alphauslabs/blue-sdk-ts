@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flagger/v1/flagger.proto.
  */
 export const file_flagger_v1_flagger: GenFile = /*@__PURE__*/
-  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSI5ChVHZXRCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJIicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyyQIKB0ZsYWdnZXISqAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIj+C0+STAjkSNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLFAQoVR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0EhQKDG5hbWVzcGFjZV9pZBgBIAEoCRIKCgJpZBgCIAEoCRIUCgdzZWdtZW50GAMgASgJSACIAQESPQoCa3YYBCADKAsyMS5ibHVlYXBpLmZsYWdnZXIudjEuR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0Lkt2RW50cnkaKQoHS3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCF9zZWdtZW50IicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyyQIKB0ZsYWdnZXISqAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIj+C0+STAjkSNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * @generated from message blueapi.flagger.v1.GetBooleanFlagRequest
@@ -32,6 +32,20 @@ export type GetBooleanFlagRequest = Message<"blueapi.flagger.v1.GetBooleanFlagRe
    * @generated from field: string id = 2;
    */
   id: string;
+
+  /**
+   * Optional. The segment to evaluate the flag for. If not provided, the default value of the flag will be returned.
+   *
+   * @generated from field: optional string segment = 3;
+   */
+  segment?: string;
+
+  /**
+   * Optional. Key-value pairs for additional context when evaluating the flag. Must be provided if segment is present.
+   *
+   * @generated from field: map<string, string> kv = 4;
+   */
+  kv: { [key: string]: string };
 };
 
 /**
@@ -67,6 +81,8 @@ export const GetBooleanFlagResponseSchema: GenMessage<GetBooleanFlagResponse> = 
  */
 export const Flagger: GenService<{
   /**
+   * GetBooleanFlag returns the boolean value of a flag for a given namespace.
+   *
    * @generated from rpc blueapi.flagger.v1.Flagger.GetBooleanFlag
    */
   getBooleanFlag: {
