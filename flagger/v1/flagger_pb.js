@@ -3,7 +3,7 @@
 // @generated from file flagger/v1/flagger.proto (package blueapi.flagger.v1, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Flagger = exports.GetBooleanFlagResponseSchema = exports.GetBooleanFlagRequestSchema = exports.file_flagger_v1_flagger = void 0;
+exports.Flagger = exports.EvaluateBooleanFlagResponseSchema = exports.EvaluateBooleanFlagRequestSchema = exports.file_flagger_v1_flagger = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const annotations_pb_1 = require("../../google/api/annotations_pb");
 const wkt_1 = require("@bufbuild/protobuf/wkt");
@@ -11,17 +11,17 @@ const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations
 /**
  * Describes the file flagger/v1/flagger.proto.
  */
-exports.file_flagger_v1_flagger = (0, codegenv2_1.fileDesc)("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLFAQoVR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0EhQKDG5hbWVzcGFjZV9pZBgBIAEoCRIKCgJpZBgCIAEoCRIUCgdzZWdtZW50GAMgASgJSACIAQESPQoCa3YYBCADKAsyMS5ibHVlYXBpLmZsYWdnZXIudjEuR2V0Qm9vbGVhbkZsYWdSZXF1ZXN0Lkt2RW50cnkaKQoHS3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQgoKCF9zZWdtZW50IicKFkdldEJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgyyQIKB0ZsYWdnZXISqAEKDkdldEJvb2xlYW5GbGFnEikuYmx1ZWFwaS5mbGFnZ2VyLnYxLkdldEJvb2xlYW5GbGFnUmVxdWVzdBoqLmJsdWVhcGkuZmxhZ2dlci52MS5HZXRCb29sZWFuRmxhZ1Jlc3BvbnNlIj+C0+STAjkSNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [annotations_pb_1.file_google_api_annotations, wkt_1.file_google_protobuf_empty, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+exports.file_flagger_v1_flagger = (0, codegenv2_1.fileDesc)("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLPAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARJCCgJrdhgEIAMoCzI2LmJsdWVhcGkuZmxhZ2dlci52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCghfc2VnbWVudCIsChtFdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgy2wIKB0ZsYWdnZXISugEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QaLy5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1Jlc3BvbnNlIkKC0+STAjw6ASoiNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [annotations_pb_1.file_google_api_annotations, wkt_1.file_google_protobuf_empty, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
 /**
- * Describes the message blueapi.flagger.v1.GetBooleanFlagRequest.
- * Use `create(GetBooleanFlagRequestSchema)` to create a new message.
+ * Describes the message blueapi.flagger.v1.EvaluateBooleanFlagRequest.
+ * Use `create(EvaluateBooleanFlagRequestSchema)` to create a new message.
  */
-exports.GetBooleanFlagRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_flagger_v1_flagger, 0);
+exports.EvaluateBooleanFlagRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_flagger_v1_flagger, 0);
 /**
- * Describes the message blueapi.flagger.v1.GetBooleanFlagResponse.
- * Use `create(GetBooleanFlagResponseSchema)` to create a new message.
+ * Describes the message blueapi.flagger.v1.EvaluateBooleanFlagResponse.
+ * Use `create(EvaluateBooleanFlagResponseSchema)` to create a new message.
  */
-exports.GetBooleanFlagResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_flagger_v1_flagger, 1);
+exports.EvaluateBooleanFlagResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_flagger_v1_flagger, 1);
 /**
  * Flagger service definition.
  *
