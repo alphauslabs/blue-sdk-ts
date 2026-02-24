@@ -13,7 +13,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file flagger/v1/flagger.proto.
  */
 export const file_flagger_v1_flagger: GenFile = /*@__PURE__*/
-  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLPAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARJCCgJrdhgEIAMoCzI2LmJsdWVhcGkuZmxhZ2dlci52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCghfc2VnbWVudCIsChtFdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgy2wIKB0ZsYWdnZXISugEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QaLy5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1Jlc3BvbnNlIkKC0+STAjw6ASoiNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChhmbGFnZ2VyL3YxL2ZsYWdnZXIucHJvdG8SEmJsdWVhcGkuZmxhZ2dlci52MSLPAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARJCCgJrdhgEIAMoCzI2LmJsdWVhcGkuZmxhZ2dlci52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVxdWVzdC5LdkVudHJ5GikKB0t2RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIKCghfc2VnbWVudCIsChtFdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgizwEKGkV2YWx1YXRlVmFyaWFudEZsYWdSZXF1ZXN0EhQKDG5hbWVzcGFjZV9pZBgBIAEoCRIKCgJpZBgCIAEoCRIUCgdzZWdtZW50GAMgASgJSACIAQESQgoCa3YYBCADKAsyNi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1JlcXVlc3QuS3ZFbnRyeRopCgdLdkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCgoIX3NlZ21lbnQitAEKG0V2YWx1YXRlVmFyaWFudEZsYWdSZXNwb25zZRINCgV2YWx1ZRgBIAEoCRJTCgphdHRhY2htZW50GAIgAygLMj8uYmx1ZWFwaS5mbGFnZ2VyLnYxLkV2YWx1YXRlVmFyaWFudEZsYWdSZXNwb25zZS5BdHRhY2htZW50RW50cnkaMQoPQXR0YWNobWVudEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEymAQKB0ZsYWdnZXISugEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QaLy5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1Jlc3BvbnNlIkKC0+STAjw6ASoiNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy9ib29sZWFuL3tpZH0SugEKE0V2YWx1YXRlVmFyaWFudEZsYWcSLi5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1JlcXVlc3QaLy5ibHVlYXBpLmZsYWdnZXIudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1Jlc3BvbnNlIkKC0+STAjw6ASoiNy9mbGFnZ2VyL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9mbGFncy92YXJpYW50L3tpZH0akgGSQY4BEjwoQUxQSEEpIEZsYWcgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUaTgoSU2VydmljZSBkZWZpbml0aW9uEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vZmxhZ2dlckJRChljbG91ZC5hbHBoYXVzLmFwaS5mbGFnZ2VyQgxGbGFnZ2VyUHJvdG9aJmdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9mbGFnZ2VyYgZwcm90bzM", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * @generated from message blueapi.flagger.v1.EvaluateBooleanFlagRequest
@@ -75,6 +75,72 @@ export const EvaluateBooleanFlagResponseSchema: GenMessage<EvaluateBooleanFlagRe
   messageDesc(file_flagger_v1_flagger, 1);
 
 /**
+ * @generated from message blueapi.flagger.v1.EvaluateVariantFlagRequest
+ */
+export type EvaluateVariantFlagRequest = Message<"blueapi.flagger.v1.EvaluateVariantFlagRequest"> & {
+  /**
+   * Required. The namespaceId that the flag belongs to.
+   *
+   * @generated from field: string namespace_id = 1;
+   */
+  namespaceId: string;
+
+  /**
+   * Required. The flagId
+   *
+   * @generated from field: string id = 2;
+   */
+  id: string;
+
+  /**
+   * Optional. The segment to evaluate the flag for. If not provided, the default value of the flag will be returned.
+   *
+   * @generated from field: optional string segment = 3;
+   */
+  segment?: string;
+
+  /**
+   * Optional. Key-value pairs for additional context when evaluating the flag. Must be provided if segment is present.
+   *
+   * @generated from field: map<string, string> kv = 4;
+   */
+  kv: { [key: string]: string };
+};
+
+/**
+ * Describes the message blueapi.flagger.v1.EvaluateVariantFlagRequest.
+ * Use `create(EvaluateVariantFlagRequestSchema)` to create a new message.
+ */
+export const EvaluateVariantFlagRequestSchema: GenMessage<EvaluateVariantFlagRequest> = /*@__PURE__*/
+  messageDesc(file_flagger_v1_flagger, 2);
+
+/**
+ * @generated from message blueapi.flagger.v1.EvaluateVariantFlagResponse
+ */
+export type EvaluateVariantFlagResponse = Message<"blueapi.flagger.v1.EvaluateVariantFlagResponse"> & {
+  /**
+   * The variant value of the flag.
+   *
+   * @generated from field: string value = 1;
+   */
+  value: string;
+
+  /**
+   * Optional. The attachment attached to the returned variant.
+   *
+   * @generated from field: map<string, string> attachment = 2;
+   */
+  attachment: { [key: string]: string };
+};
+
+/**
+ * Describes the message blueapi.flagger.v1.EvaluateVariantFlagResponse.
+ * Use `create(EvaluateVariantFlagResponseSchema)` to create a new message.
+ */
+export const EvaluateVariantFlagResponseSchema: GenMessage<EvaluateVariantFlagResponse> = /*@__PURE__*/
+  messageDesc(file_flagger_v1_flagger, 3);
+
+/**
  * Flagger service definition.
  *
  * @generated from service blueapi.flagger.v1.Flagger
@@ -89,6 +155,16 @@ export const Flagger: GenService<{
     methodKind: "unary";
     input: typeof EvaluateBooleanFlagRequestSchema;
     output: typeof EvaluateBooleanFlagResponseSchema;
+  },
+  /**
+   * EvaluateVariantFlag returns the variant value of a flag for a given namespace.
+   *
+   * @generated from rpc blueapi.flagger.v1.Flagger.EvaluateVariantFlag
+   */
+  evaluateVariantFlag: {
+    methodKind: "unary";
+    input: typeof EvaluateVariantFlagRequestSchema;
+    output: typeof EvaluateVariantFlagResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_flagger_v1_flagger, 0);
