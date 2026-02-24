@@ -5,15 +5,15 @@
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
-import { file_google_protobuf_empty } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_empty, file_google_protobuf_struct } from "@bufbuild/protobuf/wkt";
 import { file_protoc_gen_openapiv2_options_annotations } from "../../protoc-gen-openapiv2/options/annotations_pb";
-import type { Message } from "@bufbuild/protobuf";
+import type { JsonObject, Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file flags/v1/flags.proto.
  */
 export const file_flags_v1_flags: GenFile = /*@__PURE__*/
-  fileDesc("ChRmbGFncy92MS9mbGFncy5wcm90bxIQYmx1ZWFwaS5mbGFncy52MSLNAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARJACgJrdhgEIAMoCzI0LmJsdWVhcGkuZmxhZ3MudjEuRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QuS3ZFbnRyeRopCgdLdkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFCCgoIX3NlZ21lbnQiLAobRXZhbHVhdGVCb29sZWFuRmxhZ1Jlc3BvbnNlEg0KBXZhbHVlGAEgASgIIqsBChpFdmFsdWF0ZVZhcmlhbnRGbGFnUmVxdWVzdBIUCgxuYW1lc3BhY2VfaWQYASABKAkSCgoCaWQYAiABKAkSQAoCa3YYAyADKAsyNC5ibHVlYXBpLmZsYWdzLnYxLkV2YWx1YXRlVmFyaWFudEZsYWdSZXF1ZXN0Lkt2RW50cnkaKQoHS3ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIrIBChtFdmFsdWF0ZVZhcmlhbnRGbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAkSUQoKYXR0YWNobWVudBgCIAMoCzI9LmJsdWVhcGkuZmxhZ3MudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1Jlc3BvbnNlLkF0dGFjaG1lbnRFbnRyeRoxCg9BdHRhY2htZW50RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATKGBAoFRmxhZ3MSswEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLC5ibHVlYXBpLmZsYWdzLnYxLkV2YWx1YXRlQm9vbGVhbkZsYWdSZXF1ZXN0Gi0uYmx1ZWFwaS5mbGFncy52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2UiP4LT5JMCOToBKiI0L2ZsYWdzL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9ib29sZWFuL3tpZH06ZXZhbBKzAQoTRXZhbHVhdGVWYXJpYW50RmxhZxIsLmJsdWVhcGkuZmxhZ3MudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1JlcXVlc3QaLS5ibHVlYXBpLmZsYWdzLnYxLkV2YWx1YXRlVmFyaWFudEZsYWdSZXNwb25zZSI/gtPkkwI5OgEqIjQvZmxhZ3MvdjEvbmFtZXNwYWNlL3tuYW1lc3BhY2VfaWR9L3ZhcmlhbnQve2lkfTpldmFsGpABkkGMARI8KEFMUEhBKSBGbGFnIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlGkwKElNlcnZpY2UgZGVmaW5pdGlvbhI2aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2ZsYWdzQksKF2Nsb3VkLmFscGhhdXMuYXBpLmZsYWdzQgpGbGFnc1Byb3RvWiRnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvZmxhZ3NiBnByb3RvMw", [file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChRmbGFncy92MS9mbGFncy5wcm90bxIQYmx1ZWFwaS5mbGFncy52MSKNAQoaRXZhbHVhdGVCb29sZWFuRmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEhQKB3NlZ21lbnQYAyABKAlIAIgBARIrCgphdHRyaWJ1dGVzGAQgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEIKCghfc2VnbWVudCIsChtFdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2USDQoFdmFsdWUYASABKAgiawoaRXZhbHVhdGVWYXJpYW50RmxhZ1JlcXVlc3QSFAoMbmFtZXNwYWNlX2lkGAEgASgJEgoKAmlkGAIgASgJEisKCmF0dHJpYnV0ZXMYAyABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0IlkKG0V2YWx1YXRlVmFyaWFudEZsYWdSZXNwb25zZRINCgV2YWx1ZRgBIAEoCRIrCgphdHRhY2htZW50GAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdDKGBAoFRmxhZ3MSswEKE0V2YWx1YXRlQm9vbGVhbkZsYWcSLC5ibHVlYXBpLmZsYWdzLnYxLkV2YWx1YXRlQm9vbGVhbkZsYWdSZXF1ZXN0Gi0uYmx1ZWFwaS5mbGFncy52MS5FdmFsdWF0ZUJvb2xlYW5GbGFnUmVzcG9uc2UiP4LT5JMCOToBKiI0L2ZsYWdzL3YxL25hbWVzcGFjZS97bmFtZXNwYWNlX2lkfS9ib29sZWFuL3tpZH06ZXZhbBKzAQoTRXZhbHVhdGVWYXJpYW50RmxhZxIsLmJsdWVhcGkuZmxhZ3MudjEuRXZhbHVhdGVWYXJpYW50RmxhZ1JlcXVlc3QaLS5ibHVlYXBpLmZsYWdzLnYxLkV2YWx1YXRlVmFyaWFudEZsYWdSZXNwb25zZSI/gtPkkwI5OgEqIjQvZmxhZ3MvdjEvbmFtZXNwYWNlL3tuYW1lc3BhY2VfaWR9L3ZhcmlhbnQve2lkfTpldmFsGpABkkGMARI8KEFMUEhBKSBGbGFnIEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlGkwKElNlcnZpY2UgZGVmaW5pdGlvbhI2aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL2ZsYWdzQksKF2Nsb3VkLmFscGhhdXMuYXBpLmZsYWdzQgpGbGFnc1Byb3RvWiRnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvZmxhZ3NiBnByb3RvMw", [file_google_api_annotations, file_google_protobuf_empty, file_google_protobuf_struct, file_protoc_gen_openapiv2_options_annotations]);
 
 /**
  * @generated from message blueapi.flags.v1.EvaluateBooleanFlagRequest
@@ -43,9 +43,9 @@ export type EvaluateBooleanFlagRequest = Message<"blueapi.flags.v1.EvaluateBoole
   /**
    * Optional. Key-value pairs for additional context when evaluating the flag. Must be provided if segment is present.
    *
-   * @generated from field: map<string, string> kv = 4;
+   * @generated from field: google.protobuf.Struct attributes = 4;
    */
-  kv: { [key: string]: string };
+  attributes?: JsonObject;
 };
 
 /**
@@ -95,9 +95,9 @@ export type EvaluateVariantFlagRequest = Message<"blueapi.flags.v1.EvaluateVaria
   /**
    * Optional. Key-value pairs for additional context when evaluating the flag. 
    *
-   * @generated from field: map<string, string> kv = 3;
+   * @generated from field: google.protobuf.Struct attributes = 3;
    */
-  kv: { [key: string]: string };
+  attributes?: JsonObject;
 };
 
 /**
@@ -121,9 +121,9 @@ export type EvaluateVariantFlagResponse = Message<"blueapi.flags.v1.EvaluateVari
   /**
    * Optional. The attachment attached to the returned variant.
    *
-   * @generated from field: map<string, string> attachment = 2;
+   * @generated from field: google.protobuf.Struct attachment = 2;
    */
-  attachment: { [key: string]: string };
+  attachment?: JsonObject;
 };
 
 /**
