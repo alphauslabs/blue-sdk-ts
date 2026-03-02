@@ -3,14 +3,19 @@
 // @generated from file api/cover/role.proto (package blueapi.api.cover, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RoleSchema = exports.file_api_cover_role = void 0;
+exports.PolicySchema = exports.RoleSchema = exports.file_api_cover_role = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file api/cover/role.proto.
  */
-exports.file_api_cover_role = (0, codegenv2_1.fileDesc)("ChRhcGkvY292ZXIvcm9sZS5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIiTQoEUm9sZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhMKC3Blcm1pc3Npb25zGAMgAygJEhYKDmNvc3Rncm91cHNfaWRzGAQgAygJQl0KH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCDEFwaVJvbGVQcm90b1osZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvY292ZXJiBnByb3RvMw");
+exports.file_api_cover_role = (0, codegenv2_1.fileDesc)("ChRhcGkvY292ZXIvcm9sZS5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIiZQoEUm9sZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEisKCHBvbGljaWVzGAMgAygLMhkuYmx1ZWFwaS5hcGkuY292ZXIuUG9saWN5EhYKDmNvc3Rncm91cHNfaWRzGAQgAygJImEKBlBvbGljeRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhgKC2Rlc2NyaXB0aW9uGAMgASgJSACIAQESEwoLcGVybWlzc2lvbnMYBCADKAlCDgoMX2Rlc2NyaXB0aW9uQl0KH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCDEFwaVJvbGVQcm90b1osZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvY292ZXJiBnByb3RvMw");
 /**
  * Describes the message blueapi.api.cover.Role.
  * Use `create(RoleSchema)` to create a new message.
  */
 exports.RoleSchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_role, 0);
+/**
+ * Describes the message blueapi.api.cover.Policy.
+ * Use `create(PolicySchema)` to create a new message.
+ */
+exports.PolicySchema = (0, codegenv2_1.messageDesc)(exports.file_api_cover_role, 1);
