@@ -4,124 +4,16 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
-import { file_google_protobuf_struct } from "@bufbuild/protobuf/wkt";
-import type { JsonObject, Message } from "@bufbuild/protobuf";
+import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file api/cover/user.proto.
  */
 export const file_api_cover_user: GenFile = /*@__PURE__*/
-  fileDesc("ChRhcGkvY292ZXIvdXNlci5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIi3AIKBFVzZXISCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCRIrCgVyb2xlcxgEIAMoCzIcLmJsdWVhcGkuYXBpLmNvdmVyLlVzZXIuUm9sZRIrCgppbnZpdGVkX2J5GAUgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIUCgxsYXN0X3VwZGF0ZWQYBiABKAkSEgoKY3JlYXRlZF9vbhgHIAEoCRIOCgZhdmF0YXIYCCABKAkSEQoJYWN0aXZhdGVkGAkgASgIGoMBCgRSb2xlEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSOgoKY29zdGdyb3VwcxgDIAMoCzImLmJsdWVhcGkuYXBpLmNvdmVyLlVzZXIuUm9sZS5Db3N0R3JvdXAaJQoJQ29zdEdyb3VwEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkikAUKCFVzZXJEYXRhEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFZW1haWwYAyABKAkSDgoGYXZhdGFyGAQgASgJEgwKBGljb24YBSABKAkSEgoKY29sb3JUaGVtZRgGIAEoCRIPCgdpbml0aWFsGAcgASgJEhEKCWFjdGl2YXRlZBgIIAEoCBIPCgdpc0FkbWluGAkgASgIEhIKCmF0dHJpYnV0ZXMYCiADKAkSDgoGbG9jYWxlGAsgASgJEhAKCHRpbWVab25lGAwgASgJEhIKCnJlZ2lzdGVyZWQYDSABKAkSEgoKc3NvRW5hYmxlZBgOIAEoCBISCgptZmFFbmFibGVkGA8gASgIEhAKCGFwcFRoZW1lGBAgASgJEhAKCG1haW5WaWV3GBEgASgJEjYKCmNvc3RHcm91cHMYEiADKAsyIi5ibHVlYXBpLmFwaS5jb3Zlci5NZW1iZXJDb3N0R3JvdXASNAoJY3JlYXRlZEJ5GBMgASgLMiEuYmx1ZWFwaS5hcGkuY292ZXIuTWVtYmVyVXNlckRhdGESEQoJdXBkYXRlZEF0GBQgASgJEg0KBW9yZ0lkGBUgASgJEhcKD2lzUHJvZmlsaW5nRG9uZRgWIAEoCBIbChNwYXNzd29yZExhc3RSZW5ld2VkGBcgASgJEg8KB2lzT3duZXIYGCABKAgSDwoHaXNBdXRoMBgZIAEoCBIiChpyZWFkQ29zdEdyb3VwQ3JlYXRpb25Qb3B1cBgaIAEoCBIhChl1c2VOZXdDb3N0R3JvdXBDcmVhdGlvblVJGBsgASgIEhQKDGF1dG9UaW1lWm9uZRgcIAEoCBIVCg1pc0RlbW9BY2NvdW50GB0gASgIOgIYASKBAwoOTWVtYmVyVXNlckRhdGESCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCRIOCgZhdmF0YXIYBCABKAkSDAoEaWNvbhgFIAEoCRISCgpjb2xvclRoZW1lGAYgASgJEg8KB2luaXRpYWwYByABKAkSEQoJYWN0aXZhdGVkGAggASgIEg8KB2lzQWRtaW4YCSABKAgSEgoKYXR0cmlidXRlcxgKIAMoCRIOCgZsb2NhbGUYCyABKAkSEAoIdGltZVpvbmUYDCABKAkSEgoKcmVnaXN0ZXJlZBgNIAEoCRISCgpzc29FbmFibGVkGA4gASgIEhIKCm1mYUVuYWJsZWQYDyABKAgSEAoIYXBwVGhlbWUYECABKAkSEAoIbWFpblZpZXcYESABKAkSNgoKY29zdEdyb3VwcxgSIAMoCzIiLmJsdWVhcGkuYXBpLmNvdmVyLk1lbWJlckNvc3RHcm91cBIRCgl1cGRhdGVkQXQYEyABKAkilwEKD01lbWJlckNvc3RHcm91cBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEg0KBWltYWdlGAQgASgJEgwKBGljb24YBSABKAkSEgoKY29sb3JUaGVtZRgGIAEoCRIRCgljcmVhdGVkQXQYByABKAkSEQoJdXBkYXRlZEF0GAggASgJQmIKH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCEUFwaUNvdmVyVXNlclByb3RvWixnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9jb3ZlcmIGcHJvdG8z", [file_google_protobuf_struct]);
-
-/**
- * @generated from message blueapi.api.cover.User
- */
-export type User = Message<"blueapi.api.cover.User"> & {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: string email = 3;
-   */
-  email: string;
-
-  /**
-   * @generated from field: repeated blueapi.api.cover.User.Role roles = 4;
-   */
-  roles: User_Role[];
-
-  /**
-   * @generated from field: google.protobuf.Struct invited_by = 5;
-   */
-  invitedBy?: JsonObject;
-
-  /**
-   * @generated from field: string last_updated = 6;
-   */
-  lastUpdated: string;
-
-  /**
-   * @generated from field: string created_on = 7;
-   */
-  createdOn: string;
-
-  /**
-   * @generated from field: string avatar = 8;
-   */
-  avatar: string;
-
-  /**
-   * @generated from field: bool activated = 9;
-   */
-  activated: boolean;
-};
-
-/**
- * Describes the message blueapi.api.cover.User.
- * Use `create(UserSchema)` to create a new message.
- */
-export const UserSchema: GenMessage<User> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 0);
-
-/**
- * @generated from message blueapi.api.cover.User.Role
- */
-export type User_Role = Message<"blueapi.api.cover.User.Role"> & {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: repeated blueapi.api.cover.User.Role.CostGroup costgroups = 3;
-   */
-  costgroups: User_Role_CostGroup[];
-};
-
-/**
- * Describes the message blueapi.api.cover.User.Role.
- * Use `create(User_RoleSchema)` to create a new message.
- */
-export const User_RoleSchema: GenMessage<User_Role> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 0, 0);
-
-/**
- * @generated from message blueapi.api.cover.User.Role.CostGroup
- */
-export type User_Role_CostGroup = Message<"blueapi.api.cover.User.Role.CostGroup"> & {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-};
-
-/**
- * Describes the message blueapi.api.cover.User.Role.CostGroup.
- * Use `create(User_Role_CostGroupSchema)` to create a new message.
- */
-export const User_Role_CostGroupSchema: GenMessage<User_Role_CostGroup> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 0, 0, 0);
+  fileDesc("ChRhcGkvY292ZXIvdXNlci5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIijAUKCFVzZXJEYXRhEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFZW1haWwYAyABKAkSDgoGYXZhdGFyGAQgASgJEgwKBGljb24YBSABKAkSEgoKY29sb3JUaGVtZRgGIAEoCRIPCgdpbml0aWFsGAcgASgJEhEKCWFjdGl2YXRlZBgIIAEoCBIPCgdpc0FkbWluGAkgASgIEhIKCmF0dHJpYnV0ZXMYCiADKAkSDgoGbG9jYWxlGAsgASgJEhAKCHRpbWVab25lGAwgASgJEhIKCnJlZ2lzdGVyZWQYDSABKAkSEgoKc3NvRW5hYmxlZBgOIAEoCBISCgptZmFFbmFibGVkGA8gASgIEhAKCGFwcFRoZW1lGBAgASgJEhAKCG1haW5WaWV3GBEgASgJEjYKCmNvc3RHcm91cHMYEiADKAsyIi5ibHVlYXBpLmFwaS5jb3Zlci5NZW1iZXJDb3N0R3JvdXASNAoJY3JlYXRlZEJ5GBMgASgLMiEuYmx1ZWFwaS5hcGkuY292ZXIuTWVtYmVyVXNlckRhdGESEQoJdXBkYXRlZEF0GBQgASgJEg0KBW9yZ0lkGBUgASgJEhcKD2lzUHJvZmlsaW5nRG9uZRgWIAEoCBIbChNwYXNzd29yZExhc3RSZW5ld2VkGBcgASgJEg8KB2lzT3duZXIYGCABKAgSDwoHaXNBdXRoMBgZIAEoCBIiChpyZWFkQ29zdEdyb3VwQ3JlYXRpb25Qb3B1cBgaIAEoCBIhChl1c2VOZXdDb3N0R3JvdXBDcmVhdGlvblVJGBsgASgIEhQKDGF1dG9UaW1lWm9uZRgcIAEoCBIVCg1pc0RlbW9BY2NvdW50GB0gASgIIoEDCg5NZW1iZXJVc2VyRGF0YRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJEg4KBmF2YXRhchgEIAEoCRIMCgRpY29uGAUgASgJEhIKCmNvbG9yVGhlbWUYBiABKAkSDwoHaW5pdGlhbBgHIAEoCRIRCglhY3RpdmF0ZWQYCCABKAgSDwoHaXNBZG1pbhgJIAEoCBISCgphdHRyaWJ1dGVzGAogAygJEg4KBmxvY2FsZRgLIAEoCRIQCgh0aW1lWm9uZRgMIAEoCRISCgpyZWdpc3RlcmVkGA0gASgJEhIKCnNzb0VuYWJsZWQYDiABKAgSEgoKbWZhRW5hYmxlZBgPIAEoCBIQCghhcHBUaGVtZRgQIAEoCRIQCghtYWluVmlldxgRIAEoCRI2Cgpjb3N0R3JvdXBzGBIgAygLMiIuYmx1ZWFwaS5hcGkuY292ZXIuTWVtYmVyQ29zdEdyb3VwEhEKCXVwZGF0ZWRBdBgTIAEoCSKXAQoPTWVtYmVyQ29zdEdyb3VwEgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDQoFaW1hZ2UYBCABKAkSDAoEaWNvbhgFIAEoCRISCgpjb2xvclRoZW1lGAYgASgJEhEKCWNyZWF0ZWRBdBgHIAEoCRIRCgl1cGRhdGVkQXQYCCABKAlCYgofY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5jb3ZlckIRQXBpQ292ZXJVc2VyUHJvdG9aLGdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2NvdmVyYgZwcm90bzM");
 
 /**
  * @generated from message blueapi.api.cover.UserData
- * @deprecated
  */
 export type UserData = Message<"blueapi.api.cover.UserData"> & {
   /**
@@ -273,10 +165,9 @@ export type UserData = Message<"blueapi.api.cover.UserData"> & {
 /**
  * Describes the message blueapi.api.cover.UserData.
  * Use `create(UserDataSchema)` to create a new message.
- * @deprecated
  */
 export const UserDataSchema: GenMessage<UserData> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 1);
+  messageDesc(file_api_cover_user, 0);
 
 /**
  * @generated from message blueapi.api.cover.MemberUserData
@@ -383,7 +274,7 @@ export type MemberUserData = Message<"blueapi.api.cover.MemberUserData"> & {
  * Use `create(MemberUserDataSchema)` to create a new message.
  */
 export const MemberUserDataSchema: GenMessage<MemberUserData> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 2);
+  messageDesc(file_api_cover_user, 1);
 
 /**
  * @generated from message blueapi.api.cover.MemberCostGroup
@@ -435,5 +326,5 @@ export type MemberCostGroup = Message<"blueapi.api.cover.MemberCostGroup"> & {
  * Use `create(MemberCostGroupSchema)` to create a new message.
  */
 export const MemberCostGroupSchema: GenMessage<MemberCostGroup> = /*@__PURE__*/
-  messageDesc(file_api_cover_user, 3);
+  messageDesc(file_api_cover_user, 2);
 
