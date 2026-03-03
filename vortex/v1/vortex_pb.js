@@ -3,7 +3,7 @@
 // @generated from file vortex/v1/vortex.proto (package blueapi.vortex.v1, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Vortex = exports.VerifyInvitedUserRequestSchema = exports.InviteUserRequestSchema = exports.ListPromptsRequestSchema = exports.PromptSchema = exports.GetUserResponseSchema = exports.GetUserRequestSchema = exports.CreateOrgResponseSchema = exports.CreateOrgRequestSchema = exports.TestResponseSchema = exports.file_vortex_v1_vortex = void 0;
+exports.Vortex = exports.VerifyInvitedUserRequestSchema = exports.InviteUserRequestSchema = exports.ListPromptsRequestSchema = exports.PromptSchema = exports.GetUserResponseSchema = exports.GetUserRequestSchema = exports.CreateOrgResponseSchema = exports.CreateOrgRequestSchema = exports.TestResponseSchema = exports.TestRequestSchema = exports.file_vortex_v1_vortex = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const wkt_1 = require("@bufbuild/protobuf/wkt");
 const annotations_pb_1 = require("../../google/api/annotations_pb");
@@ -11,52 +11,57 @@ const annotations_pb_2 = require("../../protoc-gen-openapiv2/options/annotations
 /**
  * Describes the file vortex/v1/vortex.proto.
  */
-exports.file_vortex_v1_vortex = (0, codegenv2_1.fileDesc)("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIfCgxUZXN0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCSIvChBDcmVhdGVPcmdSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZW1haWwYAiABKAkiPwoRQ3JlYXRlT3JnUmVzcG9uc2USDQoFb3JnSWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCSIfCg5HZXRVc2VyUmVxdWVzdBINCgVlbWFpbBgBIAEoCSJJCg9HZXRVc2VyUmVzcG9uc2USCgoCaWQYASABKAkSDQoFZW1haWwYAiABKAkSDAoEbmFtZRgDIAEoCRINCgVvcmdJZBgEIAEoCSJHCgZQcm9tcHQSDwoHY29udGVudBgBIAEoCRIZChFmcm9tQ29udGFpbmVyTmFtZRgCIAEoCRIRCglyaXNrTGV2ZWwYAyABKAkiFAoSTGlzdFByb21wdHNSZXF1ZXN0IiIKEUludml0ZVVzZXJSZXF1ZXN0Eg0KBWVtYWlsGAEgASgJIkYKGFZlcmlmeUludml0ZWRVc2VyUmVxdWVzdBINCgVlbWFpbBgBIAEoCRINCgVvcmdJZBgCIAEoCRIMCgRjb2RlGAMgASgJMqkGCgZWb3J0ZXgSVAoEVGVzdBIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRofLmJsdWVhcGkudm9ydGV4LnYxLlRlc3RSZXNwb25zZSITgtPkkwINEgsvdjEvdGVzdGluZxJ0CglDcmVhdGVPcmcSIy5ibHVlYXBpLnZvcnRleC52MS5DcmVhdGVPcmdSZXF1ZXN0GiQuYmx1ZWFwaS52b3J0ZXgudjEuQ3JlYXRlT3JnUmVzcG9uc2UiHILT5JMCFjoBKiIRL3YxL29yZ2FuaXphdGlvbnMSagoHR2V0VXNlchIhLmJsdWVhcGkudm9ydGV4LnYxLkdldFVzZXJSZXF1ZXN0GiIuYmx1ZWFwaS52b3J0ZXgudjEuR2V0VXNlclJlc3BvbnNlIhiC0+STAhISEC92MS91c2VyL3tlbWFpbH0SbgoLTGlzdFByb21wdHMSJS5ibHVlYXBpLnZvcnRleC52MS5MaXN0UHJvbXB0c1JlcXVlc3QaGS5ibHVlYXBpLnZvcnRleC52MS5Qcm9tcHQiG4LT5JMCFToBKiIQL3YxL3Byb21wdHM6cmVhZDABEmEKCkludml0ZVVzZXISJC5ibHVlYXBpLnZvcnRleC52MS5JbnZpdGVVc2VyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIVgtPkkwIPOgEqIgovdjEvaW52aXRlEnYKEVZlcmlmeUludml0ZWRVc2VyEisuYmx1ZWFwaS52b3J0ZXgudjEuVmVyaWZ5SW52aXRlZFVzZXJSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhY6ASoiES92MS9pbnZpdGUvdmVyaWZ5GpsBkkGXARJFKEFscGhhKSBWb3J0ZXggQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvdm9ydGV4Gk4KElNlcnZpY2UgZGVmaW5pdGlvbhI4aHR0cHM6Ly9naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvdHJlZS9tYWluL3ZvcnRleC9CTgoYY2xvdWQuYWxwaGF1cy5hcGkudm9ydGV4QgtWb3J0ZXhQcm90b1olZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3ZvcnRleGIGcHJvdG8z", [wkt_1.file_google_protobuf_empty, annotations_pb_1.file_google_api_annotations, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+exports.file_vortex_v1_vortex = (0, codegenv2_1.fileDesc)("ChZ2b3J0ZXgvdjEvdm9ydGV4LnByb3RvEhFibHVlYXBpLnZvcnRleC52MSIeCgtUZXN0UmVxdWVzdBIPCgdtZXNzYWdlGAEgASgJIh8KDFRlc3RSZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJIi8KEENyZWF0ZU9yZ1JlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVlbWFpbBgCIAEoCSI/ChFDcmVhdGVPcmdSZXNwb25zZRINCgVvcmdJZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWVtYWlsGAMgASgJIh8KDkdldFVzZXJSZXF1ZXN0Eg0KBWVtYWlsGAEgASgJIkkKD0dldFVzZXJSZXNwb25zZRIKCgJpZBgBIAEoCRINCgVlbWFpbBgCIAEoCRIMCgRuYW1lGAMgASgJEg0KBW9yZ0lkGAQgASgJIkcKBlByb21wdBIPCgdjb250ZW50GAEgASgJEhkKEWZyb21Db250YWluZXJOYW1lGAIgASgJEhEKCXJpc2tMZXZlbBgDIAEoCSIUChJMaXN0UHJvbXB0c1JlcXVlc3QiIgoRSW52aXRlVXNlclJlcXVlc3QSDQoFZW1haWwYASABKAkiRgoYVmVyaWZ5SW52aXRlZFVzZXJSZXF1ZXN0Eg0KBWVtYWlsGAEgASgJEg0KBW9yZ0lkGAIgASgJEgwKBGNvZGUYAyABKAkysQYKBlZvcnRleBJcCgRUZXN0Eh4uYmx1ZWFwaS52b3J0ZXgudjEuVGVzdFJlcXVlc3QaHy5ibHVlYXBpLnZvcnRleC52MS5UZXN0UmVzcG9uc2UiE4LT5JMCDRILL3YxL3Rlc3RpbmcSdAoJQ3JlYXRlT3JnEiMuYmx1ZWFwaS52b3J0ZXgudjEuQ3JlYXRlT3JnUmVxdWVzdBokLmJsdWVhcGkudm9ydGV4LnYxLkNyZWF0ZU9yZ1Jlc3BvbnNlIhyC0+STAhY6ASoiES92MS9vcmdhbml6YXRpb25zEmoKB0dldFVzZXISIS5ibHVlYXBpLnZvcnRleC52MS5HZXRVc2VyUmVxdWVzdBoiLmJsdWVhcGkudm9ydGV4LnYxLkdldFVzZXJSZXNwb25zZSIYgtPkkwISEhAvdjEvdXNlci97ZW1haWx9Em4KC0xpc3RQcm9tcHRzEiUuYmx1ZWFwaS52b3J0ZXgudjEuTGlzdFByb21wdHNSZXF1ZXN0GhkuYmx1ZWFwaS52b3J0ZXgudjEuUHJvbXB0IhuC0+STAhU6ASoiEC92MS9wcm9tcHRzOnJlYWQwARJhCgpJbnZpdGVVc2VyEiQuYmx1ZWFwaS52b3J0ZXgudjEuSW52aXRlVXNlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiFYLT5JMCDzoBKiIKL3YxL2ludml0ZRJ2ChFWZXJpZnlJbnZpdGVkVXNlchIrLmJsdWVhcGkudm9ydGV4LnYxLlZlcmlmeUludml0ZWRVc2VyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIWOgEqIhEvdjEvaW52aXRlL3ZlcmlmeRqbAZJBlwESRShBbHBoYSkgVm9ydGV4IEFQSS4gQmFzZSBVUkw6IGh0dHBzOi8vYXBpLmFscGhhdXMuY2xvdWQvbS9ibHVlL3ZvcnRleBpOChJTZXJ2aWNlIGRlZmluaXRpb24SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi92b3J0ZXgvQk4KGGNsb3VkLmFscGhhdXMuYXBpLnZvcnRleEILVm9ydGV4UHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS92b3J0ZXhiBnByb3RvMw", [wkt_1.file_google_protobuf_empty, annotations_pb_1.file_google_api_annotations, annotations_pb_2.file_protoc_gen_openapiv2_options_annotations]);
+/**
+ * Describes the message blueapi.vortex.v1.TestRequest.
+ * Use `create(TestRequestSchema)` to create a new message.
+ */
+exports.TestRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 0);
 /**
  * Describes the message blueapi.vortex.v1.TestResponse.
  * Use `create(TestResponseSchema)` to create a new message.
  */
-exports.TestResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 0);
+exports.TestResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 1);
 /**
  * Describes the message blueapi.vortex.v1.CreateOrgRequest.
  * Use `create(CreateOrgRequestSchema)` to create a new message.
  */
-exports.CreateOrgRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 1);
+exports.CreateOrgRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 2);
 /**
  * Describes the message blueapi.vortex.v1.CreateOrgResponse.
  * Use `create(CreateOrgResponseSchema)` to create a new message.
  */
-exports.CreateOrgResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 2);
+exports.CreateOrgResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 3);
 /**
  * Describes the message blueapi.vortex.v1.GetUserRequest.
  * Use `create(GetUserRequestSchema)` to create a new message.
  */
-exports.GetUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 3);
+exports.GetUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 4);
 /**
  * Describes the message blueapi.vortex.v1.GetUserResponse.
  * Use `create(GetUserResponseSchema)` to create a new message.
  */
-exports.GetUserResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 4);
+exports.GetUserResponseSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 5);
 /**
  * Describes the message blueapi.vortex.v1.Prompt.
  * Use `create(PromptSchema)` to create a new message.
  */
-exports.PromptSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 5);
+exports.PromptSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 6);
 /**
  * Describes the message blueapi.vortex.v1.ListPromptsRequest.
  * Use `create(ListPromptsRequestSchema)` to create a new message.
  */
-exports.ListPromptsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 6);
+exports.ListPromptsRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 7);
 /**
  * Describes the message blueapi.vortex.v1.InviteUserRequest.
  * Use `create(InviteUserRequestSchema)` to create a new message.
  */
-exports.InviteUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 7);
+exports.InviteUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 8);
 /**
  * Describes the message blueapi.vortex.v1.VerifyInvitedUserRequest.
  * Use `create(VerifyInvitedUserRequestSchema)` to create a new message.
  */
-exports.VerifyInvitedUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 8);
+exports.VerifyInvitedUserRequestSchema = (0, codegenv2_1.messageDesc)(exports.file_vortex_v1_vortex, 9);
 /**
  * Vortex service definition.
  *
