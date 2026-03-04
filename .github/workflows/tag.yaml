@@ -34,4 +34,5 @@ jobs:
           npm publish --access public
           git add package.json
           git commit -m "chore: update package.json version to $VERSION"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/alphauslabs/blue-sdk-ts.git HEAD:main
+          git remote add origin-tmp https://$DEPLOYER_TOKEN@github.com/alphauslabs/blueapidocs.git > /dev/null 2>&1
+          git push --set-upstream origin-tmp
