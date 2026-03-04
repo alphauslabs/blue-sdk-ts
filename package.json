@@ -1,6 +1,6 @@
 {
   "name": "@alphauspkgs/blue-sdk-ts",
-  "version": "1.0.4",
+  "version": "1.0.36",
   "scripts": {
     "build": "tsc"
   },
