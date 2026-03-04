@@ -1,11 +1,27 @@
 import { createClient, Interceptor, type Client } from "@connectrpc/connect";
 import { createGrpcWebTransport } from "@connectrpc/connect-web";
 import type { DescService } from "@bufbuild/protobuf";
-import { devtoolsInterceptor } from "connect-devtools";
 import axios from "axios";
 
 const DEFAULT_BLUE_RPC_HOST = "https://bluerpc.alphaus.cloud:8443";
 const DEFAULT_AUTH_URL = "https://login.alphaus.cloud/ripple/access_token";
+
+function loggingInterceptor(): Interceptor {
+  return (next) => async (req) => {
+    const res = await next(req);
+
+    const message = {
+      method: req.method.name,
+      request: req.message,
+      response: res.message,
+    };
+
+    console.log(message);
+
+    return res;
+  };
+}
+
 export class BlueAPIService<Service extends DescService> {
   private client: Client<Service>;
 
@@ -16,7 +32,8 @@ export class BlueAPIService<Service extends DescService> {
   constructor(
     service: Service,
     private serviceName: string,
-    connectOption: ConnectOption = new WithDefaultCredentials()
+    connectOption: ConnectOption = new WithDefaultCredentials(),
+    logging = false,
   ) {
     const interceptors: Interceptor[] = [
       (next) => async (req) => {
@@ -24,14 +41,8 @@ export class BlueAPIService<Service extends DescService> {
         await connectOption.apply(req.header);
         return await next(req);
       },
+      ...(logging ? [loggingInterceptor()] : []),
     ];
-
-    if (
-      "window" in globalThis &&
-      "__CONNECT_WEB_DEVTOOLS__" in globalThis.window
-    ) {
-      interceptors.push(devtoolsInterceptor);
-    }
 
     const transport = createGrpcWebTransport({
       baseUrl: connectOption.getHost(),
@@ -85,7 +96,7 @@ export class WithDefaultCredentials implements ConnectOption {
 export class WithAccessToken implements ConnectOption {
   constructor(
     private readonly accessToken: string,
-    private readonly host?: string
+    private readonly host?: string,
   ) {}
 
   getHost(): string {

@@ -6,15 +6,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BlueCredentials = exports.WithNewBlueCredentials = exports.WithAccessToken = exports.WithDefaultCredentials = exports.BlueAPIService = void 0;
 const connect_1 = require("@connectrpc/connect");
 const connect_web_1 = require("@connectrpc/connect-web");
-const connect_devtools_1 = require("connect-devtools");
 const axios_1 = __importDefault(require("axios"));
 const DEFAULT_BLUE_RPC_HOST = "https://bluerpc.alphaus.cloud:8443";
 const DEFAULT_AUTH_URL = "https://login.alphaus.cloud/ripple/access_token";
+function loggingInterceptor() {
+    return (next) => async (req) => {
+        const res = await next(req);
+        const message = {
+            method: req.method.name,
+            request: req.message,
+            response: res.message,
+        };
+        console.log(message);
+        return res;
+    };
+}
 class BlueAPIService {
     get clientInstance() {
         return this.client;
     }
-    constructor(service, serviceName, connectOption = new WithDefaultCredentials()) {
+    constructor(service, serviceName, connectOption = new WithDefaultCredentials(), logging = false) {
         this.serviceName = serviceName;
         const interceptors = [
             (next) => async (req) => {
@@ -22,11 +33,8 @@ class BlueAPIService {
                 await connectOption.apply(req.header);
                 return await next(req);
             },
+            ...(logging ? [loggingInterceptor()] : []),
         ];
-        if ("window" in globalThis &&
-            "__CONNECT_WEB_DEVTOOLS__" in globalThis.window) {
-            interceptors.push(connect_devtools_1.devtoolsInterceptor);
-        }
         const transport = (0, connect_web_1.createGrpcWebTransport)({
             baseUrl: connectOption.getHost(),
             interceptors: interceptors,
