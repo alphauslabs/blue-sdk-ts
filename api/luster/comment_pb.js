@@ -8,7 +8,7 @@ const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file api/luster/comment.proto.
  */
-exports.file_api_luster_comment = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJqCgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIOCgZ1c2VySWQYBCABKAkSEQoJY3JlYXRlZEF0GAUgASgJEhEKCXVwZGF0ZWRBdBgGIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+exports.file_api_luster_comment = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJtCgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIPCgd1c2VyX2lkGAQgASgJEhIKCmNyZWF0ZWRfYXQYBSABKAkSEgoKdXBkYXRlZF9hdBgGIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
 /**
  * Describes the message blueapi.api.luster.Comment.
  * Use `create(CommentSchema)` to create a new message.

@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/luster/label.proto.
  */
 export const file_api_luster_label: GenFile = /*@__PURE__*/
-  fileDesc("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiawoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIRCgljcmVhdGVkQXQYBSABKAkSEQoJdXBkYXRlZEF0GAYgASgJQmYKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhNBcGlMdXN0ZXJMYWJlbFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+  fileDesc("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIibQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRISCgpjcmVhdGVkX2F0GAUgASgJEhIKCnVwZGF0ZWRfYXQYBiABKAlCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
 
 /**
  * The message defines the label
@@ -50,7 +50,7 @@ export type Label = Message<"blueapi.api.luster.Label"> & {
    * The label createdAt.
    * "created_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string createdAt = 5;
+   * @generated from field: string created_at = 5;
    */
   createdAt: string;
 
@@ -58,7 +58,7 @@ export type Label = Message<"blueapi.api.luster.Label"> & {
    * The label updatedAt.
    * "updated_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string updatedAt = 6;
+   * @generated from field: string updated_at = 6;
    */
   updatedAt: string;
 };

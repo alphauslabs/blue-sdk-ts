@@ -8,7 +8,7 @@ const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 /**
  * Describes the file api/luster/label.proto.
  */
-exports.file_api_luster_label = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiawoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIRCgljcmVhdGVkQXQYBSABKAkSEQoJdXBkYXRlZEF0GAYgASgJQmYKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhNBcGlMdXN0ZXJMYWJlbFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+exports.file_api_luster_label = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIibQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRISCgpjcmVhdGVkX2F0GAUgASgJEhIKCnVwZGF0ZWRfYXQYBiABKAlCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
 /**
  * Describes the message blueapi.api.luster.Label.
  * Use `create(LabelSchema)` to create a new message.

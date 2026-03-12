@@ -13,8 +13,9 @@ import { file_api_luster_comment } from "../../api/luster/comment_pb";
 import type { LabelSchema } from "../../api/luster/label_pb";
 import { file_api_luster_label } from "../../api/luster/label_pb";
 import { file_google_api_annotations } from "../../google/api/annotations_pb";
-import type { EmptySchema } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_empty } from "@bufbuild/protobuf/wkt";
+import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
+import type { EmptySchema, FieldMask } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_empty, file_google_protobuf_field_mask } from "@bufbuild/protobuf/wkt";
 import { file_protoc_gen_openapiv2_options_annotations } from "../../protoc-gen-openapiv2/options/annotations_pb";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -22,7 +23,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file luster/v1/luster.proto.
  */
 export const file_luster_v1_luster: GenFile = /*@__PURE__*/
-  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSITChFSZWFkU3BhY2VzUmVxdWVzdCIdCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkiNwoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkiIAoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIiAKEkRlbGV0ZVNwYWNlUmVxdWVzdBIKCgJpZBgBIAEoCSIVChNSZWFkQ29udGV4dHNSZXF1ZXN0Ih8KEUdldENvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIpoBChJHZXRDb250ZXh0UmVzcG9uc2USKAoFc3BhY2UYASABKAsyGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2USLAoHY29udGV4dBgCIAEoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0EiwKB2NvbW1lbnQYAyADKAsyGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29tbWVudCI2ChRDcmVhdGVDb250ZXh0UmVxdWVzdBINCgV0aXRsZRgBIAEoCRIPCgdjb250ZW50GAIgASgJIiIKFFVwZGF0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIiIKFERlbGV0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJIjoKG0NyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIPCgdjb250ZW50GAIgASgJIjwKG1VwZGF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIRCgljb21tZW50SWQYAiABKAkiPAobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhEKCWNvbW1lbnRJZBgCIAEoCSJGChJDcmVhdGVMYWJlbFJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVjb2xvchgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCTKxDgoGTHVzdGVyEmsKClJlYWRTcGFjZXMSJC5ibHVlYXBpLmx1c3Rlci52MS5SZWFkU3BhY2VzUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIagtPkkwIUOgEqIg8vdjEvc3BhY2VzOnJlYWQwARJiCghHZXRTcGFjZRIiLmJsdWVhcGkubHVzdGVyLnYxLkdldFNwYWNlUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIXgtPkkwIREg8vdjEvc3BhY2VzL3tpZH0SZgoLQ3JlYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiFYLT5JMCDzoBKiIKL3YxL3NwYWNlcxJrCgtVcGRhdGVTcGFjZRIlLmJsdWVhcGkubHVzdGVyLnYxLlVwZGF0ZVNwYWNlUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIagtPkkwIUOgEqGg8vdjEvc3BhY2VzL3tpZH0SZQoLRGVsZXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVTcGFjZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiF4LT5JMCESoPL3YxL3NwYWNlcy97aWR9EnMKDFJlYWRDb250ZXh0cxImLmJsdWVhcGkubHVzdGVyLnYxLlJlYWRDb250ZXh0c1JlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIcgtPkkwIWOgEqIhEvdjEvY29udGV4dHM6cmVhZDABEnQKCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIZgtPkkwITEhEvdjEvY29udGV4dHMve2lkfRJuCg1DcmVhdGVDb250ZXh0EicuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dFJlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIXgtPkkwIROgEqIgwvdjEvY29udGV4dHMScwoNVXBkYXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLlVwZGF0ZUNvbnRleHRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiHILT5JMCFjoBKhoRL3YxL2NvbnRleHRzL3tpZH0SawoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhmC0+STAhMqES92MS9jb250ZXh0cy97aWR9EokBChRDcmVhdGVDb250ZXh0Q29tbWVudBIuLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IiSC0+STAh46ASoiGS92MS9jb250ZXh0cy97aWR9L2NvbW1lbnQSlQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiMILT5JMCKjoBKholL3YxL2NvbnRleHRzL3tpZH0vY29tbWVudC97Y29tbWVudElkfRKNAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiLYLT5JMCJyolL3YxL2NvbnRleHRzL3tpZH0vY29tbWVudC97Y29tbWVudElkfRJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwauAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations]);
+  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSJDChFSZWFkU3BhY2VzUmVxdWVzdBIuCgpmaWVsZF9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJNCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDwoHbWVtYmVycxgDIAMoCSKLAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHbWVtYmVycxgEIAMoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiIAoSRGVsZXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIkUKE1JlYWRDb250ZXh0c1JlcXVlc3QSLgoKZmllbGRfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siTwoRR2V0Q29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2simgEKEkdldENvbnRleHRSZXNwb25zZRIoCgVzcGFjZRgBIAEoCzIZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZRIsCgdjb250ZXh0GAIgASgLMhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQSLAoHY29tbWVudBgDIAMoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IkgKFENyZWF0ZUNvbnRleHRSZXF1ZXN0EhAKCHNwYWNlX2lkGAEgASgJEg0KBXRpdGxlGAIgASgJEg8KB2NvbnRlbnQYAyABKAkiiwEKFFVwZGF0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEg0KBXRpdGxlGAMgASgJEg8KB2NvbnRlbnQYBCABKAkSNQoLdXBkYXRlX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgTiQQECIjQKFERlbGV0ZUNvbnRleHRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJIlQKG0NyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIQCghzcGFjZV9pZBgBIAEoCRISCgpjb250ZXh0X2lkGAIgASgJEg8KB2NvbnRlbnQYAyABKAkilwEKG1VwZGF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRISCgpjb250ZXh0X2lkGAMgASgJEg8KB2NvbnRlbnQYBCABKAkSNQoLdXBkYXRlX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgTiQQECIk8KG0RlbGV0ZUNvbnRleHRDb21tZW50UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRISCgpjb250ZXh0X2lkGAMgASgJIkYKEkNyZWF0ZUxhYmVsUmVxdWVzdBIMCgRuYW1lGAEgASgJEg0KBWNvbG9yGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJMpMPCgZMdXN0ZXISawoKUmVhZFNwYWNlcxIkLmJsdWVhcGkubHVzdGVyLnYxLlJlYWRTcGFjZXNSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhqC0+STAhQ6ASoiDy92MS9zcGFjZXM6cmVhZDABEmIKCEdldFNwYWNlEiIuYmx1ZWFwaS5sdXN0ZXIudjEuR2V0U3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIheC0+STAhESDy92MS9zcGFjZXMve2lkfRJmCgtDcmVhdGVTcGFjZRIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZVNwYWNlUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZSIVgtPkkwIPOgEqIgovdjEvc3BhY2VzEmsKC1VwZGF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhqC0+STAhQ6ASoaDy92MS9zcGFjZXMve2lkfRJlCgtEZWxldGVTcGFjZRIlLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZVNwYWNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIXgtPkkwIRKg8vdjEvc3BhY2VzL3tpZH0SfgoMUmVhZENvbnRleHRzEiYuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZENvbnRleHRzUmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IieC0+STAiE6ASoiHC92MS9jb250ZXh0cy97c3BhY2VfaWR9OnJlYWQwARJ/CgpHZXRDb250ZXh0EiQuYmx1ZWFwaS5sdXN0ZXIudjEuR2V0Q29udGV4dFJlcXVlc3QaJS5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVzcG9uc2UiJILT5JMCHhIcL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2lkfRJ5Cg1DcmVhdGVDb250ZXh0EicuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dFJlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIigtPkkwIcOgEqIhcvdjEvY29udGV4dHMve3NwYWNlX2lkfRJ+Cg1VcGRhdGVDb250ZXh0EicuYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dFJlcXVlc3QaGy5ibHVlYXBpLmFwaS5sdXN0ZXIuQ29udGV4dCIngtPkkwIhOgEqGhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EnYKDURlbGV0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIkgtPkkwIeKhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EpwBChRDcmVhdGVDb250ZXh0Q29tbWVudBIuLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IjeC0+STAjE6ASoiLC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tjb250ZXh0X2lkfS9jb21tZW50EqEBChRVcGRhdGVDb250ZXh0Q29tbWVudBIuLmJsdWVhcGkubHVzdGVyLnYxLlVwZGF0ZUNvbnRleHRDb21tZW50UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IjyC0+STAjY6ASoaMS92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tjb250ZXh0X2lkfS9jb21tZW50L3tpZH0SmQEKFERlbGV0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjmC0+STAjMqMS92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tjb250ZXh0X2lkfS9jb21tZW50L3tpZH0SbgoLQ3JlYXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVMYWJlbFJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuTGFiZWwiHYLT5JMCFzoBKiISL3YxL2NvbnRleHRzL2xhYmVsGrgBkkG0ARJFKEFMUEhBKSBMdXN0ZXIgQVBJLiBCYXNlIFVSTDogaHR0cHM6Ly9hcGkuYWxwaGF1cy5jbG91ZC9tL2JsdWUvbHVzdGVyGmsKL0x1c3RlciBpcyBhIHNlcnZpY2UgdGhhdCBtYW5hZ2VzIHVzZXIgY29udGV4dHMuEjhodHRwczovL2dpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS90cmVlL21haW4vbHVzdGVyL0JOChhjbG91ZC5hbHBoYXVzLmFwaS5sdXN0ZXJCC0x1c3RlclByb3RvWiVnaXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWVhcGkvbHVzdGVyYgZwcm90bzM", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations, file_google_protobuf_field_mask]);
 
 /**
  * Request message for the Luster.ReadSpaces rpc.
@@ -30,6 +31,13 @@ export const file_luster_v1_luster: GenFile = /*@__PURE__*/
  * @generated from message blueapi.luster.v1.ReadSpacesRequest
  */
 export type ReadSpacesRequest = Message<"blueapi.luster.v1.ReadSpacesRequest"> & {
+  /**
+   * Optional. field_mask
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask field_mask = 1;
+   */
+  fieldMask?: FieldMask;
 };
 
 /**
@@ -51,6 +59,14 @@ export type GetSpaceRequest = Message<"blueapi.luster.v1.GetSpaceRequest"> & {
    * @generated from field: string id = 1;
    */
   id: string;
+
+  /**
+   * Optional. field_mask
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask field_mask = 2;
+   */
+  fieldMask?: FieldMask;
 };
 
 /**
@@ -67,18 +83,25 @@ export const GetSpaceRequestSchema: GenMessage<GetSpaceRequest> = /*@__PURE__*/
  */
 export type CreateSpaceRequest = Message<"blueapi.luster.v1.CreateSpaceRequest"> & {
   /**
-   * the space name.
+   * Required. the space name.
    *
    * @generated from field: string name = 1;
    */
   name: string;
 
   /**
-   * the space description.
+   * Optional. the space description.
    *
    * @generated from field: string description = 2;
    */
   description: string;
+
+  /**
+   * Optional. the member ids.
+   *
+   * @generated from field: repeated string members = 3;
+   */
+  members: string[];
 };
 
 /**
@@ -95,11 +118,40 @@ export const CreateSpaceRequestSchema: GenMessage<CreateSpaceRequest> = /*@__PUR
  */
 export type UpdateSpaceRequest = Message<"blueapi.luster.v1.UpdateSpaceRequest"> & {
   /**
-   * the space id.
+   * Required. the space id.
    *
    * @generated from field: string id = 1;
    */
   id: string;
+
+  /**
+   * Optional. the space name.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * Optional. the space description.
+   *
+   * @generated from field: string description = 3;
+   */
+  description: string;
+
+  /**
+   * Optional. the member ids.
+   *
+   * @generated from field: repeated string members = 4;
+   */
+  members: string[];
+
+  /**
+   * Required.
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 5;
+   */
+  updateMask?: FieldMask;
 };
 
 /**
@@ -136,6 +188,12 @@ export const DeleteSpaceRequestSchema: GenMessage<DeleteSpaceRequest> = /*@__PUR
  * @generated from message blueapi.luster.v1.ReadContextsRequest
  */
 export type ReadContextsRequest = Message<"blueapi.luster.v1.ReadContextsRequest"> & {
+  /**
+   * Optional. field_mask
+   *
+   * @generated from field: google.protobuf.FieldMask field_mask = 1;
+   */
+  fieldMask?: FieldMask;
 };
 
 /**
@@ -157,6 +215,14 @@ export type GetContextRequest = Message<"blueapi.luster.v1.GetContextRequest"> &
    * @generated from field: string id = 1;
    */
   id: string;
+
+  /**
+   * Optional. field_mask
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask field_mask = 2;
+   */
+  fieldMask?: FieldMask;
 };
 
 /**
@@ -202,16 +268,23 @@ export const GetContextResponseSchema: GenMessage<GetContextResponse> = /*@__PUR
  */
 export type CreateContextRequest = Message<"blueapi.luster.v1.CreateContextRequest"> & {
   /**
-   * The context title.
+   * Required. The space id.
    *
-   * @generated from field: string title = 1;
+   * @generated from field: string space_id = 1;
+   */
+  spaceId: string;
+
+  /**
+   * Required. The context title.
+   *
+   * @generated from field: string title = 2;
    */
   title: string;
 
   /**
-   * The context content.
+   * Required. The context content.
    *
-   * @generated from field: string content = 2;
+   * @generated from field: string content = 3;
    */
   content: string;
 };
@@ -230,11 +303,40 @@ export const CreateContextRequestSchema: GenMessage<CreateContextRequest> = /*@_
  */
 export type UpdateContextRequest = Message<"blueapi.luster.v1.UpdateContextRequest"> & {
   /**
-   * the context id.
+   * Required. the context id.
    *
    * @generated from field: string id = 1;
    */
   id: string;
+
+  /**
+   * Required. The space id.
+   *
+   * @generated from field: string space_id = 2;
+   */
+  spaceId: string;
+
+  /**
+   * Optional. The context title.
+   *
+   * @generated from field: string title = 3;
+   */
+  title: string;
+
+  /**
+   * Optional. The context content.
+   *
+   * @generated from field: string content = 4;
+   */
+  content: string;
+
+  /**
+   * Required.
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 5;
+   */
+  updateMask?: FieldMask;
 };
 
 /**
@@ -251,11 +353,18 @@ export const UpdateContextRequestSchema: GenMessage<UpdateContextRequest> = /*@_
  */
 export type DeleteContextRequest = Message<"blueapi.luster.v1.DeleteContextRequest"> & {
   /**
-   * the context id.
+   * Required. the context id.
    *
    * @generated from field: string id = 1;
    */
   id: string;
+
+  /**
+   * Required. The space id.
+   *
+   * @generated from field: string space_id = 2;
+   */
+  spaceId: string;
 };
 
 /**
@@ -272,16 +381,23 @@ export const DeleteContextRequestSchema: GenMessage<DeleteContextRequest> = /*@_
  */
 export type CreateContextCommentRequest = Message<"blueapi.luster.v1.CreateContextCommentRequest"> & {
   /**
-   * the context id.
+   * Required. the space id.
    *
-   * @generated from field: string id = 1;
+   * @generated from field: string space_id = 1;
    */
-  id: string;
+  spaceId: string;
 
   /**
-   * The comment content.
+   * Required. the context id.
    *
-   * @generated from field: string content = 2;
+   * @generated from field: string context_id = 2;
+   */
+  contextId: string;
+
+  /**
+   * Required. The comment content.
+   *
+   * @generated from field: string content = 3;
    */
   content: string;
 };
@@ -300,18 +416,40 @@ export const CreateContextCommentRequestSchema: GenMessage<CreateContextCommentR
  */
 export type UpdateContextCommentRequest = Message<"blueapi.luster.v1.UpdateContextCommentRequest"> & {
   /**
-   * the context id.
+   * Required. the comment id.
    *
    * @generated from field: string id = 1;
    */
   id: string;
 
   /**
-   * the context comment id.
+   * Required. the space id.
    *
-   * @generated from field: string commentId = 2;
+   * @generated from field: string space_id = 2;
    */
-  commentId: string;
+  spaceId: string;
+
+  /**
+   * Required. the context id.
+   *
+   * @generated from field: string context_id = 3;
+   */
+  contextId: string;
+
+  /**
+   * Required. The comment content.
+   *
+   * @generated from field: string content = 4;
+   */
+  content: string;
+
+  /**
+   * Required.
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 5;
+   */
+  updateMask?: FieldMask;
 };
 
 /**
@@ -328,18 +466,25 @@ export const UpdateContextCommentRequestSchema: GenMessage<UpdateContextCommentR
  */
 export type DeleteContextCommentRequest = Message<"blueapi.luster.v1.DeleteContextCommentRequest"> & {
   /**
-   * the context id.
+   * Required. the comment id.
    *
    * @generated from field: string id = 1;
    */
   id: string;
 
   /**
-   * the context comment id.
+   * Required. the space id.
    *
-   * @generated from field: string commentId = 2;
+   * @generated from field: string space_id = 2;
    */
-  commentId: string;
+  spaceId: string;
+
+  /**
+   * Required. the context id.
+   *
+   * @generated from field: string context_id = 3;
+   */
+  contextId: string;
 };
 
 /**
@@ -447,7 +592,6 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Reads contexts.
-   * スペースの読み取り。
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadContexts
    */

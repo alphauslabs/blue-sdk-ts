@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/luster/comment.proto.
  */
 export const file_api_luster_comment: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJqCgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIOCgZ1c2VySWQYBCABKAkSEQoJY3JlYXRlZEF0GAUgASgJEhEKCXVwZGF0ZWRBdBgGIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+  fileDesc("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJtCgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIPCgd1c2VyX2lkGAQgASgJEhIKCmNyZWF0ZWRfYXQYBSABKAkSEgoKdXBkYXRlZF9hdBgGIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
 
 /**
  * The message defines the comment
@@ -42,23 +42,23 @@ export type Comment = Message<"blueapi.api.luster.Comment"> & {
   /**
    * The comment userId.
    *
-   * @generated from field: string userId = 4;
+   * @generated from field: string user_id = 4;
    */
   userId: string;
 
   /**
-   * The comment createdAt.
+   * The comment created_at.
    * "created_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string createdAt = 5;
+   * @generated from field: string created_at = 5;
    */
   createdAt: string;
 
   /**
-   * The comment updatedAt.
+   * The comment updated_at.
    * "updated_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string updatedAt = 6;
+   * @generated from field: string updated_at = 6;
    */
   updatedAt: string;
 };

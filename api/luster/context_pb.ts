@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/luster/context.proto.
  */
 export const file_api_luster_context: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLkAQoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEg0KBXN0YXRlGAYgASgJEg4KBmxhYmVscxgHIAMoCRIRCglhc3NpZ25lZXMYCCADKAkSFQoNY29tbWVudHNDb3VudBgJIAEoAxIRCgljcmVhdGVkQXQYCiABKAkSEQoJdXBkYXRlZEF0GAsgASgJEhAKCGNsb3NlZEF0GAwgASgJEg4KBnVzZXJJZBgNIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29udGV4dFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLpAQoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEg0KBXN0YXRlGAYgASgJEg4KBmxhYmVscxgHIAMoCRIRCglhc3NpZ25lZXMYCCADKAkSFgoOY29tbWVudHNfY291bnQYCSABKAMSEgoKY3JlYXRlZF9hdBgKIAEoCRISCgp1cGRhdGVkX2F0GAsgASgJEhEKCWNsb3NlZF9hdBgMIAEoCRIPCgd1c2VyX2lkGA0gASgJQmgKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhVBcGlMdXN0ZXJDb250ZXh0UHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
 
 /**
  * The message defines the context
@@ -80,40 +80,40 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
   assignees: string[];
 
   /**
-   * The context commentsCount.
+   * The context comments_count.
    * "comments_count": 0
    *
-   * @generated from field: int64 commentsCount = 9;
+   * @generated from field: int64 comments_count = 9;
    */
   commentsCount: bigint;
 
   /**
-   * The context createdAt.
+   * The context created_at.
    * "created_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string createdAt = 10;
+   * @generated from field: string created_at = 10;
    */
   createdAt: string;
 
   /**
-   * The context updatedAt.
+   * The context updated_at.
    * "updated_at": "2023-10-27T10:00:00Z"
    *
-   * @generated from field: string updatedAt = 11;
+   * @generated from field: string updated_at = 11;
    */
   updatedAt: string;
 
   /**
-   * The context closedAt.
+   * The context closed_at.
    *
-   * @generated from field: string closedAt = 12;
+   * @generated from field: string closed_at = 12;
    */
   closedAt: string;
 
   /**
-   * The context userId.
+   * The context user_id.
    *
-   * @generated from field: string userId = 13;
+   * @generated from field: string user_id = 13;
    */
   userId: string;
 };
