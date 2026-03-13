@@ -5,10 +5,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LabelSchema = exports.file_api_luster_label = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
+const field_behavior_pb_1 = require("../../google/api/field_behavior_pb");
 /**
  * Describes the file api/luster/label.proto.
  */
-exports.file_api_luster_label = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIibQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRISCgpjcmVhdGVkX2F0GAUgASgJEhIKCnVwZGF0ZWRfYXQYBiABKAlCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
+exports.file_api_luster_label = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIieQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIYCgpjcmVhdGVkX2F0GAUgASgJQgTiQQEDEhgKCnVwZGF0ZWRfYXQYBiABKAlCBOJBAQNCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z", [field_behavior_pb_1.file_google_api_field_behavior]);
 /**
  * Describes the message blueapi.api.luster.Label.
  * Use `create(LabelSchema)` to create a new message.

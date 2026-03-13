@@ -4,13 +4,14 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file api/luster/comment.proto.
  */
 export const file_api_luster_comment: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJtCgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIPCgd1c2VyX2lkGAQgASgJEhIKCmNyZWF0ZWRfYXQYBSABKAkSEgoKdXBkYXRlZF9hdBgGIAEoCUJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+  fileDesc("ChhhcGkvbHVzdGVyL2NvbW1lbnQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciJ/CgdDb21tZW50EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSDwoHY29udGVudBgDIAEoCRIVCgd1c2VyX2lkGAQgASgJQgTiQQEDEhgKCmNyZWF0ZWRfYXQYBSABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgGIAEoCUIE4kEBA0JoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29tbWVudFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw", [file_google_api_field_behavior]);
 
 /**
  * The message defines the comment
@@ -40,7 +41,7 @@ export type Comment = Message<"blueapi.api.luster.Comment"> & {
   content: string;
 
   /**
-   * The comment userId.
+   * The comment user_id.
    *
    * @generated from field: string user_id = 4;
    */

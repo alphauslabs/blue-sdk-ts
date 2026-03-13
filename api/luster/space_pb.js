@@ -5,10 +5,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpaceSchema = exports.file_api_luster_space = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
+const field_behavior_pb_1 = require("../../google/api/field_behavior_pb");
 /**
  * Describes the file api/luster/space.proto.
  */
-exports.file_api_luster_space = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL3NwYWNlLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiRwoFU3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIPCgdtZW1iZXJzGAQgAygJQmYKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhNBcGlMdXN0ZXJTcGFjZVByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+exports.file_api_luster_space = (0, codegenv2_1.fileDesc)("ChZhcGkvbHVzdGVyL3NwYWNlLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiewoFU3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIPCgdtZW1iZXJzGAQgAygJEhgKCmNyZWF0ZWRfYXQYBSABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgGIAEoCUIE4kEBA0JmCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckITQXBpTHVzdGVyU3BhY2VQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [field_behavior_pb_1.file_google_api_field_behavior]);
 /**
  * Describes the message blueapi.api.luster.Space.
  * Use `create(SpaceSchema)` to create a new message.

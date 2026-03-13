@@ -2,15 +2,16 @@
 // @generated from file api/luster/context.proto (package blueapi.api.luster, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file api/luster/context.proto.
  */
 export const file_api_luster_context: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLpAQoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEg0KBXN0YXRlGAYgASgJEg4KBmxhYmVscxgHIAMoCRIRCglhc3NpZ25lZXMYCCADKAkSFgoOY29tbWVudHNfY291bnQYCSABKAMSEgoKY3JlYXRlZF9hdBgKIAEoCRISCgp1cGRhdGVkX2F0GAsgASgJEhEKCWNsb3NlZF9hdBgMIAEoCRIPCgd1c2VyX2lkGA0gASgJQmgKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhVBcGlMdXN0ZXJDb250ZXh0UHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
+  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciK+AgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRINCgVzdGF0ZRgGIAEoCRIOCgZsYWJlbHMYByADKAkSEQoJYXNzaWduZWVzGAggAygJEhwKDmNvbW1lbnRzX2NvdW50GAkgASgDQgTiQQEDEhgKCmNyZWF0ZWRfYXQYCiABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgLIAEoCUIE4kEBAxIXCgljbG9zZWRfYXQYDCABKAlCBOJBAQMSFQoHdXNlcl9pZBgNIAEoCUIE4kEBAyo4CgtDb250ZXh0VHlwZRIHCgNBTlkQABIJCgVTUEFDRRABEgsKB0FDQ09VTlQQAhIICgRDT1NUEANCaAogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCFUFwaUx1c3RlckNvbnRleHRQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [file_google_api_field_behavior]);
 
 /**
  * The message defines the context
@@ -56,8 +57,15 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
   content: string;
 
   /**
+   * The context type.
+   *
+   * @generated from field: blueapi.api.luster.ContextType context_type = 14;
+   */
+  contextType: ContextType;
+
+  /**
    * The context state.
-   *  "state": "open"
+   *  "state": "open", "pending", "review", "close"
    *
    * @generated from field: string state = 6;
    */
@@ -105,6 +113,7 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
 
   /**
    * The context closed_at.
+   * "closed_at": "2023-10-27T10:00:00Z"
    *
    * @generated from field: string closed_at = 12;
    */
@@ -124,4 +133,45 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
  */
 export const ContextSchema: GenMessage<Context> = /*@__PURE__*/
   messageDesc(file_api_luster_context, 0);
+
+/**
+ * The context type.
+ *
+ * @generated from enum blueapi.api.luster.ContextType
+ */
+export enum ContextType {
+  /**
+   * anyone
+   *
+   * @generated from enum value: ANY = 0;
+   */
+  ANY = 0,
+
+  /**
+   * space
+   *
+   * @generated from enum value: SPACE = 1;
+   */
+  SPACE = 1,
+
+  /**
+   * account
+   *
+   * @generated from enum value: ACCOUNT = 2;
+   */
+  ACCOUNT = 2,
+
+  /**
+   * cost
+   *
+   * @generated from enum value: COST = 3;
+   */
+  COST = 3,
+}
+
+/**
+ * Describes the enum blueapi.api.luster.ContextType.
+ */
+export const ContextTypeSchema: GenEnum<ContextType> = /*@__PURE__*/
+  enumDesc(file_api_luster_context, 0);
 

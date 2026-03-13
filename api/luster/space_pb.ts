@@ -4,13 +4,14 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file api/luster/space.proto.
  */
 export const file_api_luster_space: GenFile = /*@__PURE__*/
-  fileDesc("ChZhcGkvbHVzdGVyL3NwYWNlLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiRwoFU3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIPCgdtZW1iZXJzGAQgAygJQmYKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhNBcGlMdXN0ZXJTcGFjZVByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw");
+  fileDesc("ChZhcGkvbHVzdGVyL3NwYWNlLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIiewoFU3BhY2USCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIPCgdtZW1iZXJzGAQgAygJEhgKCmNyZWF0ZWRfYXQYBSABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgGIAEoCUIE4kEBA0JmCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckITQXBpTHVzdGVyU3BhY2VQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [file_google_api_field_behavior]);
 
 /**
  * The message defines the space
@@ -45,6 +46,22 @@ export type Space = Message<"blueapi.api.luster.Space"> & {
    * @generated from field: repeated string members = 4;
    */
   members: string[];
+
+  /**
+   * The space created_at.
+   * "created_at": "2023-10-27T10:00:00Z"
+   *
+   * @generated from field: string created_at = 5;
+   */
+  createdAt: string;
+
+  /**
+   * The space updated_at.
+   * "updated_at": "2023-10-27T10:00:00Z"
+   *
+   * @generated from field: string updated_at = 6;
+   */
+  updatedAt: string;
 };
 
 /**

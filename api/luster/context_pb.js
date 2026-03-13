@@ -3,14 +3,51 @@
 // @generated from file api/luster/context.proto (package blueapi.api.luster, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContextSchema = exports.file_api_luster_context = void 0;
+exports.ContextTypeSchema = exports.ContextType = exports.ContextSchema = exports.file_api_luster_context = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
+const field_behavior_pb_1 = require("../../google/api/field_behavior_pb");
 /**
  * Describes the file api/luster/context.proto.
  */
-exports.file_api_luster_context = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLpAQoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEg0KBXN0YXRlGAYgASgJEg4KBmxhYmVscxgHIAMoCRIRCglhc3NpZ25lZXMYCCADKAkSFgoOY29tbWVudHNfY291bnQYCSABKAMSEgoKY3JlYXRlZF9hdBgKIAEoCRISCgp1cGRhdGVkX2F0GAsgASgJEhEKCWNsb3NlZF9hdBgMIAEoCRIPCgd1c2VyX2lkGA0gASgJQmgKIGNsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkubHVzdGVyQhVBcGlMdXN0ZXJDb250ZXh0UHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
+exports.file_api_luster_context = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciK+AgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRINCgVzdGF0ZRgGIAEoCRIOCgZsYWJlbHMYByADKAkSEQoJYXNzaWduZWVzGAggAygJEhwKDmNvbW1lbnRzX2NvdW50GAkgASgDQgTiQQEDEhgKCmNyZWF0ZWRfYXQYCiABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgLIAEoCUIE4kEBAxIXCgljbG9zZWRfYXQYDCABKAlCBOJBAQMSFQoHdXNlcl9pZBgNIAEoCUIE4kEBAyo4CgtDb250ZXh0VHlwZRIHCgNBTlkQABIJCgVTUEFDRRABEgsKB0FDQ09VTlQQAhIICgRDT1NUEANCaAogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCFUFwaUx1c3RlckNvbnRleHRQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [field_behavior_pb_1.file_google_api_field_behavior]);
 /**
  * Describes the message blueapi.api.luster.Context.
  * Use `create(ContextSchema)` to create a new message.
  */
 exports.ContextSchema = (0, codegenv2_1.messageDesc)(exports.file_api_luster_context, 0);
+/**
+ * The context type.
+ *
+ * @generated from enum blueapi.api.luster.ContextType
+ */
+var ContextType;
+(function (ContextType) {
+    /**
+     * anyone
+     *
+     * @generated from enum value: ANY = 0;
+     */
+    ContextType[ContextType["ANY"] = 0] = "ANY";
+    /**
+     * space
+     *
+     * @generated from enum value: SPACE = 1;
+     */
+    ContextType[ContextType["SPACE"] = 1] = "SPACE";
+    /**
+     * account
+     *
+     * @generated from enum value: ACCOUNT = 2;
+     */
+    ContextType[ContextType["ACCOUNT"] = 2] = "ACCOUNT";
+    /**
+     * cost
+     *
+     * @generated from enum value: COST = 3;
+     */
+    ContextType[ContextType["COST"] = 3] = "COST";
+})(ContextType || (exports.ContextType = ContextType = {}));
+/**
+ * Describes the enum blueapi.api.luster.ContextType.
+ */
+exports.ContextTypeSchema = (0, codegenv2_1.enumDesc)(exports.file_api_luster_context, 0);

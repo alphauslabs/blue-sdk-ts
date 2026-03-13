@@ -4,13 +4,14 @@
 
 import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import { file_google_api_field_behavior } from "../../google/api/field_behavior_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file api/luster/label.proto.
  */
 export const file_api_luster_label: GenFile = /*@__PURE__*/
-  fileDesc("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIibQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRISCgpjcmVhdGVkX2F0GAUgASgJEhIKCnVwZGF0ZWRfYXQYBiABKAlCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z");
+  fileDesc("ChZhcGkvbHVzdGVyL2xhYmVsLnByb3RvEhJibHVlYXBpLmFwaS5sdXN0ZXIieQoFTGFiZWwSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRINCgVjb2xvchgDIAEoCRITCgtkZXNjcmlwdGlvbhgEIAEoCRIYCgpjcmVhdGVkX2F0GAUgASgJQgTiQQEDEhgKCnVwZGF0ZWRfYXQYBiABKAlCBOJBAQNCZgogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCE0FwaUx1c3RlckxhYmVsUHJvdG9aLWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZS1zZGstZ28vYXBpL2x1c3RlcmIGcHJvdG8z", [file_google_api_field_behavior]);
 
 /**
  * The message defines the label
