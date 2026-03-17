@@ -3,13 +3,13 @@
 // @generated from file api/luster/context.proto (package blueapi.api.luster, syntax proto3)
 /* eslint-disable */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContextTypeSchema = exports.ContextType = exports.ContextSchema = exports.file_api_luster_context = void 0;
+exports.ContextStateSchema = exports.ContextState = exports.ContextTypeSchema = exports.ContextType = exports.ContextSchema = exports.file_api_luster_context = void 0;
 const codegenv2_1 = require("@bufbuild/protobuf/codegenv2");
 const field_behavior_pb_1 = require("../../google/api/field_behavior_pb");
 /**
  * Describes the file api/luster/context.proto.
  */
-exports.file_api_luster_context = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciK+AgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRINCgVzdGF0ZRgGIAEoCRIOCgZsYWJlbHMYByADKAkSEQoJYXNzaWduZWVzGAggAygJEhwKDmNvbW1lbnRzX2NvdW50GAkgASgDQgTiQQEDEhgKCmNyZWF0ZWRfYXQYCiABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgLIAEoCUIE4kEBAxIXCgljbG9zZWRfYXQYDCABKAlCBOJBAQMSFQoHdXNlcl9pZBgNIAEoCUIE4kEBAyo4CgtDb250ZXh0VHlwZRIHCgNBTlkQABIJCgVTUEFDRRABEgsKB0FDQ09VTlQQAhIICgRDT1NUEANCaAogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCFUFwaUx1c3RlckNvbnRleHRQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [field_behavior_pb_1.file_google_api_field_behavior]);
+exports.file_api_luster_context = (0, codegenv2_1.fileDesc)("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLgAgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRIvCgVzdGF0ZRgGIAEoDjIgLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0U3RhdGUSDgoGbGFiZWxzGAcgAygJEhEKCWFzc2lnbmVlcxgIIAMoCRIcCg5jb21tZW50c19jb3VudBgJIAEoA0IE4kEBAxIYCgpjcmVhdGVkX2F0GAogASgJQgTiQQEDEhgKCnVwZGF0ZWRfYXQYCyABKAlCBOJBAQMSFwoJY2xvc2VkX2F0GAwgASgJQgTiQQEDEhUKB3VzZXJfaWQYDSABKAlCBOJBAQMqOAoLQ29udGV4dFR5cGUSBwoDQU5ZEAASCQoFU1BBQ0UQARILCgdBQ0NPVU5UEAISCAoEQ09TVBADKjUKDENvbnRleHRTdGF0ZRIICgRPUEVOEAASDwoLSU5fUFJPR1JFU1MQARIKCgZDTE9TRUQQAkJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29udGV4dFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw", [field_behavior_pb_1.file_google_api_field_behavior]);
 /**
  * Describes the message blueapi.api.luster.Context.
  * Use `create(ContextSchema)` to create a new message.
@@ -23,25 +23,25 @@ exports.ContextSchema = (0, codegenv2_1.messageDesc)(exports.file_api_luster_con
 var ContextType;
 (function (ContextType) {
     /**
-     * anyone
+     * Any type of context.
      *
      * @generated from enum value: ANY = 0;
      */
     ContextType[ContextType["ANY"] = 0] = "ANY";
     /**
-     * space
+     * Space-related context.
      *
      * @generated from enum value: SPACE = 1;
      */
     ContextType[ContextType["SPACE"] = 1] = "SPACE";
     /**
-     * account
+     * Account-related context.
      *
      * @generated from enum value: ACCOUNT = 2;
      */
     ContextType[ContextType["ACCOUNT"] = 2] = "ACCOUNT";
     /**
-     * cost
+     * Cost-related context.
      *
      * @generated from enum value: COST = 3;
      */
@@ -51,3 +51,36 @@ var ContextType;
  * Describes the enum blueapi.api.luster.ContextType.
  */
 exports.ContextTypeSchema = (0, codegenv2_1.enumDesc)(exports.file_api_luster_context, 0);
+/**
+ * The context state.
+ *
+ * @generated from enum blueapi.api.luster.ContextState
+ */
+var ContextState;
+(function (ContextState) {
+    /**
+     * open
+     * Initial state when context is created.
+     *
+     * @generated from enum value: OPEN = 0;
+     */
+    ContextState[ContextState["OPEN"] = 0] = "OPEN";
+    /**
+     * in progress
+     * Indicates work is in progress.
+     *
+     * @generated from enum value: IN_PROGRESS = 1;
+     */
+    ContextState[ContextState["IN_PROGRESS"] = 1] = "IN_PROGRESS";
+    /**
+     * closed
+     * Final state indicating work is completed.
+     *
+     * @generated from enum value: CLOSED = 2;
+     */
+    ContextState[ContextState["CLOSED"] = 2] = "CLOSED";
+})(ContextState || (exports.ContextState = ContextState = {}));
+/**
+ * Describes the enum blueapi.api.luster.ContextState.
+ */
+exports.ContextStateSchema = (0, codegenv2_1.enumDesc)(exports.file_api_luster_context, 1);

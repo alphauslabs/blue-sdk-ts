@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/luster/context.proto.
  */
 export const file_api_luster_context: GenFile = /*@__PURE__*/
-  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciK+AgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRINCgVzdGF0ZRgGIAEoCRIOCgZsYWJlbHMYByADKAkSEQoJYXNzaWduZWVzGAggAygJEhwKDmNvbW1lbnRzX2NvdW50GAkgASgDQgTiQQEDEhgKCmNyZWF0ZWRfYXQYCiABKAlCBOJBAQMSGAoKdXBkYXRlZF9hdBgLIAEoCUIE4kEBAxIXCgljbG9zZWRfYXQYDCABKAlCBOJBAQMSFQoHdXNlcl9pZBgNIAEoCUIE4kEBAyo4CgtDb250ZXh0VHlwZRIHCgNBTlkQABIJCgVTUEFDRRABEgsKB0FDQ09VTlQQAhIICgRDT1NUEANCaAogY2xvdWQuYWxwaGF1cy5ibHVlYXBpLmFwaS5sdXN0ZXJCFUFwaUx1c3RlckNvbnRleHRQcm90b1otZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvbHVzdGVyYgZwcm90bzM", [file_google_api_field_behavior]);
+  fileDesc("ChhhcGkvbHVzdGVyL2NvbnRleHQucHJvdG8SEmJsdWVhcGkuYXBpLmx1c3RlciLgAgoHQ29udGV4dBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg4KBm51bWJlchgDIAEoCRINCgV0aXRsZRgEIAEoCRIPCgdjb250ZW50GAUgASgJEjUKDGNvbnRleHRfdHlwZRgOIAEoDjIfLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0VHlwZRIvCgVzdGF0ZRgGIAEoDjIgLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0U3RhdGUSDgoGbGFiZWxzGAcgAygJEhEKCWFzc2lnbmVlcxgIIAMoCRIcCg5jb21tZW50c19jb3VudBgJIAEoA0IE4kEBAxIYCgpjcmVhdGVkX2F0GAogASgJQgTiQQEDEhgKCnVwZGF0ZWRfYXQYCyABKAlCBOJBAQMSFwoJY2xvc2VkX2F0GAwgASgJQgTiQQEDEhUKB3VzZXJfaWQYDSABKAlCBOJBAQMqOAoLQ29udGV4dFR5cGUSBwoDQU5ZEAASCQoFU1BBQ0UQARILCgdBQ0NPVU5UEAISCAoEQ09TVBADKjUKDENvbnRleHRTdGF0ZRIICgRPUEVOEAASDwoLSU5fUFJPR1JFU1MQARIKCgZDTE9TRUQQAkJoCiBjbG91ZC5hbHBoYXVzLmJsdWVhcGkuYXBpLmx1c3RlckIVQXBpTHVzdGVyQ29udGV4dFByb3RvWi1naXRodWIuY29tL2FscGhhdXNsYWJzL2JsdWUtc2RrLWdvL2FwaS9sdXN0ZXJiBnByb3RvMw", [file_google_api_field_behavior]);
 
 /**
  * The message defines the context
@@ -35,7 +35,7 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
 
   /**
    * The context number.
-   * 作成されるごとにnumberが採番されます。
+   * Sequential number assigned to the context.
    *
    * @generated from field: string number = 3;
    */
@@ -50,7 +50,7 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
 
   /**
    * The context content.
-   *  "content": "contextの本文詳細..."
+   * Detailed content or description of the context.
    *
    * @generated from field: string content = 5;
    */
@@ -65,11 +65,10 @@ export type Context = Message<"blueapi.api.luster.Context"> & {
 
   /**
    * The context state.
-   *  "state": "open", "pending", "review", "close"
    *
-   * @generated from field: string state = 6;
+   * @generated from field: blueapi.api.luster.ContextState state = 6;
    */
-  state: string;
+  state: ContextState;
 
   /**
    * The context labels.
@@ -141,28 +140,28 @@ export const ContextSchema: GenMessage<Context> = /*@__PURE__*/
  */
 export enum ContextType {
   /**
-   * anyone
+   * Any type of context.
    *
    * @generated from enum value: ANY = 0;
    */
   ANY = 0,
 
   /**
-   * space
+   * Space-related context.
    *
    * @generated from enum value: SPACE = 1;
    */
   SPACE = 1,
 
   /**
-   * account
+   * Account-related context.
    *
    * @generated from enum value: ACCOUNT = 2;
    */
   ACCOUNT = 2,
 
   /**
-   * cost
+   * Cost-related context.
    *
    * @generated from enum value: COST = 3;
    */
@@ -174,4 +173,41 @@ export enum ContextType {
  */
 export const ContextTypeSchema: GenEnum<ContextType> = /*@__PURE__*/
   enumDesc(file_api_luster_context, 0);
+
+/**
+ * The context state.
+ *
+ * @generated from enum blueapi.api.luster.ContextState
+ */
+export enum ContextState {
+  /**
+   * open
+   * Initial state when context is created.
+   *
+   * @generated from enum value: OPEN = 0;
+   */
+  OPEN = 0,
+
+  /**
+   * in progress
+   * Indicates work is in progress.
+   *
+   * @generated from enum value: IN_PROGRESS = 1;
+   */
+  IN_PROGRESS = 1,
+
+  /**
+   * closed
+   * Final state indicating work is completed.
+   *
+   * @generated from enum value: CLOSED = 2;
+   */
+  CLOSED = 2,
+}
+
+/**
+ * Describes the enum blueapi.api.luster.ContextState.
+ */
+export const ContextStateSchema: GenEnum<ContextState> = /*@__PURE__*/
+  enumDesc(file_api_luster_context, 1);
 
