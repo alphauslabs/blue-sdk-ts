@@ -23,7 +23,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file luster/v1/luster.proto.
  */
 export const file_luster_v1_luster: GenFile = /*@__PURE__*/
-  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSJDChFSZWFkU3BhY2VzUmVxdWVzdBIuCgpmaWVsZF9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJNCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDwoHbWVtYmVycxgDIAMoCSKLAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHbWVtYmVycxgEIAMoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiIAoSRGVsZXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIlcKE1JlYWRDb250ZXh0c1JlcXVlc3QSEAoIc3BhY2VfaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siYQoRR2V0Q29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2simgEKEkdldENvbnRleHRSZXNwb25zZRIoCgVzcGFjZRgBIAEoCzIZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZRIsCgdjb250ZXh0GAIgASgLMhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQSLAoHY29tbWVudBgDIAMoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IqIBChRDcmVhdGVDb250ZXh0UmVxdWVzdBIQCghzcGFjZV9pZBgBIAEoCRINCgV0aXRsZRgCIAEoCRIPCgdjb250ZW50GAMgASgJEg4KBmxhYmVscxgEIAMoCRIRCglhc3NpZ25lZXMYBSADKAkSNQoMY29udGV4dF90eXBlGAYgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlIpYCChRVcGRhdGVDb250ZXh0UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRINCgV0aXRsZRgDIAEoCRIPCgdjb250ZW50GAQgASgJEg4KBmxhYmVscxgFIAMoCRIRCglhc3NpZ25lZXMYBiADKAkSNQoMY29udGV4dF90eXBlGAcgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlEi8KBXN0YXRlGAggASgOMiAuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRTdGF0ZRI1Cgt1cGRhdGVfbWFzaxgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiNAoURGVsZXRlQ29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkiVAobQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EhAKCHNwYWNlX2lkGAEgASgJEhIKCmNvbnRleHRfaWQYAiABKAkSDwoHY29udGVudBgDIAEoCSKXAQobVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkSDwoHY29udGVudBgEIAEoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiTwobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkiRgoSQ3JlYXRlTGFiZWxSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFY29sb3IYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkykw8KBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRJ+CgxSZWFkQ29udGV4dHMSJi5ibHVlYXBpLmx1c3Rlci52MS5SZWFkQ29udGV4dHNSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiJ4LT5JMCIToBKiIcL3YxL2NvbnRleHRzL3tzcGFjZV9pZH06cmVhZDABEn8KCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIkgtPkkwIeEhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EnkKDUNyZWF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IiKC0+STAhw6ASoiFy92MS9jb250ZXh0cy97c3BhY2VfaWR9En4KDVVwZGF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IieC0+STAiE6ASoaHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SdgoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4qHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SnAEKFENyZWF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiN4LT5JMCMToBKiIsL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQSoQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiPILT5JMCNjoBKhoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRKZAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOYLT5JMCMyoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwauAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations, file_google_protobuf_field_mask]);
+  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSJDChFSZWFkU3BhY2VzUmVxdWVzdBIuCgpmaWVsZF9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJNCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDwoHbWVtYmVycxgDIAMoCSKLAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHbWVtYmVycxgEIAMoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiIAoSRGVsZXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIlcKE1JlYWRDb250ZXh0c1JlcXVlc3QSEAoIc3BhY2VfaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siYQoRR2V0Q29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2simgEKEkdldENvbnRleHRSZXNwb25zZRIoCgVzcGFjZRgBIAEoCzIZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZRIsCgdjb250ZXh0GAIgASgLMhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQSLAoHY29tbWVudBgDIAMoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IqIBChRDcmVhdGVDb250ZXh0UmVxdWVzdBIQCghzcGFjZV9pZBgBIAEoCRINCgV0aXRsZRgCIAEoCRIPCgdjb250ZW50GAMgASgJEg4KBmxhYmVscxgEIAMoCRIRCglhc3NpZ25lZXMYBSADKAkSNQoMY29udGV4dF90eXBlGAYgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlIpYCChRVcGRhdGVDb250ZXh0UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRINCgV0aXRsZRgDIAEoCRIPCgdjb250ZW50GAQgASgJEg4KBmxhYmVscxgFIAMoCRIRCglhc3NpZ25lZXMYBiADKAkSNQoMY29udGV4dF90eXBlGAcgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlEi8KBXN0YXRlGAggASgOMiAuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRTdGF0ZRI1Cgt1cGRhdGVfbWFzaxgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiNAoURGVsZXRlQ29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkiVAobQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EhAKCHNwYWNlX2lkGAEgASgJEhIKCmNvbnRleHRfaWQYAiABKAkSDwoHY29udGVudBgDIAEoCSKXAQobVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkSDwoHY29udGVudBgEIAEoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiTwobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkiRgoSQ3JlYXRlTGFiZWxSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFY29sb3IYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkiiQEKElVwZGF0ZUxhYmVsUmVxdWVzdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWNvbG9yGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEjUKC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0IE4kEBAiIgChJEZWxldGVMYWJlbFJlcXVlc3QSCgoCaWQYASABKAky9xAKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRJ+CgxSZWFkQ29udGV4dHMSJi5ibHVlYXBpLmx1c3Rlci52MS5SZWFkQ29udGV4dHNSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiJ4LT5JMCIToBKiIcL3YxL2NvbnRleHRzL3tzcGFjZV9pZH06cmVhZDABEn8KCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIkgtPkkwIeEhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EnkKDUNyZWF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IiKC0+STAhw6ASoiFy92MS9jb250ZXh0cy97c3BhY2VfaWR9En4KDVVwZGF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IieC0+STAiE6ASoaHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SdgoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4qHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SnAEKFENyZWF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiN4LT5JMCMToBKiIsL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQSoQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiPILT5JMCNjoBKhoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRKZAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOYLT5JMCMyoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwScwoLVXBkYXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVMYWJlbFJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuTGFiZWwiIoLT5JMCHDoBKhoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0SbQoLRGVsZXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVMYWJlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiH4LT5JMCGSoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0auAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations, file_google_protobuf_field_mask]);
 
 /**
  * Request message for the Luster.ReadSpaces rpc.
@@ -84,6 +84,7 @@ export const GetSpaceRequestSchema: GenMessage<GetSpaceRequest> = /*@__PURE__*/
 export type CreateSpaceRequest = Message<"blueapi.luster.v1.CreateSpaceRequest"> & {
   /**
    * Required. the space name.
+   * String length 1-60 characters
    *
    * @generated from field: string name = 1;
    */
@@ -91,6 +92,7 @@ export type CreateSpaceRequest = Message<"blueapi.luster.v1.CreateSpaceRequest">
 
   /**
    * Optional. the space description.
+   * String length 0-1000 characters
    *
    * @generated from field: string description = 2;
    */
@@ -126,6 +128,7 @@ export type UpdateSpaceRequest = Message<"blueapi.luster.v1.UpdateSpaceRequest">
 
   /**
    * Optional. the space name.
+   * String length 1-60 characters
    *
    * @generated from field: string name = 2;
    */
@@ -133,6 +136,7 @@ export type UpdateSpaceRequest = Message<"blueapi.luster.v1.UpdateSpaceRequest">
 
   /**
    * Optional. the space description.
+   * String length 0-1000 characters
    *
    * @generated from field: string description = 3;
    */
@@ -290,6 +294,7 @@ export type CreateContextRequest = Message<"blueapi.luster.v1.CreateContextReque
 
   /**
    * Required. The context title.
+   * String length 1-500 characters
    *
    * @generated from field: string title = 2;
    */
@@ -297,6 +302,7 @@ export type CreateContextRequest = Message<"blueapi.luster.v1.CreateContextReque
 
   /**
    * Required. The context content.
+   * String length 0-10000 characters
    *
    * @generated from field: string content = 3;
    */
@@ -356,6 +362,7 @@ export type UpdateContextRequest = Message<"blueapi.luster.v1.UpdateContextReque
 
   /**
    * Optional. The context title.
+   * String length 1-500 characters
    *
    * @generated from field: string title = 3;
    */
@@ -363,6 +370,7 @@ export type UpdateContextRequest = Message<"blueapi.luster.v1.UpdateContextReque
 
   /**
    * Optional. The context content.
+   * String length 0-10000 characters
    *
    * @generated from field: string content = 4;
    */
@@ -465,6 +473,7 @@ export type CreateContextCommentRequest = Message<"blueapi.luster.v1.CreateConte
 
   /**
    * Required. The comment content.
+   * String length 1-10000 characters
    *
    * @generated from field: string content = 3;
    */
@@ -507,6 +516,7 @@ export type UpdateContextCommentRequest = Message<"blueapi.luster.v1.UpdateConte
 
   /**
    * Required. The comment content.
+   * String length 1-10000 characters
    *
    * @generated from field: string content = 4;
    */
@@ -571,6 +581,7 @@ export const DeleteContextCommentRequestSchema: GenMessage<DeleteContextCommentR
 export type CreateLabelRequest = Message<"blueapi.luster.v1.CreateLabelRequest"> & {
   /**
    * The label name.
+   * String length 1-100 characters
    *
    * @generated from field: string name = 1;
    */
@@ -578,6 +589,8 @@ export type CreateLabelRequest = Message<"blueapi.luster.v1.CreateLabelRequest">
 
   /**
    * The label color.
+   * Required format: HEX color code (#RRGGBB).
+   * Example: #FF5733 (valid), #FFF (invalid - must be 6 digits), rgb(255, 87, 51) (invalid format)
    *
    * @generated from field: string color = 2;
    */
@@ -585,6 +598,7 @@ export type CreateLabelRequest = Message<"blueapi.luster.v1.CreateLabelRequest">
 
   /**
    * The label description.
+   * String length 0-500 characters
    *
    * @generated from field: string description = 3;
    */
@@ -599,6 +613,80 @@ export const CreateLabelRequestSchema: GenMessage<CreateLabelRequest> = /*@__PUR
   messageDesc(file_luster_v1_luster, 14);
 
 /**
+ * Request message for the Luster.UpdateLabel rpc.
+ *
+ * @generated from message blueapi.luster.v1.UpdateLabelRequest
+ */
+export type UpdateLabelRequest = Message<"blueapi.luster.v1.UpdateLabelRequest"> & {
+  /**
+   * Required. the label id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * Optional. the label name.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * The label color.
+   * Optional. format: HEX color code (#RRGGBB).
+   * Example: #FF5733 (valid), #FFF (invalid - must be 6 digits), rgb(255, 87, 51) (invalid format)
+   *
+   * @generated from field: string color = 3;
+   */
+  color: string;
+
+  /**
+   * Optional. the description.
+   * String length 0-500 characters
+   *
+   * @generated from field: string description = 4;
+   */
+  description: string;
+
+  /**
+   * Required.
+   * see more info: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/field_mask.proto
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 5;
+   */
+  updateMask?: FieldMask;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.UpdateLabelRequest.
+ * Use `create(UpdateLabelRequestSchema)` to create a new message.
+ */
+export const UpdateLabelRequestSchema: GenMessage<UpdateLabelRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 15);
+
+/**
+ * Request message for the Luster.DeleteLabel rpc.
+ *
+ * @generated from message blueapi.luster.v1.DeleteLabelRequest
+ */
+export type DeleteLabelRequest = Message<"blueapi.luster.v1.DeleteLabelRequest"> & {
+  /**
+   * Required. the label id.
+   *
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.DeleteLabelRequest.
+ * Use `create(DeleteLabelRequestSchema)` to create a new message.
+ */
+export const DeleteLabelRequestSchema: GenMessage<DeleteLabelRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 16);
+
+/**
  * Luster service definition.
  *
  * @generated from service blueapi.luster.v1.Luster
@@ -606,7 +694,6 @@ export const CreateLabelRequestSchema: GenMessage<CreateLabelRequest> = /*@__PUR
 export const Luster: GenService<{
   /**
    * (ALPHA) Reads spaces.
-   * スペースの読み取り。
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadSpaces
    */
@@ -617,7 +704,6 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Gets space.
-   * スペースの取得。
    *
    * @generated from rpc blueapi.luster.v1.Luster.GetSpace
    */
@@ -628,7 +714,6 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Creates space.
-   * スペースの作成。
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateSpace
    */
@@ -639,7 +724,6 @@ export const Luster: GenService<{
   },
   /**
    * (ALPHA) Updates space.
-   * スペースの更新。
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateSpace
    */
@@ -649,8 +733,7 @@ export const Luster: GenService<{
     output: typeof SpaceSchema;
   },
   /**
-   * (ALPHA) Deletes space.
-   * スペースの削除。 削除する場合はスペース内で作成したコンテクストも削除され閲覧できなくなります。
+   * (ALPHA) Deletes space. When deleted, contexts created within the space will also be deleted and cannot be viewed.
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteSpace
    */
@@ -748,6 +831,26 @@ export const Luster: GenService<{
     methodKind: "unary";
     input: typeof CreateLabelRequestSchema;
     output: typeof LabelSchema;
+  },
+  /**
+   * (ALPHA) Updates label.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.UpdateLabel
+   */
+  updateLabel: {
+    methodKind: "unary";
+    input: typeof UpdateLabelRequestSchema;
+    output: typeof LabelSchema;
+  },
+  /**
+   * (ALPHA) Deletes label.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.DeleteLabel
+   */
+  deleteLabel: {
+    methodKind: "unary";
+    input: typeof DeleteLabelRequestSchema;
+    output: typeof EmptySchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_luster_v1_luster, 0);
