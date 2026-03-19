@@ -23,7 +23,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file luster/v1/luster.proto.
  */
 export const file_luster_v1_luster: GenFile = /*@__PURE__*/
-  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSJDChFSZWFkU3BhY2VzUmVxdWVzdBIuCgpmaWVsZF9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJNCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDwoHbWVtYmVycxgDIAMoCSKLAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHbWVtYmVycxgEIAMoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiIAoSRGVsZXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIlcKE1JlYWRDb250ZXh0c1JlcXVlc3QSEAoIc3BhY2VfaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siYQoRR2V0Q29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2simgEKEkdldENvbnRleHRSZXNwb25zZRIoCgVzcGFjZRgBIAEoCzIZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZRIsCgdjb250ZXh0GAIgASgLMhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQSLAoHY29tbWVudBgDIAMoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IqIBChRDcmVhdGVDb250ZXh0UmVxdWVzdBIQCghzcGFjZV9pZBgBIAEoCRINCgV0aXRsZRgCIAEoCRIPCgdjb250ZW50GAMgASgJEg4KBmxhYmVscxgEIAMoCRIRCglhc3NpZ25lZXMYBSADKAkSNQoMY29udGV4dF90eXBlGAYgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlIpYCChRVcGRhdGVDb250ZXh0UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRINCgV0aXRsZRgDIAEoCRIPCgdjb250ZW50GAQgASgJEg4KBmxhYmVscxgFIAMoCRIRCglhc3NpZ25lZXMYBiADKAkSNQoMY29udGV4dF90eXBlGAcgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlEi8KBXN0YXRlGAggASgOMiAuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRTdGF0ZRI1Cgt1cGRhdGVfbWFzaxgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiNAoURGVsZXRlQ29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkiVAobQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EhAKCHNwYWNlX2lkGAEgASgJEhIKCmNvbnRleHRfaWQYAiABKAkSDwoHY29udGVudBgDIAEoCSKXAQobVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkSDwoHY29udGVudBgEIAEoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiTwobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkiRgoSQ3JlYXRlTGFiZWxSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFY29sb3IYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkiiQEKElVwZGF0ZUxhYmVsUmVxdWVzdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWNvbG9yGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEjUKC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0IE4kEBAiIgChJEZWxldGVMYWJlbFJlcXVlc3QSCgoCaWQYASABKAky9xAKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRJ+CgxSZWFkQ29udGV4dHMSJi5ibHVlYXBpLmx1c3Rlci52MS5SZWFkQ29udGV4dHNSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiJ4LT5JMCIToBKiIcL3YxL2NvbnRleHRzL3tzcGFjZV9pZH06cmVhZDABEn8KCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIkgtPkkwIeEhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EnkKDUNyZWF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IiKC0+STAhw6ASoiFy92MS9jb250ZXh0cy97c3BhY2VfaWR9En4KDVVwZGF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IieC0+STAiE6ASoaHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SdgoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4qHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SnAEKFENyZWF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiN4LT5JMCMToBKiIsL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQSoQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiPILT5JMCNjoBKhoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRKZAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOYLT5JMCMyoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwScwoLVXBkYXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVMYWJlbFJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuTGFiZWwiIoLT5JMCHDoBKhoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0SbQoLRGVsZXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVMYWJlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiH4LT5JMCGSoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0auAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations, file_google_protobuf_field_mask]);
+  fileDesc("ChZsdXN0ZXIvdjEvbHVzdGVyLnByb3RvEhFibHVlYXBpLmx1c3Rlci52MSJDChFSZWFkU3BhY2VzUmVxdWVzdBIuCgpmaWVsZF9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJNCg9HZXRTcGFjZVJlcXVlc3QSCgoCaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSDwoHbWVtYmVycxgDIAMoCSKLAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJEgwKBG5hbWUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSDwoHbWVtYmVycxgEIAMoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiIAoSRGVsZXRlU3BhY2VSZXF1ZXN0EgoKAmlkGAEgASgJIlcKE1JlYWRDb250ZXh0c1JlcXVlc3QSEAoIc3BhY2VfaWQYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siYQoRR2V0Q29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2simgEKEkdldENvbnRleHRSZXNwb25zZRIoCgVzcGFjZRgBIAEoCzIZLmJsdWVhcGkuYXBpLmx1c3Rlci5TcGFjZRIsCgdjb250ZXh0GAIgASgLMhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQSLAoHY29tbWVudBgDIAMoCzIbLmJsdWVhcGkuYXBpLmx1c3Rlci5Db21tZW50IqIBChRDcmVhdGVDb250ZXh0UmVxdWVzdBIQCghzcGFjZV9pZBgBIAEoCRINCgV0aXRsZRgCIAEoCRIPCgdjb250ZW50GAMgASgJEg4KBmxhYmVscxgEIAMoCRIRCglhc3NpZ25lZXMYBSADKAkSNQoMY29udGV4dF90eXBlGAYgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlIpYCChRVcGRhdGVDb250ZXh0UmVxdWVzdBIKCgJpZBgBIAEoCRIQCghzcGFjZV9pZBgCIAEoCRINCgV0aXRsZRgDIAEoCRIPCgdjb250ZW50GAQgASgJEg4KBmxhYmVscxgFIAMoCRIRCglhc3NpZ25lZXMYBiADKAkSNQoMY29udGV4dF90eXBlGAcgASgOMh8uYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRUeXBlEi8KBXN0YXRlGAggASgOMiAuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHRTdGF0ZRI1Cgt1cGRhdGVfbWFzaxgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiNAoURGVsZXRlQ29udGV4dFJlcXVlc3QSCgoCaWQYASABKAkSEAoIc3BhY2VfaWQYAiABKAkiVAobQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EhAKCHNwYWNlX2lkGAEgASgJEhIKCmNvbnRleHRfaWQYAiABKAkSDwoHY29udGVudBgDIAEoCSKXAQobVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkSDwoHY29udGVudBgEIAEoCRI1Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCBOJBAQIiTwobRGVsZXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0EgoKAmlkGAEgASgJEhAKCHNwYWNlX2lkGAIgASgJEhIKCmNvbnRleHRfaWQYAyABKAkiQwoRUmVhZExhYmVsc1JlcXVlc3QSLgoKZmllbGRfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siRgoSQ3JlYXRlTGFiZWxSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFY29sb3IYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkiiQEKElVwZGF0ZUxhYmVsUmVxdWVzdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBWNvbG9yGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEjUKC3VwZGF0ZV9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0IE4kEBAiIgChJEZWxldGVMYWJlbFJlcXVlc3QSCgoCaWQYASABKAky7BEKBkx1c3RlchJrCgpSZWFkU3BhY2VzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZFNwYWNlc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKiIPL3YxL3NwYWNlczpyZWFkMAESYgoIR2V0U3BhY2USIi5ibHVlYXBpLmx1c3Rlci52MS5HZXRTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiF4LT5JMCERIPL3YxL3NwYWNlcy97aWR9EmYKC0NyZWF0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlU3BhY2VSZXF1ZXN0GhkuYmx1ZWFwaS5hcGkubHVzdGVyLlNwYWNlIhWC0+STAg86ASoiCi92MS9zcGFjZXMSawoLVXBkYXRlU3BhY2USJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVTcGFjZVJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuU3BhY2UiGoLT5JMCFDoBKhoPL3YxL3NwYWNlcy97aWR9EmUKC0RlbGV0ZVNwYWNlEiUuYmx1ZWFwaS5sdXN0ZXIudjEuRGVsZXRlU3BhY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEqDy92MS9zcGFjZXMve2lkfRJ+CgxSZWFkQ29udGV4dHMSJi5ibHVlYXBpLmx1c3Rlci52MS5SZWFkQ29udGV4dHNSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbnRleHQiJ4LT5JMCIToBKiIcL3YxL2NvbnRleHRzL3tzcGFjZV9pZH06cmVhZDABEn8KCkdldENvbnRleHQSJC5ibHVlYXBpLmx1c3Rlci52MS5HZXRDb250ZXh0UmVxdWVzdBolLmJsdWVhcGkubHVzdGVyLnYxLkdldENvbnRleHRSZXNwb25zZSIkgtPkkwIeEhwvdjEvY29udGV4dHMve3NwYWNlX2lkfS97aWR9EnkKDUNyZWF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5DcmVhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IiKC0+STAhw6ASoiFy92MS9jb250ZXh0cy97c3BhY2VfaWR9En4KDVVwZGF0ZUNvbnRleHQSJy5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVDb250ZXh0UmVxdWVzdBobLmJsdWVhcGkuYXBpLmx1c3Rlci5Db250ZXh0IieC0+STAiE6ASoaHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SdgoNRGVsZXRlQ29udGV4dBInLmJsdWVhcGkubHVzdGVyLnYxLkRlbGV0ZUNvbnRleHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4qHC92MS9jb250ZXh0cy97c3BhY2VfaWR9L3tpZH0SnAEKFENyZWF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuQ3JlYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiN4LT5JMCMToBKiIsL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQSoQEKFFVwZGF0ZUNvbnRleHRDb21tZW50Ei4uYmx1ZWFwaS5sdXN0ZXIudjEuVXBkYXRlQ29udGV4dENvbW1lbnRSZXF1ZXN0GhsuYmx1ZWFwaS5hcGkubHVzdGVyLkNvbW1lbnQiPILT5JMCNjoBKhoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRKZAQoURGVsZXRlQ29udGV4dENvbW1lbnQSLi5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVDb250ZXh0Q29tbWVudFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiOYLT5JMCMyoxL3YxL2NvbnRleHRzL3tzcGFjZV9pZH0ve2NvbnRleHRfaWR9L2NvbW1lbnQve2lkfRJzCgpSZWFkTGFiZWxzEiQuYmx1ZWFwaS5sdXN0ZXIudjEuUmVhZExhYmVsc1JlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuTGFiZWwiIoLT5JMCHDoBKiIXL3YxL2NvbnRleHRzL2xhYmVsOnJlYWQwARJuCgtDcmVhdGVMYWJlbBIlLmJsdWVhcGkubHVzdGVyLnYxLkNyZWF0ZUxhYmVsUmVxdWVzdBoZLmJsdWVhcGkuYXBpLmx1c3Rlci5MYWJlbCIdgtPkkwIXOgEqIhIvdjEvY29udGV4dHMvbGFiZWwScwoLVXBkYXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5VcGRhdGVMYWJlbFJlcXVlc3QaGS5ibHVlYXBpLmFwaS5sdXN0ZXIuTGFiZWwiIoLT5JMCHDoBKhoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0SbQoLRGVsZXRlTGFiZWwSJS5ibHVlYXBpLmx1c3Rlci52MS5EZWxldGVMYWJlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiH4LT5JMCGSoXL3YxL2NvbnRleHRzL2xhYmVsL3tpZH0auAGSQbQBEkUoQUxQSEEpIEx1c3RlciBBUEkuIEJhc2UgVVJMOiBodHRwczovL2FwaS5hbHBoYXVzLmNsb3VkL20vYmx1ZS9sdXN0ZXIaawovTHVzdGVyIGlzIGEgc2VydmljZSB0aGF0IG1hbmFnZXMgdXNlciBjb250ZXh0cy4SOGh0dHBzOi8vZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlYXBpL3RyZWUvbWFpbi9sdXN0ZXIvQk4KGGNsb3VkLmFscGhhdXMuYXBpLmx1c3RlckILTHVzdGVyUHJvdG9aJWdpdGh1Yi5jb20vYWxwaGF1c2xhYnMvYmx1ZWFwaS9sdXN0ZXJiBnByb3RvMw", [file_api_luster_space, file_api_luster_context, file_api_luster_comment, file_api_luster_label, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_empty, file_protoc_gen_openapiv2_options_annotations, file_google_protobuf_field_mask]);
 
 /**
  * Request message for the Luster.ReadSpaces rpc.
@@ -574,6 +574,27 @@ export const DeleteContextCommentRequestSchema: GenMessage<DeleteContextCommentR
   messageDesc(file_luster_v1_luster, 13);
 
 /**
+ * Request message for the Luster.ReadLabels rpc.
+ *
+ * @generated from message blueapi.luster.v1.ReadLabelsRequest
+ */
+export type ReadLabelsRequest = Message<"blueapi.luster.v1.ReadLabelsRequest"> & {
+  /**
+   * Optional. field_mask
+   *
+   * @generated from field: google.protobuf.FieldMask field_mask = 1;
+   */
+  fieldMask?: FieldMask;
+};
+
+/**
+ * Describes the message blueapi.luster.v1.ReadLabelsRequest.
+ * Use `create(ReadLabelsRequestSchema)` to create a new message.
+ */
+export const ReadLabelsRequestSchema: GenMessage<ReadLabelsRequest> = /*@__PURE__*/
+  messageDesc(file_luster_v1_luster, 14);
+
+/**
  * Request message for the Luster.CreateLabel rpc.
  *
  * @generated from message blueapi.luster.v1.CreateLabelRequest
@@ -610,7 +631,7 @@ export type CreateLabelRequest = Message<"blueapi.luster.v1.CreateLabelRequest">
  * Use `create(CreateLabelRequestSchema)` to create a new message.
  */
 export const CreateLabelRequestSchema: GenMessage<CreateLabelRequest> = /*@__PURE__*/
-  messageDesc(file_luster_v1_luster, 14);
+  messageDesc(file_luster_v1_luster, 15);
 
 /**
  * Request message for the Luster.UpdateLabel rpc.
@@ -663,7 +684,7 @@ export type UpdateLabelRequest = Message<"blueapi.luster.v1.UpdateLabelRequest">
  * Use `create(UpdateLabelRequestSchema)` to create a new message.
  */
 export const UpdateLabelRequestSchema: GenMessage<UpdateLabelRequest> = /*@__PURE__*/
-  messageDesc(file_luster_v1_luster, 15);
+  messageDesc(file_luster_v1_luster, 16);
 
 /**
  * Request message for the Luster.DeleteLabel rpc.
@@ -684,7 +705,7 @@ export type DeleteLabelRequest = Message<"blueapi.luster.v1.DeleteLabelRequest">
  * Use `create(DeleteLabelRequestSchema)` to create a new message.
  */
 export const DeleteLabelRequestSchema: GenMessage<DeleteLabelRequest> = /*@__PURE__*/
-  messageDesc(file_luster_v1_luster, 16);
+  messageDesc(file_luster_v1_luster, 17);
 
 /**
  * Luster service definition.
@@ -693,7 +714,7 @@ export const DeleteLabelRequestSchema: GenMessage<DeleteLabelRequest> = /*@__PUR
  */
 export const Luster: GenService<{
   /**
-   * (ALPHA) Reads spaces.
+   * (ALPHA) [SPACE] Reads spaces.
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadSpaces
    */
@@ -703,7 +724,7 @@ export const Luster: GenService<{
     output: typeof SpaceSchema;
   },
   /**
-   * (ALPHA) Gets space.
+   * (ALPHA) [SPACE] Gets space.
    *
    * @generated from rpc blueapi.luster.v1.Luster.GetSpace
    */
@@ -713,7 +734,7 @@ export const Luster: GenService<{
     output: typeof SpaceSchema;
   },
   /**
-   * (ALPHA) Creates space.
+   * (ALPHA) [SPACE] Creates space.
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateSpace
    */
@@ -723,7 +744,7 @@ export const Luster: GenService<{
     output: typeof SpaceSchema;
   },
   /**
-   * (ALPHA) Updates space.
+   * (ALPHA) [SPACE] Updates space.
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateSpace
    */
@@ -733,7 +754,8 @@ export const Luster: GenService<{
     output: typeof SpaceSchema;
   },
   /**
-   * (ALPHA) Deletes space. When deleted, contexts created within the space will also be deleted and cannot be viewed.
+   * (ALPHA) [SPACE] Deletes space. 
+   * When deleted, contexts created within the space will also be deleted and cannot be viewed.
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteSpace
    */
@@ -743,7 +765,7 @@ export const Luster: GenService<{
     output: typeof EmptySchema;
   },
   /**
-   * (ALPHA) Reads contexts.
+   * (ALPHA) [CONTEXT] Reads contexts.
    *
    * @generated from rpc blueapi.luster.v1.Luster.ReadContexts
    */
@@ -753,7 +775,7 @@ export const Luster: GenService<{
     output: typeof ContextSchema;
   },
   /**
-   * (ALPHA) Gets context.
+   * (ALPHA [CONTEXT]) Gets context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.GetContext
    */
@@ -763,7 +785,7 @@ export const Luster: GenService<{
     output: typeof GetContextResponseSchema;
   },
   /**
-   * (ALPHA) Creates context.
+   * (ALPHA) [CONTEXT] Creates context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateContext
    */
@@ -773,7 +795,7 @@ export const Luster: GenService<{
     output: typeof ContextSchema;
   },
   /**
-   * (ALPHA) Updates context.
+   * (ALPHA) [CONTEXT] Updates context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateContext
    */
@@ -783,7 +805,7 @@ export const Luster: GenService<{
     output: typeof ContextSchema;
   },
   /**
-   * (ALPHA) Deletes context.
+   * (ALPHA) [CONTEXT] Deletes context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteContext
    */
@@ -793,7 +815,7 @@ export const Luster: GenService<{
     output: typeof EmptySchema;
   },
   /**
-   * (ALPHA) Creates comment in context.
+   * (ALPHA) [COMMENT] Creates comment in context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateContextComment
    */
@@ -803,7 +825,7 @@ export const Luster: GenService<{
     output: typeof CommentSchema;
   },
   /**
-   * (ALPHA) Updates comment in context.
+   * (ALPHA) [COMMENT] Updates comment in context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateContextComment
    */
@@ -813,7 +835,7 @@ export const Luster: GenService<{
     output: typeof CommentSchema;
   },
   /**
-   * (ALPHA) Deletes comment in context.
+   * (ALPHA) [COMMENT] Deletes comment in context.
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteContextComment
    */
@@ -823,7 +845,17 @@ export const Luster: GenService<{
     output: typeof EmptySchema;
   },
   /**
-   * (ALPHA) Creates label.
+   * (ALPHA) [LABEL] Reads labels.
+   *
+   * @generated from rpc blueapi.luster.v1.Luster.ReadLabels
+   */
+  readLabels: {
+    methodKind: "server_streaming";
+    input: typeof ReadLabelsRequestSchema;
+    output: typeof LabelSchema;
+  },
+  /**
+   * (ALPHA) [LABEL] Creates label.
    *
    * @generated from rpc blueapi.luster.v1.Luster.CreateLabel
    */
@@ -833,7 +865,7 @@ export const Luster: GenService<{
     output: typeof LabelSchema;
   },
   /**
-   * (ALPHA) Updates label.
+   * (ALPHA) [LABEL] Updates label.
    *
    * @generated from rpc blueapi.luster.v1.Luster.UpdateLabel
    */
@@ -843,7 +875,7 @@ export const Luster: GenService<{
     output: typeof LabelSchema;
   },
   /**
-   * (ALPHA) Deletes label.
+   * (ALPHA) [LABEL] Deletes label.
    *
    * @generated from rpc blueapi.luster.v1.Luster.DeleteLabel
    */
