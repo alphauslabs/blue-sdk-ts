@@ -35,6 +35,7 @@ export type Label = Message<"blueapi.api.luster.Label"> & {
 
   /**
    * The label color.
+   * format: HEX color code ( #FF0000 ).
    *
    * @generated from field: string color = 3;
    */
