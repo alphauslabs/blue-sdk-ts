@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file api/cover/role.proto.
  */
 export const file_api_cover_role: GenFile = /*@__PURE__*/
-  fileDesc("ChRhcGkvY292ZXIvcm9sZS5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIiZQoEUm9sZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEisKCHBvbGljaWVzGAMgAygLMhkuYmx1ZWFwaS5hcGkuY292ZXIuUG9saWN5EhYKDmNvc3Rncm91cHNfaWRzGAQgAygJImEKBlBvbGljeRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhgKC2Rlc2NyaXB0aW9uGAMgASgJSACIAQESEwoLcGVybWlzc2lvbnMYBCADKAlCDgoMX2Rlc2NyaXB0aW9uQl0KH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCDEFwaVJvbGVQcm90b1osZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvY292ZXJiBnByb3RvMw");
+  fileDesc("ChRhcGkvY292ZXIvcm9sZS5wcm90bxIRYmx1ZWFwaS5hcGkuY292ZXIiTQoEUm9sZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEhYKDmNvc3Rncm91cHNfaWRzGAMgAygJEhMKC3Blcm1pc3Npb25zGAQgAygJQl0KH2Nsb3VkLmFscGhhdXMuYmx1ZWFwaS5hcGkuY292ZXJCDEFwaVJvbGVQcm90b1osZ2l0aHViLmNvbS9hbHBoYXVzbGFicy9ibHVlLXNkay1nby9hcGkvY292ZXJiBnByb3RvMw");
 
 /**
  * @generated from message blueapi.api.cover.Role
@@ -27,41 +27,9 @@ export type Role = Message<"blueapi.api.cover.Role"> & {
   name: string;
 
   /**
-   * @generated from field: repeated blueapi.api.cover.Policy policies = 3;
-   */
-  policies: Policy[];
-
-  /**
-   * @generated from field: repeated string costgroups_ids = 4;
+   * @generated from field: repeated string costgroups_ids = 3;
    */
   costgroupsIds: string[];
-};
-
-/**
- * Describes the message blueapi.api.cover.Role.
- * Use `create(RoleSchema)` to create a new message.
- */
-export const RoleSchema: GenMessage<Role> = /*@__PURE__*/
-  messageDesc(file_api_cover_role, 0);
-
-/**
- * @generated from message blueapi.api.cover.Policy
- */
-export type Policy = Message<"blueapi.api.cover.Policy"> & {
-  /**
-   * @generated from field: string id = 1;
-   */
-  id: string;
-
-  /**
-   * @generated from field: string name = 2;
-   */
-  name: string;
-
-  /**
-   * @generated from field: optional string description = 3;
-   */
-  description?: string;
 
   /**
    * @generated from field: repeated string permissions = 4;
@@ -70,9 +38,9 @@ export type Policy = Message<"blueapi.api.cover.Policy"> & {
 };
 
 /**
- * Describes the message blueapi.api.cover.Policy.
- * Use `create(PolicySchema)` to create a new message.
+ * Describes the message blueapi.api.cover.Role.
+ * Use `create(RoleSchema)` to create a new message.
  */
-export const PolicySchema: GenMessage<Policy> = /*@__PURE__*/
-  messageDesc(file_api_cover_role, 1);
+export const RoleSchema: GenMessage<Role> = /*@__PURE__*/
+  messageDesc(file_api_cover_role, 0);
 
