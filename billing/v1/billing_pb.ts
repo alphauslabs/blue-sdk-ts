@@ -615,7 +615,8 @@ export type RegisterAccounts = Message<"blueapi.billing.v1.RegisterAccounts"> & 
   enabled: boolean;
 
   /**
-   * Optional. AccountId to be used for registration into the billing group.
+   * Optional. AccountIds to be used for registration into the billing group.
+   * Accepts multiple accountIds separated by a comma.
    *
    * @generated from field: string accountId = 2;
    */
