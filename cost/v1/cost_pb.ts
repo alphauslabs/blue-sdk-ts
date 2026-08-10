@@ -1461,14 +1461,14 @@ export type CalculateCostsRequestAwsOptions = Message<"blueapi.cost.v1.Calculate
   force: boolean;
 
   /**
-   * Optional. If set to true, only calculate for account-type billing groups. If both `accountsOnly` and `tagsOnly` are set to true, `accountsOnly` will prevail.
+   * Optional. If set to true, only calculate for account-type billing groups. If both `accountsOnly` and `tagsOnly` are set to true, both flags are ignored and a full run is performed (equivalent to setting neither flag).
    *
    * @generated from field: bool accountsOnly = 2;
    */
   accountsOnly: boolean;
 
   /**
-   * Optional. If set to true, only calculate for tags-type billing groups. Discarded when the organization doesn't have any tag-based billing groups configured. If both `accountsOnly` and `tagsOnly` are set to true, `accountsOnly` will prevail.
+   * Optional. If set to true, only calculate for tags-type billing groups. Discarded when the organization doesn't have any tag-based billing groups configured. If both `accountsOnly` and `tagsOnly` are set to true, both flags are ignored and a full run is performed (equivalent to setting neither flag).
    *
    * @generated from field: bool tagsOnly = 3;
    */
