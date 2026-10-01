@@ -1,4 +1,4 @@
-import { createClient, Interceptor, type Client } from "@connectrpc/connect";
+import { createClient, type Interceptor, type Client } from "@connectrpc/connect";
 import { createGrpcWebTransport } from "@connectrpc/connect-web";
 import type { DescService } from "@bufbuild/protobuf";
 import axios from "axios";
