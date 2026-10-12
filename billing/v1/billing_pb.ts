@@ -3063,7 +3063,7 @@ export type ListInvoiceResponse = Message<"blueapi.billing.v1.ListInvoiceRespons
   hasChild: boolean;
 
   /**
-   * Vendors with a cloud account attached to this billing group, independent of invoice status or usage.
+   * Vendors with a cloud account or tag rule attached to this billing group, independent of invoice status or usage.
    *
    * @generated from field: repeated string attachedVendors = 20;
    */
